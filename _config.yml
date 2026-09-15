@@ -1,0 +1,50 @@
+title: CodeLearn Academy
+description: Formación real basada en ejercicios, proyectos y buenas prácticas profesionales.
+baseurl: ""
+url: "https://codelearnacademy.github.io"
+lang: es
+markdown: kramdown
+permalink: pretty
+
+collections:
+  documentation:
+    output: true
+    permalink: /documentacion/:path/
+  references:
+    output: true
+    permalink: /referencias/:path/
+
+exclude:
+  - .jekyll-cache
+  - _site
+  - node_modules
+  - vendor
+  - scripts
+  - Gemfile.lock
+  - README.md
+
+include:
+  - _pages
+
+author:
+  name: "Joatham Pérez Expósito"
+  role: "Software Architect & Trainer"
+  github: "https://github.com/jpexposito"
+  linkedin: ""
+
+academy:
+  title: "CodeLearn Academy"
+  tagline: "Formación real basada en ejercicios, proyectos y buenas prácticas profesionales."
+  hero_title: "Aprende tecnología construyendo software."
+  repository: "https://github.com/codelearnacademy/codelearnacademy.github.io"
+  branch: "main"
+  logo: "/assets/images/branding/logo.svg"
+  favicon: "/assets/images/branding/favicon.svg"
+  hero_icon: "/assets/images/branding/logo-symbol.svg"
+  routes_label: "Rutas"
+  lessons_label: "Lecciones"
+
+seo:
+  title: "CodeLearn Academy"
+  description: "Formación real basada en ejercicios, proyectos y buenas prácticas profesionales."
+  image: "/assets/images/branding/logo-symbol.svg"

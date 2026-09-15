@@ -1,0 +1,41 @@
+{% assign branding = site.data.branding %}
+<footer class="cla-footer">
+  <div class="cla-container cla-footer-grid">
+    <div>
+      <img class="cla-footer-logo" src="{{ branding.logo | default: site.academy.logo | default: '/assets/images/branding/logo.svg' | relative_url }}" alt="{{ branding.name | default: site.academy.title | default: site.title }}" width="{{ branding.logo_width | default: 248 }}" height="{{ branding.logo_height | default: 48 }}" loading="lazy">
+      <p>{{ site.academy.tagline | default: site.description }}</p>
+      <p class="cla-footer-legal"><a href="{{ '/licencias/' | relative_url }}">Iconos, licencias y marcas</a></p>
+    </div>
+
+    {% for column in site.data.footer.columns %}
+      <div>
+        <strong>{{ column.title }}</strong>
+        {% if column.type == 'routes' %}
+          {% for item in site.data.routes %}
+            {% assign route = item[1] %}
+            {% if route.status == 'published' %}
+              <a href="{{ route.url | relative_url }}">{{ route.title }}</a>
+            {% else %}
+              <span>{{ route.title }}</span>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% for link in column.links %}
+            {% assign url = link.url %}
+            {% if link.config == 'academy.repository' %}{% assign url = site.academy.repository %}{% endif %}
+            {% if link.config == 'academy.repository_commits' %}{% assign url = site.academy.repository | append: '/commits/' | append: site.data.build.branch %}{% endif %}
+            <a href="{{ url }}">{{ link.label }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <div>
+      <strong>Build</strong>
+      <span>Versión {{ site.data.build.version | default: 'local' }}</span>
+      <span>Rama {{ site.data.build.branch | default: 'local' }}</span>
+      <span>Commit {{ site.data.build.commit | default: 'local' }}</span>
+      <span>{{ site.data.build.date | default: site.time | date: '%Y-%m-%d' }}</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+columns:
+  - title: Proyecto
+    links:
+      - label: Acerca de
+        url: /about/
+      - label: Licencias
+        url: /licencias/
+
+  - title: Código
+    links:
+      - label: Repositorio
+        config: academy.repository
+      - label: Commits
+        config: academy.repository_commits

@@ -1,0 +1,124 @@
+01-bienvenida:
+  - id: qué-vas-a-conseguir
+    title: Qué vas a conseguir
+  - id: punto-de-partida
+    title: Punto de partida
+02-que-es-java:
+  - id: lenguaje-y-plataforma
+    title: Lenguaje y plataforma
+  - id: la-idea-de-portabilidad
+    title: La idea de portabilidad
+  - id: comparación-rápida
+    title: Comparación rápida
+  - id: cuándo-elegir-cada-modelo
+    title: Cuándo elegir cada modelo
+03-historia:
+  - id: hitos-principales
+    title: Hitos principales
+  - id: una-consecuencia-práctica
+    title: Una consecuencia práctica
+04-caracteristicas:
+  - id: propiedades-esenciales
+    title: Propiedades esenciales
+  - id: qué-no-significa
+    title: Qué no significa
+  - id: comparación-con-otros-lenguajes
+    title: Comparación con otros lenguajes
+05-versiones-java:
+  - id: versiones-lts-conocidas
+    title: Versiones LTS conocidas
+  - id: versión-del-lenguaje-y-versión-del-jdk
+    title: Versión del lenguaje y versión del JDK
+  - id: comparación-de-ciclos
+    title: Comparación de ciclos
+06-java-lts:
+  - id: qué-aporta
+    title: Qué aporta
+  - id: lts-no-es-la-más-antigua
+    title: LTS no es la más antigua
+  - id: decisión-recomendada
+    title: Decisión recomendada
+07-jvm:
+  - id: flujo-de-ejecución
+    title: Flujo de ejecución
+  - id: responsabilidades
+    title: Responsabilidades
+  - id: memoria-y-rendimiento
+    title: Memoria y rendimiento
+  - id: qué-observa-un-equipo
+    title: Qué observa un equipo
+08-bytecode:
+  - id: por-qué-importa
+    title: Por qué importa
+  - id: inspeccionarlo
+    title: Inspeccionarlo
+09-jdk:
+  - id: herramientas-esenciales
+    title: Herramientas esenciales
+  - id: jdk-frente-a-otros-kits
+    title: JDK frente a otros kits
+10-jre:
+  - id: el-matiz-en-java-moderno
+    title: El matiz en Java moderno
+  - id: desarrollo-y-despliegue
+    title: Desarrollo y despliegue
+11-openjdk:
+  - id: implementación-y-distribución
+    title: Implementación y distribución
+  - id: cómo-elegir-sin-confusiones
+    title: Cómo elegir sin confusiones
+12-instalacion:
+  - id: verificación-mínima
+    title: Verificación mínima
+  - id: diagnóstico
+    title: Diagnóstico
+  - id: entorno-reproducible
+    title: Entorno reproducible
+13-primer-programa:
+  - id: qué-significa-cada-parte
+    title: Qué significa cada parte
+  - id: un-segundo-ejemplo
+    title: Un segundo ejemplo
+14-compilacion:
+  - id: separar-las-fases
+    title: Separar las fases
+  - id: compilar-a-otra-carpeta
+    title: Compilar a otra carpeta
+15-resumen:
+  - id: ideas-esenciales
+    title: Ideas esenciales
+  - id: mapa-comparativo
+    title: Mapa comparativo
+16-preguntas-oracle:
+  - id: 1-qué-genera-javac
+    title: ¿Qué genera javac?
+  - id: 2-qué-componente-ejecuta-el-bytecode
+    title: ¿Qué componente ejecuta el bytecode?
+  - id: 3-qué-necesitas-para-compilar
+    title: ¿Qué necesitas para compilar?
+  - id: cómo-razonar-la-respuesta
+    title: Cómo razonar la respuesta
+17-preguntas-trampa:
+  - id: openjdk-y-temurin-son-lo-mismo
+    title: ¿OpenJDK y Temurin son lo mismo?
+  - id: la-jvm-compila-el-archivo-java
+    title: ¿La JVM compila el archivo .java?
+  - id: java-es-totalmente-independiente-del-sistema-operativo
+    title: ¿Java es totalmente independiente del sistema operativo?
+  - id: existe-un-jre-independiente-en-java-21
+    title: ¿Existe un JRE independiente en Java 21?
+  - id: contraste-con-otros-ecosistemas
+    title: Contraste con otros ecosistemas
+18-ejercicios:
+  - id: 1-comprueba-el-entorno
+    title: Comprueba el entorno
+  - id: 2-personaliza-el-programa
+    title: Personaliza el programa
+  - id: 3-compila-y-ejecuta
+    title: Compila y ejecuta
+  - id: 4-diagnostica-un-fallo
+    title: Diagnostica un fallo
+  - id: 5-comparación-opcional
+    title: Comparación opcional
+  - id: criterios-de-revisión
+    title: Criterios de revisión

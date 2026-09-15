@@ -1,0 +1,121 @@
+---
+layout: academy
+---
+{% assign route = site.data.routes[page.route] %}
+{% assign current_lesson = nil %}
+{% assign current_index = 0 %}
+{% for item in route.lessons %}
+  {% if item.id == page.lesson_id %}
+    {% assign current_lesson = item %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign previous_index = current_index | minus: 1 %}
+{% assign next_index = current_index | plus: 1 %}
+{% assign previous_lesson = route.lessons[previous_index] %}
+{% assign next_lesson = route.lessons[next_index] %}
+{% assign page_lessons = page.lessons %}
+{% if page_lessons == nil and page.lesson_id == 'leccion01' %}
+  {% assign page_lessons = site.data.lesson_indexes[page.lesson_file] %}
+{% endif %}
+{% if page.lesson_file %}
+  {% if page.route != 'java' %}
+    {% assign lesson_pages = site.pages | where: 'route', page.route | where: 'lesson_id', page.lesson_id | where_exp: 'item', 'item.lesson_file != nil' | sort: 'lesson_file' %}
+    {% assign lesson_files = lesson_pages | map: 'lesson_file' %}
+    {% assign lesson_titles = lesson_pages | map: 'title' %}
+  {% elsif page.lesson_id == 'leccion01' %}
+    {% assign lesson_files = '01-bienvenida,02-que-es-java,03-historia,04-caracteristicas,05-versiones-java,06-java-lts,07-jvm,08-bytecode,09-jdk,10-jre,11-openjdk,12-instalacion,13-primer-programa,14-compilacion,15-resumen,16-preguntas-oracle,17-preguntas-trampa,18-ejercicios' | split: ',' %}
+    {% assign lesson_titles = 'Bienvenida,¿Qué es Java?,Historia,Características,Versiones,Java LTS,JVM,Bytecode,JDK,JRE,OpenJDK,Instalación,Tu primer programa,Compilación,Resumen,Preguntas Oracle,Preguntas trampa,Ejercicios' | split: ',' %}
+  {% elsif page.lesson_id == 'leccion02' %}
+    {% assign lesson_files = '01-primeros-pasos,02-estructura-programa,03-variables-y-tipos,04-operadores-y-expresiones,05-entrada-y-salida,06-condicionales,07-bucles,08-metodos-y-parametros,09-resumen,10-practica-final,11-algoritmos' | split: ',' %}
+    {% assign lesson_titles = 'Primeros pasos con Java,Estructura de un programa en Java,Variables y tipos,Operadores y expresiones,Entrada y salida,Condicionales,Bucles,Métodos y parámetros,Resumen,Práctica final,Algoritmos guiados' | split: ',' %}
+  {% endif %}
+
+  {% assign lesson_position = 0 %}
+  {% for file in lesson_files %}
+    {% if file == page.lesson_file %}{% assign lesson_position = forloop.index0 %}{% endif %}
+  {% endfor %}
+  {% assign previous_position = lesson_position | minus: 1 %}
+  {% assign next_position = lesson_position | plus: 1 %}
+  {% assign last_position = lesson_files.size | minus: 1 %}
+  {% assign previous_file = lesson_files[previous_position] %}
+  {% assign next_file = lesson_files[next_position] %}
+  {% assign next_lesson_title = lesson_titles[next_position] %}
+  {% assign previous_lesson_title = lesson_titles[previous_position] %}
+{% endif %}
+
+<main class="cla-main">
+<section class="cla-lesson-page">
+  <div class="cla-container">
+    <div class="cla-breadcrumb">
+      <a href="{{ '/' | relative_url }}">Inicio</a>
+      <span>›</span>
+      <a href="{{ route.url | relative_url }}">{{ route.title }}</a>
+      <span>›</span>
+      <span>{{ current_lesson.title | default: page.title }}</span>
+    </div>
+
+    <div class="cla-lesson-layout">
+      <aside class="cla-lesson-sidebar" aria-label="Lecciones de la ruta {{ route.short_title | escape }}">
+        <strong>{{ route.title }}</strong>
+        {% for lesson in route.lessons %}
+        <a class="{% if lesson.id == page.lesson_id %}is-active{% endif %}" href="{{ lesson.url | relative_url }}">
+          <span>{{ lesson.number }}</span>
+          {{ lesson.title }}
+        </a>
+        {% endfor %}
+      </aside>
+
+      <article class="cla-lesson-content">
+        {% unless page.lessons %}
+          <span class="cla-badge">Lección {{ current_lesson.number | default: page.lesson_number }}</span>
+          <h1>{{ current_lesson.title | default: page.title }}</h1>
+          <p class="cla-lead">{{ page.description | default: current_lesson.description }}</p>
+        {% endunless %}
+        {{ content }}
+
+        {% if page.lesson_file %}
+        {% assign lesson_base_url = '/' | append: page.route | append: '/' | append: page.lesson_id | append: '/' %}
+        <nav class="cla-lesson-nav" aria-label="Navegación de la lección">
+          {% if lesson_position > 0 and previous_file %}
+            <a href="{{ lesson_base_url | append: previous_file | append: '/' | relative_url }}">← Anterior</a>
+          {% endif %}
+          {% if lesson_position < last_position and next_file %}
+            <a href="{{ lesson_base_url | append: next_file | append: '/' | relative_url }}">Siguiente →</a>
+          {% endif %}
+        </nav>
+        {% endif %}
+
+        <div class="cla-page-meta">
+          <span>{{ site.data.build.version }}</span>
+          <span>{{ site.data.build.branch }}</span>
+          <span>{{ site.data.build.commit }}</span>
+          <a href="{{ site.academy.repository }}/commits/{{ site.data.build.branch }}">Ver cambios</a>
+        </div>
+      </article>
+
+      <aside class="cla-lesson-index" aria-label="Índice de esta página">
+        <strong>En esta lección</strong>
+        {% if page.lesson_file %}
+        <div class="cla-lesson-position">
+          <span>APARTADO {{ lesson_position | plus: 1 }} DE {{ lesson_files.size }}</span>
+          <strong>{{ page.title }}</strong>
+          {% if next_file and next_lesson_title %}
+          <a href="{{ lesson_base_url | append: next_file | append: '/' | relative_url }}">Después: {{ next_lesson_title }} →</a>
+          {% else %}
+          <span>Último apartado</span>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if page_lessons %}
+        <ol>
+          {% for item in page_lessons %}
+          <li><a href="#{{ item.id }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ol>
+        {% endif %}
+      </aside>
+    </div>
+  </div>
+</section>
+</main>

@@ -1,0 +1,51 @@
+intro: >-
+  CodeLearn Academy utiliza iconos y logotipos de terceros únicamente con fines educativos e identificativos.
+  Las marcas pertenecen a sus respectivos propietarios.
+sources:
+  - name: Devicon
+    url: https://github.com/devicons/devicon
+    license: MIT
+    used_for:
+      - Java
+      - Angular
+      - TypeScript
+      - JavaScript
+      - MySQL
+      - SQLite
+      - Docker
+  - name: VectorLogoZone
+    url: https://www.vectorlogo.zone/
+    license: Ver condiciones del proyecto original y de cada marca
+    used_for:
+      - Spring
+      - Git
+trademarks:
+  - name: Java
+    owner: Oracle Corporation
+  - name: Spring
+    owner: Broadcom / VMware
+  - name: Angular
+    owner: Google LLC
+  - name: TypeScript
+    owner: Microsoft Corporation
+  - name: JavaScript
+    owner: Oracle Corporation
+  - name: MySQL
+    owner: Oracle Corporation
+  - name: SQLite
+    owner: SQLite Consortium / dominio público según el proyecto SQLite
+  - name: Docker
+    owner: Docker Inc.
+  - name: Git
+    owner: Software Freedom Conservancy
+notice: >-
+  Los logotipos se sirven localmente para mejorar rendimiento, disponibilidad y control del sitio.
+  Su inclusión no implica afiliación, patrocinio ni aprobación por parte de los propietarios de las marcas.
+  
+branding:
+  name: CodeLearn Academy
+  license: Propietario del proyecto
+  used_for:
+    - logo.svg
+    - logo-symbol.svg
+    - favicon.svg

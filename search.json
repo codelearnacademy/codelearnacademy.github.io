@@ -1,0 +1,21 @@
+---
+layout: null
+---
+[
+{% assign first = true %}
+{% for p in site.pages %}
+  {% unless p.url == '/search.json' %}
+    {% if p.title or p.search_title %}
+      {% unless first %},{% endunless %}
+      {% assign first = false %}
+      {
+        "title": {{ p.search_title | default: p.title | jsonify }},
+        "url": {{ p.url | relative_url | jsonify }},
+        "description": {{ p.search_description | default: p.description | default: site.academy.tagline | jsonify }},
+        "tags": {{ p.tags | default: empty | jsonify }},
+        "content": {{ p.content | markdownify | strip_html | normalize_whitespace | truncate: 900 | jsonify }}
+      }
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+]

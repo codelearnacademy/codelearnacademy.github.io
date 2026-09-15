@@ -1,0 +1,9 @@
+colors:
+  primary: '#0B63CE'
+  primary_dark: '#063A78'
+  primary_soft: '#EAF3FF'
+  text: '#0F172A'
+  muted: '#526177'
+  border: '#D9E2EF'
+  surface: '#FFFFFF'
+  surface_soft: '#F7FAFE'

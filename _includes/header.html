@@ -1,0 +1,20 @@
+{% assign branding = site.data.branding %}
+<header class="cla-header">
+  <div class="cla-container cla-header-inner">
+    <a class="cla-logo" href="{{ '/' | relative_url }}" aria-label="{{ branding.name | default: site.academy.title | default: site.title }}">
+      <img src="{{ branding.logo | default: site.academy.logo | default: '/assets/images/branding/logo.svg' | relative_url }}" alt="{{ branding.name | default: site.academy.title | default: site.title }}" width="{{ branding.logo_width | default: 248 }}" height="{{ branding.logo_height | default: 48 }}">
+    </a>
+
+    <nav class="cla-nav" aria-label="Navegación principal">
+      {% for item in site.data.navigation.main %}
+        <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+      {% endfor %}
+      
+    </nav>
+
+    <div class="cla-search" role="search">
+      <input id="cla-search-input" type="search" placeholder="Buscar contenido..." autocomplete="off" aria-label="Buscar contenido" data-search-index="{{ '/search.json' | relative_url }}">
+      <div id="cla-search-results" class="cla-search-results" aria-live="polite"></div>
+    </div>
+  </div>
+</header>

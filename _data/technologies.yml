@@ -1,0 +1,113 @@
+java:
+  name: Java
+  icon: /assets/images/technologies/java-original.svg
+  source: Devicon
+  description: Lenguaje principal para aprender fundamentos, POO y buenas prácticas.
+
+spring:
+  name: Spring
+  icon: /assets/images/technologies/springio-icon.svg
+  source: VectorLogoZone
+  description: Framework para construir aplicaciones backend modernas.
+
+angular:
+  name: Angular
+  icon: /assets/images/technologies/angular-original.svg
+  source: Devicon
+  description: Framework para construir aplicaciones web con TypeScript.
+
+typescript:
+  name: TypeScript
+  icon: /assets/images/technologies/typescript-original.svg
+  source: Devicon
+  description: JavaScript con tipado estático para aplicaciones mantenibles.
+
+javascript:
+  name: JavaScript
+  icon: /assets/images/technologies/javascript-original.svg
+  source: Devicon
+  description: Lenguaje base de la web moderna.
+
+sql:
+  name: SQL
+  icon: /assets/images/technologies/mysql-original.svg
+  source: Devicon
+  description: Lenguaje para consultar y modelar bases de datos relacionales.
+
+sqlite:
+  name: SQLite
+  icon: /assets/images/technologies/sqlite-original.svg
+  source: Devicon
+  description: Base de datos ligera para prácticas y proyectos locales.
+
+git:
+  name: Git
+  icon: /assets/images/technologies/git-scm-icon.svg
+  source: VectorLogoZone
+  description: Control de versiones para gestionar cambios del código.
+
+docker:
+  name: Docker
+  icon: /assets/images/technologies/docker-original.svg
+  source: Devicon
+  description: Contenedores para crear entornos reproducibles.
+
+testing:
+  name: Testing
+  icon: /assets/images/technologies/testing-icon.svg
+  source: CodeLearn Academy
+  description: Pruebas automatizadas para validar el comportamiento del software.
+
+algoritmia:
+  name: Algoritmia
+  icon: /assets/images/technologies/algoritmia-icon.svg
+  source: CodeLearn Academy
+  description: Resolución de problemas mediante algoritmos, diagramas de flujo, pseudocódigo y estructuras de control.  
+
+git:
+  name: Git
+  icon: /assets/images/technologies/git-scm-icon.svg
+  source: VectorLogoZone
+  description: Control de versiones para gestionar cambios del código.
+
+maven:
+  name: Maven
+  icon: /assets/images/technologies/maven-icon.svg
+  source: VectorLogoZone
+  description: Gestor de dependencias y construcción para proyectos Java.
+
+architecture:
+  name: Arquitectura
+  icon: /assets/images/technologies/architecture.svg
+  source: CodeLearn Academy
+  description: Organización del software, capas, responsabilidades y mantenibilidad.
+
+ficheros:
+  name: Ficheros
+  icon: /assets/images/technologies/ficheros-icon.svg
+  source: CodeLearn Academy
+  description: Lectura, escritura y transformación de datos en properties, CSV, JSON y XML desde Java.
+
+software:
+  name: Software y metodologías
+  icon: /assets/images/technologies/software-icon.svg
+  source: CodeLearn Academy
+  description: Ciclo de vida del software, procesos, requisitos, planificación, calidad y evolución.
+
+agile:
+  name: Agile
+  icon: /assets/images/technologies/agile-icon.svg
+  source: Agile Manifesto
+  description: Valores y principios para desarrollar software con colaboración, entrega frecuente y adaptación.
+
+scrum:
+  name: Scrum
+  icon: /assets/images/technologies/scrum-icon.svg
+  source: Scrum
+  description: Marco iterativo e incremental basado en Sprints, Product Backlog, inspección y adaptación.
+
+kanban:
+  name: Kanban
+  icon: /assets/images/technologies/kanban-icon.svg
+  source: Kanban
+  description: Gestión visual del flujo mediante políticas explícitas y límites de trabajo en progreso.

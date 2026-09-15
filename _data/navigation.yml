@@ -1,0 +1,15 @@
+main:
+  - label: Inicio
+    url: /
+  - label: Rutas
+    url: /#rutas
+  - label: Programaciones
+    url: /1-dam/
+  - label: Documentación
+    url: /documentacion/java/
+  - label: Referencias
+    url: /referencias/java/
+  - label: Acerca de
+    url: /about/
+  - label: Licencias
+    url: /licencias/

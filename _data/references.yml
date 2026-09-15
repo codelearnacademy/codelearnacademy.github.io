@@ -1,0 +1,7 @@
+java:
+  - title: Comandos básicos de Java
+    url: /referencias/java/comandos/
+    description: Comprobación del JDK, compilación y ejecución.
+  - title: Plataforma Java
+    url: /documentacion/java/plataforma/
+    description: JDK, JVM, JRE y versiones LTS.

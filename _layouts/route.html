@@ -1,0 +1,63 @@
+---
+layout: academy
+---
+{% assign route = site.data.routes[page.route] %}
+{% assign tech = site.data.technologies[route.technology] %}
+
+<main class="cla-main">
+<section class="cla-route-hero">
+  <div class="cla-container">
+    <div class="cla-breadcrumb">
+      <a href="{{ '/' | relative_url }}">Inicio</a>
+      <span>›</span>
+      <span>{{ site.academy.routes_label | default: 'Rutas' }}</span>
+      <span>›</span>
+      <span>{{ route.title }}</span>
+    </div>
+
+    <div class="cla-route-heading">
+      <div class="cla-route-icon">
+        <img src="{{ tech.icon | relative_url }}" alt="{{ tech.name }}" width="82" height="82">
+      </div>
+      <div>
+        <span class="cla-badge">{{ route.level | default: 'Ruta' }}</span>
+        <h1>{{ route.title }}</h1>
+        <p>{{ route.description }}</p>
+      </div>
+    </div>
+
+    <div class="cla-route-meta">
+      <div><strong>{{ route.lessons | size }}</strong><span>{{ site.academy.lessons_label | default: 'Lecciones' }}</span></div>
+      <div><strong>{{ route.project }}</strong><span>Proyecto</span></div>
+      <div><strong>{{ route.exam }}</strong><span>Examen</span></div>
+      <div><strong>{{ route.level }}</strong><span>Tipo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cla-section">
+  <div class="cla-container">
+    {{ content }}
+
+    <section class="cla-block">
+      <h2>{{ site.academy.lessons_label | default: 'Lecciones' }}</h2>
+      <div class="cla-lesson-list">
+        {% for lesson in route.lessons %}
+        <a class="cla-lesson-row" href="{{ lesson.url | relative_url }}">
+          <span>{{ lesson.number }}</span>
+          <strong>{{ lesson.title }}</strong>
+          <em>›</em>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if route.project_description %}
+    <section class="cla-project-box">
+      <strong>Proyecto final</strong>
+      <p>{{ route.project_description }}</p>
+    </section>
+    {% endif %}
+  </div>
+</section>
+</main>

@@ -1,0 +1,83 @@
+---
+layout: lesson
+route: testing
+lesson_id: leccion88
+lesson_file: 88-testing-de-spring-boot-con-mockito-mockmvc-y-tests-de-integracion
+lesson_number: "88"
+title: Testing de Spring Boot con Mockito, MockMvc y tests de integración
+description: Bloque «Testing de infraestructura y proyecto final». Trabaja el concepto desde Java 21 y llévalo siempre al build reproducible de Maven.
+permalink: /testing/leccion88/
+lessons:
+  - id: qué-vas-a-conseguir
+    title: Qué vas a conseguir
+  - id: punto-de-partida
+    title: Punto de partida
+  - id: conceptos-clave
+    title: Conceptos clave
+  - id: ejemplo-guiado
+    title: Ejemplo guiado
+  - id: integración-con-maven
+    title: Integración con Maven
+  - id: ejercicios-propuestos
+    title: Ejercicios propuestos
+  - id: qué-debes-recordar
+    title: Qué debes recordar
+---
+
+# Testing de Spring Boot con Mockito, MockMvc y tests de integración
+
+Bloque «Testing de infraestructura y proyecto final». Trabaja el concepto desde Java 21 y llévalo siempre al build reproducible de Maven.
+
+## Qué vas a conseguir
+
+- Comprender **Testing de Spring Boot con Mockito, MockMvc y tests de integración**.
+- Aplicarlo con Java 21.
+- Relacionarlo con el lifecycle y los plugins Maven.
+- Saber qué evidencia revisar cuando el build falla.
+
+## Punto de partida
+
+```text
+Java 21 → JUnit/Mockito → Surefire → Failsafe → JaCoCo → quality gates → mvn verify
+```
+
+## Conceptos clave
+
+- **@TempDir**
+- **Testcontainers**
+- **CI**
+- **quality gate**
+
+## Ejemplo guiado
+
+```text
+Spring: Service con JUnit/Mockito; Controller con MockMvc; Repository con Testcontainers; @SpringBootTest solo cuando haga falta.
+```
+
+
+
+## Integración con Maven
+
+Pregunta siempre: ¿es dependencia o plugin?, ¿en qué fase actúa?, ¿genera reportes?, ¿puede producir BUILD FAILURE?, ¿se ejecutará igual en CI?
+
+JUnit, Mockito y AssertJ son dependencias de test. Surefire, Failsafe y JaCoCo son plugins Maven que participan en el build.
+
+## Ejercicios propuestos
+
+1. Reproduce el ejemplo desde Maven, no solo desde el IDE.
+2. Provoca un fallo deliberado y localiza el mensaje útil.
+3. Añade un caso límite o camino alternativo.
+4. Clasifica la prueba por nivel: unit, integration, system o E2E.
+5. Explica qué debería ocurrir en CI si esta comprobación falla.
+
+## Qué debes recordar
+
+- Maven convierte las pruebas en una regla reproducible del proyecto.
+- `mvn test` y `mvn verify` no significan lo mismo.
+- Coverage y complejidad son señales; no sustituyen el razonamiento.
+- El objetivo final es que `./mvnw clean verify` represente la definición automática de calidad.
+
+<div class="cla-lesson-nav">
+  <a href="/testing/leccion87/">← 87 · Testing de persistencia con PostgreSQL y Testcontainers</a>
+  <a href="/testing/leccion89/">89 · Testing automático en GitHub Actions y GitLab CI →</a>
+</div>

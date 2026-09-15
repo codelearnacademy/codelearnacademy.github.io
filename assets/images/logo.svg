@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="690"
+     height="180"
+     viewBox="0 0 690 180">
+  <defs>
+    <style>
+      .blue{stroke:#2563EB;fill:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+      .dark{fill:#0F172A}
+      .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-weight:800;font-size:62px}
+      .sub{font-family:Inter,Segoe UI,Arial,sans-serif;font-weight:700;font-size:42px}
+      .mono{font-family:"JetBrains Mono","Fira Code",Consolas,monospace;font-weight:700;font-size:82px}
+    </style>
+  </defs>
+
+  <!-- Isotipo -->
+  <path class="blue" d="M62 34 C42 34 30 46 30 66 V76 C30 88 22 96 10 96 C22 96 30 104 30 116 V126 C30 146 42 158 62 158"/>
+  <path class="blue" d="M138 34 C158 34 170 46 170 66 V76 C170 88 178 96 190 96 C178 96 170 104 170 116 V126 C170 146 158 158 138 158"/>
+  <text x="100" y="121" text-anchor="middle" class="mono" fill="#0F172A">a</text>
+
+  <!-- Texto -->
+  <text x="220" y="84" class="title dark">CodeLearn</text>
+  <text x="220" y="138" class="sub" fill="#2563EB">Academy</text>
+</svg>

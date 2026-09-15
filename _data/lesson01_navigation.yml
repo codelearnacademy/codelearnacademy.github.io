@@ -1,0 +1,36 @@
+01-bienvenida:
+  title: Bienvenido
+02-que-es-java:
+  title: ¿Qué es Java?
+03-historia:
+  title: Historia
+04-caracteristicas:
+  title: Características
+05-versiones-java:
+  title: Versiones
+06-java-lts:
+  title: Java LTS
+07-jvm:
+  title: JVM
+08-bytecode:
+  title: Bytecode
+09-jdk:
+  title: JDK
+10-jre:
+  title: JRE
+11-openjdk:
+  title: OpenJDK
+12-instalacion:
+  title: Instalación
+13-primer-programa:
+  title: Tu primer programa
+14-compilacion:
+  title: Compilación
+15-resumen:
+  title: Resumen
+16-preguntas-oracle:
+  title: Preguntas Oracle
+17-preguntas-trampa:
+  title: Preguntas trampa
+18-ejercicios:
+  title: Ejercicios

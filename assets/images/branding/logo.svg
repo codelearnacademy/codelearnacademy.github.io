@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="760" height="160" viewBox="0 0 760 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>CodeLearn Academy logo</title>
+  <desc>Logotipo horizontal con isotipo {a} y texto CodeLearn Academy.</desc>
+
+  <g transform="translate(16 16) scale(0.25)">
+    <rect width="512" height="512" rx="96" fill="#F8FAFC"/>
+    <path d="M174 128 C134 128 112 150 112 190 V213 C112 236 96 256 72 256 C96 256 112 276 112 299 V322 C112 362 134 384 174 384"
+          stroke="#2563EB" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M338 128 C378 128 400 150 400 190 V213 C400 236 416 256 440 256 C416 256 400 276 400 299 V322 C400 362 378 384 338 384"
+          stroke="#2563EB" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="256" y="294" text-anchor="middle"
+          font-family="JetBrains Mono, Fira Code, Consolas, Menlo, monospace"
+          font-size="154" font-weight="700" fill="#0F172A">a</text>
+  </g>
+
+  <text x="172" y="76"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="44"
+        font-weight="800"
+        fill="#0F172A">CodeLearn</text>
+
+  <text x="172" y="118"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="34"
+        font-weight="600"
+        fill="#2563EB">Academy</text>
+</svg>

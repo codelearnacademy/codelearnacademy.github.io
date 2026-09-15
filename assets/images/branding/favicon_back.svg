@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">CodeLearn Academy symbol</title>
+  <desc id="desc">Open book with terminal prompt symbol.</desc>
+  <defs>
+    <linearGradient id="claBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B7CFF"/>
+      <stop offset="1" stop-color="#0B4DBA"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 35v62c13-8 30-10 48 2V31C47 21 29 23 16 35z" stroke="#062B5F" stroke-width="8"/>
+    <path d="M112 35v62c-13-8-30-10-48 2V31c17-10 35-8 48 4z" stroke="#062B5F" stroke-width="8"/>
+    <path d="M24 43v45c12-5 25-4 40 7" stroke="#062B5F" stroke-width="5" opacity=".28"/>
+    <path d="M104 43v45c-12-5-25-4-40 7" stroke="#062B5F" stroke-width="5" opacity=".28"/>
+    <path d="M47 55 34 68l13 13" stroke="url(#claBlue)" stroke-width="8"/>
+    <path d="M81 55 94 68 81 81" stroke="url(#claBlue)" stroke-width="8"/>
+    <path d="M70 52 58 84" stroke="url(#claBlue)" stroke-width="8"/>
+  </g>
+  <g fill="url(#claBlue)">
+    <rect x="84" y="16" width="12" height="12" rx="2"/>
+    <rect x="98" y="8" width="9" height="9" rx="2" opacity=".9"/>
+    <rect x="100" y="28" width="10" height="10" rx="2" opacity=".75"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% assign branding = site.data.branding %}
+{% assign theme = site.data.theme.colors %}
+{% assign page_title = page.title | default: site.seo.title | default: site.academy.title | default: site.title %}
+{% assign site_title = branding.name | default: site.academy.title | default: site.title %}
+{% assign asset_version = site.data.build.commit %}
+{% if asset_version == nil or asset_version == 'local' %}{% assign asset_version = site.time | date: '%s' %}{% endif %}
+<title>{% if page.title %}{{ page_title }} · {{ site_title }}{% else %}{{ site_title }}{% endif %}</title>
+<meta name="description" content="{{ page.search_description | default: page.description | default: site.seo.description | default: site.academy.tagline | escape }}">
+<link rel="icon" type="image/svg+xml" href="{{ branding.favicon | default: site.academy.favicon | default: '/assets/images/branding/favicon.svg' | relative_url }}">
+<link rel="preload" href="{{ '/assets/css/academy.css' | relative_url }}?v={{ asset_version }}" as="style">
+<link rel="stylesheet" href="{{ '/assets/css/academy.css' | relative_url }}?v={{ asset_version }}">
+<style>
+  :root {
+    --cla-primary: {{ theme.primary | default: '#0B63CE' }};
+    --cla-primary-dark: {{ theme.primary_dark | default: '#063A78' }};
+    --cla-primary-soft: {{ theme.primary_soft | default: '#EAF3FF' }};
+    --cla-text: {{ theme.text | default: '#0F172A' }};
+    --cla-muted: {{ theme.muted | default: '#526177' }};
+    --cla-border: {{ theme.border | default: '#D9E2EF' }};
+    --cla-surface: {{ theme.surface | default: '#FFFFFF' }};
+    --cla-surface-2: {{ theme.surface_soft | default: '#F7FAFE' }};
+  }
+</style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page.search_description | default: page.description | default: site.seo.description | default: site.academy.tagline | escape }}">
+<meta property="og:image" content="{{ site.seo.image | default: branding.symbol | default: site.academy.hero_icon | relative_url }}">

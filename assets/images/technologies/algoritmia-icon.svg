@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Algoritmia</title>
+  <desc id="desc">Icono de diagrama de flujo con inicio, proceso, decisión y ramificación</desc>
+
+  <g fill="none" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Inicio -->
+    <rect x="24" y="4" width="16" height="9" rx="4.5" fill="#eff6ff"/>
+
+    <!-- Flujo hacia proceso -->
+    <path d="M32 13v6"/>
+    <path d="m29.5 17 2.5 2.5 2.5-2.5"/>
+
+    <!-- Proceso -->
+    <rect x="20" y="20" width="24" height="10" rx="2.5" fill="#eff6ff"/>
+
+    <!-- Flujo hacia decisión -->
+    <path d="M32 30v5"/>
+    <path d="m29.5 33 2.5 2.5 2.5-2.5"/>
+
+    <!-- Decisión -->
+    <path d="M32 36 42 44 32 52 22 44Z" fill="#eff6ff"/>
+
+    <!-- Ramas -->
+    <path d="M22 44H12v8"/>
+    <path d="m9.5 49.5 2.5 2.5 2.5-2.5"/>
+    <path d="M42 44h10v8"/>
+    <path d="m49.5 49.5 2.5 2.5 2.5-2.5"/>
+
+    <!-- Resultados -->
+    <rect x="6" y="53" width="12" height="7" rx="2" fill="#eff6ff"/>
+    <rect x="46" y="53" width="12" height="7" rx="2" fill="#eff6ff"/>
+  </g>
+</svg>

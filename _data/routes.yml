@@ -1,0 +1,2022 @@
+java:
+  title: Java
+  short_title: Java
+  technology: java
+  level: Ruta
+  url: /java/
+  status: published
+  description: Fundamentos del lenguaje, programación orientada a objetos y buenas prácticas de desarrollo.
+  project: Sí
+  exam: Opcional
+  project_description: Desarrollarás una aplicación de consola completa integrando todos los conocimientos adquiridos.
+  technologies:
+    - java
+    - sqlite
+    - git
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: Introducción a Java
+      url: /java/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Fundamentos de Java
+      url: /java/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Estructuras de control
+      url: /java/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Organización de clases
+      url: /java/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Entrada y salida
+      url: /java/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Colecciones y tipos avanzados
+      url: /java/leccion06/
+    - id: leccion07
+      number: "07"
+      title: Herencia e interfaces
+      url: /java/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Persistencia con SQLite
+      url: /java/leccion08/
+
+spring:
+  title: Spring y Spring Boot
+  short_title: Spring
+  technology: spring
+  level: Ruta
+  url: /spring/
+  status: published
+  description: Spring Framework, Spring Boot, inyección de dependencias, MVC, Tomcat, persistencia, testing, Docker y CI/CD.
+  project: Sí
+  exam: Sí
+  technologies:
+    - java
+    - spring
+    - maven
+    - sql
+    - git
+    - docker
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: De Java tradicional a aplicaciones empresariales
+      url: /spring/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Acoplamiento entre clases
+      url: /spring/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Inversión de Control
+      url: /spring/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Inyección de dependencias
+      url: /spring/leccion04/
+    - id: leccion05
+      number: "05"
+      title: IoC, DI y DIP no son lo mismo
+      url: /spring/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Qué es Spring Framework
+      url: /spring/leccion06/
+    - id: leccion07
+      number: "07"
+      title: El ecosistema Spring
+      url: /spring/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Spring Framework frente a Spring Boot
+      url: /spring/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Historia de Spring y Spring Boot
+      url: /spring/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Spring 6 y Spring Boot 3
+      url: /spring/leccion10/
+    - id: leccion11
+      number: "11"
+      title: Spring 7 y Spring Boot 4
+      url: /spring/leccion11/
+    - id: leccion12
+      number: "12"
+      title: Cómo interpretar las versiones
+      url: /spring/leccion12/
+    - id: leccion13
+      number: "13"
+      title: Incorporar Spring con Maven
+      url: /spring/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Maven no hace Dependency Injection
+      url: /spring/leccion14/
+    - id: leccion15
+      number: "15"
+      title: Dependencias transitivas de Spring
+      url: /spring/leccion15/
+    - id: leccion16
+      number: "16"
+      title: Spring Boot Starter Parent y BOM
+      url: /spring/leccion16/
+    - id: leccion17
+      number: "17"
+      title: Starters de Spring Boot
+      url: /spring/leccion17/
+    - id: leccion18
+      number: "18"
+      title: ApplicationContext
+      url: /spring/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Beans
+      url: /spring/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Etiqueta Configuration y Etiqueta Bean
+      url: /spring/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Component scanning
+      url: /spring/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Constructor injection
+      url: /spring/leccion22/
+    - id: leccion23
+      number: "23"
+      title: Varias implementaciones, Etiqueta Qualifier y Etiqueta Primary
+      url: /spring/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Scopes de los beans
+      url: /spring/leccion24/
+    - id: leccion25
+      number: "25"
+      title: Ciclo de vida del bean
+      url: /spring/leccion25/
+    - id: leccion26
+      number: "26"
+      title: Qué problema resuelve Spring Boot
+      url: /spring/leccion26/
+    - id: leccion27
+      number: "27"
+      title: Crear el primer proyecto Spring Boot
+      url: /spring/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Etiqueta SpringBootApplication
+      url: /spring/leccion28/
+    - id: leccion29
+      number: "29"
+      title: Auto-configuración
+      url: /spring/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Convention over configuration
+      url: /spring/leccion30/
+    - id: leccion31
+      number: "31"
+      title: application.properties y YAML
+      url: /spring/leccion31/
+    - id: leccion32
+      number: "32"
+      title: Profiles
+      url: /spring/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Qué ocurre cuando llega una petición HTTP
+      url: /spring/leccion33/
+    - id: leccion34
+      number: "34"
+      title: Etiqueta Controller frente a Etiqueta RestController
+      url: /spring/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Etiqueta RequestMapping
+      url: /spring/leccion35/
+    - id: leccion36
+      number: "36"
+      title: GET
+      url: /spring/leccion36/
+    - id: leccion37
+      number: "37"
+      title: POST
+      url: /spring/leccion37/
+    - id: leccion38
+      number: "38"
+      title: Path variables
+      url: /spring/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Query parameters
+      url: /spring/leccion39/
+    - id: leccion40
+      number: "40"
+      title: Request body y JSON
+      url: /spring/leccion40/
+    - id: leccion41
+      number: "41"
+      title: DTOs
+      url: /spring/leccion41/
+    - id: leccion42
+      number: "42"
+      title: Códigos de estado HTTP
+      url: /spring/leccion42/
+    - id: leccion43
+      number: "43"
+      title: ResponseEntity
+      url: /spring/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Manejo global de errores
+      url: /spring/leccion44/
+    - id: leccion45
+      number: "45"
+      title: Validación
+      url: /spring/leccion45/
+    - id: leccion46
+      number: "46"
+      title: Qué es Tomcat
+      url: /spring/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Tomcat embebido
+      url: /spring/leccion47/
+    - id: leccion48
+      number: "48"
+      title: ¿Quién arranca a quién?
+      url: /spring/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Cambiar Tomcat por otro servidor
+      url: /spring/leccion49/
+    - id: leccion50
+      number: "50"
+      title: JAR ejecutable
+      url: /spring/leccion50/
+    - id: leccion51
+      number: "51"
+      title: WAR tradicional
+      url: /spring/leccion51/
+    - id: leccion52
+      number: "52"
+      title: Tomcat 10 frente a Tomcat 11
+      url: /spring/leccion52/
+    - id: leccion53
+      number: "53"
+      title: Controller, Service y Repository
+      url: /spring/leccion53/
+    - id: leccion54
+      number: "54"
+      title: Responsabilidad del Controller
+      url: /spring/leccion54/
+    - id: leccion55
+      number: "55"
+      title: Responsabilidad del Service
+      url: /spring/leccion55/
+    - id: leccion56
+      number: "56"
+      title: Responsabilidad del Repository
+      url: /spring/leccion56/
+    - id: leccion57
+      number: "57"
+      title: Dependency Injection entre capas
+      url: /spring/leccion57/
+    - id: leccion58
+      number: "58"
+      title: Interfaces y desacoplamiento
+      url: /spring/leccion58/
+    - id: leccion59
+      number: "59"
+      title: Spring JDBC, JPA y Spring Data JPA
+      url: /spring/leccion59/
+    - id: leccion60
+      number: "60"
+      title: Añadir PostgreSQL mediante Maven
+      url: /spring/leccion60/
+    - id: leccion61
+      number: "61"
+      title: Configurar DataSource
+      url: /spring/leccion61/
+    - id: leccion62
+      number: "62"
+      title: Entidades JPA
+      url: /spring/leccion62/
+    - id: leccion63
+      number: "63"
+      title: Identificadores
+      url: /spring/leccion63/
+    - id: leccion64
+      number: "64"
+      title: Repositories
+      url: /spring/leccion64/
+    - id: leccion65
+      number: "65"
+      title: Relaciones entre entidades
+      url: /spring/leccion65/
+    - id: leccion66
+      number: "66"
+      title: Transacciones
+      url: /spring/leccion66/
+    - id: leccion67
+      number: "67"
+      title: Migraciones de base de datos
+      url: /spring/leccion67/
+    - id: leccion68
+      number: "68"
+      title: Configuración externa
+      url: /spring/leccion68/
+    - id: leccion69
+      number: "69"
+      title: Profiles de desarrollo, test y producción
+      url: /spring/leccion69/
+    - id: leccion70
+      number: "70"
+      title: Variables de entorno
+      url: /spring/leccion70/
+    - id: leccion71
+      number: "71"
+      title: Secretos
+      url: /spring/leccion71/
+    - id: leccion72
+      number: "72"
+      title: Etiqueta ConfigurationProperties
+      url: /spring/leccion72/
+    - id: leccion73
+      number: "73"
+      title: Testing de servicios
+      url: /spring/leccion73/
+    - id: leccion74
+      number: "74"
+      title: Testing del contexto Spring
+      url: /spring/leccion74/
+    - id: leccion75
+      number: "75"
+      title: Testing MVC
+      url: /spring/leccion75/
+    - id: leccion76
+      number: "76"
+      title: Testing del Repository
+      url: /spring/leccion76/
+    - id: leccion77
+      number: "77"
+      title: Tests de integración
+      url: /spring/leccion77/
+    - id: leccion78
+      number: "78"
+      title: Testcontainers
+      url: /spring/leccion78/
+    - id: leccion79
+      number: "79"
+      title: Autenticación y autorización
+      url: /spring/leccion79/
+    - id: leccion80
+      number: "80"
+      title: Introducción a Spring Security
+      url: /spring/leccion80/
+    - id: leccion81
+      number: "81"
+      title: Password hashing
+      url: /spring/leccion81/
+    - id: leccion82
+      number: "82"
+      title: Autenticación para APIs
+      url: /spring/leccion82/
+    - id: leccion83
+      number: "83"
+      title: Logging
+      url: /spring/leccion83/
+    - id: leccion84
+      number: "84"
+      title: Spring Boot Actuator
+      url: /spring/leccion84/
+    - id: leccion85
+      number: "85"
+      title: Métricas con Micrometer
+      url: /spring/leccion85/
+    - id: leccion86
+      number: "86"
+      title: Healthchecks
+      url: /spring/leccion86/
+    - id: leccion87
+      number: "87"
+      title: Configuración para producción
+      url: /spring/leccion87/
+    - id: leccion88
+      number: "88"
+      title: Dockerizar un Spring Boot JAR
+      url: /spring/leccion88/
+    - id: leccion89
+      number: "89"
+      title: Dockerfile multi-stage
+      url: /spring/leccion89/
+    - id: leccion90
+      number: "90"
+      title: Spring Boot + PostgreSQL con Compose
+      url: /spring/leccion90/
+    - id: leccion91
+      number: "91"
+      title: Variables de entorno en Docker
+      url: /spring/leccion91/
+    - id: leccion92
+      number: "92"
+      title: Profiles dentro del contenedor
+      url: /spring/leccion92/
+    - id: leccion93
+      number: "93"
+      title: Healthcheck de Spring
+      url: /spring/leccion93/
+    - id: leccion94
+      number: "94"
+      title: Spring Boot y Cloud Native Buildpacks
+      url: /spring/leccion94/
+    - id: leccion95
+      number: "95"
+      title: Spring dentro del flujo Git
+      url: /spring/leccion95/
+    - id: leccion96
+      number: "96"
+      title: CI para Spring Boot
+      url: /spring/leccion96/
+    - id: leccion97
+      number: "97"
+      title: Construcción de imagen
+      url: /spring/leccion97/
+    - id: leccion98
+      number: "98"
+      title: Publicar en un registry
+      url: /spring/leccion98/
+    - id: leccion99
+      number: "99"
+      title: CD, desplegar una versión
+      url: /spring/leccion99/
+    - id: leccion100
+      number: "100"
+      title: AOP
+      url: /spring/leccion100/
+    - id: leccion101
+      number: "101"
+      title: Proxies de Spring
+      url: /spring/leccion101/
+    - id: leccion102
+      number: "102"
+      title: Eventos
+      url: /spring/leccion102/
+    - id: leccion103
+      number: "103"
+      title: Scheduling
+      url: /spring/leccion103/
+    - id: leccion104
+      number: "104"
+      title: Cache
+      url: /spring/leccion104/
+    - id: leccion105
+      number: "105"
+      title: Clientes HTTP
+      url: /spring/leccion105/
+    - id: leccion106
+      number: "106"
+      title: Spring MVC frente a WebFlux
+      url: /spring/leccion106/
+    - id: leccion107
+      number: "107"
+      title: Proyecto final · Plataforma de gestión de tareas
+      url: /spring/leccion107/
+
+sql:
+  title: SQL
+  short_title: SQL
+  technology: sql
+  level: Ruta
+  url: /sql/
+  status: draft
+  description: Consultas, joins, agrupaciones y diseño de bases de datos relacionales.
+  project: Sí
+  exam: No
+  technologies:
+    - sql
+    - sqlite
+  lessons: []
+
+angular:
+  title: Angular
+  short_title: Angular
+  technology: angular
+  level: Ruta
+  url: /angular/
+  status: draft
+  description: Componentes, servicios, routing, formularios reactivos y consumo de APIs REST.
+  project: Sí
+  exam: No
+  technologies:
+    - angular
+    - typescript
+    - git
+  lessons: []
+
+typescript:
+  title: TypeScript
+  short_title: TypeScript
+  technology: typescript
+  level: Ruta
+  url: /typescript/
+  status: draft
+  description: Tipado estático, patrones de diseño y JavaScript moderno para aplicaciones mantenibles.
+  project: Sí
+  exam: No
+  technologies:
+    - typescript
+    - git
+  lessons: []
+
+docker:
+  title: Docker y entornos reproducibles
+  short_title: Docker
+  technology: docker
+  level: Ruta
+  url: /docker/
+  status: published
+  description: Contenedores, imágenes, redes, persistencia, Docker Compose e integración CI/CD para aplicaciones modernas.
+  project: Sí
+  exam: No
+  technologies:
+    - docker
+    - git
+    - maven
+    - java
+    - spring
+    - angular
+    - sql
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: De una aplicación local a un entorno reproducible
+      url: /docker/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Qué es un contenedor
+      url: /docker/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Contenedores frente a máquinas virtuales
+      url: /docker/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Docker dentro del ecosistema de contenedores
+      url: /docker/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Instalación y entorno Docker
+      url: /docker/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Primer contenedor
+      url: /docker/leccion06/
+    - id: leccion07
+      number: "07"
+      title: Primer servidor web
+      url: /docker/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Ciclo de vida de contenedores
+      url: /docker/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Imagen frente a contenedor
+      url: /docker/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Trabajar con imágenes
+      url: /docker/leccion10/
+    - id: leccion11
+      number: "11"
+      title: Docker Hub y registries
+      url: /docker/leccion11/
+    - id: leccion12
+      number: "12"
+      title: Tags y versiones
+      url: /docker/leccion12/
+    - id: leccion13
+      number: "13"
+      title: Primer Dockerfile
+      url: /docker/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Anatomía de un Dockerfile
+      url: /docker/leccion14/
+    - id: leccion15
+      number: "15"
+      title: Imágenes base
+      url: /docker/leccion15/
+    - id: leccion16
+      number: "16"
+      title: COPY y contexto de construcción
+      url: /docker/leccion16/
+    - id: leccion17
+      number: "17"
+      title: .dockerignore
+      url: /docker/leccion17/
+    - id: leccion18
+      number: "18"
+      title: CMD y ENTRYPOINT
+      url: /docker/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Capas de una imagen
+      url: /docker/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Caché de construcción
+      url: /docker/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Tamaño de imágenes
+      url: /docker/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Contenerizar un JAR
+      url: /docker/leccion22/
+    - id: leccion23
+      number: "23"
+      title: Maven fuera de Docker
+      url: /docker/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Maven dentro de Docker
+      url: /docker/leccion24/
+    - id: leccion25
+      number: "25"
+      title: Multi-stage builds
+      url: /docker/leccion25/
+    - id: leccion26
+      number: "26"
+      title: Contenedores efímeros
+      url: /docker/leccion26/
+    - id: leccion27
+      number: "27"
+      title: Volúmenes
+      url: /docker/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Bind mounts
+      url: /docker/leccion28/
+    - id: leccion29
+      number: "29"
+      title: Comunicación entre contenedores
+      url: /docker/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Redes Docker
+      url: /docker/leccion30/
+    - id: leccion31
+      number: "31"
+      title: DNS interno
+      url: /docker/leccion31/
+    - id: leccion32
+      number: "32"
+      title: Puertos internos y externos
+      url: /docker/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Aplicaciones multicontenedor
+      url: /docker/leccion33/
+    - id: leccion34
+      number: "34"
+      title: Introducción a Docker Compose
+      url: /docker/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Servicios en Compose
+      url: /docker/leccion35/
+    - id: leccion36
+      number: "36"
+      title: Variables de entorno
+      url: /docker/leccion36/
+    - id: leccion37
+      number: "37"
+      title: Volúmenes con Compose
+      url: /docker/leccion37/
+    - id: leccion38
+      number: "38"
+      title: Redes con Compose
+      url: /docker/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Operaciones con Compose
+      url: /docker/leccion39/
+    - id: leccion40
+      number: "40"
+      title: Logs
+      url: /docker/leccion40/
+    - id: leccion41
+      number: "41"
+      title: Ejecutar comandos dentro de un contenedor
+      url: /docker/leccion41/
+    - id: leccion42
+      number: "42"
+      title: Inspect
+      url: /docker/leccion42/
+    - id: leccion43
+      number: "43"
+      title: Diagnóstico de problemas frecuentes
+      url: /docker/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Usuarios y root
+      url: /docker/leccion44/
+    - id: leccion45
+      number: "45"
+      title: Secretos
+      url: /docker/leccion45/
+    - id: leccion46
+      number: "46"
+      title: Configuración externa
+      url: /docker/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Healthchecks
+      url: /docker/leccion47/
+    - id: leccion48
+      number: "48"
+      title: Recursos y límites
+      url: /docker/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Docker y Git
+      url: /docker/leccion49/
+    - id: leccion50
+      number: "50"
+      title: Flujo Git + Docker
+      url: /docker/leccion50/
+    - id: leccion51
+      number: "51"
+      title: Nombrado de imágenes
+      url: /docker/leccion51/
+    - id: leccion52
+      number: "52"
+      title: Publicar imágenes
+      url: /docker/leccion52/
+    - id: leccion53
+      number: "53"
+      title: Consumir imágenes publicadas
+      url: /docker/leccion53/
+    - id: leccion54
+      number: "54"
+      title: Docker en integración continua
+      url: /docker/leccion54/
+    - id: leccion55
+      number: "55"
+      title: Maven + Docker + CI
+      url: /docker/leccion55/
+    - id: leccion56
+      number: "56"
+      title: Publicación automática
+      url: /docker/leccion56/
+    - id: leccion57
+      number: "57"
+      title: GitHub Actions y GitLab CI
+      url: /docker/leccion57/
+    - id: leccion58
+      number: "58"
+      title: Docker frente a Podman
+      url: /docker/leccion58/
+    - id: leccion59
+      number: "59"
+      title: Docker frente a máquinas virtuales revisitado
+      url: /docker/leccion59/
+    - id: leccion60
+      number: "60"
+      title: Docker y Kubernetes
+      url: /docker/leccion60/
+    - id: leccion61
+      number: "61"
+      title: Proyecto final · Plataforma Java + Spring + Angular + PostgreSQL con CI/CD
+      url: /docker/leccion61/
+
+algoritmia:
+  title: Algoritmia y Fundamentos de Programación
+  short_title: Algoritmia
+  technology: algoritmia
+  level: Ruta
+  url: /algoritmia/
+  status: published
+  description: Algoritmos, diagramas de flujo, pseudocódigo, estructuras de control y resolución lógica de problemas.
+  project: Sí
+  exam: No
+  technologies:
+    - algoritmia
+  lessons:
+    - { id: leccion01, number: "01", title: "Introducción a la algoritmia", url: /algoritmia/leccion01/ }
+    - { id: leccion02, number: "02", title: "Resolución de problemas", url: /algoritmia/leccion02/ }
+    - { id: leccion03, number: "03", title: "Representación de algoritmos", url: /algoritmia/leccion03/ }
+    - { id: leccion04, number: "04", title: "Introducción a los diagramas de flujo", url: /algoritmia/leccion04/ }
+    - { id: leccion05, number: "05", title: "Símbolos y reglas de los diagramas de flujo", url: /algoritmia/leccion05/ }
+    - { id: leccion06, number: "06", title: "Algoritmos secuenciales", url: /algoritmia/leccion06/ }
+    - { id: leccion07, number: "07", title: "Variables, constantes y expresiones", url: /algoritmia/leccion07/ }
+    - { id: leccion08, number: "08", title: "Entrada y salida de datos", url: /algoritmia/leccion08/ }
+    - { id: leccion09, number: "09", title: "Estructuras condicionales", url: /algoritmia/leccion09/ }
+    - { id: leccion10, number: "10", title: "Condicionales múltiples", url: /algoritmia/leccion10/ }
+    - { id: leccion11, number: "11", title: "Estructuras repetitivas", url: /algoritmia/leccion11/ }
+    - { id: leccion12, number: "12", title: "Contadores y acumuladores", url: /algoritmia/leccion12/ }
+    - { id: leccion13, number: "13", title: "Trazado de algoritmos", url: /algoritmia/leccion13/ }
+    - { id: leccion14, number: "14", title: "Pseudocódigo", url: /algoritmia/leccion14/ }
+    - { id: leccion15, number: "15", title: "Subalgoritmos y funciones", url: /algoritmia/leccion15/ }
+    - { id: leccion16, number: "16", title: "Errores frecuentes en algoritmos", url: /algoritmia/leccion16/ }
+    - { id: leccion17, number: "17", title: "Del algoritmo al código", url: /algoritmia/leccion17/ }
+    - { id: leccion18, number: "18", title: "Ejercicios y retos de algoritmia", url: /algoritmia/leccion18/ }
+    - { id: leccion19, number: "19", title: "Proyecto final de algoritmia", url: /algoritmia/leccion19/ }
+
+git:
+  title: Git y repositorios colaborativos
+  short_title: Git
+  technology: git
+  level: Ruta
+  url: /git/
+  status: published
+  description: Control de versiones, ramas, repositorios remotos y trabajo colaborativo con GitHub y GitLab.
+  project: Sí
+  exam: No
+  technologies:
+    - git
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: "Introducción a Git y al control de versiones"
+      url: /git/leccion01/
+    - id: leccion02
+      number: "02"
+      title: "Instalación y configuración de Git"
+      url: /git/leccion02/
+    - id: leccion03
+      number: "03"
+      title: "Crear el primer repositorio"
+      url: /git/leccion03/
+    - id: leccion04
+      number: "04"
+      title: "El modelo de trabajo de Git"
+      url: /git/leccion04/
+    - id: leccion05
+      number: "05"
+      title: "Commits y construcción del historial"
+      url: /git/leccion05/
+    - id: leccion06
+      number: "06"
+      title: "Seguimiento y revisión de cambios"
+      url: /git/leccion06/
+    - id: leccion07
+      number: "07"
+      title: "Ignorar archivos con .gitignore"
+      url: /git/leccion07/
+    - id: leccion08
+      number: "08"
+      title: "Corregir errores y recuperar cambios"
+      url: /git/leccion08/
+    - id: leccion09
+      number: "09"
+      title: "Ramas: trabajar en paralelo"
+      url: /git/leccion09/
+    - id: leccion10
+      number: "10"
+      title: "Fusionar ramas con merge"
+      url: /git/leccion10/
+    - id: leccion11
+      number: "11"
+      title: "Resolver conflictos"
+      url: /git/leccion11/
+    - id: leccion12
+      number: "12"
+      title: "Repositorios remotos: GitHub y GitLab"
+      url: /git/leccion12/
+    - id: leccion13
+      number: "13"
+      title: "Publicar un proyecto local en la nube"
+      url: /git/leccion13/
+    - id: leccion14
+      number: "14"
+      title: "Clonar y continuar un repositorio"
+      url: /git/leccion14/
+    - id: leccion15
+      number: "15"
+      title: "Fetch, pull y push"
+      url: /git/leccion15/
+    - id: leccion16
+      number: "16"
+      title: "Trabajo colaborativo con ramas"
+      url: /git/leccion16/
+    - id: leccion17
+      number: "17"
+      title: "Pull Requests y Merge Requests"
+      url: /git/leccion17/
+    - id: leccion18
+      number: "18"
+      title: "Revisión de código y buenas prácticas"
+      url: /git/leccion18/
+    - id: leccion19
+      number: "19"
+      title: "Etiquetas, versiones y releases"
+      url: /git/leccion19/
+    - id: leccion20
+      number: "20"
+      title: "Flujo de trabajo profesional con Git"
+      url: /git/leccion20/
+    - id: leccion21
+      number: "21"
+      title: "Problemas frecuentes y diagnóstico"
+      url: /git/leccion21/
+    - id: leccion22
+      number: "22"
+      title: "Proyecto final colaborativo"
+      url: /git/leccion22/
+
+maven:
+  title: Maven y construcción de proyectos Java
+  short_title: Maven
+  technology: maven
+  level: Ruta
+  url: /maven/
+  status: published
+  description: Gestión de dependencias, construcción, pruebas, empaquetado y automatización de proyectos Java con Maven.
+  project: Sí
+  exam: No
+  technologies:
+    - java
+    - maven
+    - git
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: De código fuente a aplicación
+      url: /maven/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Construir un proyecto Java sin Maven
+      url: /maven/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Bibliotecas y dependencias
+      url: /maven/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Por qué copiar JAR no escala
+      url: /maven/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Qué es Maven
+      url: /maven/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Maven frente a otros ecosistemas
+      url: /maven/leccion06/
+    - id: leccion07
+      number: "07"
+      title: Instalación y configuración
+      url: /maven/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Crear un proyecto Maven
+      url: /maven/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Anatomía del pom.xml
+      url: /maven/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Coordenadas Maven
+      url: /maven/leccion10/
+    - id: leccion11
+      number: "11"
+      title: Compilar el primer proyecto
+      url: /maven/leccion11/
+    - id: leccion12
+      number: "12"
+      title: El ciclo de vida de Maven
+      url: /maven/leccion12/
+    - id: leccion13
+      number: "13"
+      title: clean, compile, test y package
+      url: /maven/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Fases encadenadas
+      url: /maven/leccion14/
+    - id: leccion15
+      number: "15"
+      title: target y artefactos
+      url: /maven/leccion15/
+    - id: leccion16
+      number: "16"
+      title: Añadir una dependencia
+      url: /maven/leccion16/
+    - id: leccion17
+      number: "17"
+      title: Maven Central
+      url: /maven/leccion17/
+    - id: leccion18
+      number: "18"
+      title: El repositorio local .m2
+      url: /maven/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Dependencias transitivas
+      url: /maven/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Scopes de dependencias
+      url: /maven/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Versiones y conflictos
+      url: /maven/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Estructura de pruebas
+      url: /maven/leccion22/
+    - id: leccion23
+      number: "23"
+      title: JUnit como dependencia
+      url: /maven/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Ejecutar pruebas con Maven
+      url: /maven/leccion24/
+    - id: leccion25
+      number: "25"
+      title: El build como barrera de calidad
+      url: /maven/leccion25/
+    - id: leccion26
+      number: "26"
+      title: Dependencias frente a plugins
+      url: /maven/leccion26/
+    - id: leccion27
+      number: "27"
+      title: Goals y fases
+      url: /maven/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Configurar Java 21
+      url: /maven/leccion28/
+    - id: leccion29
+      number: "29"
+      title: Empaquetar una aplicación
+      url: /maven/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Ejecutar el artefacto
+      url: /maven/leccion30/
+    - id: leccion31
+      number: "31"
+      title: Código de producción y pruebas
+      url: /maven/leccion31/
+    - id: leccion32
+      number: "32"
+      title: Recursos del proyecto
+      url: /maven/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Properties del POM
+      url: /maven/leccion33/
+    - id: leccion34
+      number: "34"
+      title: dependencyManagement
+      url: /maven/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Maven Wrapper
+      url: /maven/leccion35/
+    - id: leccion36
+      number: "36"
+      title: Qué versionar con Git
+      url: /maven/leccion36/
+    - id: leccion37
+      number: "37"
+      title: .gitignore para Maven
+      url: /maven/leccion37/
+    - id: leccion38
+      number: "38"
+      title: Maven dentro del flujo Git
+      url: /maven/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Construcciones reproducibles
+      url: /maven/leccion39/
+    - id: leccion40
+      number: "40"
+      title: Introducción a la integración continua
+      url: /maven/leccion40/
+    - id: leccion41
+      number: "41"
+      title: Maven dentro de un pipeline
+      url: /maven/leccion41/
+    - id: leccion42
+      number: "42"
+      title: Maven con GitHub Actions
+      url: /maven/leccion42/
+    - id: leccion43
+      number: "43"
+      title: Maven con GitLab CI
+      url: /maven/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Romper y reparar el build
+      url: /maven/leccion44/
+    - id: leccion45
+      number: "45"
+      title: Maven frente a Gradle
+      url: /maven/leccion45/
+    - id: leccion46
+      number: "46"
+      title: Maven frente a npm
+      url: /maven/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Maven frente al ecosistema Python
+      url: /maven/leccion47/
+    - id: leccion48
+      number: "48"
+      title: Maven frente a Go Modules
+      url: /maven/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Elegir herramientas comprendiendo el problema
+      url: /maven/leccion49/
+    - id: leccion50
+      number: "50"
+      title: Proyecto final · Gestor de tareas
+      url: /maven/leccion50/
+
+ficheros:
+  title: Ficheros y formatos estructurados
+  short_title: Ficheros
+  technology: ficheros
+  level: Ruta
+  url: /ficheros/
+  status: published
+  description: Lectura, escritura, properties, CSV, JSON, XML, Jackson, testing e integración con Spring y Docker.
+  project: Sí
+  exam: No
+  technologies:
+    - java
+    - maven
+    - jackson
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: Datos persistentes y ficheros
+      url: /ficheros/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Rutas y Path
+      url: /ficheros/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Leer ficheros de texto
+      url: /ficheros/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Escribir ficheros de texto
+      url: /ficheros/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Encoding y UTF-8
+      url: /ficheros/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Excepciones de entrada y salida
+      url: /ficheros/leccion06/
+    - id: leccion07
+      number: "07"
+      title: try-with-resources
+      url: /ficheros/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Ficheros grandes y procesamiento progresivo
+      url: /ficheros/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Leer no es lo mismo que parsear
+      url: /ficheros/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Serialización, deserialización y modelo de dominio
+      url: /ficheros/leccion10/
+    - id: leccion11
+      number: "11"
+      title: Qué es un fichero properties
+      url: /ficheros/leccion11/
+    - id: leccion12
+      number: "12"
+      title: Leer properties con java.util.Properties
+      url: /ficheros/leccion12/
+    - id: leccion13
+      number: "13"
+      title: Valores por defecto
+      url: /ficheros/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Convertir valores a tipos Java
+      url: /ficheros/leccion14/
+    - id: leccion15
+      number: "15"
+      title: Guardar properties
+      url: /ficheros/leccion15/
+    - id: leccion16
+      number: "16"
+      title: Properties en src/main/resources
+      url: /ficheros/leccion16/
+    - id: leccion17
+      number: "17"
+      title: Configuración, secretos y buenas prácticas
+      url: /ficheros/leccion17/
+    - id: leccion18
+      number: "18"
+      title: Qué es CSV y para qué se utiliza
+      url: /ficheros/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Por qué split no es un parser CSV
+      url: /ficheros/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Apache Commons CSV y Maven
+      url: /ficheros/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Leer un CSV
+      url: /ficheros/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Cabeceras y acceso por nombre
+      url: /ficheros/leccion22/
+    - id: leccion23
+      number: "23"
+      title: Convertir filas en objetos Java
+      url: /ficheros/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Validar datos CSV
+      url: /ficheros/leccion24/
+    - id: leccion25
+      number: "25"
+      title: Escribir CSV
+      url: /ficheros/leccion25/
+    - id: leccion26
+      number: "26"
+      title: Importaciones masivas y tratamiento de errores
+      url: /ficheros/leccion26/
+    - id: leccion27
+      number: "27"
+      title: Qué es JSON
+      url: /ficheros/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Jackson y Maven
+      url: /ficheros/leccion28/
+    - id: leccion29
+      number: "29"
+      title: ObjectMapper
+      url: /ficheros/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Objeto Java a JSON
+      url: /ficheros/leccion30/
+    - id: leccion31
+      number: "31"
+      title: JSON a objeto Java
+      url: /ficheros/leccion31/
+    - id: leccion32
+      number: "32"
+      title: Leer y escribir JSON en ficheros
+      url: /ficheros/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Arrays y listas JSON
+      url: /ficheros/leccion33/
+    - id: leccion34
+      number: "34"
+      title: TypeReference y genéricos
+      url: /ficheros/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Records y Jackson
+      url: /ficheros/leccion35/
+    - id: leccion36
+      number: "36"
+      title: Mapeo de nombres de propiedades
+      url: /ficheros/leccion36/
+    - id: leccion37
+      number: "37"
+      title: Campos ignorados, opcionales y null
+      url: /ficheros/leccion37/
+    - id: leccion38
+      number: "38"
+      title: JsonNode y modelo de árbol
+      url: /ficheros/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Qué es XML
+      url: /ficheros/leccion39/
+    - id: leccion40
+      number: "40"
+      title: JSON frente a XML
+      url: /ficheros/leccion40/
+    - id: leccion41
+      number: "41"
+      title: DOM
+      url: /ficheros/leccion41/
+    - id: leccion42
+      number: "42"
+      title: SAX
+      url: /ficheros/leccion42/
+    - id: leccion43
+      number: "43"
+      title: StAX
+      url: /ficheros/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Jackson XML y Maven
+      url: /ficheros/leccion44/
+    - id: leccion45
+      number: "45"
+      title: XmlMapper
+      url: /ficheros/leccion45/
+    - id: leccion46
+      number: "46"
+      title: JAXB y Jakarta XML Binding
+      url: /ficheros/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Seguridad XML y XXE
+      url: /ficheros/leccion47/
+    - id: leccion48
+      number: "48"
+      title: Datos no confiables y validación
+      url: /ficheros/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Elegir entre properties, CSV, JSON y XML
+      url: /ficheros/leccion49/
+    - id: leccion50
+      number: "50"
+      title: CSV a objetos Java
+      url: /ficheros/leccion50/
+    - id: leccion51
+      number: "51"
+      title: Objetos Java a JSON y XML
+      url: /ficheros/leccion51/
+    - id: leccion52
+      number: "52"
+      title: Arquitectura Reader y Writer
+      url: /ficheros/leccion52/
+    - id: leccion53
+      number: "53"
+      title: Testing de lectura y escritura
+      url: /ficheros/leccion53/
+    - id: leccion54
+      number: "54"
+      title: TempDir y recursos de prueba
+      url: /ficheros/leccion54/
+    - id: leccion55
+      number: "55"
+      title: src/main/resources y classpath
+      url: /ficheros/leccion55/
+    - id: leccion56
+      number: "56"
+      title: Recursos internos frente a ficheros externos
+      url: /ficheros/leccion56/
+    - id: leccion57
+      number: "57"
+      title: Properties y Jackson en Spring Boot
+      url: /ficheros/leccion57/
+    - id: leccion58
+      number: "58"
+      title: Subida e importación de ficheros con Spring
+      url: /ficheros/leccion58/
+    - id: leccion59
+      number: "59"
+      title: Ficheros, volúmenes y configuración en Docker
+      url: /ficheros/leccion59/
+    - id: leccion60
+      number: "60"
+      title: Exportaciones y persistencia de ficheros
+      url: /ficheros/leccion60/
+    - id: leccion61
+      number: "61"
+      title: Java frente a JavaScript, Python y Go
+      url: /ficheros/leccion61/
+    - id: leccion62
+      number: "62"
+      title: Proyecto final · DataBridge
+      url: /ficheros/leccion62/
+
+testing:
+  title: Testing y optimización
+  short_title: Testing
+  technology: testing
+  level: Ruta
+  url: /testing/
+  status: published
+  description: Testing en Java 21 con JUnit, Mockito, Maven Surefire/Failsafe, JaCoCo, cobertura, complejidad, Testcontainers y CI.
+  project: Sí
+  exam: No
+  technologies:
+    - java
+    - maven
+    - testing
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: Introducción al testing de software
+      url: /testing/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Pruebas manuales y pruebas automatizadas
+      url: /testing/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Bugs, defectos y regresiones
+      url: /testing/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Qué puede demostrar una prueba
+      url: /testing/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Testing dentro del ciclo de desarrollo
+      url: /testing/leccion05/
+    - id: leccion06
+      number: "06"
+      title: Pruebas unitarias
+      url: /testing/leccion06/
+    - id: leccion07
+      number: "07"
+      title: Pruebas de integración
+      url: /testing/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Pruebas funcionales y de sistema
+      url: /testing/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Pruebas end-to-end y de aceptación
+      url: /testing/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Smoke tests, regresión, rendimiento y seguridad
+      url: /testing/leccion10/
+    - id: leccion11
+      number: "11"
+      title: La pirámide de testing
+      url: /testing/leccion11/
+    - id: leccion12
+      number: "12"
+      title: Qué probar y qué no probar
+      url: /testing/leccion12/
+    - id: leccion13
+      number: "13"
+      title: Coste, velocidad y aislamiento de las pruebas
+      url: /testing/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Tests como documentación del comportamiento
+      url: /testing/leccion14/
+    - id: leccion15
+      number: "15"
+      title: Diseñar una estrategia de testing para un proyecto
+      url: /testing/leccion15/
+    - id: leccion16
+      number: "16"
+      title: Configurar Java 21 con Maven
+      url: /testing/leccion16/
+    - id: leccion17
+      number: "17"
+      title: src/main/java y src/test/java
+      url: /testing/leccion17/
+    - id: leccion18
+      number: "18"
+      title: El ciclo de compilación del código de test
+      url: /testing/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Records, sealed classes y testing en Java 21
+      url: /testing/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Maven como eje de automatización de calidad
+      url: /testing/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Introducción a JUnit Jupiter
+      url: /testing/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Añadir JUnit mediante Maven
+      url: /testing/leccion22/
+    - id: leccion23
+      number: "23"
+      title: La primera prueba con @Test
+      url: /testing/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Arrange, Act, Assert
+      url: /testing/leccion24/
+    - id: leccion25
+      number: "25"
+      title: Ejecutar pruebas desde el IDE y desde Maven
+      url: /testing/leccion25/
+    - id: leccion26
+      number: "26"
+      title: assertEquals, assertTrue y assertFalse
+      url: /testing/leccion26/
+    - id: leccion27
+      number: "27"
+      title: assertNull, assertNotNull, assertSame y assertNotSame
+      url: /testing/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Comprobar excepciones con assertThrows
+      url: /testing/leccion28/
+    - id: leccion29
+      number: "29"
+      title: Agrupar comprobaciones con assertAll
+      url: /testing/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Mensajes de error y assertions útiles
+      url: /testing/leccion30/
+    - id: leccion31
+      number: "31"
+      title: Convenciones para nombrar tests
+      url: /testing/leccion31/
+    - id: leccion32
+      number: "32"
+      title: DisplayName
+      url: /testing/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Nested
+      url: /testing/leccion33/
+    - id: leccion34
+      number: "34"
+      title: BeforeEach, AfterEach, BeforeAll y AfterAll
+      url: /testing/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Organización de una suite de pruebas mantenible
+      url: /testing/leccion35/
+    - id: leccion36
+      number: "36"
+      title: Boundary testing
+      url: /testing/leccion36/
+    - id: leccion37
+      number: "37"
+      title: Null, vacío, cero y valores extremos
+      url: /testing/leccion37/
+    - id: leccion38
+      number: "38"
+      title: ParameterizedTest y @ValueSource
+      url: /testing/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Datos con @CsvSource
+      url: /testing/leccion39/
+    - id: leccion40
+      number: "40"
+      title: Datos complejos con @MethodSource
+      url: /testing/leccion40/
+    - id: leccion41
+      number: "41"
+      title: Principios FIRST
+      url: /testing/leccion41/
+    - id: leccion42
+      number: "42"
+      title: Tests independientes
+      url: /testing/leccion42/
+    - id: leccion43
+      number: "43"
+      title: Tests deterministas
+      url: /testing/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Una prueba, un comportamiento
+      url: /testing/leccion44/
+    - id: leccion45
+      number: "45"
+      title: Flaky tests y cómo evitarlos
+      url: /testing/leccion45/
+    - id: leccion46
+      number: "46"
+      title: Introducción a AssertJ
+      url: /testing/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Assertions sobre objetos y strings
+      url: /testing/leccion47/
+    - id: leccion48
+      number: "48"
+      title: Assertions sobre colecciones
+      url: /testing/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Assertions de excepciones
+      url: /testing/leccion49/
+    - id: leccion50
+      number: "50"
+      title: JUnit Assertions frente a AssertJ
+      url: /testing/leccion50/
+    - id: leccion51
+      number: "51"
+      title: Código difícil de probar
+      url: /testing/leccion51/
+    - id: leccion52
+      number: "52"
+      title: Dependency Injection y testing
+      url: /testing/leccion52/
+    - id: leccion53
+      number: "53"
+      title: Aislar reloj, filesystem, red y servicios externos
+      url: /testing/leccion53/
+    - id: leccion54
+      number: "54"
+      title: Uso de Clock para controlar el tiempo
+      url: /testing/leccion54/
+    - id: leccion55
+      number: "55"
+      title: Diseño, desacoplamiento y testabilidad
+      url: /testing/leccion55/
+    - id: leccion56
+      number: "56"
+      title: Dummy, Stub, Fake, Mock y Spy
+      url: /testing/leccion56/
+    - id: leccion57
+      number: "57"
+      title: Añadir Mockito mediante Maven
+      url: /testing/leccion57/
+    - id: leccion58
+      number: "58"
+      title: mock, when y thenReturn
+      url: /testing/leccion58/
+    - id: leccion59
+      number: "59"
+      title: verify, @Mock, @InjectMocks y ArgumentCaptor
+      url: /testing/leccion59/
+    - id: leccion60
+      number: "60"
+      title: Cuándo no utilizar mocks
+      url: /testing/leccion60/
+    - id: leccion61
+      number: "61"
+      title: Qué es Maven Surefire
+      url: /testing/leccion61/
+    - id: leccion62
+      number: "62"
+      title: Configurar maven-surefire-plugin
+      url: /testing/leccion62/
+    - id: leccion63
+      number: "63"
+      title: Cómo detecta Maven los tests unitarios
+      url: /testing/leccion63/
+    - id: leccion64
+      number: "64"
+      title: Reportes en target/surefire-reports
+      url: /testing/leccion64/
+    - id: leccion65
+      number: "65"
+      title: mvn test y BUILD FAILURE
+      url: /testing/leccion65/
+    - id: leccion66
+      number: "66"
+      title: Diferencia entre tests unitarios y de integración
+      url: /testing/leccion66/
+    - id: leccion67
+      number: "67"
+      title: Convención *Test frente a *IT
+      url: /testing/leccion67/
+    - id: leccion68
+      number: "68"
+      title: Configurar maven-failsafe-plugin
+      url: /testing/leccion68/
+    - id: leccion69
+      number: "69"
+      title: Fases integration-test y verify
+      url: /testing/leccion69/
+    - id: leccion70
+      number: "70"
+      title: mvn test frente a mvn verify
+      url: /testing/leccion70/
+    - id: leccion71
+      number: "71"
+      title: Qué significa cobertura
+      url: /testing/leccion71/
+    - id: leccion72
+      number: "72"
+      title: Cobertura de instrucciones y líneas
+      url: /testing/leccion72/
+    - id: leccion73
+      number: "73"
+      title: Cobertura de ramas
+      url: /testing/leccion73/
+    - id: leccion74
+      number: "74"
+      title: Cobertura de métodos y clases
+      url: /testing/leccion74/
+    - id: leccion75
+      number: "75"
+      title: Por qué 100 % de cobertura no significa software correcto
+      url: /testing/leccion75/
+    - id: leccion76
+      number: "76"
+      title: Introducción a JaCoCo
+      url: /testing/leccion76/
+    - id: leccion77
+      number: "77"
+      title: Integrar jacoco-maven-plugin
+      url: /testing/leccion77/
+    - id: leccion78
+      number: "78"
+      title: prepare-agent y ejecución de los tests
+      url: /testing/leccion78/
+    - id: leccion79
+      number: "79"
+      title: Generar y leer el informe HTML de JaCoCo
+      url: /testing/leccion79/
+    - id: leccion80
+      number: "80"
+      title: Integrar JaCoCo en mvn verify
+      url: /testing/leccion80/
+    - id: leccion81
+      number: "81"
+      title: Introducción a la complejidad ciclomática
+      url: /testing/leccion81/
+    - id: leccion82
+      number: "82"
+      title: Decisiones, ramas y caminos de ejecución
+      url: /testing/leccion82/
+    - id: leccion83
+      number: "83"
+      title: Complejidad cubierta y no cubierta en JaCoCo
+      url: /testing/leccion83/
+    - id: leccion84
+      number: "84"
+      title: Configurar jacoco:check y límites mínimos
+      url: /testing/leccion84/
+    - id: leccion85
+      number: "85"
+      title: Coverage, complejidad y refactorización
+      url: /testing/leccion85/
+    - id: leccion86
+      number: "86"
+      title: Testing de ficheros con @TempDir y src/test/resources
+      url: /testing/leccion86/
+    - id: leccion87
+      number: "87"
+      title: Testing de persistencia con PostgreSQL y Testcontainers
+      url: /testing/leccion87/
+    - id: leccion88
+      number: "88"
+      title: Testing de Spring Boot con Mockito, MockMvc y tests de integración
+      url: /testing/leccion88/
+    - id: leccion89
+      number: "89"
+      title: Testing automático en GitHub Actions y GitLab CI
+      url: /testing/leccion89/
+    - id: leccion90
+      number: "90"
+      title: Proyecto final · Sistema Java con quality gate
+      url: /testing/leccion90/
+
+software:
+  title: Software y metodologías
+  short_title: Software
+  technology: software
+  level: Ruta
+  url: /software/
+  status: published
+  description: Fundamentos del desarrollo de software, ciclo de vida, metodologías predictivas y ágiles, Scrum, Kanban, requisitos, planificación, calidad y DevOps.
+  project: Sí
+  exam: No
+  technologies:
+    - software
+    - agile
+    - scrum
+    - kanban
+  lessons:
+    - id: leccion01
+      number: "01"
+      title: Qué es el software
+      url: /software/leccion01/
+    - id: leccion02
+      number: "02"
+      title: Tipos de software
+      url: /software/leccion02/
+    - id: leccion03
+      number: "03"
+      title: Software como producto
+      url: /software/leccion03/
+    - id: leccion04
+      number: "04"
+      title: Qué es la ingeniería del software
+      url: /software/leccion04/
+    - id: leccion05
+      number: "05"
+      title: Proyecto, producto y servicio
+      url: /software/leccion05/
+    - id: leccion06
+      number: "06"
+      title: El ciclo de vida del software
+      url: /software/leccion06/
+    - id: leccion07
+      number: "07"
+      title: Planificación de un proyecto
+      url: /software/leccion07/
+    - id: leccion08
+      number: "08"
+      title: Análisis de requisitos
+      url: /software/leccion08/
+    - id: leccion09
+      number: "09"
+      title: Diseño e implementación
+      url: /software/leccion09/
+    - id: leccion10
+      number: "10"
+      title: Pruebas, despliegue y mantenimiento
+      url: /software/leccion10/
+    - id: leccion11
+      number: "11"
+      title: Qué es una metodología de desarrollo
+      url: /software/leccion11/
+    - id: leccion12
+      number: "12"
+      title: Modelo en cascada
+      url: /software/leccion12/
+    - id: leccion13
+      number: "13"
+      title: Modelo en V
+      url: /software/leccion13/
+    - id: leccion14
+      number: "14"
+      title: Desarrollo incremental
+      url: /software/leccion14/
+    - id: leccion15
+      number: "15"
+      title: Desarrollo iterativo, prototipado y espiral
+      url: /software/leccion15/
+    - id: leccion16
+      number: "16"
+      title: Problemas de los procesos rígidos
+      url: /software/leccion16/
+    - id: leccion17
+      number: "17"
+      title: Qué significa Agile
+      url: /software/leccion17/
+    - id: leccion18
+      number: "18"
+      title: El Manifiesto Ágil
+      url: /software/leccion18/
+    - id: leccion19
+      number: "19"
+      title: Principios ágiles
+      url: /software/leccion19/
+    - id: leccion20
+      number: "20"
+      title: Predictivo frente a adaptativo
+      url: /software/leccion20/
+    - id: leccion21
+      number: "21"
+      title: Introducción a Scrum
+      url: /software/leccion21/
+    - id: leccion22
+      number: "22"
+      title: Responsabilidades en Scrum
+      url: /software/leccion22/
+    - id: leccion23
+      number: "23"
+      title: Product Backlog
+      url: /software/leccion23/
+    - id: leccion24
+      number: "24"
+      title: Sprint
+      url: /software/leccion24/
+    - id: leccion25
+      number: "25"
+      title: Sprint Planning y Sprint Backlog
+      url: /software/leccion25/
+    - id: leccion26
+      number: "26"
+      title: Daily Scrum
+      url: /software/leccion26/
+    - id: leccion27
+      number: "27"
+      title: Sprint Review y Retrospective
+      url: /software/leccion27/
+    - id: leccion28
+      number: "28"
+      title: Introducción a Kanban
+      url: /software/leccion28/
+    - id: leccion29
+      number: "29"
+      title: Visualización del trabajo
+      url: /software/leccion29/
+    - id: leccion30
+      number: "30"
+      title: Límites WIP
+      url: /software/leccion30/
+    - id: leccion31
+      number: "31"
+      title: Scrum frente a Kanban
+      url: /software/leccion31/
+    - id: leccion32
+      number: "32"
+      title: Requisitos funcionales
+      url: /software/leccion32/
+    - id: leccion33
+      number: "33"
+      title: Requisitos no funcionales
+      url: /software/leccion33/
+    - id: leccion34
+      number: "34"
+      title: Historias de usuario
+      url: /software/leccion34/
+    - id: leccion35
+      number: "35"
+      title: Criterios de aceptación
+      url: /software/leccion35/
+    - id: leccion36
+      number: "36"
+      title: Definition of Done
+      url: /software/leccion36/
+    - id: leccion37
+      number: "37"
+      title: Descomposición del trabajo
+      url: /software/leccion37/
+    - id: leccion38
+      number: "38"
+      title: Estimación
+      url: /software/leccion38/
+    - id: leccion39
+      number: "39"
+      title: Priorización
+      url: /software/leccion39/
+    - id: leccion40
+      number: "40"
+      title: MVP y entregas incrementales
+      url: /software/leccion40/
+    - id: leccion41
+      number: "41"
+      title: Calidad del software
+      url: /software/leccion41/
+    - id: leccion42
+      number: "42"
+      title: Deuda técnica
+      url: /software/leccion42/
+    - id: leccion43
+      number: "43"
+      title: Mantenimiento del software
+      url: /software/leccion43/
+    - id: leccion44
+      number: "44"
+      title: Integración continua
+      url: /software/leccion44/
+    - id: leccion45
+      number: "45"
+      title: Entrega y despliegue continuo
+      url: /software/leccion45/
+    - id: leccion46
+      number: "46"
+      title: Introducción a DevOps
+      url: /software/leccion46/
+    - id: leccion47
+      number: "47"
+      title: Caso práctico · Analizando un proyecto
+      url: /software/leccion47/
+    - id: leccion48
+      number: "48"
+      title: Definir requisitos del proyecto
+      url: /software/leccion48/
+    - id: leccion49
+      number: "49"
+      title: Crear el Product Backlog
+      url: /software/leccion49/
+    - id: leccion50
+      number: "50"
+      title: Organizar un Sprint
+      url: /software/leccion50/
+    - id: leccion51
+      number: "51"
+      title: Simular el flujo Kanban
+      url: /software/leccion51/
+    - id: leccion52
+      number: "52"
+      title: Proyecto final · Planificación de un producto software
+      url: /software/leccion52/
+
