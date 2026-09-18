@@ -1,5 +1,6 @@
 {% assign branding = site.data.branding %}
 <header class="cla-header">
+  {% include analytics.html %} 
   <div class="cla-container cla-header-inner">
     <a class="cla-logo" href="{{ '/' | relative_url }}" aria-label="{{ branding.name | default: site.academy.title | default: site.title }}">
       <img src="{{ branding.logo | default: site.academy.logo | default: '/assets/images/branding/logo.svg' | relative_url }}" alt="{{ branding.name | default: site.academy.title | default: site.title }}" width="{{ branding.logo_width | default: 248 }}" height="{{ branding.logo_height | default: 48 }}">
