@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Anotacion</title><desc id="desc">Comentario unido a una parte del diagrama.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Anotacion</text>
+<path d="M112 72c-20-19 11-39 29-21 7-28 47-20 43 7 26-17 48 16 25 31 20 23-15 45-32 27-17 23-52 8-42-17-29 6-40-17-23-27z" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="103" text-anchor="middle" font="bold 18px sans-serif" fill="#414141">Regla</text><text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: aclarar una regla</text>
+</svg>

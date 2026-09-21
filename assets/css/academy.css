@@ -835,6 +835,36 @@ body {
   font-size: 14px;
 }
 
+.cla-flow-symbols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 30px;
+}
+
+.cla-flow-symbols figure {
+  min-width: 0;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--cla-border);
+  border-radius: 10px;
+  background: var(--cla-surface);
+}
+
+.cla-flow-symbols img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cla-flow-symbols figcaption {
+  margin-top: 6px;
+  color: var(--cla-muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .cla-lesson-content th,
 .cla-lesson-content td {
   padding: 10px 12px;
@@ -1052,6 +1082,10 @@ body {
 @media (max-width: 700px) {
   .cla-container {
     width: min(100% - 32px, 1120px);
+  }
+
+  .cla-flow-symbols {
+    grid-template-columns: 1fr;
   }
 
   .cla-nav {

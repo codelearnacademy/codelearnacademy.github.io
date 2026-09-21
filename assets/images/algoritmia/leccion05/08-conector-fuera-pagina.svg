@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Conector fuera de pagina</title><desc id="desc">Pentagono que indica que el flujo continua en otra pagina.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Conector fuera de pagina</text>
+<path d="M115 64h130v52l-65 28-65-28z" fill="none" stroke="#414141" stroke-width="4"/><text x="180" y="102" text-anchor="middle" font="bold 20px sans-serif" fill="#414141">B</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: continuar en pagina 2</text>
+</svg>

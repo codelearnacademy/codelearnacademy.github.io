@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Preparacion</title><desc id="desc">Hexagono para preparar o inicializar valores.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Preparacion</text>
+<path d="M95 68h170l25 29-25 29H95L70 97z" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="104" text-anchor="middle" font="bold 18px sans-serif" fill="#414141">contador = 0</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: inicializar una variable</text>
+</svg>

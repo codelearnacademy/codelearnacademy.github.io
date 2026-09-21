@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Terminador</title><desc id="desc">Simbolo de inicio o fin. Ejemplo: Inicio.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Terminador</text>
+<rect x="80" y="68" width="200" height="58" rx="29" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="104" text-anchor="middle" font="bold 20px sans-serif" fill="#414141">Inicio</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: Inicio / Fin</text>
+</svg>

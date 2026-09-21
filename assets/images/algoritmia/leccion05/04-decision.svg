@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Decision</title><desc id="desc">Rombo para evaluar una condicion. Ejemplo: edad mayor o igual que 18.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Decision</text>
+<path d="M180 58l105 53-105 53-105-53z" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="117" text-anchor="middle" font="bold 18px sans-serif" fill="#414141">edad &gt;= 18?</text>
+<text x="180" y="198" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: Si / No</text>
+</svg>

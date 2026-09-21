@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Conector en pagina</title><desc id="desc">Circulo que conecta dos partes del mismo diagrama.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Conector en pagina</text>
+<circle cx="180" cy="100" r="38" fill="none" stroke="#414141" stroke-width="4"/><text x="180" y="108" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">A</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: continuar desde A</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Union de flujo</title><desc id="desc">Simbolo para reunir dos recorridos en uno.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Union de flujo</text>
+<path d="M120 68h120l-60 96z" fill="none" stroke="#414141" stroke-width="4"/><path d="M120 97h120" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="194" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: reunir las ramas</text>
+</svg>

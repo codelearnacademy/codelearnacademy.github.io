@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Almacenamiento interno</title><desc id="desc">Simbolo para un dato guardado temporalmente en memoria.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Almacenamiento interno</text>
+<path d="M110 60h140l25 37-25 37H110L85 97z" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="104" text-anchor="middle" font="bold 18px sans-serif" fill="#414141">resultado</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: guardar un resultado temporal</text>
+</svg>

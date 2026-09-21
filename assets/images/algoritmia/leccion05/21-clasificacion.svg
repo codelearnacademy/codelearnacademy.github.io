@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Clasificacion</title><desc id="desc">Simbolo para ordenar o clasificar datos.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Clasificacion</text>
+<path d="M75 70h210v55H75z" fill="none" stroke="#414141" stroke-width="4"/><path d="M105 88h150M105 106h110" stroke="#414141" stroke-width="3"/>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: ordenar por fecha</text>
+</svg>

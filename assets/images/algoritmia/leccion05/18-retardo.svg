@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Retardo</title><desc id="desc">Simbolo que representa una espera antes de continuar.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Retardo</text>
+<path d="M70 70h220v55H70c27-18 27-37 0-55z" fill="none" stroke="#414141" stroke-width="4"/>
+<text x="180" y="105" text-anchor="middle" font="bold 19px sans-serif" fill="#414141">Esperar 5 segundos</text>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: esperar antes de continuar</text>
+</svg>

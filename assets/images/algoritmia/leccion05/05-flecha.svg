@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+<title id="title">Linea de flujo</title><desc id="desc">Flecha que indica la direccion del recorrido.</desc>
+<rect width="360" height="220" fill="#f1f3f4"/><text x="180" y="32" text-anchor="middle" font="bold 22px sans-serif" fill="#414141">Linea de flujo</text>
+<path d="M70 104h205m0 0-22-16m22 16-22 16" fill="none" stroke="#414141" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="174" text-anchor="middle" font="16px sans-serif" fill="#555">Ejemplo: pasar al siguiente paso</text>
+</svg>
