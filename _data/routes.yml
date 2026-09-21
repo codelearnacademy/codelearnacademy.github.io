@@ -10,7 +10,7 @@ java:
   exam: Opcional
   project_description: Desarrollarás una aplicación de consola completa integrando todos los conocimientos adquiridos.
   technologies:
-    - java
+    - maven
     - sqlite
     - git
   lessons:
@@ -505,7 +505,8 @@ sql:
   project: Sí
   exam: No
   technologies:
-    - sql
+    - java
+    - maven
     - sqlite
   lessons: []
 
@@ -520,7 +521,7 @@ angular:
   project: Sí
   exam: No
   technologies:
-    - angular
+    - java
     - typescript
     - git
   lessons: []
@@ -536,7 +537,6 @@ typescript:
   project: Sí
   exam: No
   technologies:
-    - typescript
     - git
   lessons: []
 
@@ -551,7 +551,6 @@ docker:
   project: Sí
   exam: No
   technologies:
-    - docker
     - git
     - maven
     - java
@@ -815,7 +814,7 @@ algoritmia:
   project: Sí
   exam: No
   technologies:
-    - algoritmia
+    - java
   lessons:
     - { id: leccion01, number: "01", title: "Introducción a la algoritmia", url: /algoritmia/leccion01/ }
     - { id: leccion02, number: "02", title: "Resolución de problemas", url: /algoritmia/leccion02/ }
@@ -848,7 +847,7 @@ git:
   project: Sí
   exam: No
   technologies:
-    - git
+
   lessons:
     - id: leccion01
       number: "01"
@@ -946,214 +945,139 @@ maven:
   level: Ruta
   url: /maven/
   status: published
-  description: Gestión de dependencias, construcción, pruebas, empaquetado y automatización de proyectos Java con Maven.
+  description: "Aprende Maven con un proyecto progresivo: instalación multiplataforma, dependencias, repositorios, settings, perfiles, pruebas, distribución y CI."
   project: Sí
   exam: No
+  project_description: Construye un gestor de tareas con persistencia JSON, pruebas, Maven Wrapper y un artefacto ejecutable verificado en CI.
   technologies:
     - java
-    - maven
     - git
   lessons:
-    - id: leccion01
+    - id: principal01
       number: "01"
-      title: De código fuente a aplicación
-      url: /maven/leccion01/
-    - id: leccion02
+      title: "Qué problema resuelve Maven"
+      url: /maven/01-problema-que-resuelve-maven/
+      kind: principal
+    - id: principal02
       number: "02"
-      title: Construir un proyecto Java sin Maven
-      url: /maven/leccion02/
-    - id: leccion03
+      title: "Instalar JDK 21 y Maven"
+      url: /maven/02-instalar-jdk-maven/
+      kind: principal
+    - id: principal03
       number: "03"
-      title: Bibliotecas y dependencias
-      url: /maven/leccion03/
-    - id: leccion04
+      title: "Crear el primer proyecto Maven"
+      url: /maven/03-primer-proyecto/
+      kind: principal
+    - id: principal04
       number: "04"
-      title: Por qué copiar JAR no escala
-      url: /maven/leccion04/
-    - id: leccion05
+      title: "Compilar y entender los archivos generados"
+      url: /maven/04-compilar-target/
+      kind: principal
+    - id: principal05
       number: "05"
-      title: Qué es Maven
-      url: /maven/leccion05/
-    - id: leccion06
+      title: "Ciclos de vida, fases y goals"
+      url: /maven/05-ciclos-fases-goals/
+      kind: principal
+    - id: principal06
       number: "06"
-      title: Maven frente a otros ecosistemas
-      url: /maven/leccion06/
-    - id: leccion07
+      title: "Añadir y utilizar una dependencia"
+      url: /maven/06-anadir-dependencia/
+      kind: principal
+    - id: principal07
       number: "07"
-      title: Instalación y configuración
-      url: /maven/leccion07/
-    - id: leccion08
+      title: "Maven Central y el repositorio local"
+      url: /maven/07-central-repositorio-local/
+      kind: principal
+    - id: principal08
       number: "08"
-      title: Crear un proyecto Maven
-      url: /maven/leccion08/
-    - id: leccion09
+      title: "Repositorios externos y settings.xml"
+      url: /maven/08-repositorios-settings/
+      kind: principal
+    - id: principal09
       number: "09"
-      title: Anatomía del pom.xml
-      url: /maven/leccion09/
-    - id: leccion10
+      title: "Repositorios privados, mirrors y proxy"
+      url: /maven/09-privados-mirrors-proxy/
+      kind: principal
+    - id: principal10
       number: "10"
-      title: Coordenadas Maven
-      url: /maven/leccion10/
-    - id: leccion11
+      title: "Profiles: activar configuraciones de Maven"
+      url: /maven/10-profiles/
+      kind: principal
+    - id: principal11
       number: "11"
-      title: Compilar el primer proyecto
-      url: /maven/leccion11/
-    - id: leccion12
+      title: "Dependencias transitivas, scopes y conflictos"
+      url: /maven/11-transitivas-scopes-conflictos/
+      kind: principal
+    - id: principal12
       number: "12"
-      title: El ciclo de vida de Maven
-      url: /maven/leccion12/
-    - id: leccion13
+      title: "Propiedades y gestión de versiones"
+      url: /maven/12-propiedades-versiones/
+      kind: principal
+    - id: principal13
       number: "13"
-      title: clean, compile, test y package
-      url: /maven/leccion13/
-    - id: leccion14
+      title: "Añadir y ejecutar pruebas con JUnit"
+      url: /maven/13-junit-surefire/
+      kind: principal
+    - id: principal14
       number: "14"
-      title: Fases encadenadas
-      url: /maven/leccion14/
-    - id: leccion15
+      title: "El build como comprobación de calidad"
+      url: /maven/14-build-calidad/
+      kind: principal
+    - id: principal15
       number: "15"
-      title: target y artefactos
-      url: /maven/leccion15/
-    - id: leccion16
+      title: "Recursos y configuración de la aplicación"
+      url: /maven/15-recursos-configuracion/
+      kind: principal
+    - id: principal16
       number: "16"
-      title: Añadir una dependencia
-      url: /maven/leccion16/
-    - id: leccion17
+      title: "Empaquetar y ejecutar la aplicación"
+      url: /maven/16-empaquetar-ejecutar/
+      kind: principal
+    - id: principal17
       number: "17"
-      title: Maven Central
-      url: /maven/leccion17/
-    - id: leccion18
+      title: "Crear y utilizar Maven Wrapper"
+      url: /maven/17-maven-wrapper/
+      kind: principal
+    - id: principal18
       number: "18"
-      title: El repositorio local .m2
-      url: /maven/leccion18/
-    - id: leccion19
+      title: "Maven dentro del flujo Git"
+      url: /maven/18-maven-git/
+      kind: principal
+    - id: principal19
       number: "19"
-      title: Dependencias transitivas
-      url: /maven/leccion19/
-    - id: leccion20
+      title: "Automatizar el build en CI"
+      url: /maven/19-maven-ci/
+      kind: principal
+    - id: principal20
       number: "20"
-      title: Scopes de dependencias
-      url: /maven/leccion20/
-    - id: leccion21
+      title: "Diagnosticar y reparar problemas de Maven"
+      url: /maven/20-diagnosticar-build/
+      kind: principal
+    - id: principal21
       number: "21"
-      title: Versiones y conflictos
-      url: /maven/leccion21/
-    - id: leccion22
-      number: "22"
-      title: Estructura de pruebas
-      url: /maven/leccion22/
-    - id: leccion23
-      number: "23"
-      title: JUnit como dependencia
-      url: /maven/leccion23/
-    - id: leccion24
-      number: "24"
-      title: Ejecutar pruebas con Maven
-      url: /maven/leccion24/
-    - id: leccion25
-      number: "25"
-      title: El build como barrera de calidad
-      url: /maven/leccion25/
-    - id: leccion26
-      number: "26"
-      title: Dependencias frente a plugins
-      url: /maven/leccion26/
-    - id: leccion27
-      number: "27"
-      title: Goals y fases
-      url: /maven/leccion27/
-    - id: leccion28
-      number: "28"
-      title: Configurar Java 21
-      url: /maven/leccion28/
-    - id: leccion29
-      number: "29"
-      title: Empaquetar una aplicación
-      url: /maven/leccion29/
-    - id: leccion30
-      number: "30"
-      title: Ejecutar el artefacto
-      url: /maven/leccion30/
-    - id: leccion31
-      number: "31"
-      title: Código de producción y pruebas
-      url: /maven/leccion31/
-    - id: leccion32
-      number: "32"
-      title: Recursos del proyecto
-      url: /maven/leccion32/
-    - id: leccion33
-      number: "33"
-      title: Properties del POM
-      url: /maven/leccion33/
-    - id: leccion34
-      number: "34"
-      title: dependencyManagement
-      url: /maven/leccion34/
-    - id: leccion35
-      number: "35"
-      title: Maven Wrapper
-      url: /maven/leccion35/
-    - id: leccion36
-      number: "36"
-      title: Qué versionar con Git
-      url: /maven/leccion36/
-    - id: leccion37
-      number: "37"
-      title: .gitignore para Maven
-      url: /maven/leccion37/
-    - id: leccion38
-      number: "38"
-      title: Maven dentro del flujo Git
-      url: /maven/leccion38/
-    - id: leccion39
-      number: "39"
-      title: Construcciones reproducibles
-      url: /maven/leccion39/
-    - id: leccion40
-      number: "40"
-      title: Introducción a la integración continua
-      url: /maven/leccion40/
-    - id: leccion41
-      number: "41"
-      title: Maven dentro de un pipeline
-      url: /maven/leccion41/
-    - id: leccion42
-      number: "42"
-      title: Maven con GitHub Actions
-      url: /maven/leccion42/
-    - id: leccion43
-      number: "43"
-      title: Maven con GitLab CI
-      url: /maven/leccion43/
-    - id: leccion44
-      number: "44"
-      title: Romper y reparar el build
-      url: /maven/leccion44/
-    - id: leccion45
-      number: "45"
-      title: Maven frente a Gradle
-      url: /maven/leccion45/
-    - id: leccion46
-      number: "46"
-      title: Maven frente a npm
-      url: /maven/leccion46/
-    - id: leccion47
-      number: "47"
-      title: Maven frente al ecosistema Python
-      url: /maven/leccion47/
-    - id: leccion48
-      number: "48"
-      title: Maven frente a Go Modules
-      url: /maven/leccion48/
-    - id: leccion49
-      number: "49"
-      title: Elegir herramientas comprendiendo el problema
-      url: /maven/leccion49/
-    - id: leccion50
-      number: "50"
-      title: Proyecto final · Gestor de tareas
-      url: /maven/leccion50/
+      title: "Proyecto final: gestor de tareas"
+      url: /maven/21-proyecto-final/
+      kind: principal
+    - id: ampliacion01
+      number: "A1"
+      title: "A1 · Publicar artefactos en un repositorio privado"
+      url: /maven/a1-publicar-artefactos/
+      kind: ampliacion
+    - id: ampliacion02
+      number: "A2"
+      title: "A2 · Proyectos con varios módulos"
+      url: /maven/a2-varios-modulos/
+      kind: ampliacion
+    - id: ampliacion03
+      number: "A3"
+      title: "A3 · Generar un JAR con dependencias"
+      url: /maven/a3-jar-dependencias/
+      kind: ampliacion
+    - id: ampliacion04
+      number: "A4"
+      title: "A4 · Maven frente a otras herramientas"
+      url: /maven/a4-comparar-herramientas/
+      kind: ampliacion
 
 ficheros:
   title: Ficheros y formatos estructurados
@@ -1432,7 +1356,6 @@ testing:
   technologies:
     - java
     - maven
-    - testing
   lessons:
     - id: leccion01
       number: "01"
@@ -1806,7 +1729,6 @@ software:
   project: Sí
   exam: No
   technologies:
-    - software
     - agile
     - scrum
     - kanban

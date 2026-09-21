@@ -43,6 +43,9 @@ layout: academy
       <h2>{{ site.academy.lessons_label | default: 'Lecciones' }}</h2>
       <div class="cla-lesson-list">
         {% for lesson in route.lessons %}
+        {% if lesson.kind == 'ampliacion' and lesson.number == 'A1' %}
+        <h3>Ampliaciones opcionales</h3>
+        {% endif %}
         <a class="cla-lesson-row" href="{{ lesson.url | relative_url }}">
           <span>{{ lesson.number }}</span>
           <strong>{{ lesson.title }}</strong>
