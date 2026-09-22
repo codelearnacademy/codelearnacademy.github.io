@@ -51,12 +51,16 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 ## Ejemplo guiado
 
 ```java
-Path path = Path.of("data", "ejemplo.txt");
-String text = Files.readString(path, StandardCharsets.UTF_8);
-Files.writeString(Path.of("output.txt"), text, StandardCharsets.UTF_8);
-```
+record Usuario(String nombre, String correo) {}
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+Usuario user = new Usuario("Ana", "ana@example.com");
+Path file = Path.of("data", "usuario.txt");
+Files.createDirectories(file.getParent());
+Files.writeString(file, user.nombre() + "\n" + user.correo(), StandardCharsets.UTF_8);
+String[] values = Files.readString(file, StandardCharsets.UTF_8).split("\\R", -1);
+Usuario recovered = new Usuario(values[0], values[1]);
+System.out.println(recovered);
+```
 
 
 
@@ -66,11 +70,11 @@ Estas APIs son la base común. Las librerías de formato no sustituyen Path, Fil
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa el caso principal de esta lección con un fichero de prueba pequeño.
+2. Comprueba el comportamiento cuando la ruta no existe o el contenido está incompleto.
+3. Recibe la ruta del fichero como argumento y no la fijes en el código.
+4. Explica qué responsabilidad corresponde a `Path`/`Files` y cuál a tu lógica.
+5. Añade una prueba que cubra el caso correcto y un error esperado.
 
 ## Qué debes recordar
 

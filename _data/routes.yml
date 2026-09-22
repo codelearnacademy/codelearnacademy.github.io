@@ -1092,7 +1092,8 @@ ficheros:
   technologies:
     - java
     - maven
-    - jackson
+    - spring
+    - docker
   lessons:
     - id: leccion01
       number: "01"

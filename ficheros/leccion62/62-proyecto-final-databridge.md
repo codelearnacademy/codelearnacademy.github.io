@@ -57,8 +57,6 @@ JSON       → APIs y objetos
 XML        → documentos e integraciones enterprise
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
-
 ## Proyecto integrador · DataBridge
 
 Construye una aplicación que lea productos desde CSV, JSON o XML y los exporte a cualquiera de esos formatos.
@@ -99,20 +97,40 @@ WriterFactory
 
 Debe soportar CSV→JSON, CSV→XML, JSON→CSV, JSON→XML, XML→CSV y XML→JSON, informar de registros válidos/erróneos y disponer de pruebas con `@TempDir`.
 
-Como extensión, reutiliza los readers/writers desde Spring Boot para importar mediante `MultipartFile` y monta `/data` y `/config` como volúmenes Docker.
+La entrega mínima es una aplicación Java ejecutable desde Maven. Como ampliaciones independientes, reutiliza los readers/writers desde Spring Boot para importar mediante `MultipartFile` y monta `/data` y `/config` como volúmenes Docker.
+
+### Hitos obligatorios
+
+1. **Modelo y configuración.** Crea `Producto`, lee `config.properties` y valida los formatos admitidos.
+2. **CSV.** Implementa CSV→objetos y objetos→CSV con cabeceras, comillas y errores por fila.
+3. **JSON.** Añade JSON usando Jackson y conserva los mismos objetos de dominio.
+4. **XML.** Añade XML usando Jackson XML o una API XML segura; no dupliques la validación.
+5. **Conversión.** Implementa al menos CSV→JSON y JSON→CSV antes de añadir las cuatro combinaciones restantes.
+6. **Pruebas.** Usa `@TempDir` para probar entradas, salidas, datos inválidos y ficheros inexistentes.
+7. **Construcción.** Ejecuta `mvn clean verify` y documenta cómo iniciar la aplicación.
+
+### Ampliaciones
+
+- Implementa las seis conversiones entre formatos.
+- Añade una API Spring Boot para recibir archivos.
+- Ejecuta la aplicación con Docker y conserva `data` mediante un volumen.
+
+No evalúes Spring ni Docker como requisitos de la entrega mínima: requieren conocimientos que no son necesarios para demostrar la arquitectura de lectura, validación y escritura.
 
 
 ## Relación con el resto de la ruta
 
 Todos los ecosistemas resuelven lectura, parsing, validación y escritura, aunque reparten las responsabilidades entre biblioteca estándar y paquetes externos.
 
-## Ejercicios propuestos
+## Comprobación de la entrega
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+Entrega el código, un README y ejemplos pequeños de entrada y salida. El README debe indicar:
+
+1. Cómo construir y ejecutar el proyecto.
+2. Qué formatos y conversiones están implementados.
+3. Qué ocurre ante una fila inválida o un fichero inexistente.
+4. Qué pruebas se ejecutan y cómo se aíslan sus ficheros temporales.
+5. Qué partes son ampliaciones de Spring o Docker, si las has realizado.
 
 ## Qué debes recordar
 

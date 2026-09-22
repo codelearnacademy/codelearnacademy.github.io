@@ -86,11 +86,11 @@ XML sigue siendo importante en integraciones empresariales, SOAP, estándares do
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa el procesamiento XML específico de esta lección.
+2. Prueba un documento válido y otro mal formado.
+3. Añade una entrada con DTD o entidad externa y verifica que se rechaza cuando corresponda.
+4. Compara el consumo de memoria y el control del flujo del parser utilizado.
+5. Añade una prueba que compruebe el resultado y la política de seguridad XML.
 
 ## Qué debes recordar
 

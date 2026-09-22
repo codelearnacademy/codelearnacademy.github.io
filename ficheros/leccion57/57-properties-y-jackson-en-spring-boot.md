@@ -50,14 +50,29 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 
 ## Ejemplo guiado
 
-```text
-src/main/resources → recursos empaquetados
-src/test/resources → fixtures
-Docker volume      → ficheros externos
-Spring MultipartFile → subida HTTP
+Parte de una aplicación Spring Boot con las dependencias `spring-boot-starter-web` y `jackson-databind`. Guarda la configuración en `src/main/resources/application.properties`:
+
+```properties
+app.catalogo=ruta/catalogo.json
+spring.jackson.default-property-inclusion=non_null
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+Expón una clase de configuración y un endpoint que devuelva un objeto Java. Spring utilizará Jackson para convertirlo en JSON:
+
+```java
+@RestController
+class CatalogoController {
+  @Value("${app.catalogo}")
+  private String rutaCatalogo;
+
+  @GetMapping("/catalogo/configuracion")
+  Map<String, String> configuracion() {
+    return Map.of("catalogo", rutaCatalogo);
+  }
+}
+```
+
+Prueba `GET /catalogo/configuracion` y comprueba que la respuesta es JSON. La propiedad configura la aplicación; Jackson transforma el `Map` en la respuesta HTTP.
 
 
 
@@ -67,11 +82,11 @@ Maven, Spring y Docker añaden empaquetado, endpoints, recursos, configuración 
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Añade la propiedad y crea el endpoint de configuración.
+2. Cambia la ruta mediante un perfil `application-dev.properties` sin modificar el código.
+3. Añade un campo nullable al DTO y comprueba el efecto de `non_null`.
+4. Escribe una prueba MVC que compruebe el código HTTP y el JSON devuelto.
+5. Explica qué parte corresponde a Spring, qué parte a Jackson y qué parte a `application.properties`.
 
 ## Qué debes recordar
 

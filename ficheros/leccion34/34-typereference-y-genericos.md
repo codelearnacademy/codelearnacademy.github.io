@@ -75,11 +75,11 @@ Spring MVC utiliza Jackson habitualmente para convertir JSON HTTP en DTOs Java y
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa la operación JSON específica de esta lección con Jackson.
+2. Prueba un JSON válido, uno incompleto y otro con un tipo incorrecto.
+3. Conserva el modelo Java separado del acceso al fichero.
+4. Comprueba la salida y explica qué ocurre ante una propiedad desconocida o ausente.
+5. Añade una prueba de serialización o deserialización para el caso principal.
 
 ## Qué debes recordar
 

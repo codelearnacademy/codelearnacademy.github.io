@@ -60,8 +60,6 @@ try (Reader r = Files.newBufferedReader(path);
 }
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
-
 
 
 ## Relación con el resto de la ruta
@@ -70,11 +68,11 @@ Maven resuelve Apache Commons CSV; Commons CSV interpreta el formato. CSV es hab
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Procesa un CSV con cabecera y transforma cada fila en el resultado de esta lección.
+2. Prueba una fila con comas, comillas o columnas incompletas.
+3. Recibe la ruta del CSV como argumento y conserva UTF-8 explícito.
+4. Separa parsing, validación y escritura en responsabilidades distintas.
+5. Añade una prueba para una fila válida y otra rechazada.
 
 ## Qué debes recordar
 

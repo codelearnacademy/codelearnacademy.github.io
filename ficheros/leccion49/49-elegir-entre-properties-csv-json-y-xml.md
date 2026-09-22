@@ -59,8 +59,6 @@ interface DataWriter<T> {
 }
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
-
 
 
 ## Relación con el resto de la ruta
@@ -69,11 +67,11 @@ El modelo de dominio debe ser independiente del formato para permitir cambiar CS
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa una conversión entre dos formatos utilizando un único modelo de dominio.
+2. Comprueba que los datos conservan sus tipos y valores después de la conversión.
+3. Rechaza registros inválidos sin detener una importación completa cuando proceda.
+4. Compara las ventajas y pérdidas de cada formato elegido.
+5. Añade pruebas de ida y vuelta y de datos corruptos.
 
 ## Qué debes recordar
 

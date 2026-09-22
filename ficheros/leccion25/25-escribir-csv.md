@@ -82,7 +82,7 @@ public class EscribirCsv {
 
 La salida debe ser `Dijo "hola"`. El archivo contiene dos registros; el escritor se ocupa del escape de comas y comillas. No construyas el CSV concatenando campos con comas.
 
-Para ejecutar esta clase con sus dependencias consulta [ejecución de artefactos]({{ '/maven/leccion30/' | relative_url }}); usa `EscribirCsv` como clase principal. Referencia: [CSVPrinter](https://commons.apache.org/proper/commons-csv/apidocs/org/apache/commons/csv/CSVPrinter.html).
+Para ejecutar esta clase con sus dependencias consulta [empaquetar y ejecutar la aplicación]({{ '/maven/16-empaquetar-ejecutar/' | relative_url }}); usa `EscribirCsv` como clase principal. Referencia: [CSVPrinter](https://commons.apache.org/proper/commons-csv/apidocs/org/apache/commons/csv/CSVPrinter.html).
 
 
 ## Relación con el resto de la ruta
@@ -91,11 +91,11 @@ Maven resuelve Apache Commons CSV; Commons CSV interpreta el formato. CSV es hab
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Procesa un CSV con cabecera y transforma cada fila en el resultado de esta lección.
+2. Prueba una fila con comas, comillas o columnas incompletas.
+3. Recibe la ruta del CSV como argumento y conserva UTF-8 explícito.
+4. Separa parsing, validación y escritura en responsabilidades distintas.
+5. Añade una prueba para una fila válida y otra rechazada.
 
 ## Qué debes recordar
 

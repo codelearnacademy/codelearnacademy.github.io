@@ -50,14 +50,26 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 
 ## Ejemplo guiado
 
-```text
-src/main/resources → recursos empaquetados
-src/test/resources → fixtures
-Docker volume      → ficheros externos
-Spring MultipartFile → subida HTTP
+Implementa un endpoint que reciba un CSV mediante `MultipartFile`. El controlador no debe contener el parser ni la lógica de validación; delega esas responsabilidades en un servicio:
+
+```java
+@RestController
+class ImportacionController {
+  private final ImportacionService service;
+
+  ImportacionController(ImportacionService service) {
+    this.service = service;
+  }
+
+  @PostMapping("/importaciones", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  Map<String, Integer> importar(@RequestParam("fichero") MultipartFile fichero)
+      throws IOException {
+    return Map.of("registros", service.importar(fichero.getInputStream()));
+  }
+}
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+El servicio debe leer el `InputStream`, validar cada fila y devolver un resumen. No guardes el nombre original del fichero como ruta sin validarlo ni cargues ficheros enormes completos en memoria.
 
 
 
@@ -67,11 +79,11 @@ Maven, Spring y Docker añaden empaquetado, endpoints, recursos, configuración 
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa el servicio que cuente filas válidas y rechace columnas incompletas.
+2. Devuelve un error claro cuando falta la parte `fichero`.
+3. Limita el tamaño del archivo y rechaza extensiones no permitidas.
+4. Añade una prueba MockMvc con un CSV válido y otro inválido.
+5. Explica por qué el controlador no debe encargarse del parsing.
 
 ## Qué debes recordar
 

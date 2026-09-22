@@ -50,14 +50,26 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 
 ## Ejemplo guiado
 
+Añade `com.fasterxml.jackson.core:jackson-databind:2.19.4` a las dependencias Maven del proyecto. Guarda la clase como `EjemploJackson.java` en `src/main/java`.
+
 ```java
-ObjectMapper mapper = new ObjectMapper();
-Usuario u = new Usuario("Ana", "ana@example.com", 22);
-String json = mapper.writeValueAsString(u);
-Usuario copia = mapper.readValue(json, Usuario.class);
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class EjemploJackson {
+  public record Usuario(String nombre, String correo, int edad) {}
+
+  public static void main(String[] args) throws Exception {
+    var mapper = new ObjectMapper();
+    var usuario = new Usuario("Ana", "ana@example.com", 22);
+    var json = mapper.writeValueAsString(usuario);
+    var copia = mapper.readValue(json, Usuario.class);
+    System.out.println(json);
+    System.out.println(copia.nombre());
+  }
+}
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+El programa imprime el JSON del usuario y después su nombre. `ObjectMapper` es la API; `jackson-databind` es la dependencia que Maven debe resolver.
 
 
 
@@ -67,11 +79,11 @@ Spring MVC utiliza Jackson habitualmente para convertir JSON HTTP en DTOs Java y
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa la operación JSON específica de esta lección con Jackson.
+2. Prueba un JSON válido, uno incompleto y otro con un tipo incorrecto.
+3. Conserva el modelo Java separado del acceso al fichero.
+4. Comprueba la salida y explica qué ocurre ante una propiedad desconocida o ausente.
+5. Añade una prueba de serialización o deserialización para el caso principal.
 
 ## Qué debes recordar
 

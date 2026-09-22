@@ -50,13 +50,26 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 
 ## Ejemplo guiado
 
+Añade `com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.19.4` a las dependencias Maven del proyecto. Guarda la clase como `EjemploJacksonXml.java` en `src/main/java`.
+
 ```java
-XmlMapper mapper = new XmlMapper();
-String xml = mapper.writeValueAsString(usuario);
-Usuario copia = mapper.readValue(xml, Usuario.class);
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
+public class EjemploJacksonXml {
+  public record Usuario(String nombre, int edad) {}
+
+  public static void main(String[] args) throws Exception {
+    var mapper = new XmlMapper();
+    var usuario = new Usuario("Ana", 22);
+    var xml = mapper.writeValueAsString(usuario);
+    var copia = mapper.readValue(xml, Usuario.class);
+    System.out.println(xml);
+    System.out.println(copia.nombre());
+  }
+}
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+El programa genera XML, lo vuelve a convertir en un objeto y muestra su nombre. Jackson XML necesita una dependencia diferente de `jackson-databind`, aunque ambas utilizan conceptos parecidos.
 
 
 
@@ -66,11 +79,11 @@ XML sigue siendo importante en integraciones empresariales, SOAP, estándares do
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Implementa el procesamiento XML específico de esta lección.
+2. Prueba un documento válido y otro mal formado.
+3. Añade una entrada con DTD o entidad externa y verifica que se rechaza cuando corresponda.
+4. Compara el consumo de memoria y el control del flujo del parser utilizado.
+5. Añade una prueba que compruebe el resultado y la política de seguridad XML.
 
 ## Qué debes recordar
 

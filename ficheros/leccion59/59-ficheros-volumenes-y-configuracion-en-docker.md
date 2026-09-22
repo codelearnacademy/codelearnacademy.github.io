@@ -50,14 +50,29 @@ Fichero → bytes/texto → parser → objetos Java → validación → lógica 
 
 ## Ejemplo guiado
 
-```text
-src/main/resources → recursos empaquetados
-src/test/resources → fixtures
-Docker volume      → ficheros externos
-Spring MultipartFile → subida HTTP
+Construye el JAR de la aplicación y monta fuera de la imagen los datos y la configuración:
+
+```dockerfile
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY target/aplicacion.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
+Ejemplo de ejecución con Docker Compose:
+
+```yaml
+services:
+  aplicacion:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+```
+
+La imagen contiene el código y las dependencias. `data` conserva los ficheros generados y `config` permite cambiar la configuración sin reconstruir la imagen. No montes secretos en una imagen ni los incluyas en `Dockerfile`.
 
 
 
@@ -67,11 +82,11 @@ Maven, Spring y Docker añaden empaquetado, endpoints, recursos, configuración 
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Crea el `Dockerfile` y construye la imagen después de ejecutar `mvn package`.
+2. Ejecuta el contenedor con los directorios `data` y `config` montados.
+3. Modifica un fichero de configuración sin reconstruir la imagen y comprueba el cambio.
+4. Verifica que los datos siguen disponibles tras eliminar y volver a crear el contenedor.
+5. Explica qué pertenece a la imagen, al contenedor y al volumen.
 
 ## Qué debes recordar
 

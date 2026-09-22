@@ -59,8 +59,6 @@ interface DataWriter<T> {
 }
 ```
 
-Adapta el ejemplo al concepto de esta lección y comprueba el resultado con un fichero pequeño antes de aumentar el volumen de datos.
-
 
 
 ## Relación con el resto de la ruta
@@ -69,11 +67,11 @@ El modelo de dominio debe ser independiente del formato para permitir cambiar CS
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo y guarda el resultado en un repositorio Git.
-2. Introduce un fichero válido y otro mal formado; compara el comportamiento.
-3. Cambia el nombre/ruta del fichero para recibirlo como argumento del programa.
-4. Explica qué parte resuelve Java estándar y cuál depende de una biblioteca externa.
-5. Escribe una prueba para el caso principal o describe cómo la automatizarías.
+1. Aplica la arquitectura o técnica de esta lección a una operación real de lectura o escritura.
+2. Separa las responsabilidades y sustituye la dependencia concreta en una prueba.
+3. Comprueba el comportamiento con un recurso temporal o externo.
+4. Documenta qué ocurre ante errores de lectura, escritura o configuración.
+5. Añade una prueba aislada que demuestre el beneficio de la solución.
 
 ## Qué debes recordar
 
