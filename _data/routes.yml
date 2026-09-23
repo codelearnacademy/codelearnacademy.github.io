@@ -1086,263 +1086,150 @@ ficheros:
   level: Ruta
   url: /ficheros/
   status: published
-  description: Lectura, escritura, properties, CSV, JSON, XML, Jackson, testing e integración con Spring y Docker.
+  description: "Ficheros en Java 21: lectura, escritura, .properties, CSV, JSON, XML, Jackson, CRUD y diseño común de repositorios."
   project: Sí
   exam: No
+  project_description: "Construirás DataBridge, una aplicación que gestiona productos y transforma datos entre CSV, JSON y XML usando configuración .properties."
   technologies:
     - java
     - maven
-    - spring
-    - docker
   lessons:
     - id: leccion01
       number: "01"
-      title: Datos persistentes y ficheros
+      title: "Introducción a ficheros en Java 21"
       url: /ficheros/leccion01/
     - id: leccion02
       number: "02"
-      title: Rutas y Path
+      title: "Path y Files"
       url: /ficheros/leccion02/
     - id: leccion03
       number: "03"
-      title: Leer ficheros de texto
+      title: "Lectura y escritura de texto"
       url: /ficheros/leccion03/
     - id: leccion04
       number: "04"
-      title: Escribir ficheros de texto
+      title: "IOException y try-with-resources"
       url: /ficheros/leccion04/
     - id: leccion05
       number: "05"
-      title: Encoding y UTF-8
+      title: "Maven y dependencias"
       url: /ficheros/leccion05/
     - id: leccion06
       number: "06"
-      title: Excepciones de entrada y salida
+      title: "Modelo común Producto"
       url: /ficheros/leccion06/
     - id: leccion07
       number: "07"
-      title: try-with-resources
+      title: "El formato .properties"
       url: /ficheros/leccion07/
     - id: leccion08
       number: "08"
-      title: Ficheros grandes y procesamiento progresivo
+      title: "Leer .properties"
       url: /ficheros/leccion08/
     - id: leccion09
       number: "09"
-      title: Leer no es lo mismo que parsear
+      title: "Crear y modificar .properties"
       url: /ficheros/leccion09/
     - id: leccion10
       number: "10"
-      title: Serialización, deserialización y modelo de dominio
+      title: "CRUD con .properties"
       url: /ficheros/leccion10/
     - id: leccion11
       number: "11"
-      title: Qué es un fichero properties
+      title: "Ejercicio: configuración de aplicación"
       url: /ficheros/leccion11/
     - id: leccion12
       number: "12"
-      title: Leer properties con java.util.Properties
+      title: "El formato CSV"
       url: /ficheros/leccion12/
     - id: leccion13
       number: "13"
-      title: Valores por defecto
+      title: "Apache Commons CSV"
       url: /ficheros/leccion13/
     - id: leccion14
       number: "14"
-      title: Convertir valores a tipos Java
+      title: "Leer CSV a objetos Java"
       url: /ficheros/leccion14/
     - id: leccion15
       number: "15"
-      title: Guardar properties
+      title: "Escribir objetos a CSV"
       url: /ficheros/leccion15/
     - id: leccion16
       number: "16"
-      title: Properties en src/main/resources
+      title: "CRUD con CSV"
       url: /ficheros/leccion16/
     - id: leccion17
       number: "17"
-      title: Configuración, secretos y buenas prácticas
+      title: "Ejercicio: catálogo de productos CSV"
       url: /ficheros/leccion17/
     - id: leccion18
       number: "18"
-      title: Qué es CSV y para qué se utiliza
+      title: "El formato JSON"
       url: /ficheros/leccion18/
     - id: leccion19
       number: "19"
-      title: Por qué split no es un parser CSV
+      title: "Jackson con Maven"
       url: /ficheros/leccion19/
     - id: leccion20
       number: "20"
-      title: Apache Commons CSV y Maven
+      title: "Deserializar JSON"
       url: /ficheros/leccion20/
     - id: leccion21
       number: "21"
-      title: Leer un CSV
+      title: "Serializar JSON"
       url: /ficheros/leccion21/
     - id: leccion22
       number: "22"
-      title: Cabeceras y acceso por nombre
+      title: "CRUD con JSON"
       url: /ficheros/leccion22/
     - id: leccion23
       number: "23"
-      title: Convertir filas en objetos Java
+      title: "Ejercicio: inventario JSON"
       url: /ficheros/leccion23/
     - id: leccion24
       number: "24"
-      title: Validar datos CSV
+      title: "El formato XML"
       url: /ficheros/leccion24/
     - id: leccion25
       number: "25"
-      title: Escribir CSV
+      title: "Jackson XML con Maven"
       url: /ficheros/leccion25/
     - id: leccion26
       number: "26"
-      title: Importaciones masivas y tratamiento de errores
+      title: "Deserializar XML"
       url: /ficheros/leccion26/
     - id: leccion27
       number: "27"
-      title: Qué es JSON
+      title: "Serializar XML"
       url: /ficheros/leccion27/
     - id: leccion28
       number: "28"
-      title: Jackson y Maven
+      title: "CRUD con XML"
       url: /ficheros/leccion28/
     - id: leccion29
       number: "29"
-      title: ObjectMapper
+      title: "Ejercicio: catálogo de productos XML"
       url: /ficheros/leccion29/
     - id: leccion30
       number: "30"
-      title: Objeto Java a JSON
+      title: "Diseño común para varios formatos"
       url: /ficheros/leccion30/
     - id: leccion31
       number: "31"
-      title: JSON a objeto Java
+      title: "Repositorios por formato"
       url: /ficheros/leccion31/
     - id: leccion32
       number: "32"
-      title: Leer y escribir JSON en ficheros
+      title: "Configurar el programa con .properties"
       url: /ficheros/leccion32/
     - id: leccion33
       number: "33"
-      title: Arrays y listas JSON
+      title: "Proyecto final: DataBridge"
       url: /ficheros/leccion33/
     - id: leccion34
       number: "34"
-      title: TypeReference y genéricos
+      title: "Retos y ampliaciones"
       url: /ficheros/leccion34/
-    - id: leccion35
-      number: "35"
-      title: Records y Jackson
-      url: /ficheros/leccion35/
-    - id: leccion36
-      number: "36"
-      title: Mapeo de nombres de propiedades
-      url: /ficheros/leccion36/
-    - id: leccion37
-      number: "37"
-      title: Campos ignorados, opcionales y null
-      url: /ficheros/leccion37/
-    - id: leccion38
-      number: "38"
-      title: JsonNode y modelo de árbol
-      url: /ficheros/leccion38/
-    - id: leccion39
-      number: "39"
-      title: Qué es XML
-      url: /ficheros/leccion39/
-    - id: leccion40
-      number: "40"
-      title: JSON frente a XML
-      url: /ficheros/leccion40/
-    - id: leccion41
-      number: "41"
-      title: DOM
-      url: /ficheros/leccion41/
-    - id: leccion42
-      number: "42"
-      title: SAX
-      url: /ficheros/leccion42/
-    - id: leccion43
-      number: "43"
-      title: StAX
-      url: /ficheros/leccion43/
-    - id: leccion44
-      number: "44"
-      title: Jackson XML y Maven
-      url: /ficheros/leccion44/
-    - id: leccion45
-      number: "45"
-      title: XmlMapper
-      url: /ficheros/leccion45/
-    - id: leccion46
-      number: "46"
-      title: JAXB y Jakarta XML Binding
-      url: /ficheros/leccion46/
-    - id: leccion47
-      number: "47"
-      title: Seguridad XML y XXE
-      url: /ficheros/leccion47/
-    - id: leccion48
-      number: "48"
-      title: Datos no confiables y validación
-      url: /ficheros/leccion48/
-    - id: leccion49
-      number: "49"
-      title: Elegir entre properties, CSV, JSON y XML
-      url: /ficheros/leccion49/
-    - id: leccion50
-      number: "50"
-      title: CSV a objetos Java
-      url: /ficheros/leccion50/
-    - id: leccion51
-      number: "51"
-      title: Objetos Java a JSON y XML
-      url: /ficheros/leccion51/
-    - id: leccion52
-      number: "52"
-      title: Arquitectura Reader y Writer
-      url: /ficheros/leccion52/
-    - id: leccion53
-      number: "53"
-      title: Testing de lectura y escritura
-      url: /ficheros/leccion53/
-    - id: leccion54
-      number: "54"
-      title: TempDir y recursos de prueba
-      url: /ficheros/leccion54/
-    - id: leccion55
-      number: "55"
-      title: src/main/resources y classpath
-      url: /ficheros/leccion55/
-    - id: leccion56
-      number: "56"
-      title: Recursos internos frente a ficheros externos
-      url: /ficheros/leccion56/
-    - id: leccion57
-      number: "57"
-      title: Properties y Jackson en Spring Boot
-      url: /ficheros/leccion57/
-    - id: leccion58
-      number: "58"
-      title: Subida e importación de ficheros con Spring
-      url: /ficheros/leccion58/
-    - id: leccion59
-      number: "59"
-      title: Ficheros, volúmenes y configuración en Docker
-      url: /ficheros/leccion59/
-    - id: leccion60
-      number: "60"
-      title: Exportaciones y persistencia de ficheros
-      url: /ficheros/leccion60/
-    - id: leccion61
-      number: "61"
-      title: Java frente a JavaScript, Python y Go
-      url: /ficheros/leccion61/
-    - id: leccion62
-      number: "62"
-      title: Proyecto final · DataBridge
-      url: /ficheros/leccion62/
 
 testing:
   title: Testing y optimización
