@@ -181,3 +181,80 @@ Al terminar este ejemplo ya dispones de CRUD completo en los cuatro tipos de fic
   <a href="/ficheros/leccion27/">← 27 · Serializar XML</a>
   <a href="/ficheros/leccion29/">29 · Ejercicio: catálogo de productos XML →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+`XmlCrudDemo` explica el CRUD en una única clase. La variante por repositorios separa esas responsabilidades: `AbstractFileRepository` resuelve las operaciones de negocio compartidas y `AbstractXmlRepository` únicamente transforma un documento XML en una lista y viceversa.
+
+**Archivo real: `repository/file/xml/AbstractXmlRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.repository.file.AbstractFileRepository;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.Function;
+
+/** Persistencia XML generica con un documento tipado para raiz y elementos XML. */
+public abstract class AbstractXmlRepository<T, ID, D> extends AbstractFileRepository<T, ID> {
+    private final XmlMapper mapper;
+    private final Class<D> documentType;
+    private final Function<D, List<T>> fromDocument;
+    private final Function<List<T>, D> toDocument;
+
+    protected AbstractXmlRepository(Path path, XmlMapper mapper, Class<D> documentType,
+                                    Function<D, List<T>> fromDocument, Function<List<T>, D> toDocument) {
+        super(path);
+        this.mapper = Objects.requireNonNull(mapper, "mapper");
+        this.documentType = Objects.requireNonNull(documentType, "documentType");
+        this.fromDocument = Objects.requireNonNull(fromDocument, "fromDocument");
+        this.toDocument = Objects.requireNonNull(toDocument, "toDocument");
+    }
+
+    @Override
+    protected List<T> readAll() throws IOException {
+        if (Files.size(path) == 0) return List.of();
+        D document = mapper.readValue(path.toFile(), documentType);
+        if (document == null) throw new IOException("Documento XML vacio");
+        List<T> result = fromDocument.apply(document);
+        return result == null ? List.of() : result;
+    }
+
+    @Override
+    protected void writeAll(List<T> entities) throws IOException {
+        mapper.writerWithDefaultPrettyPrinter().writeValue(path.toFile(), toDocument.apply(entities));
+    }
+}
+```
+
+**Archivo real: `repository/file/xml/ProductoXmlRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.nio.file.Path;
+
+public class ProductoXmlRepository extends AbstractXmlRepository<Producto, Long, DocumentoProductos>
+        implements ProductoRepository {
+    public ProductoXmlRepository(Path path) { this(path, new XmlMapper()); }
+    public ProductoXmlRepository(Path path, XmlMapper mapper) {
+        super(path, mapper, DocumentoProductos.class,
+              DocumentoProductos::getProductos, DocumentoProductos::new);
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Secuencia `create`:** interfaz `ProductoRepository` → implementación heredada en `AbstractFileRepository` → `saveAll` → `AbstractXmlRepository.writeAll` → `DocumentoProductos` → `productos.xml`.
+
+**Secuencia `findById`:** `AbstractFileRepository.findById` → `findAll` → `AbstractXmlRepository.readAll` → `XmlMapper.readValue` → `DocumentoProductos.getProductos` → filtrado de identificador.

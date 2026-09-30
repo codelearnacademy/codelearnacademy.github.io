@@ -4,7 +4,7 @@ route: "ficheros"
 lesson_id: "leccion29"
 lesson_file: "29-ejercicio-catalogo-de-productos-xml"
 lesson_number: "29"
-title: "Ejercicio: catálogo de productos XML"
+title: "Ejercicio: catálogo de productos XML con repositorios"
 description: "Ejercicio integrador de XML con Producto, wrapper, CRUD, validación y persistencia con Jackson XML."
 permalink: "/ficheros/leccion29/"
 lessons:
@@ -85,3 +85,47 @@ Con esta lección ya has implementado el mismo CRUD con CSV, JSON y XML. El sigu
   <a href="/ficheros/leccion28/">← 28 · CRUD con XML</a>
   <a href="/ficheros/leccion30/">30 · Diseño común para varios formatos →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Ejercicio equivalente a CSV y JSON, ahora con XML
+
+Mantén el contrato y el modelo común y añade `AbstractXmlRepository`, `ProductoXmlRepository` y el adaptador `DocumentoProductos`. Esta última clase **no** debe contener operaciones CRUD.
+
+**Archivo real: `repository/file/xml/ProductoXmlRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.nio.file.Path;
+
+public class ProductoXmlRepository extends AbstractXmlRepository<Producto, Long, DocumentoProductos>
+        implements ProductoRepository {
+    public ProductoXmlRepository(Path path) { this(path, new XmlMapper()); }
+    public ProductoXmlRepository(Path path, XmlMapper mapper) {
+        super(path, mapper, DocumentoProductos.class,
+              DocumentoProductos::getProductos, DocumentoProductos::new);
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Fichero de ejemplo `productos.xml`**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto><id>1</id><nombre>Teclado, mecanico</nombre><precio>29.99</precio><stock>10</stock></producto>
+  <producto><id>2</id><nombre>Raton</nombre><precio>15.5</precio><stock>25</stock></producto>
+  <producto><id>3</id><nombre>Monitor</nombre><precio>189.99</precio><stock>4</stock></producto>
+</productos>
+```
+
+**Tareas:** listar, buscar el id 2, comprobar `Optional.empty()` para uno inexistente, crear el id 4, rechazar un id repetido, actualizar el precio, eliminar y volver a abrir el mismo XML para verificar persistencia.
+
+**Ejecuta:** `mvn test` y `mvn exec:java -Dexec.args=xml` en `proyecto-maven/`.

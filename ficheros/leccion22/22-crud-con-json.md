@@ -164,3 +164,77 @@ El repositorio JSON muestra claramente la ventaja del mapeo objeto-documento. XM
   <a href="/ficheros/leccion21/">← 21 · Serializar JSON</a>
   <a href="/ficheros/leccion23/">23 · Ejercicio: inventario JSON →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+`JsonCrudDemo` (apartado anterior de esta lección) es el equivalente directo de `CsvCrudDemo`. El paso de refactorización consiste en **no volver a implementar el CRUD**: `ProductoJsonRepository` hereda los cinco métodos de `AbstractFileRepository` y solo fija el tipo JSON y la forma de extraer el id.
+
+**Archivo real: `repository/file/json/ProductoJsonRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.json;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.file.Path;
+import java.util.List;
+
+public class ProductoJsonRepository extends AbstractJsonRepository<Producto, Long> implements ProductoRepository {
+    public ProductoJsonRepository(Path path) { this(path, new ObjectMapper()); }
+    public ProductoJsonRepository(Path path, ObjectMapper mapper) {
+        super(path, mapper, new TypeReference<List<Producto>>() {});
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Archivo real: `repository/file/json/AbstractJsonRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.json;
+
+import com.ejemplo.catalogo.repository.file.AbstractFileRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+/** Persistencia JSON generica. El TypeReference conserva el tipo de los elementos. */
+public abstract class AbstractJsonRepository<T, ID> extends AbstractFileRepository<T, ID> {
+    private final ObjectMapper mapper;
+    private final TypeReference<List<T>> listType;
+
+    protected AbstractJsonRepository(Path path, ObjectMapper mapper, TypeReference<List<T>> listType) {
+        super(path);
+        this.mapper = Objects.requireNonNull(mapper, "mapper");
+        this.listType = Objects.requireNonNull(listType, "listType");
+    }
+
+    @Override
+    protected List<T> readAll() throws IOException {
+        if (Files.size(path) == 0) return new ArrayList<>();
+        List<T> result = mapper.readValue(path.toFile(), listType);
+        if (result == null) throw new IOException("El JSON debe contener un array, no null");
+        return result;
+    }
+
+    @Override
+    protected void writeAll(List<T> entities) throws IOException {
+        mapper.writerWithDefaultPrettyPrinter().writeValue(path.toFile(), entities);
+    }
+}
+```
+
+**Orden de llamada `create`:** `ProductoJsonRepository.create` (método heredado) → `AbstractFileRepository.create` → `findAll` → `AbstractJsonRepository.readAll` (si existe el fichero) → `saveAll` → `AbstractJsonRepository.writeAll`.
+
+**Orden de llamada `findById`:** `AbstractFileRepository.findById` → `findAll` → `AbstractJsonRepository.readAll` → comparación del id.
+
+Los archivos completos y las pruebas están en [`proyecto-maven`](../../proyecto-maven/). Todos los ejemplos de repositorios de esta ampliación usan el `record Producto(long id, String nombre, double precio, int stock)`; el `*CrudDemo` previo es un ejemplo monolítico introductorio y no debe mezclarse con las clases de la arquitectura de repositorios.

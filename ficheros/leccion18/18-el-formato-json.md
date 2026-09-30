@@ -70,3 +70,36 @@ El mismo `Producto` de CSV podrá reutilizarse; solo cambia la herramienta que t
   <a href="/ficheros/leccion17/">← 17 · Ejercicio: catálogo de productos CSV</a>
   <a href="/ficheros/leccion19/">19 · Jackson con Maven →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+Conservaremos los cuatro campos del mismo `Producto` utilizado en CSV, de modo que el cambio solo afecte a la representación y no a la lógica de dominio.
+
+**Fichero de ejemplo `productos.json`**
+
+```json
+[
+  {
+    "id": 1,
+    "nombre": "Teclado, mecanico",
+    "precio": 29.99,
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Raton",
+    "precio": 15.5,
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor",
+    "precio": 189.99,
+    "stock": 4
+  }
+]
+```
+
+**Observa:** JSON representa el catálogo como un array; el `stock` es un número entero, el precio es numérico y el id sirve para buscar un producto.

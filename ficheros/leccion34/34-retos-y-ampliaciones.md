@@ -74,3 +74,17 @@ Estos retos no añaden otro formato: profundizan en robustez, pruebas y extensib
   <a href="/ficheros/leccion33/">← 33 · Proyecto final: DataBridge</a>
   <a href="/ficheros/">Volver al índice →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Ampliaciones sobre el proyecto de repositorios
+
+1. Asegurar `saveAll`: escribir a un fichero temporal y sustituir el original después de completar el guardado.
+2. Validar identificadores, precios y stock antes de crear o actualizar objetos.
+3. Probar CSV con nombres que contienen comas y XML/JSON mal formados.
+4. Incorporar una importación CSV → JSON → XML sin duplicar el CRUD.
+5. Añadir pruebas independientes para un archivo vacío, uno inexistente, errores de lectura y persistencia tras nueva instancia.
+
+**Pista:** no mezcles la conversión con `Producto`; utiliza adaptadores de formato y la interfaz `ProductoRepository`.

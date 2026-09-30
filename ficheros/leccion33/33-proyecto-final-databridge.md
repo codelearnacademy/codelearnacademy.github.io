@@ -83,3 +83,23 @@ Es la culminación de la ruta: cada formato queda reducido a un adaptador alrede
   <a href="/ficheros/leccion32/">← 32 · Configurar el programa con .properties</a>
   <a href="/ficheros/leccion34/">34 · Retos y ampliaciones →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Proyecto entregable: DataBridge sobre el catálogo real
+
+El directorio `proyecto-maven/` incluye `Producto`, el contrato común, los tres repositorios y pruebas JUnit. Amplíalo para leer la configuración `.properties`, abrir un origen CSV/JSON/XML y exportar el resultado a un formato distinto sin duplicar el CRUD.
+
+**Fases de entrega:** (1) compilar Java 21; (2) ejecutar pruebas existentes; (3) implementar selección por configuración; (4) leer el origen y construir el repositorio de destino; (5) guardar una copia sin sobrescribir el origen; (6) comprobar la equivalencia de productos con JUnit.
+
+```bash
+cd proyecto-maven
+mvn clean test
+mvn exec:java -Dexec.args=csv
+mvn exec:java -Dexec.args=json
+mvn exec:java -Dexec.args=xml
+```
+
+**Nota:** los comandos `exec:java` ilustran un formato por ejecución, no realizan todavía una migración entre formatos. La conversión de uno a otro es la actividad que deberá desarrollar el alumnado.

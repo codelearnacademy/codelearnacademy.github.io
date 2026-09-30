@@ -68,3 +68,42 @@ Con lectura y escritura disponibles, la siguiente lección construye un reposito
   <a href="/ficheros/leccion20/">← 20 · Deserializar JSON</a>
   <a href="/ficheros/leccion22/">22 · CRUD con JSON →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+El guardado de JSON delega en el `ObjectMapper` la serialización de toda la lista. El método `saveAll(List<T>)` de `AbstractFileRepository` garantiza que exista el directorio y llama a `AbstractJsonRepository.writeAll`.
+
+```java
+@Override
+protected void writeAll(List<T> entities) throws IOException {
+    mapper.writerWithDefaultPrettyPrinter().writeValue(path.toFile(), entities);
+}
+```
+**Fichero de ejemplo `productos.json`**
+
+```json
+[
+  {
+    "id": 1,
+    "nombre": "Teclado, mecanico",
+    "precio": 29.99,
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Raton",
+    "precio": 15.5,
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor",
+    "precio": 189.99,
+    "stock": 4
+  }
+]
+```
+
+**Práctica:** sustituye el stock de un producto con `update`, crea una nueva instancia de `ProductoJsonRepository` y verifica que el cambio permanece.

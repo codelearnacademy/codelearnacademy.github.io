@@ -1085,3 +1085,13 @@ Al finalizar, responde:
 - Apache Commons CSV debe resolver quoting y escape.
 - UTF-8 debe utilizarse explícitamente.
 - El mismo modelo `Producto` podrá reutilizarse posteriormente con JSON y XML.
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Puente hacia JSON y XML
+
+Una vez terminado el catálogo CSV, conserva `Repository<T, ID>`, `ProductoRepository` y `AbstractFileRepository` sin introducir métodos CRUD nuevos. En las lecciones 23 y 29 repetirás la misma tarea cambiando exclusivamente las clases de lectura/escritura. Véase el proyecto Maven de esta ruta en `proyecto-maven/`.
+
+**Criterios de verificación:** id duplicado, búsqueda inexistente (`Optional.empty()`), actualización, eliminación, fichero inexistente y persistencia tras reinstanciar el repositorio.

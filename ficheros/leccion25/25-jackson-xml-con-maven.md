@@ -75,3 +75,45 @@ La similitud de APIs permite centrarse en las diferencias de estructura XML y no
   <a href="/ficheros/leccion24/">← 24 · El formato XML</a>
   <a href="/ficheros/leccion26/">26 · Deserializar XML →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+Utiliza la dependencia `jackson-dataformat-xml` ya presente en `proyecto-maven/pom.xml` y la clase `XmlMapper`. La configuración de Maven es compartida por las tres implementaciones.
+
+```xml
+<dependency>
+  <groupId>com.fasterxml.jackson.dataformat</groupId>
+  <artifactId>jackson-dataformat-xml</artifactId>
+  <version>${jackson.version}</version>
+</dependency>
+```
+
+La anotación de la raíz se reserva a `DocumentoProductos`; de ese modo `Producto` no queda acoplado a XML.
+
+**Archivo real: `repository/file/xml/DocumentoProductos.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
+
+/** Adaptador exclusivo de XML; Producto sigue sin anotaciones de infraestructura. */
+@JacksonXmlRootElement(localName = "productos")
+public class DocumentoProductos {
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "producto")
+    private List<Producto> productos = new ArrayList<>();
+
+    public DocumentoProductos() { }
+    public DocumentoProductos(List<Producto> productos) { this.productos = new ArrayList<>(productos); }
+    public List<Producto> getProductos() { return productos; }
+    public void setProductos(List<Producto> productos) { this.productos = productos; }
+}
+```

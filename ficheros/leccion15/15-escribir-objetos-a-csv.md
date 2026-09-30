@@ -75,3 +75,62 @@ Ya puedes leer y escribir el mismo modelo; la siguiente lección reúne ambas op
   <a href="/ficheros/leccion14/">← 14 · Leer CSV a objetos Java</a>
   <a href="/ficheros/leccion16/">16 · CRUD con CSV →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+A diferencia del ejemplo directo con `CSVPrinter`, el proyecto completo separa la escritura genérica en `AbstractCsvRepository.writeAll` y el mapeo del dominio en `ProductoCsvRepository.toCsv`.
+
+**Archivo real: `repository/file/csv/AbstractCsvRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.csv;
+
+import com.ejemplo.catalogo.repository.file.AbstractFileRepository;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVPrinter;
+import org.apache.commons.csv.CSVRecord;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class AbstractCsvRepository<T, ID> extends AbstractFileRepository<T, ID> {
+    private final CSVFormat inputFormat;
+    private final CSVFormat outputFormat;
+
+    protected AbstractCsvRepository(Path path, String... headers) {
+        super(path);
+        inputFormat = CSVFormat.DEFAULT.builder().setHeader().setSkipHeaderRecord(true).get();
+        outputFormat = CSVFormat.DEFAULT.builder().setHeader(headers).get();
+    }
+    protected abstract T fromCsv(CSVRecord record);
+    protected abstract Object[] toCsv(T entity);
+
+    @Override
+    protected List<T> readAll() throws IOException {
+        List<T> result = new ArrayList<>();
+        try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
+             CSVParser parser = inputFormat.parse(reader)) {
+            for (CSVRecord record : parser) result.add(fromCsv(record));
+        }
+        return result;
+    }
+
+    @Override
+    protected void writeAll(List<T> entities) throws IOException {
+        try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
+             CSVPrinter printer = new CSVPrinter(writer, outputFormat)) {
+            for (T entity : entities) printer.printRecord(toCsv(entity));
+        }
+    }
+}
+```
+
+**Prueba:** crea un producto, reconstruye el repositorio con el mismo `Path` y comprueba que sigue presente.

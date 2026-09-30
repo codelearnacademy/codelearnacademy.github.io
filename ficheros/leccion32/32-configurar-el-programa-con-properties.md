@@ -77,3 +77,18 @@ Esta configuración es el punto de entrada del proyecto DataBridge de la siguien
   <a href="/ficheros/leccion31/">← 31 · Repositorios por formato</a>
   <a href="/ficheros/leccion33/">33 · Proyecto final: DataBridge →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Selección del formato sin modificar el CRUD
+
+A partir de `java.util.Properties`, lee `formato` y `ruta`, valida que el formato sea `csv`, `json` o `xml` y construye el repositorio adecuado. El programa de ejemplo del proyecto Maven ya permite seleccionar el formato mediante `mvn exec:java -Dexec.args=json` (o `csv` / `xml`); úsalo como punto de partida para incorporar `.properties`.
+
+```properties
+formato=json
+ruta=data/productos.json
+```
+
+**Criterios:** rechazar un formato desconocido, no sobrescribir la muestra original durante las pruebas y resolver rutas relativas desde el directorio de ejecución.

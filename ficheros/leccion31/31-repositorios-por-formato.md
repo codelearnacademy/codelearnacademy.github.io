@@ -77,3 +77,78 @@ Esto introduce inyección por constructor sin Spring: la clase declara lo que ne
   <a href="/ficheros/leccion30/">← 30 · Diseño común para varios formatos</a>
   <a href="/ficheros/leccion32/">32 · Configurar el programa con .properties →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Tres implementaciones del mismo contrato
+
+**Archivo real: `repository/file/csv/ProductoCsvRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.csv;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import org.apache.commons.csv.CSVRecord;
+import java.nio.file.Path;
+
+public class ProductoCsvRepository extends AbstractCsvRepository<Producto, Long> implements ProductoRepository {
+    public ProductoCsvRepository(Path path) {
+        super(path, "id", "nombre", "precio", "stock");
+    }
+    @Override protected Producto fromCsv(CSVRecord record) {
+        return new Producto(Long.parseLong(record.get("id")), record.get("nombre"),
+                Double.parseDouble(record.get("precio")), Integer.parseInt(record.get("stock")));
+    }
+    @Override protected Object[] toCsv(Producto p) {
+        return new Object[]{p.id(), p.nombre(), p.precio(), p.stock()};
+    }
+    @Override protected Long getId(Producto p) { return p.id(); }
+}
+```
+
+**Archivo real: `repository/file/json/ProductoJsonRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.json;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.file.Path;
+import java.util.List;
+
+public class ProductoJsonRepository extends AbstractJsonRepository<Producto, Long> implements ProductoRepository {
+    public ProductoJsonRepository(Path path) { this(path, new ObjectMapper()); }
+    public ProductoJsonRepository(Path path, ObjectMapper mapper) {
+        super(path, mapper, new TypeReference<List<Producto>>() {});
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Archivo real: `repository/file/xml/ProductoXmlRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.nio.file.Path;
+
+public class ProductoXmlRepository extends AbstractXmlRepository<Producto, Long, DocumentoProductos>
+        implements ProductoRepository {
+    public ProductoXmlRepository(Path path) { this(path, new XmlMapper()); }
+    public ProductoXmlRepository(Path path, XmlMapper mapper) {
+        super(path, mapper, DocumentoProductos.class,
+              DocumentoProductos::getProductos, DocumentoProductos::new);
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Práctica:** cambia únicamente la construcción del repositorio y ejecuta las mismas operaciones del catálogo sobre los tres formatos. Los tests parametrizados del proyecto comprueban que el comportamiento CRUD sea equivalente.

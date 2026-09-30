@@ -73,3 +73,22 @@ Mantendrás `Producto` y cambiarás `ObjectMapper` por `XmlMapper` más una clas
   <a href="/ficheros/leccion23/">← 23 · Ejercicio: inventario JSON</a>
   <a href="/ficheros/leccion25/">25 · Jackson XML con Maven →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+XML también utiliza el modelo común `Producto`, pero precisa una representación explícita de la raíz del documento. Esa responsabilidad es de `DocumentoProductos`, una clase de infraestructura que **no** sustituye a la entidad `Producto`.
+
+**Fichero de ejemplo `productos.xml`**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto><id>1</id><nombre>Teclado, mecanico</nombre><precio>29.99</precio><stock>10</stock></producto>
+  <producto><id>2</id><nombre>Raton</nombre><precio>15.5</precio><stock>25</stock></producto>
+  <producto><id>3</id><nombre>Monitor</nombre><precio>189.99</precio><stock>4</stock></producto>
+</productos>
+```
+
+Compara un elemento `<producto>` con un objeto del array JSON y una línea CSV: el contenido de dominio es el mismo.

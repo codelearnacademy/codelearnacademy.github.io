@@ -4,7 +4,7 @@ route: "ficheros"
 lesson_id: "leccion23"
 lesson_file: "23-ejercicio-inventario-json"
 lesson_number: "23"
-title: "Ejercicio: inventario JSON"
+title: "Ejercicio: inventario JSON con repositorios"
 description: "Ejercicio: inventario JSON: ruta práctica de ficheros con Java 21."
 permalink: "/ficheros/leccion23/"
 lessons:
@@ -72,3 +72,61 @@ Este ejercicio prepara el salto a XML demostrando que la lógica CRUD puede perm
   <a href="/ficheros/leccion22/">← 22 · CRUD con JSON</a>
   <a href="/ficheros/leccion24/">24 · El formato XML →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+### Ejercicio equivalente al catálogo CSV, ahora con JSON
+
+Partiendo de la lección 17, **no modifiques** `Producto`, `Repository`, `ProductoRepository` ni el CRUD compartido. Incorpora `AbstractJsonRepository` y `ProductoJsonRepository` y utiliza `productos.json`.
+
+**Archivo real: `repository/file/json/ProductoJsonRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.json;
+
+import com.ejemplo.catalogo.model.Producto;
+import com.ejemplo.catalogo.repository.ProductoRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.file.Path;
+import java.util.List;
+
+public class ProductoJsonRepository extends AbstractJsonRepository<Producto, Long> implements ProductoRepository {
+    public ProductoJsonRepository(Path path) { this(path, new ObjectMapper()); }
+    public ProductoJsonRepository(Path path, ObjectMapper mapper) {
+        super(path, mapper, new TypeReference<List<Producto>>() {});
+    }
+    @Override protected Long getId(Producto producto) { return producto.id(); }
+}
+```
+
+**Fichero de ejemplo `productos.json`**
+
+```json
+[
+  {
+    "id": 1,
+    "nombre": "Teclado, mecanico",
+    "precio": 29.99,
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Raton",
+    "precio": 15.5,
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor",
+    "precio": 189.99,
+    "stock": 4
+  }
+]
+```
+
+**Tareas:** 1) listar; 2) buscar el id 2 y uno inexistente; 3) crear el id 4; 4) rechazar un duplicado; 5) actualizar el stock del id 2; 6) eliminar el id 1; 7) crear otra instancia y verificar los resultados.
+
+**Ejecuta:** `mvn test` en `proyecto-maven/`; también puedes ejecutar `mvn exec:java -Dexec.args=json`. Explica por qué `readAll` y `writeAll` pertenecen al repositorio de formato, mientras que `create` pertenece a la clase base.

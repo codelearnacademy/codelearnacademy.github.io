@@ -75,3 +75,68 @@ La clase wrapper adapta la estructura del formato; la lógica de negocio sigue r
   <a href="/ficheros/leccion25/">← 25 · Jackson XML con Maven</a>
   <a href="/ficheros/leccion27/">27 · Serializar XML →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+`XmlMapper.readValue` convierte el XML a `DocumentoProductos`; un adaptador extrae de este la lista de `Producto`. La clase base resuelve previamente el caso de fichero inexistente.
+
+**Archivo real: `repository/file/xml/AbstractXmlRepository.java`**
+
+```java
+package com.ejemplo.catalogo.repository.file.xml;
+
+import com.ejemplo.catalogo.repository.file.AbstractFileRepository;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.Function;
+
+/** Persistencia XML generica con un documento tipado para raiz y elementos XML. */
+public abstract class AbstractXmlRepository<T, ID, D> extends AbstractFileRepository<T, ID> {
+    private final XmlMapper mapper;
+    private final Class<D> documentType;
+    private final Function<D, List<T>> fromDocument;
+    private final Function<List<T>, D> toDocument;
+
+    protected AbstractXmlRepository(Path path, XmlMapper mapper, Class<D> documentType,
+                                    Function<D, List<T>> fromDocument, Function<List<T>, D> toDocument) {
+        super(path);
+        this.mapper = Objects.requireNonNull(mapper, "mapper");
+        this.documentType = Objects.requireNonNull(documentType, "documentType");
+        this.fromDocument = Objects.requireNonNull(fromDocument, "fromDocument");
+        this.toDocument = Objects.requireNonNull(toDocument, "toDocument");
+    }
+
+    @Override
+    protected List<T> readAll() throws IOException {
+        if (Files.size(path) == 0) return List.of();
+        D document = mapper.readValue(path.toFile(), documentType);
+        if (document == null) throw new IOException("Documento XML vacio");
+        List<T> result = fromDocument.apply(document);
+        return result == null ? List.of() : result;
+    }
+
+    @Override
+    protected void writeAll(List<T> entities) throws IOException {
+        mapper.writerWithDefaultPrettyPrinter().writeValue(path.toFile(), toDocument.apply(entities));
+    }
+}
+```
+
+**Fichero de ejemplo `productos.xml`**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto><id>1</id><nombre>Teclado, mecanico</nombre><precio>29.99</precio><stock>10</stock></producto>
+  <producto><id>2</id><nombre>Raton</nombre><precio>15.5</precio><stock>25</stock></producto>
+  <producto><id>3</id><nombre>Monitor</nombre><precio>189.99</precio><stock>4</stock></producto>
+</productos>
+```
+
+**Ejercicio:** encuentra dónde se llama a `DocumentoProductos::getProductos`; compara el comportamiento de un fichero inexistente con el de un XML incorrecto.

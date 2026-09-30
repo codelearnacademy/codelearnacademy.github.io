@@ -73,3 +73,27 @@ CSV, JSON y XML mapearán sus datos al mismo `Producto`, de modo que la lógica 
   <a href="/ficheros/leccion05/">← 5 · Maven y dependencias</a>
   <a href="/ficheros/leccion07/">7 · El formato .properties →</a>
 </div>
+
+---
+
+## Ampliación práctica: el mismo catálogo de productos
+
+El mismo modelo se comparte entre CSV, JSON y XML. No contiene código de persistencia ni anotaciones Jackson: la conversión queda en cada implementación.
+
+**Archivo real: `model/Producto.java`**
+
+```java
+package com.ejemplo.catalogo.model;
+
+/** Modelo de dominio compartido por los tres formatos. */
+public record Producto(long id, String nombre, double precio, int stock) {
+    public Producto {
+        if (id <= 0) throw new IllegalArgumentException("El id debe ser positivo");
+        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("El nombre es obligatorio");
+        if (!Double.isFinite(precio) || precio < 0) throw new IllegalArgumentException("El precio debe ser finito y no negativo");
+        if (stock < 0) throw new IllegalArgumentException("El stock no puede ser negativo");
+    }
+}
+```
+
+Los archivos completos y las pruebas están en [`proyecto-maven`](../../proyecto-maven/). Todos los ejemplos de repositorios de esta ampliación usan el `record Producto(long id, String nombre, double precio, int stock)`; el `*CrudDemo` previo es un ejemplo monolítico introductorio y no debe mezclarse con las clases de la arquitectura de repositorios.
