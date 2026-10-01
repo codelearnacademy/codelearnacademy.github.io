@@ -1,0 +1,5 @@
+[
+  {"matricula":"1234ABC","marca":"Toyota","modelo":"Corolla","anio":2022},
+  {"matricula":"5678DEF","marca":"Seat","modelo":"Leon","anio":2021},
+  {"matricula":"9012GHI","marca":"Renault","modelo":"Clio","anio":2020}
+]

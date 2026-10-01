@@ -1,0 +1,5 @@
+<vehiculos>
+  <vehiculo><matricula>1234ABC</matricula><marca>Toyota</marca><modelo>Corolla</modelo><anio>2022</anio></vehiculo>
+  <vehiculo><matricula>5678DEF</matricula><marca>Seat</marca><modelo>Leon</modelo><anio>2021</anio></vehiculo>
+  <vehiculo><matricula>9012GHI</matricula><marca>Renault</marca><modelo>Clio</modelo><anio>2020</anio></vehiculo>
+</vehiculos>

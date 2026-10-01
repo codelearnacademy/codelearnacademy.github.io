@@ -5,86 +5,27 @@ lesson_id: "leccion34"
 lesson_file: "34-retos-y-ampliaciones"
 lesson_number: "34"
 title: "Retos y ampliaciones"
-description: "Retos y ampliaciones: ruta práctica de ficheros con Java 21."
+description: "Ejercicios para extender la arquitectura manteniendo la separación de responsabilidades."
 permalink: "/ficheros/leccion34/"
-lessons:
-  - id: "qué-vas-a-conseguir"
-    title: "Qué vas a conseguir"
-  - id: "punto-de-partida"
-    title: "Punto de partida"
-  - id: "conceptos-clave"
-    title: "Conceptos clave"
-  - id: "ejemplo-guiado"
-    title: "Ejemplo guiado"
-  - id: "relación-con-el-resto-de-la-ruta"
-    title: "Relación con el resto de la ruta"
-  - id: "ejercicios-propuestos"
-    title: "Ejercicios propuestos"
-  - id: "qué-debes-recordar"
-    title: "Qué debes recordar"
 ---
 
 # Retos y ampliaciones
 
-## Qué vas a conseguir
+## Retos sobre el diseño
 
-- Extender el proyecto con retos que obliguen a tomar decisiones de diseño.
-- Reconocer cuándo un fichero deja de ser la herramienta adecuada.
+1. Extrae una `RepositoryFactory` para que `main` no contenga el `switch` de formatos.
+2. Añade un nuevo modelo `Cliente` con identificador `UUID` y reutiliza `IRepository<T, ID>`.
+3. Añade un cuarto formato sin modificar el código consumidor.
+4. Introduce validaciones de dominio fuera de las clases de persistencia.
+5. Añade pruebas que ejecuten el mismo contrato CRUD contra CSV, JSON y XML.
 
-## Punto de partida
+## Preguntas de revisión
 
-La ruta termina cuando puedes modificar el proyecto sin romper la separación entre formato, persistencia y lógica.
+- ¿Qué responsabilidades tenía inicialmente `CsvCrudDemo`?
+- ¿Qué clases aparecieron al distribuir esas responsabilidades?
+- ¿Qué se mantuvo igual al pasar a `JsonCrudDemo` y `XmlCrudDemo`?
+- ¿Por qué `Repository<T, ID>` se introduce después de los ejemplos concretos?
+- ¿Qué demuestra `Repository<Vehiculo, String>`?
+- ¿Qué decisión sacamos del código gracias a `.properties`?
 
-<div class="cla-note"><strong>Ampliación</strong><p>Los retos finales deben mejorar robustez, pruebas o diseño sin romper el contrato común construido en la ruta.</p></div>
-
-## Conceptos clave
-
-- Los ficheros grandes pueden requerir streaming.
-- Escrituras concurrentes y transacciones son límites importantes del almacenamiento en fichero.
-- Tests con `@TempDir` permiten aislar casos de persistencia.
-
-## Ejemplo guiado
-
-```text
-Retos sugeridos:
-- importación por streaming de un CSV grande
-- copia de seguridad antes de reescribir
-- validación acumulando errores por registro
-- tests temporales con @TempDir
-- nuevo formato sin modificar la lógica de negocio
-```
-
-## Relación con el resto de la ruta
-
-Estos retos no añaden otro formato: profundizan en robustez, pruebas y extensibilidad sobre la arquitectura que ya construiste.
-
-## Ejercicios propuestos
-
-1. Añade tests de CRUD con `@TempDir` a un repositorio.
-2. Implementa backup antes de cada escritura.
-3. Añade un cuarto repositorio ficticio en memoria para comprobar que la lógica no depende de ficheros.
-4. Documenta cuándo migrarías de ficheros a una base de datos.
-
-## Qué debes recordar
-
-- Los ficheros son excelentes para intercambio, configuración y datasets pequeños/medios; no resuelven todos los problemas de persistencia.
-- La separación lograda facilita cambiar la tecnología cuando sea necesario.
-
-<div class="cla-lesson-nav">
-  <a href="/ficheros/leccion33/">← 33 · Proyecto final: DataBridge</a>
-  <a href="/ficheros/">Volver al índice →</a>
-</div>
-
----
-
-## Ampliación práctica: el mismo catálogo de productos
-
-### Ampliaciones sobre el proyecto de repositorios
-
-1. Asegurar `saveAll`: escribir a un fichero temporal y sustituir el original después de completar el guardado.
-2. Validar identificadores, precios y stock antes de crear o actualizar objetos.
-3. Probar CSV con nombres que contienen comas y XML/JSON mal formados.
-4. Incorporar una importación CSV → JSON → XML sin duplicar el CRUD.
-5. Añadir pruebas independientes para un archivo vacío, uno inexistente, errores de lectura y persistencia tras nueva instancia.
-
-**Pista:** no mezcles la conversión con `Producto`; utiliza adaptadores de formato y la interfaz `ProductoRepository`.
+<div class="cla-lesson-nav"><a href="/ficheros/leccion33/">← 33 · DataBridge</a><a href="/ficheros/">Volver a la ruta →</a></div>

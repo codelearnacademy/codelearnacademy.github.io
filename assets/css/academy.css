@@ -1472,3 +1472,197 @@ body {
     transition: none;
   }
 }
+
+
+/* =========================================================
+   Ficheros route · diagramas compactos
+   ========================================================= */
+.cla-diagram {
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto 24px;
+  padding: 10px;
+  border: 1px solid var(--cla-border);
+  border-radius: 12px;
+  background: var(--cla-surface);
+  text-align: center;
+}
+
+.cla-diagram img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 620px);
+  max-height: 480px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.cla-diagram--small { max-width: 620px; }
+.cla-diagram--small img { max-width: min(100%, 540px); max-height: 410px; }
+.cla-diagram--wide { max-width: 760px; }
+.cla-diagram--wide img { max-width: min(100%, 680px); max-height: 480px; }
+
+.cla-diagram figcaption {
+  max-width: 600px;
+  margin: 8px auto 0;
+  color: var(--cla-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cla-lesson-content > p > img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 620px);
+  max-height: 480px;
+  height: auto;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+.cla-route-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 860px;
+  margin: 20px auto 26px;
+  padding: 14px;
+  border: 1px solid var(--cla-border);
+  border-radius: 12px;
+  background: var(--cla-surface);
+}
+.cla-route-flow span {
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--cla-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+.cla-route-flow b { color: var(--cla-primary); }
+
+@media (max-width: 700px) {
+  .cla-diagram, .cla-diagram--small, .cla-diagram--wide { max-width: 100%; padding: 8px; }
+  .cla-diagram img, .cla-diagram--small img, .cla-diagram--wide img, .cla-lesson-content > p > img { max-width: 100%; max-height: none; }
+  .cla-route-flow { justify-content: flex-start; padding: 12px; }
+}
+
+
+/* =========================================================
+   Código con anotaciones didácticas
+   ========================================================= */
+
+.cla-code-annotated {
+  position: relative;
+  margin: 22px 0;
+}
+
+.cla-code-annotated pre {
+  margin: 0;
+  padding-right: 58px;
+  line-height: 1.55;
+}
+
+.cla-code-pin {
+  --line: 1;
+  position: absolute;
+  z-index: 2;
+  top: calc(16px + ((var(--line) - 1) * 1.55em));
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: var(--cla-primary);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .24);
+}
+
+.cla-code-pin::before {
+  content: "";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background: rgba(255, 255, 255, .55);
+}
+
+.cla-code-notes {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 26px;
+}
+
+.cla-code-note {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 11px 13px;
+  border: 1px solid var(--cla-border);
+  border-radius: 9px;
+  background: var(--cla-surface);
+}
+
+.cla-code-note-number {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--cla-primary-soft);
+  color: var(--cla-primary-strong);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cla-code-note p {
+  margin: 1px 0 0;
+  color: var(--cla-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.cla-code-note strong {
+  color: var(--cla-text);
+}
+
+.cla-code-note--important {
+  border-color: #bfdbfe;
+  background: var(--cla-primary-soft);
+}
+
+.cla-code-note code {
+  padding: 2px 5px;
+  border: 1px solid var(--cla-border);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--cla-text);
+  font-size: .92em;
+}
+
+@media (max-width: 700px) {
+  .cla-code-annotated pre {
+    padding-right: 48px;
+  }
+
+  .cla-code-pin {
+    right: 9px;
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+  }
+
+  .cla-code-pin::before {
+    display: none;
+  }
+}

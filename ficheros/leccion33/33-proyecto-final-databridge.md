@@ -5,101 +5,47 @@ lesson_id: "leccion33"
 lesson_file: "33-proyecto-final-databridge"
 lesson_number: "33"
 title: "Proyecto final: DataBridge"
-description: "Proyecto final: DataBridge: ruta práctica de ficheros con Java 21."
+description: "Proyecto final que integra demos, refactorización, Repository<T, ID> y configuración externa."
 permalink: "/ficheros/leccion33/"
-lessons:
-  - id: "qué-vas-a-conseguir"
-    title: "Qué vas a conseguir"
-  - id: "punto-de-partida"
-    title: "Punto de partida"
-  - id: "conceptos-clave"
-    title: "Conceptos clave"
-  - id: "ejemplo-guiado"
-    title: "Ejemplo guiado"
-  - id: "relación-con-el-resto-de-la-ruta"
-    title: "Relación con el resto de la ruta"
-  - id: "ejercicios-propuestos"
-    title: "Ejercicios propuestos"
-  - id: "qué-debes-recordar"
-    title: "Qué debes recordar"
 ---
 
 # Proyecto final: DataBridge
 
-## Qué vas a conseguir
+## Objetivo
 
-- Integrar `.properties`, CSV, JSON y XML en una sola aplicación.
-- Importar datos desde un formato y exportarlos a otro reutilizando el mismo modelo.
+DataBridge reúne toda la ruta: ficheros, Maven, Commons CSV, Jackson, refactorización, repositorios genéricos y configuración externa.
 
-## Punto de partida
+<figure class="cla-diagram cla-diagram--wide">
+  <img src="../images/33-databridge.png" alt="Arquitectura del proyecto DataBridge" loading="lazy">
+  <figcaption>DataBridge selecciona la persistencia mediante configuración y mantiene estable el código que consume el repositorio.</figcaption>
+</figure>
 
-DataBridge combina todo lo aprendido: configuración, repositorios, modelo común y conversión entre formatos.
+## Requisitos mínimos
 
-<div class="cla-note"><strong>Objetivo de la ruta</strong><p>Aprender el formato sin acoplar toda la aplicación a su parser o serializador.</p></div>
+1. Cargar `application.properties`.
+2. Seleccionar CSV, JSON o XML.
+3. Instanciar la implementación correspondiente.
+4. Ejecutar operaciones CRUD mediante `Repository<Producto, Long>` o `ProductoRepository`.
+5. Permitir transformar datos de un formato a otro sin modificar el modelo de dominio.
 
-## Conceptos clave
-
-- Un repositorio de entrada obtiene `Producto`.
-- La lógica trabaja con objetos, no con sintaxis de fichero.
-- Un repositorio de salida persiste el resultado en otro formato.
-
-## Ejemplo guiado
+## Historia completa de la refactorización
 
 ```text
-config.properties
-  input.format=csv
-  input.path=data/productos.csv
-  output.format=json
-  output.path=data/productos.json
-
-CSV → List<Producto> → validación/transformación → JSON
+CsvCrudDemo / JsonCrudDemo / XmlCrudDemo
+             ↓
+      detectar repetición
+             ↓
+ProductoRepository + clases por responsabilidad
+             ↓
+      IRepository<T, ID>
+             ↓
+ Producto / Vehiculo
+             ↓
+     application.properties
+             ↓
+          DataBridge
 ```
 
-```java
-List<Producto> productos = input.findAll();
-for (Producto p : productos) {
-    if (output.findById(p.id()).isEmpty()) {
-        output.create(p);
-    }
-}
-```
+La arquitectura final no sustituye el aprendizaje de las demos: **se construye a partir de ellas**.
 
-## Relación con el resto de la ruta
-
-Es la culminación de la ruta: cada formato queda reducido a un adaptador alrededor del mismo modelo y operaciones.
-
-## Ejercicios propuestos
-
-1. Permite las conversiones CSV→JSON, JSON→XML y XML→CSV.
-2. Añade una opción de configuración para aplicar un descuento porcentual antes de exportar.
-3. Evita sobrescribir el fichero de salida si ya existe salvo que `output.overwrite=true`.
-
-## Qué debes recordar
-
-- La lógica de transformación no debería depender del parser.
-- El fichero `.properties` coordina; los repositorios leen y escriben; el modelo transporta los datos.
-
-<div class="cla-lesson-nav">
-  <a href="/ficheros/leccion32/">← 32 · Configurar el programa con .properties</a>
-  <a href="/ficheros/leccion34/">34 · Retos y ampliaciones →</a>
-</div>
-
----
-
-## Ampliación práctica: el mismo catálogo de productos
-
-### Proyecto entregable: DataBridge sobre el catálogo real
-
-El directorio `proyecto-maven/` incluye `Producto`, el contrato común, los tres repositorios y pruebas JUnit. Amplíalo para leer la configuración `.properties`, abrir un origen CSV/JSON/XML y exportar el resultado a un formato distinto sin duplicar el CRUD.
-
-**Fases de entrega:** (1) compilar Java 21; (2) ejecutar pruebas existentes; (3) implementar selección por configuración; (4) leer el origen y construir el repositorio de destino; (5) guardar una copia sin sobrescribir el origen; (6) comprobar la equivalencia de productos con JUnit.
-
-```bash
-cd proyecto-maven
-mvn clean test
-mvn exec:java -Dexec.args=csv
-mvn exec:java -Dexec.args=json
-mvn exec:java -Dexec.args=xml
-```
-
-**Nota:** los comandos `exec:java` ilustran un formato por ejecución, no realizan todavía una migración entre formatos. La conversión de uno a otro es la actividad que deberá desarrollar el alumnado.
+<div class="cla-lesson-nav"><a href="/ficheros/leccion32/">← 32 · .properties</a><a href="/ficheros/leccion34/">34 · Retos y ampliaciones →</a></div>

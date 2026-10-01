@@ -1,0 +1,23 @@
+<properties>
+  <maven.compiler.release>21</maven.compiler.release>
+  <commons-csv.version>1.11.0</commons-csv.version>
+  <jackson.version>2.21.3</jackson.version>
+</properties>
+
+<dependencies>
+  <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>${commons-csv.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId>
+    <version>${jackson.version}</version>
+  </dependency>
+</dependencies>
