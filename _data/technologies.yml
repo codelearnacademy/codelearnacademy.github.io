@@ -111,3 +111,8 @@ kanban:
   icon: /assets/images/technologies/kanban-icon.svg
   source: Kanban
   description: Gestión visual del flujo mediante políticas explícitas y límites de trabajo en progreso.
+ides:
+  name: IDEs
+  icon: /assets/images/technologies/ides-icon.svg
+  source: CodeLearn Academy
+  description: Entornos de desarrollo para trabajar con Java, Maven, Git, pruebas y depuración.

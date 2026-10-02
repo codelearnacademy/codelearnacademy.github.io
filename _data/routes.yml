@@ -1880,3 +1880,42 @@ software:
     number: '52'
     title: Proyecto final · Planificación de un producto software
     url: /software/leccion52/
+
+ides:
+  title: Entornos de desarrollo Java
+  short_title: IDEs
+  technology: ides
+  level: Ruta
+  url: /ides/
+  status: published
+  description: "Crea una máquina virtual Debian 13.7.0 netinst y configura Java 21, Maven, Git, VS Code, IntelliJ IDEA, Eclipse y Apache NetBeans."
+  project: Sí
+  exam: No
+  project_description: "Prepararás un laboratorio Debian reproducible y verificarás el mismo proyecto Maven en cuatro entornos de desarrollo Java."
+  technologies:
+    - java
+    - maven
+    - git
+  lessons:
+    - { id: leccion01, number: "01", title: "Qué es un IDE y qué vamos a construir", url: /ides/leccion01/ }
+    - { id: leccion02, number: "02", title: "Máquinas virtuales e hipervisores", url: /ides/leccion02/ }
+    - { id: leccion03, number: "03", title: "Descargar Debian 13.7.0 netinst", url: /ides/leccion03/ }
+    - { id: leccion04, number: "04", title: "Crear la máquina virtual", url: /ides/leccion04/ }
+    - { id: leccion05, number: "05", title: "Instalar Debian 13.7.0 con Xfce", url: /ides/leccion05/ }
+    - { id: leccion06, number: "06", title: "Integrar Debian con VirtualBox", url: /ides/leccion06/ }
+    - { id: leccion07, number: "07", title: "Actualizar Debian y preparar herramientas básicas", url: /ides/leccion07/ }
+    - { id: leccion08, number: "08", title: "Instalar y configurar JDK 21", url: /ides/leccion08/ }
+    - { id: leccion09, number: "09", title: "Instalar y verificar Maven", url: /ides/leccion09/ }
+    - { id: leccion10, number: "10", title: "Instalar y configurar Git", url: /ides/leccion10/ }
+    - { id: leccion11, number: "11", title: "Crear el proyecto Maven común", url: /ides/leccion11/ }
+    - { id: leccion12, number: "12", title: "Instalar Visual Studio Code", url: /ides/leccion12/ }
+    - { id: leccion13, number: "13", title: "Configurar VS Code para Java", url: /ides/leccion13/ }
+    - { id: leccion14, number: "14", title: "Trabajar con Maven y JUnit en VS Code", url: /ides/leccion14/ }
+    - { id: leccion15, number: "15", title: "Instalar y configurar IntelliJ IDEA", url: /ides/leccion15/ }
+    - { id: leccion16, number: "16", title: "Abrir y verificar el proyecto en IntelliJ IDEA", url: /ides/leccion16/ }
+    - { id: leccion17, number: "17", title: "Instalar y configurar Eclipse IDE", url: /ides/leccion17/ }
+    - { id: leccion18, number: "18", title: "Importar y verificar el proyecto en Eclipse", url: /ides/leccion18/ }
+    - { id: leccion19, number: "19", title: "Instalar y configurar Apache NetBeans", url: /ides/leccion19/ }
+    - { id: leccion20, number: "20", title: "Abrir y verificar el proyecto en NetBeans", url: /ides/leccion20/ }
+    - { id: leccion21, number: "21", title: "El mismo proyecto en cuatro IDEs", url: /ides/leccion21/ }
+    - { id: leccion22, number: "22", title: "Comparación final y verificación del entorno", url: /ides/leccion22/ }
