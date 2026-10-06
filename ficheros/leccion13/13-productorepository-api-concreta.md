@@ -4,48 +4,90 @@ route: "ficheros"
 lesson_id: "leccion13"
 lesson_file: "13-productorepository-api-concreta"
 lesson_number: "13"
-title: "ProductoRepository: extraer la API concreta"
-description: "Extracción del contrato CRUD de Producto a partir de CsvCrudDemo."
+title: "IRepository e IProductoRepository: extraer el contrato CRUD"
+description: "Extraer del CsvCrudDemo un contrato CRUD general y especializarlo para Producto."
 permalink: "/ficheros/leccion13/"
 ---
 
-# `ProductoRepository`: extraer la API concreta
+# Del CRUD inicial al contrato del repositorio
 
-## Por qué aparece esta clase
+## 1. Extraer las operaciones que ya existen
 
-`IProductoRepository` **no sustituye arbitrariamente** a `CsvCrudDemo`. Se extrae durante la refactorización para separar lo que la aplicación necesita pedir de la forma concreta en que se guarda el fichero.
+`CsvCrudDemo` ya nos ha dado las cinco operaciones que necesita la aplicación:
 
 ```java
-public interface IProductoRepository {
-    List<Producto> findAll();
-    Optional<Producto> findById(Long id);
-    Producto create(Producto producto);
-    Producto update(Producto producto);
-    void delete(Long id);
+findAll()
+findById(...)
+create(...)
+update(...)
+delete(...)
+```
+
+El primer paso es expresarlas sin hablar de CSV.
+
+```java
+package es.educacion.ficheros.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface IRepository<T, ID> {
+
+    List<T> findAll();
+
+    Optional<T> findById(ID id);
+
+    void create(T entity);
+
+    boolean update(T entity);
+
+    boolean delete(ID id);
 }
 ```
 
-<div class="cla-note">
-<strong>Recuerda:</strong>
-    <p>Recueda que la documentación se debe de realizar en las api, para que este disponible en todas las implementaciones de esta.</p>
-</div>
+## 2. Especializar el contrato para `Producto`
 
-En esta etapa la API sigue siendo deliberadamente concreta: trabaja con `Producto` y `Long`.
-
-## Qué responsabilidad se ha movido
-
-Antes, quien utilizaba `CsvCrudDemo` conocía directamente la clase CSV. Ahora el cliente puede declarar:
+El proyecto de ejemplo conserva una interfaz de dominio específica:
 
 ```java
-IProductoRepository repository;
+package es.educacion.ficheros.repository;
+
+import es.educacion.ficheros.model.Producto;
+
+public interface IProductoRepository
+        extends IRepository<Producto, Long> {
+}
 ```
 
-Todavía falta una implementación, pero el código consumidor ya expresa **qué necesita** en lugar de **cómo se persiste**.
+Una **interfaz extiende** otra interfaz. Una clase será la que posteriormente la implemente.
 
-<div class="cla-note"><strong>Refactorización</strong><p>La interfaz aparece porque hemos extraído el contrato CRUD de <code>CsvCrudDemo</code>. No estamos cambiando el comportamiento funcional del programa.</p></div>
+```text
+IRepository<T, ID>
+       ▲
+       │ T = Producto
+       │ ID = Long
+IProductoRepository
+```
 
-## Por qué no usamos todavía `Repository<T, ID>`
+## ¿Por qué no hay `IOException`?
 
-Con un solo modelo sería posible hacerlo, pero todavía no hemos demostrado que esa generalización sea necesaria. La introduciremos después de repetir el ejercicio con JSON y XML y de probar un segundo modelo.
+La aplicación no debería saber cómo se almacena la información. Por eso el contrato no contiene:
+
+```java
+throws IOException
+```
+
+Si una implementación CSV, JSON o XML tiene un problema de E/S, será esa implementación quien lo controle.
+
+## Mantener la semántica del CRUD inicial
+
+La interfaz conserva la semántica que ya probamos en los demos:
+
+- `create` crea o falla si el identificador está duplicado.
+- `update` devuelve `true` si encontró y sustituyó la entidad.
+- `delete` devuelve `true` si encontró y eliminó la entidad.
+- `findById` devuelve `Optional<T>`.
+
+<div class="cla-note"><strong>Importante</strong><p>La interfaz no añade comportamiento nuevo. Formaliza el CRUD que ya construimos.</p></div>
 
 <div class="cla-lesson-nav"><a href="/ficheros/leccion12/">← 12 · Responsabilidades</a><a href="/ficheros/leccion14/">14 · AbstractFileRepository →</a></div>

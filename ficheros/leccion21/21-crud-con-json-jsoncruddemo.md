@@ -23,6 +23,9 @@ JSON permite serializar directamente `List<Producto>`, por lo que el repositorio
 
 <div class="cla-note"><strong>Mismo modelo didáctico</strong><p>Primero construimos <code>JsonCrudDemo</code> como clase funcional y autocontenida. Las clases nuevas del repositorio JSON aparecerán únicamente en la siguiente lección, como refactorización y distribución de responsabilidades.</p></div>
 
+
+<div class="cla-note"><strong>Contrato provisional del CRUD.</strong><p>Las demos iniciales mantienen <code>throws IOException</code> porque todavía mezclan aplicación e infraestructura. Durante la refactorización eliminaremos ese detalle de las interfaces y cada repositorio concreto controlará sus errores.</p></div>
+
 ## Ejemplo completo: `JsonCrudDemo.java`
 
 Dependencia Maven:
@@ -36,6 +39,7 @@ Dependencia Maven:
 ```
 
 ```java
+import es.educacion.ficheros.model.Producto;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -47,7 +51,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class JsonCrudDemo {
-    public record Producto(long id, String nombre, double precio) {}
 
     private final Path path;
     private final ObjectMapper mapper;

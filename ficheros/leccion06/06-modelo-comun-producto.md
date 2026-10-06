@@ -83,7 +83,7 @@ El mismo modelo se comparte entre CSV, JSON y XML. No contiene código de persis
 **Archivo real: `model/Producto.java`**
 
 ```java
-package com.ejemplo.catalogo.model;
+package es.educacion.ficheros.model;
 
 /** Modelo de dominio compartido por los tres formatos. */
 public record Producto(long id, String nombre, double precio) {
@@ -95,4 +95,4 @@ public record Producto(long id, String nombre, double precio) {
 }
 ```
 
-Los archivos completos y las pruebas están en [`proyecto-maven`](../../proyecto-maven/). Todos los ejemplos de repositorios de esta ampliación usan el `record Producto(long id, String nombre, double precio)`; el `*CrudDemo` previo es un ejemplo monolítico introductorio y no debe mezclarse con las clases de la arquitectura de repositorios.
+La arquitectura final seguirá utilizando exactamente este modelo. Al ser un `record`, sus accesores son `id()`, `nombre()` y `precio()`; no existen `getId()`, `getNombre()` o `getPrecio()`. En un `update` se sustituye el record completo por otro con el mismo identificador.

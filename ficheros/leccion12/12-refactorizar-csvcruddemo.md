@@ -4,44 +4,80 @@ route: "ficheros"
 lesson_id: "leccion12"
 lesson_file: "12-refactorizar-csvcruddemo"
 lesson_number: "12"
-title: "Refactorizar CsvCrudDemo: separar responsabilidades"
-description: "Análisis del CsvCrudDemo original y primer paso de refactorización sin adelantar la abstracción genérica."
+title: "Refactorizar CsvCrudDemo: detectar responsabilidades"
+description: "Partir del CRUD CSV funcional para separar dominio, contrato, CRUD común y persistencia."
 permalink: "/ficheros/leccion12/"
 ---
 
-# Refactorizar `CsvCrudDemo`: detectar responsabilidades
+# Refactorizar `CsvCrudDemo`: partir de un CRUD que ya funciona
 
-## Qué vas a conseguir
+## Punto de partida
 
-- Partir exactamente de `CsvCrudDemo`, sin sustituirlo por otra clase de demostración.
-- Identificar qué partes pertenecen al dominio, al CRUD y al formato CSV.
-- Entender que los nombres y clases que aparecen a partir de ahora son **resultado de una refactorización**.
+En la lección anterior construimos `CsvCrudDemo` con un CRUD completo. Esa clase es importante: **la arquitectura no aparece antes del problema**, sino después de tener un ejemplo que funciona.
 
-## Antes de cambiar el código
-
-`CsvCrudDemo` mezcla cinco responsabilidades: ejecutar el ejemplo, representar `Producto`, resolver el CRUD, leer/escribir CSV y gestionar errores de fichero.
-
-<div class="cla-note"><strong>Importante</strong><p>No presentamos las nuevas clases como si siempre hubieran existido. El cambio de nombre, la extracción de interfaces y la creación de clases abstractas forman parte del proceso de refactorización y distribución de responsabilidades.</p></div>
-
-## Primer objetivo de la refactorización
+`CsvCrudDemo` concentra:
 
 ```text
 CsvCrudDemo
- ├─ modelo Producto
- ├─ operaciones CRUD
- ├─ lectura/escritura CSV
- ├─ ruta del fichero
- └─ main de demostración
+ ├─ Path del fichero
+ ├─ Commons CSV
+ ├─ conversión CSV ↔ Producto
+ ├─ findAll / findById
+ ├─ create / update / delete
+ └─ tratamiento de IOException
 ```
 
-Queremos llegar progresivamente a responsabilidades separadas, pero cada paso debe conservar el comportamiento del ejemplo original.
+El objetivo de la refactorización es conservar el mismo comportamiento y repartir responsabilidades.
 
-## Qué no hacemos todavía
+## Qué se repite en el CRUD
 
-Todavía no generalizamos a `Repository<T, ID>`. Primero extraeremos una API concreta de productos y el comportamiento común. La generalización con `T` e `ID` llegará después de haber trabajado CSV, JSON y XML y poder justificarla por repetición real.
+Las operaciones del demo tienen una estructura común:
 
-## Siguiente paso
+```text
+leer colección
+    ↓
+buscar / añadir / sustituir / eliminar
+    ↓
+escribir colección cuando hay cambios
+```
 
-La primera extracción será `IProductoRepository`: una API que expresa qué operaciones necesita la aplicación sin conocer todavía Commons CSV.
+La sintaxis CSV solo afecta a dos operaciones:
 
-<div class="cla-lesson-nav"><a href="/ficheros/leccion11/">← 11 · CsvCrudDemo</a><a href="/ficheros/leccion13/">13 · IProductoRepository →</a></div>
+```text
+readAll()   fichero → List<Producto>
+writeAll()  List<Producto> → fichero
+```
+
+Esta observación será la base de `AbstractFileRepository`.
+
+## Qué queremos conseguir
+
+La evolución será:
+
+```text
+CsvCrudDemo
+    ↓ separar contrato
+IRepository<T, ID>
+    ↓ especializar para Producto
+IProductoRepository
+    ↓ extraer CRUD común
+AbstractFileRepository<T, ID>
+    ↓ dejar solo lo específico de CSV
+ProductoCsvRepository
+```
+
+<div class="cla-note"><strong>Regla de la ruta</strong><p>Cada nueva abstracción debe poder relacionarse con código que ya existía en el CRUD inicial.</p></div>
+
+## Las excepciones también cambian de lugar
+
+En el demo es normal ver:
+
+```java
+public List<Producto> findAll() throws IOException
+```
+
+En la arquitectura final, las interfaces no expondrán `IOException`. Cada implementación concreta de fichero controlará sus errores de E/S y los transformará en `RepositoryException`.
+
+Eso permite que la aplicación utilice un repositorio sin conocer si detrás hay CSV, JSON o XML.
+
+<div class="cla-lesson-nav"><a href="/ficheros/leccion11/">← 11 · CsvCrudDemo</a><a href="/ficheros/leccion13/">13 · IRepository e IProductoRepository →</a></div>

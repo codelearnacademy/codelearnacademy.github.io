@@ -1,0 +1,12 @@
+<productos>
+  <producto>
+    <id>1</id>
+    <nombre>Teclado</nombre>
+    <precio>30.0</precio>
+  </producto>
+  <producto>
+    <id>2</id>
+    <nombre>Ratón</nombre>
+    <precio>15.0</precio>
+  </producto>
+</productos>

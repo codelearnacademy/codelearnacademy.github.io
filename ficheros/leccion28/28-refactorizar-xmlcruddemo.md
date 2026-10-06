@@ -5,37 +5,95 @@ lesson_id: "leccion28"
 lesson_file: "28-refactorizar-xmlcruddemo"
 lesson_number: "28"
 title: "Refactorizar XmlCrudDemo: ProductoXmlRepository"
-description: "Integración de XML en la arquitectura común como refactorización de XmlCrudDemo."
+description: "Extraer readAll/writeAll de XmlCrudDemo y reutilizar el CRUD común."
 permalink: "/ficheros/leccion28/"
 ---
 
-# Refactorizar `XmlCrudDemo` hacia `ProductoXmlRepository`
+# De `XmlCrudDemo` a `ProductoXmlRepository`
 
-## Punto de partida
+## Partimos otra vez de un CRUD funcional
 
-`XmlCrudDemo` contiene el CRUD, `XmlMapper`, el wrapper XML y el acceso al fichero. Como en CSV y JSON, ahora distribuimos esas responsabilidades.
+`XmlCrudDemo` demostró que el CRUD es el mismo y que XML añade una necesidad propia: una raíz `<productos>` con elementos `<producto>`.
 
-## Clases nuevas durante la refactorización
+La refactorización conserva únicamente lo específico del formato:
 
-- `ProductoXmlRepository`: adapta el modelo `Producto`, y sabe transformar el documento XML en una colección y viceversa
-- `DocumentoProductos`: representa el documento/raíz XML cuando la implementación separada lo necesita.
+- `XmlMapper`.
+- el wrapper XML.
+- `readAll()`.
+- `writeAll()`.
+- el control de excepciones.
 
-```text
-XmlCrudDemo
-   │
-   │ extraemos responsabilidades
-   ▼
-ProductoXmlRepository
-DocumentoProductos
+## Implementación
+
+```java
+public class ProductoXmlRepository
+        extends AbstractFileRepository<Producto, Long>
+        implements IProductoRepository {
+
+    private final XmlMapper mapper = XmlMapper.builder()
+            .defaultUseWrapper(false)
+            .build();
+
+    public ProductoXmlRepository(Path path) {
+        super(path, Producto::id);
+        entities = readAll();
+    }
+
+    @Override
+    protected List<Producto> readAll() {
+        if (Files.notExists(path)) {
+            return new ArrayList<>();
+        }
+
+        try {
+            if (Files.size(path) == 0) {
+                return new ArrayList<>();
+            }
+
+            ProductosXml data = mapper.readValue(
+                    path.toFile(), ProductosXml.class);
+
+            return data.getProductos() == null
+                    ? new ArrayList<>()
+                    : new ArrayList<>(data.getProductos());
+
+        } catch (IOException | RuntimeException e) {
+            throw new RepositoryException(
+                    "Error leyendo productos desde XML: " + path, e);
+        }
+    }
+
+    @Override
+    protected void writeAll(List<Producto> productos) {
+        try {
+            Path parent = path.getParent();
+            if (parent != null) {
+                Files.createDirectories(parent);
+            }
+
+            mapper.writerWithDefaultPrettyPrinter()
+                    .writeValue(
+                            path.toFile(),
+                            new ProductosXml(productos));
+
+        } catch (IOException e) {
+            throw new RepositoryException(
+                    "Error escribiendo productos en XML: " + path, e);
+        }
+    }
+}
 ```
 
-La aplicación vuelve a depender del mismo contrato concreto:
+El wrapper `ProductosXml` pertenece a la implementación XML, no al `record Producto`.
+
+## Misma API
 
 ```java
 IProductoRepository repository =
-        new ProductoXmlRepository(Path.of("data", "productos.xml"));
+        new ProductoXmlRepository(
+                Path.of("data", "productos.xml"));
 ```
 
-<div class="cla-note"><strong>No es un simple cambio de nombre</strong><p><code>XmlCrudDemo</code> continúa siendo el ejemplo autocontenido. Las nuevas clases existen porque hemos repartido sus responsabilidades entre contrato, CRUD común, formato XML y mapeo de dominio.</p></div>
+El código consumidor continúa utilizando las cinco operaciones del CRUD inicial.
 
-<div class="cla-lesson-nav"><a href="/ficheros/leccion27/">← 27 · XmlCrudDemo</a><a href="/ficheros/leccion29/">29 · Comparar los tres formatos →</a></div>
+<div class="cla-lesson-nav"><a href="/ficheros/leccion27/">← 27 · XmlCrudDemo</a><a href="/ficheros/leccion29/">29 · Comparar implementaciones →</a></div>

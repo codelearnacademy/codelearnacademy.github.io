@@ -23,6 +23,9 @@ El repositorio carga la colección, aplica el cambio y reescribe el fichero. Es 
 
 <div class="cla-note"><strong>Antes de refactorizar</strong><p>En esta lección no cambiamos todavía nombres ni creamos capas. <code>CsvCrudDemo</code> concentra intencionadamente lectura, escritura, CRUD y acceso al fichero. En las siguientes lecciones utilizaremos este código funcional para detectar responsabilidades y extraerlas.</p></div>
 
+
+<div class="cla-note"><strong>Contrato provisional del CRUD.</strong><p>Las demos iniciales mantienen <code>throws IOException</code> porque todavía mezclan aplicación e infraestructura. Durante la refactorización eliminaremos ese detalle de las interfaces y cada repositorio concreto controlará sus errores.</p></div>
+
 ## Conceptos clave
 
 - `findAll` convierte registros en `Producto`.
@@ -43,6 +46,7 @@ Dependencia Maven:
 ```
 
 ```java
+import es.educacion.ficheros.model.Producto;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -59,7 +63,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class CsvCrudDemo {
-    public record Producto(long id, String nombre, double precio) {}
 
     private final Path path;
     private final CSVFormat inputFormat = CSVFormat.DEFAULT.builder()

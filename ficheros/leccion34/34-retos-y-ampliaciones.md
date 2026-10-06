@@ -24,8 +24,8 @@ permalink: "/ficheros/leccion34/"
 - ¿Qué responsabilidades tenía inicialmente `CsvCrudDemo`?
 - ¿Qué clases aparecieron al distribuir esas responsabilidades?
 - ¿Qué se mantuvo igual al pasar a `JsonCrudDemo` y `XmlCrudDemo`?
-- ¿Por qué `Repository<T, ID>` se introduce después de los ejemplos concretos?
-- ¿Qué demuestra `Repository<Vehiculo, String>`?
+- ¿Qué partes de `IRepository<T, ID>` puedes justificar a partir de los tres CRUD iniciales?
+- ¿Qué demuestra `IRepository<Vehiculo, String>`?
 - ¿Qué decisión sacamos del código gracias a `.properties`?
 
 <div class="cla-lesson-nav"><a href="/ficheros/leccion33/">← 33 · DataBridge</a><a href="/ficheros/">Volver a la ruta →</a></div>

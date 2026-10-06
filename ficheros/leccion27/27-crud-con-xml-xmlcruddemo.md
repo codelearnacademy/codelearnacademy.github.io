@@ -23,6 +23,9 @@ XML necesita representar explícitamente la colección bajo `<productos>` y cada
 
 <div class="cla-note"><strong>Mismo modelo didáctico</strong><p><code>XmlCrudDemo</code> se construye primero como clase completa, igual que <code>CsvCrudDemo</code> y <code>JsonCrudDemo</code>. Las clases del repositorio XML se extraen después.</p></div>
 
+
+<div class="cla-note"><strong>Contrato provisional del CRUD.</strong><p>Las demos iniciales mantienen <code>throws IOException</code> porque todavía mezclan aplicación e infraestructura. Durante la refactorización eliminaremos ese detalle de las interfaces y cada repositorio concreto controlará sus errores.</p></div>
+
 ## Ejemplo completo: `XmlCrudDemo.java`
 
 Dependencia Maven:
@@ -36,6 +39,7 @@ Dependencia Maven:
 ```
 
 ```java
+import es.educacion.ficheros.model.Producto;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -49,7 +53,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class XmlCrudDemo {
-    public record Producto(long id, String nombre, double precio) {}
 
     @JacksonXmlRootElement(localName = "productos")
     public static class DocumentoProductos {
