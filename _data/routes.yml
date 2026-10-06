@@ -1281,6 +1281,136 @@ ficheros:
     number: '34'
     title: Retos y ampliaciones
     url: /ficheros/leccion34/
+orm:
+  title: 'Persistencia relacional y ORM con Java y SQLite'
+  short_title: ORM
+  technology: orm
+  level: Ruta
+  url: /orm/
+  status: published
+  description: 'Persistencia relacional en Java con SQLite: SQL, JDBC, repositorios, JPA, Hibernate, mapeo objeto-relacional y testing.'
+  project: Sí
+  exam: false
+  project_description: 'Construirás PersistenceLab partiendo de un CRUD JDBC con SQLite, refactorizando hacia repositorios y evolucionando después a JPA/Hibernate.'
+  technologies:
+  - java
+  - maven
+  - sql
+  - sqlite
+  - orm
+  lessons:
+  - id: leccion01
+    number: '01'
+    title: 'De ficheros a bases de datos'
+    url: /orm/leccion01/
+  - id: leccion02
+    number: '02'
+    title: 'SQLite y la consola sqlite3'
+    url: /orm/leccion02/
+  - id: leccion03
+    number: '03'
+    title: 'Modelo relacional: Producto y Vehiculo'
+    url: /orm/leccion03/
+  - id: leccion04
+    number: '04'
+    title: 'SQL para el CRUD'
+    url: /orm/leccion04/
+  - id: leccion05
+    number: '05'
+    title: 'JDBC con SQLite'
+    url: /orm/leccion05/
+  - id: leccion06
+    number: '06'
+    title: 'Crear el esquema desde Java'
+    url: /orm/leccion06/
+  - id: leccion07
+    number: '07'
+    title: 'SELECT, ResultSet y mapeo manual'
+    url: /orm/leccion07/
+  - id: leccion08
+    number: '08'
+    title: 'INSERT, UPDATE y DELETE con PreparedStatement'
+    url: /orm/leccion08/
+  - id: leccion09
+    number: '09'
+    title: 'ProductoJdbcCrudDemo: CRUD completo'
+    url: /orm/leccion09/
+  - id: leccion10
+    number: '10'
+    title: 'Refactorizar a ProductoJdbcRepository'
+    url: /orm/leccion10/
+  - id: leccion11
+    number: '11'
+    title: 'Transacciones con JDBC'
+    url: /orm/leccion11/
+  - id: leccion12
+    number: '12'
+    title: 'Testear JDBC con SQLite temporal'
+    url: /orm/leccion12/
+  - id: leccion13
+    number: '13'
+    title: 'El problema del mapeo objeto-relacional'
+    url: /orm/leccion13/
+  - id: leccion14
+    number: '14'
+    title: 'Qué es un ORM: JPA y Hibernate'
+    url: /orm/leccion14/
+  - id: leccion15
+    number: '15'
+    title: 'Hibernate y SQLite con Maven'
+    url: /orm/leccion15/
+  - id: leccion16
+    number: '16'
+    title: 'Dominio record frente a entidad JPA'
+    url: /orm/leccion16/
+  - id: leccion17
+    number: '17'
+    title: '.properties y configuración ORM'
+    url: /orm/leccion17/
+  - id: leccion18
+    number: '18'
+    title: 'ProductoMapper: dominio y persistencia'
+    url: /orm/leccion18/
+  - id: leccion19
+    number: '19'
+    title: 'CREATE con EntityManager y persist()'
+    url: /orm/leccion19/
+  - id: leccion20
+    number: '20'
+    title: 'READ con find() y JPQL'
+    url: /orm/leccion20/
+  - id: leccion21
+    number: '21'
+    title: 'UPDATE y DELETE con entidades administradas'
+    url: /orm/leccion21/
+  - id: leccion22
+    number: '22'
+    title: 'ProductoOrmRepository: CRUD completo'
+    url: /orm/leccion22/
+  - id: leccion23
+    number: '23'
+    title: 'Errores y RepositoryException en ORM'
+    url: /orm/leccion23/
+  - id: leccion24
+    number: '24'
+    title: 'Comparar el CRUD JDBC y ORM'
+    url: /orm/leccion24/
+  - id: leccion25
+    number: '25'
+    title: 'VehiculoEntity e IVehiculoRepository'
+    url: /orm/leccion25/
+  - id: leccion26
+    number: '26'
+    title: 'Tests ORM con SQLite'
+    url: /orm/leccion26/
+  - id: leccion27
+    number: '27'
+    title: 'Comparar ficheros, JDBC y ORM'
+    url: /orm/leccion27/
+  - id: leccion28
+    number: '28'
+    title: 'Proyecto final PersistenceLab'
+    url: /orm/leccion28/
 testing:
   title: Testing y optimización
   short_title: Testing

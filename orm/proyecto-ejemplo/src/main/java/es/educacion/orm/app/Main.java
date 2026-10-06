@@ -1,0 +1,3 @@
+package es.educacion.orm.app;
+import es.educacion.orm.config.EntityManagerFactories; import es.educacion.orm.model.*; import es.educacion.orm.orm.*; import es.educacion.orm.repository.*; import jakarta.persistence.EntityManagerFactory; import java.nio.file.Path;
+public class Main { public static void main(String[] args){ try(EntityManagerFactory emf=EntityManagerFactories.from(Path.of("src/main/resources/application.properties"))){ IProductoRepository productos=new ProductoOrmRepository(emf); if(productos.findById(1L).isEmpty()) productos.create(new Producto(1,"Teclado",35.5)); productos.findAll().forEach(System.out::println); } } }

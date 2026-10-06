@@ -82,6 +82,12 @@ architecture:
   source: CodeLearn Academy
   description: Organización del software, capas, responsabilidades y mantenibilidad.
 
+orm:
+  name: ORM / JPA / Hibernate
+  icon: /assets/images/technologies/orm-icon.svg
+  source: CodeLearn Academy
+  description: Persistencia objeto-relacional en Java mediante JPA/Hibernate, JDBC y bases de datos relacionales.
+
 ficheros:
   name: Ficheros
   icon: /assets/images/technologies/ficheros-icon.svg

@@ -1,0 +1,3 @@
+package es.educacion.orm.orm.mapper;
+import es.educacion.orm.model.Producto; import es.educacion.orm.orm.entity.ProductoEntity;
+public final class ProductoMapper { private ProductoMapper(){} public static ProductoEntity toEntity(Producto p){return new ProductoEntity(p.id(),p.nombre(),p.precio());} public static Producto toDomain(ProductoEntity e){return new Producto(e.getId(),e.getNombre(),e.getPrecio());} }

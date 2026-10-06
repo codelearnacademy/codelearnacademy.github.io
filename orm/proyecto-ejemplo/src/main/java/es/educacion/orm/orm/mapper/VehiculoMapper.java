@@ -1,0 +1,3 @@
+package es.educacion.orm.orm.mapper;
+import es.educacion.orm.model.Vehiculo; import es.educacion.orm.orm.entity.VehiculoEntity;
+public final class VehiculoMapper { private VehiculoMapper(){} public static VehiculoEntity toEntity(Vehiculo v){return new VehiculoEntity(v.matricula(),v.marca(),v.modelo(),v.anio());} public static Vehiculo toDomain(VehiculoEntity e){return new Vehiculo(e.getMatricula(),e.getMarca(),e.getModelo(),e.getAnio());} }
