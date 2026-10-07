@@ -77,6 +77,11 @@ public static void main(String[] args) {
 
 ## Ficheros
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/05-formatos.png" alt="Comparación entre CSV JSON y XML" loading="lazy">
+</figure>
+
 La API `java.nio.file` ofrece una forma directa de trabajar con rutas y ficheros. `try-with-resources` garantiza el cierre de recursos.
 
 ```java
@@ -217,3 +222,141 @@ El controlador asociado concentra `aceptar`, mientras FXML describe la vista. Pa
 2. Construye un conversor de euros a dólares.
 3. Muestra una lista de alumnos en `ListView` y responde a la selección.
 4. Repite el formulario usando FXML y un controlador separado.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/05-io-flujo.png" alt="Flujo de entrada y salida: los datos entran al programa, se procesan y se envían a consola o fichero" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Lee líneas de un fichero de texto y genera un fichero resumen.
+
+### Ejercicio propuesto
+
+Construye un informe simple a partir de un fichero y justifica cuándo usarías CSV, JSON o XML.
+
+## Tarea para casa
+
+Lee un fichero de datos sencillo y genera un informe de salida. Documenta qué responsabilidades pertenecen a entrada, procesamiento y escritura.
+
+### Entrega mínima
+
+- Código fuente compilable.
+- Un `README.md` breve con instrucciones de ejecución.
+- Tres casos de prueba manuales y el resultado esperado.
+
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué representa System.in?
+
+- A) Entrada estándar
+- B) Salida estándar
+- C) Error de compilación
+- D) JVM
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> System.in es el flujo de entrada estándar.</p>
+
+</details>
+
+### 2. ¿Qué API moderna simplifica operaciones con rutas y ficheros?
+
+- A) Path y Files
+- B) Math e Integer
+- C) Pattern y Matcher
+- D) LocalDate y Period
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> java.nio.file ofrece Path y Files.</p>
+
+</details>
+
+### 3. ¿Qué formato es tabular y suele separar campos por delimitadores?
+
+- A) CSV
+- B) JSON únicamente
+- C) XML únicamente
+- D) Bytecode
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> CSV representa filas y columnas mediante delimitadores.</p>
+
+</details>
+
+### 4. ¿Qué formato representa datos mediante objetos/arrays y pares clave-valor?
+
+- A) JSON
+- B) CSV exclusivamente
+- C) Bytecode
+- D) JVM
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> JSON usa objetos y arrays.</p>
+
+</details>
+
+### 5. ¿Dónde debería profundizarse en CSV/JSON/XML dentro de este proyecto formativo?
+
+- A) En la ruta especializada de Ficheros
+- B) Solo en JVM
+- C) En Git
+- D) En CSS
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La ruta Java introduce el tema y la ruta Ficheros lo desarrolla.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Lee un fichero de texto y genera otro con las líneas numeradas.
+2. Representa el mismo `Producto` en CSV, JSON y XML y compara legibilidad y estructura.
+3. Decide qué contenido debe quedarse aquí y qué estudiarías en la ruta Ficheros.
+
+## Actividades principales de la lección
+
+### Actividad 1 · Procesar un fichero de texto
+
+**Modalidad:** clase · **Tiempo orientativo:** 30–40 minutos
+
+**Objetivo:** leer información desde un fichero y procesarla en Java.
+
+Crea `alumnos.txt` con un nombre por línea. Lee el fichero, muestra cada alumno numerado y cuenta cuántas líneas válidas contiene.
+
+**Comprobación:** añade líneas vacías y decide explícitamente si deben contarse o ignorarse.
+
+### Actividad 2 · Generar un informe
+
+**Modalidad:** clase · **Tiempo orientativo:** 40–50 minutos
+
+**Objetivo:** combinar lectura, procesamiento y escritura.
+
+Lee un fichero de notas, calcula número de notas, media, máxima y mínima y escribe los resultados en `informe.txt`.
+
+**Comprobación:** compara el fichero generado con los cálculos obtenidos manualmente para un conjunto pequeño de datos.
+
+### Actividad 3 · Transformador de datos
+
+**Modalidad:** casa · **Tiempo orientativo:** 60–75 minutos
+
+**Objetivo:** construir un pequeño proceso de transformación de ficheros.
+
+Lee registros de productos o alumnos desde un fichero de texto, valida los datos y genera un segundo fichero normalizado. Registra las líneas descartadas y el motivo.
+
+**Ampliación:** continúa el problema en la ruta especializada de Ficheros utilizando CSV, JSON o XML.
+
+<div class="cla-lesson-nav"><a href="/java/leccion04/">← 04 · Organización de clases</a><a href="/java/leccion06/">06 · Colecciones y tipos avanzados →</a></div>

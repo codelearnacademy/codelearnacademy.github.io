@@ -100,4 +100,65 @@ El programa fallará por una llave faltante. La corrección es cerrar correctame
 ## Después de esta lección
 
 Ahora ya conoces la base de una clase. El siguiente paso es aprender a guardar información real en variables y tipos.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Dónde se agrupan las sentencias de un método?
+
+- A) Entre llaves
+- B) Entre comillas
+- C) En pom.xml
+- D) En una tabla
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Las llaves delimitan el bloque.</p>
+
+</details>
+
+### 2. ¿Qué es `main`?
+
+- A) Un método
+- B) Una clase obligatoria
+- C) Una variable
+- D) Un paquete
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> main es el punto de entrada clásico y es un método.</p>
+
+</details>
+
+### 3. ¿Qué suele terminar una sentencia simple en Java?
+
+- A) ;
+- B) :
+- C) #
+- D) @
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El punto y coma termina muchas sentencias.</p>
+
+</details>
+
+### 4. ¿La indentación cambia por sí sola la semántica de los bloques Java?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> Los bloques se delimitan por llaves, aunque una buena indentación mejora legibilidad.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Corrige una clase con llaves, punto y coma y firma de `main` incorrectos.
 

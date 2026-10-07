@@ -894,3 +894,79 @@ Character.isLetter()
 Las clases envolventes aparecerán continuamente cuando trabajemos con colecciones, conversiones de datos y diferentes partes de la API de Java.
 
 El siguiente paso es estudiar con mayor detalle la clase `String` y aprender a trabajar con cadenas de caracteres en Java.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-wrapper.png" alt="02 wrapper" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Convierte `"25"` a entero, provoca un `NumberFormatException` con `"hola"` y observa la diferencia.
+
+### Ejercicio propuesto
+
+Convierte varios textos numéricos y documenta qué ocurre con entradas inválidas.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Cuál es el wrapper de int?
+
+- A) Integer
+- B) Int
+- C) NumberInt
+- D) Long
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Integer envuelve valores int.</p>
+
+</details>
+
+### 2. ¿Qué es autoboxing?
+
+- A) Conversión automática de primitivo a wrapper
+- B) Conversión de String a JSON
+- C) Un tipo de bucle
+- D) Compilación de bytecode
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Java puede envolver automáticamente un valor primitivo.</p>
+
+</details>
+
+### 3. ¿Qué es unboxing?
+
+- A) Extraer el valor primitivo de un wrapper
+- B) Eliminar una clase
+- C) Leer teclado
+- D) Crear un array
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Es la conversión wrapper → primitivo.</p>
+
+</details>
+
+### 4. ¿Puede un Integer tener valor null?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los wrappers son referencias y pueden ser null.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Crea una lista `List<Integer>` con un `null` y analiza qué ocurre al hacer unboxing del valor nulo.
+

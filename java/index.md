@@ -9,6 +9,18 @@ permalink: /java/
 
 {% assign route = site.data.routes.java %}
 
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/01-mapa-ruta-java.png" alt="Mapa visual de la ruta de aprendizaje de Java" loading="lazy">
+</figure>
+
+
+
+## Accesibilidad y formas de trabajo
+
+La ruta combina explicación textual, diagramas con texto alternativo, ejemplos guiados, autoevaluaciones y ejercicios. La información esencial no debe depender únicamente de una imagen, un color o una explicación oral. Las actividades principales incluyen instrucciones escritas, criterios de comprobación y tiempos orientativos.
+
+> Si utilizas ampliación de pantalla, navegación por teclado, lector de pantalla o subtítulos, puedes recorrer la ruta siguiendo los mismos contenidos y actividades.
+
 ## Tecnologías utilizadas
 
 <div class="cla-tech-grid">
@@ -21,3 +33,7 @@ permalink: /java/
   </div>
 {% endfor %}
 </div>
+
+## Cómo trabajar esta ruta
+
+Cada sección combina explicación, diagramas, ejemplos guiados, ejercicios propuestos y una autoevaluación breve. Intenta responder el test antes de desplegar las soluciones y realiza los ejercicios sin copiar el ejemplo anterior.

@@ -2348,6 +2348,11 @@ Un objeto `Pattern` representa una expresión regular compilada.
 
 ## Crear un `Pattern`
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-pattern-matcher.png" alt="Flujo entre expresión regular Pattern y Matcher" loading="lazy">
+</figure>
+
 Ejemplo:
 
 ```java
@@ -4108,3 +4113,96 @@ y su representación dentro de Java:
 ```
 
 Las expresiones regulares son especialmente útiles para procesar texto, validar formatos y extraer información, pero deben utilizarse con moderación: cuando Java proporciona una API específica para un tipo de dato, como fechas y horas, suele ser preferible combinar una validación estructural sencilla con esa API especializada.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-regex-anatomia.png" alt="02 regex anatomia" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Construye paso a paso la regex de matrícula `ABC1234`: letra, tres letras, dígitos y anclas.
+
+### Ejercicio propuesto
+
+Crea expresiones para código postal, teléfono y nombre de fichero `.java`.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué indica `^` al inicio de una regex?
+
+- A) Inicio del texto/línea según modo
+- B) Un dígito
+- C) Cualquier carácter
+- D) Fin
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> ^ es un ancla de inicio.</p>
+
+</details>
+
+### 2. ¿Qué representa `\d`?
+
+- A) Un dígito
+- B) Una letra mayúscula
+- C) Un espacio exclusivamente
+- D) El final
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> \d es una clase abreviada de dígito.</p>
+
+</details>
+
+### 3. ¿Qué significa `{3}` tras un patrón?
+
+- A) Exactamente tres repeticiones
+- B) Como máximo una
+- C) Cero o más
+- D) Alternativa
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> {n} fija la cantidad exacta.</p>
+
+</details>
+
+### 4. ¿Qué clase compila una expresión regular en Java?
+
+- A) Pattern
+- B) Matcher
+- C) Math
+- D) Scanner
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Pattern representa el patrón compilado.</p>
+
+</details>
+
+### 5. ¿Qué diferencia conceptual hay entre matches y find?
+
+- A) matches intenta casar toda la entrada; find busca coincidencias
+- B) Son siempre idénticos
+- C) find compila Java
+- D) matches crea ficheros
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Son operaciones de coincidencia con alcance distinto.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Construye paso a paso una regex para validar tres letras mayúsculas seguidas de cuatro dígitos.
+2. Valida un código postal y un nombre de fichero `.java`.
+

@@ -21,6 +21,11 @@ permalink: /java/leccion07/
 
 ## Herencia y sobrescritura
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/07-herencia.png" alt="Jerarquía de herencia y polimorfismo" loading="lazy">
+</figure>
+
 La herencia expresa una especialización. La subclase recibe miembros accesibles de la superclase y puede sobrescribir comportamiento con `@Override`.
 
 ```java
@@ -61,6 +66,11 @@ El código cliente depende del contrato y no de la implementación concreta. Una
 
 ## Composición y diseño
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/07-herencia-composicion.png" alt="Herencia frente a composición" loading="lazy">
+</figure>
+
 Prefiere composición cuando un objeto utiliza a otro sin ser una especialización. `Pedido` puede tener un `CalculadorDePrecios`; no necesita heredar de él. Esta decisión reduce acoplamiento y facilita sustituir colaboraciones en pruebas.
 
 ## Ejercicios
@@ -70,3 +80,141 @@ Prefiere composición cuando un objeto utiliza a otro sin ser una especializaci�
 3. Compara una solución con herencia y otra con composición.
 4. Diseña un sistema de formas que calcule áreas mediante polimorfismo.
 5. Documenta por qué una clase debe ser `abstract`, `final` o una interfaz.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/07-interface.png" alt="Una interfaz Java define un contrato que puede tener varias implementaciones" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Define `IPago`, implementa tarjeta y transferencia y haz que el cliente dependa solo de la interfaz.
+
+### Ejercicio propuesto
+
+Añade una tercera forma de pago sin modificar el código cliente y explica por qué funciona.
+
+## Tarea para casa
+
+Implementa un sistema de pagos con `IPago` y al menos tres implementaciones. El código cliente solo debe depender de la interfaz.
+
+### Entrega mínima
+
+- Código fuente compilable.
+- Un `README.md` breve con instrucciones de ejecución.
+- Tres casos de prueba manuales y el resultado esperado.
+
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué relación modela herencia?
+
+- A) Es-un
+- B) Tiene-un
+- C) Clave-valor
+- D) Entrada-salida
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Una subclase es un tipo más específico de su superclase.</p>
+
+</details>
+
+### 2. ¿Qué palabra se usa para heredar de una clase?
+
+- A) extends
+- B) implements siempre
+- C) inherits
+- D) superclass
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> extends declara la superclase.</p>
+
+</details>
+
+### 3. ¿Qué palabra se usa para implementar una interfaz?
+
+- A) implements
+- B) extends siempre
+- C) interfaceOf
+- D) with
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Una clase implementa contratos con implements.</p>
+
+</details>
+
+### 4. ¿Qué permite el polimorfismo?
+
+- A) Usar una referencia de un tipo común con implementaciones distintas
+- B) Eliminar todos los tipos
+- C) Evitar métodos
+- D) Compilar sin JVM
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El código cliente puede trabajar contra una abstracción común.</p>
+
+</details>
+
+### 5. ¿Cuándo suele ser preferible composición a herencia?
+
+- A) Cuando queremos combinar comportamiento sin una relación es-un natural
+- B) Nunca
+- C) Solo con Strings
+- D) Solo con bases de datos
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La composición suele reducir acoplamiento cuando la jerarquía no es una relación de sustitución clara.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Implementa `IPago` con `PagoTarjeta` y `PagoTransferencia` y usa solo `IPago` en el cliente.
+2. Crea una jerarquía `Vehiculo`, `Coche`, `Moto` y demuestra polimorfismo en una lista.
+3. Reformula un ejemplo de herencia como composición y compara ambas soluciones.
+
+## Actividades principales de la lección
+
+### Actividad 1 · Vehículos polimórficos
+
+**Modalidad:** clase · **Tiempo orientativo:** 40–50 minutos
+
+**Objetivo:** observar herencia, sobrescritura y polimorfismo.
+
+Crea `Vehiculo`, `Coche` y `Moto`. Define `mover()` en el tipo base y sobrescríbelo. Guarda distintos objetos en una `List<Vehiculo>` y recórrela invocando `mover()`.
+
+**Comprobación:** explica por qué una referencia de tipo `Vehiculo` puede ejecutar implementaciones diferentes.
+
+### Actividad 2 · Formas de pago
+
+**Modalidad:** clase · **Tiempo orientativo:** 45–55 minutos
+
+**Objetivo:** diseñar contra una interfaz.
+
+Define `IPago` e implementa `PagoTarjeta` y `PagoTransferencia`. Crea un servicio que dependa únicamente de `IPago`, no de las clases concretas.
+
+**Comprobación:** añade `PagoEfectivo` sin modificar la lógica principal del servicio.
+
+### Actividad 3 · Sistema de notificaciones
+
+**Modalidad:** casa · **Tiempo orientativo:** 60–75 minutos
+
+**Objetivo:** consolidar interfaces, polimorfismo y bajo acoplamiento.
+
+Diseña `INotificacion` con implementaciones para correo electrónico, SMS y un tercer canal elegido por ti. El cliente debe trabajar solo con la interfaz.
+
+**Entrega:** código, pequeño diagrama de tipos y explicación de cómo añadirías una cuarta implementación.
+
+<div class="cla-lesson-nav"><a href="/java/leccion06/">← 06 · Colecciones y tipos avanzados</a><a href="/java/leccion08/">08 · Persistencia con SQLite →</a></div>

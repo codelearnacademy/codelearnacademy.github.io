@@ -37,3 +37,81 @@ El recorrido completo se puede resumir así:
 | JVM | CPython u otro runtime | CLR |
 
 Los nombres cambian, pero la pregunta profesional es la misma: qué herramienta transforma el código, qué formato intermedio se genera y qué runtime lo ejecuta.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué herramienta compila Java?
+
+- A) javac
+- B) java
+- C) JVM únicamente
+- D) Scanner
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> javac es el compilador.</p>
+
+</details>
+
+### 2. ¿Qué ejecuta la JVM?
+
+- A) Bytecode
+- B) Markdown
+- C) CSS
+- D) SQL
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La JVM ejecuta bytecode Java.</p>
+
+</details>
+
+### 3. ¿Qué paquete necesitas normalmente para desarrollar Java?
+
+- A) JDK
+- B) Solo JRE histórico
+- C) SQLite
+- D) Docker
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El JDK aporta las herramientas de desarrollo.</p>
+
+</details>
+
+### 4. ¿Qué concepto facilita la portabilidad?
+
+- A) JVM por plataforma
+- B) Compilar a un exe distinto manualmente
+- C) Eliminar tipos
+- D) Usar siempre Windows
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La JVM abstrae la plataforma concreta.</p>
+
+</details>
+
+### 5. ¿Qué debes saber hacer al terminar la lección?
+
+- A) Compilar y ejecutar un programa sencillo
+- B) Configurar Kubernetes
+- C) Crear un ORM
+- D) Diseñar una API REST
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Ese es el resultado práctico mínimo de la introducción.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Crea un esquema de una página que conecte JDK, javac, bytecode, JVM y ejecución.
+

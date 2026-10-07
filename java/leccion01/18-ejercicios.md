@@ -56,3 +56,53 @@ Repite el programa mínimo en Python o JavaScript y anota tres diferencias de si
 | Ejecución | `java Main` | `python main.py` o `node main.js` |
 
 Compara ambos flujos atendiendo a la sintaxis, las herramientas necesarias y el papel del runtime.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué deberías hacer antes de consultar una solución?
+
+- A) Intentar resolver el ejercicio y probar tu código
+- B) Copiarla
+- C) Omitir la ejecución
+- D) Cambiar de tema
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El intento propio es necesario para que el ejercicio tenga valor.</p>
+
+</details>
+
+### 2. ¿Qué evidencia confirma mejor que tu programa funciona?
+
+- A) Compilarlo y ejecutarlo con casos de prueba
+- B) Que el código sea largo
+- C) Que tenga comentarios
+- D) Que use muchas clases
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La ejecución y las pruebas permiten comprobar el comportamiento.</p>
+
+</details>
+
+### 3. ¿Qué conviene hacer si aparece un error?
+
+- A) Leer el mensaje y localizar la línea antes de modificar al azar
+- B) Borrar todo
+- C) Instalar otro SO
+- D) Ignorarlo
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Diagnosticar el mensaje es una habilidad central de programación.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Resuelve al menos seis ejercicios sin consultar la solución hasta haber compilado y probado tu intento.
+

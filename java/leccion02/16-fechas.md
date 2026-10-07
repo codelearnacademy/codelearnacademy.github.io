@@ -1589,6 +1589,11 @@ Salida:
 
 ## `Period` frente a `Duration`
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-period-duration.png" alt="Comparación entre Period y Duration" loading="lazy">
+</figure>
+
 | Clase | Trabaja principalmente con |
 | --- | --- |
 | `Period` | Años, meses y días |
@@ -3289,3 +3294,95 @@ Para diferencias de **horas, minutos y segundos**, utiliza `Duration`.
 Para obtener un **total exacto en una unidad concreta**, como días, meses o años completos, utiliza `ChronoUnit`.
 
 Cuando el programa necesite representar una zona horaria real, utiliza `ZoneId` y `ZonedDateTime` en lugar de asumir que un `LocalDateTime` contiene información geográfica o de huso horario.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-fechas.png" alt="Comparación entre LocalDate, LocalTime y LocalDateTime con ejemplos de los datos que representa cada tipo" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Crea una fecha de nacimiento y calcula la fecha del próximo cumpleaños.
+
+### Ejercicio propuesto
+
+Calcula edad, días hasta una fecha y compara dos horas.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué representa LocalDate?
+
+- A) Una fecha sin hora ni zona
+- B) Una hora únicamente
+- C) Un instante UTC obligatorio
+- D) Una duración
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> LocalDate modela año, mes y día.</p>
+
+</details>
+
+### 2. ¿Qué representa LocalTime?
+
+- A) Hora sin fecha
+- B) Fecha completa
+- C) Periodo de años
+- D) Zona horaria
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> LocalTime modela hora, minuto, segundo, etc.</p>
+
+</details>
+
+### 3. ¿Qué combina LocalDateTime?
+
+- A) Fecha y hora locales
+- B) Solo zona
+- C) Dos periodos
+- D) Una regex
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Combina LocalDate y LocalTime sin zona.</p>
+
+</details>
+
+### 4. ¿Qué clase es apropiada para diferencia basada en fechas como años/meses/días?
+
+- A) Period
+- B) Duration siempre
+- C) Scanner
+- D) Integer
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Period trabaja con unidades de fecha.</p>
+
+</details>
+
+### 5. ¿Para qué sirve DateTimeFormatter?
+
+- A) Formatear y parsear fechas/horas
+- B) Crear bucles
+- C) Compilar Java
+- D) Gestionar memoria
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Permite convertir entre representaciones textuales y temporales.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Dada una fecha de nacimiento, calcula la edad aproximada con `Period` y los días hasta el próximo cumpleaños.
+

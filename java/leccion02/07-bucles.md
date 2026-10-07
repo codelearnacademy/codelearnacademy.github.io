@@ -70,6 +70,11 @@ public class BuclesDemo {
 
 ## Cuándo usar cada uno
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-bucles-comparacion.png" alt="Comparación entre for while y do while" loading="lazy">
+</figure>
+
 - `for`: cuando sabes cuántas veces quieres repetir.
 - `while`: cuando la condición depende de algo que cambia durante la ejecución.
 - `do while`: cuando al menos una ejecución debe ocurrir antes de comprobar la condición.
@@ -105,4 +110,94 @@ Este bucle no termina porque la variable `i` nunca cambia. La corrección es inc
 ## Después de esta lección
 
 Cuando ya sabes repetir tareas, el siguiente paso es encapsular lógica en métodos.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-for.png" alt="02 for" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Traza un `for` del 1 al 5 en una tabla con contador, condición y salida. Después crea un acumulador.
+
+### Ejercicio propuesto
+
+Haz una tabla de multiplicar, suma pares y dibuja un triángulo de asteriscos con bucles.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué bucle es cómodo cuando conoces el número de iteraciones?
+
+- A) for
+- B) if
+- C) switch
+- D) try
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> for concentra inicialización, condición y actualización.</p>
+
+</details>
+
+### 2. ¿Puede un `while` ejecutarse cero veces?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Comprueba la condición antes de entrar.</p>
+
+</details>
+
+### 3. ¿Qué diferencia principal tiene `do while`?
+
+- A) Ejecuta el cuerpo al menos una vez
+- B) Nunca comprueba condición
+- C) No puede repetir
+- D) Solo funciona con Strings
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La condición se evalúa después del cuerpo.</p>
+
+</details>
+
+### 4. ¿Qué es un acumulador?
+
+- A) Una variable que va combinando resultados durante iteraciones
+- B) Una clase de JVM
+- C) Un operador SQL
+- D) Un paquete
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Por ejemplo, suma += valor.</p>
+
+</details>
+
+### 5. ¿Qué riesgo tiene un bucle cuya condición nunca pasa a false?
+
+- A) Bucle infinito
+- B) Error de sintaxis necesariamente
+- C) Autoboxing
+- D) Garbage collection inmediata
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El programa puede quedar repitiendo indefinidamente.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Genera la tabla de multiplicar de un número leído por teclado.
+2. Pide números hasta introducir 0 y muestra suma y cantidad de valores introducidos.
 

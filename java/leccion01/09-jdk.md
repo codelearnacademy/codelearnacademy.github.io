@@ -34,3 +34,79 @@ El JDK cumple una función parecida al SDK de .NET o a un toolchain de Go: reún
 java -version
 javac -version
 ```
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/01-jdk-jre-jvm.png" alt="01 jdk jre jvm" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Ejecuta `java -version` y `javac -version`. Comprueba que tu instalación puede ejecutar y compilar.
+
+### Ejercicio propuesto
+
+Explica qué herramienta faltaría si pudieras ejecutar programas pero no compilar código fuente.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué contiene un JDK?
+
+- A) Herramientas para desarrollar Java, incluido el compilador
+- B) Solo un navegador
+- C) Solo SQLite
+- D) Únicamente Git
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El JDK incluye herramientas de desarrollo como javac y el runtime necesario.</p>
+
+</details>
+
+### 2. ¿Qué herramienta del JDK compila fuentes?
+
+- A) java
+- B) javac
+- C) javap -version únicamente
+- D) jvmc
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> javac es el compilador de Java.</p>
+
+</details>
+
+### 3. ¿Qué necesitas para desarrollar y compilar código Java?
+
+- A) Un JDK
+- B) Solo un .class
+- C) Un servidor web
+- D) Una base de datos
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Para desarrollo se instala normalmente un JDK.</p>
+
+</details>
+
+### 4. ¿JDK y JVM son exactamente lo mismo?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> La JVM es una parte/concepto de ejecución; el JDK incorpora además herramientas de desarrollo.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Localiza en tu instalación `java`, `javac` y `javap` y explica para qué sirve cada uno.
+

@@ -33,3 +33,51 @@ No debe asumirse. El JDK incluye el entorno de ejecución y se pueden construir 
 ## Contraste con otros ecosistemas
 
 Python distingue entre el lenguaje, CPython y sus distribuciones; JavaScript distingue el estándar del motor y de Node.js; C# distingue el lenguaje, el runtime y el SDK de .NET. Separar esos niveles evita trasladar una respuesta correcta de un ecosistema a otro sin comprobar sus reglas.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Cuál es el objetivo de una pregunta trampa bien diseñada?
+
+- A) Confundir sin enseñar
+- B) Detectar una idea errónea frecuente
+- C) Memorizar letras
+- D) Evitar ejecutar código
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> Debe revelar y corregir modelos mentales incorrectos.</p>
+
+</details>
+
+### 2. Si dudas sobre qué imprime un código corto, ¿qué práctica ayuda?
+
+- A) Predecir primero y ejecutar después
+- B) Mirar solo la solución
+- C) No compilar
+- D) Cambiar el código antes de leerlo
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La predicción seguida de comprobación produce aprendizaje útil.</p>
+
+</details>
+
+### 3. ¿Una pregunta con opción correcta basta si no entiendes por qué?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> La explicación de la respuesta es parte esencial de la autoevaluación.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Crea dos preguntas trampa propias sobre compilación o JVM y explica la respuesta correcta.
+

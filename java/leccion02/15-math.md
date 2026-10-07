@@ -1635,3 +1635,81 @@ Math.TAU
 También debes comprender que las funciones trigonométricas trabajan con radianes y que los métodos terminados en `Exact` pueden utilizarse cuando necesitas detectar desbordamientos de enteros.
 
 El siguiente paso es aprender a trabajar con fechas y horas mediante la API `java.time` de Java 21.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-math-redondeo.png" alt="02 math redondeo" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Genera un dado de seis caras a partir de `Math.random()` y explica el rango en cada paso.
+
+### Ejercicio propuesto
+
+Crea un dado de 20 caras, calcula una hipotenusa y redondea un precio a dos decimales.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué devuelve Math.abs(-5)?
+
+- A) 5
+- B) -5
+- C) 0
+- D) 25
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> abs calcula el valor absoluto.</p>
+
+</details>
+
+### 2. ¿Qué hace Math.sqrt(9)?
+
+- A) Devuelve 3.0
+- B) Devuelve 81
+- C) Redondea a 9
+- D) Genera aleatorio
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> sqrt calcula raíz cuadrada.</p>
+
+</details>
+
+### 3. ¿En qué intervalo se encuentra Math.random()?
+
+- A) <code>0.0 &lt;= x &lt; 1.0</code>
+- B) <code>1 &lt;= x &lt;= 10</code>
+- C) <code>-1 &lt; x &lt; 1</code>
+- D) Solo enteros
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Math.random devuelve double en [0,1).</p>
+
+</details>
+
+### 4. ¿Qué diferencia hay entre floor y ceil?
+
+- A) floor baja al entero matemático inferior y ceil sube al superior
+- B) Son idénticos
+- C) Uno solo funciona con int
+- D) Ambos generan random
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Representan redondeos dirigidos diferentes.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Simula 100 lanzamientos de un dado y cuenta cuántas veces aparece cada valor.
+

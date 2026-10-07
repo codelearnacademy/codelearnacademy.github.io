@@ -85,4 +85,81 @@ Este ejemplo no falla, pero es útil para reflexionar: si el `if` está bien esc
 ## Después de esta lección
 
 Tras este resumen, entramos en la parte de algoritmos guiados y la práctica final.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué estructura repetiría código varias veces?
+
+- A) Un bucle
+- B) Una constante
+- C) Un import
+- D) Un package
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los bucles modelan repetición.</p>
+
+</details>
+
+### 2. ¿Qué estructura permite seleccionar un camino?
+
+- A) Condicional
+- B) Comentario
+- C) Clase envolvente
+- D) JDK
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> if/switch seleccionan comportamiento según condiciones.</p>
+
+</details>
+
+### 3. ¿Para qué sirven los métodos?
+
+- A) Encapsular y reutilizar operaciones
+- B) Solo para imprimir
+- C) Solo para bases de datos
+- D) Para sustituir variables
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Permiten dividir problemas en operaciones con responsabilidades claras.</p>
+
+</details>
+
+### 4. ¿Qué clase hemos usado para entrada básica?
+
+- A) Scanner
+- B) Math
+- C) Integer únicamente
+- D) JVM
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Scanner es el ejemplo introductorio habitual.</p>
+
+</details>
+
+### 5. ¿Qué debería acompañar siempre a la teoría?
+
+- A) Pruebas con código y casos concretos
+- B) Solo memorización
+- C) No compilar
+- D) Copiar soluciones
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La práctica consolida los conceptos.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Construye un programa pequeño que combine entrada, condición, bucle y método.
 

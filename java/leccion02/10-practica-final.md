@@ -164,3 +164,67 @@ Este ejemplo puede no fallar, pero si la nota se introduce como texto o fuera de
 ## Después de esta lección
 
 Esta lección termina con la consolidación de fundamentos. La siguiente etapa es la programación orientada a objetos, donde se aprenden clases, atributos, encapsulación y relaciones entre objetos.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué enfoque conviene al resolver una práctica grande?
+
+- A) Dividirla en pasos pequeños
+- B) Escribir todo sin ejecutar
+- C) Copiar una solución completa
+- D) Evitar métodos
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La descomposición reduce complejidad y facilita comprobar cada fase.</p>
+
+</details>
+
+### 2. ¿Qué deberías probar además del caso correcto?
+
+- A) Casos límite y entradas inválidas relevantes
+- B) Nada
+- C) Solo el primer valor
+- D) Solo comentarios
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los casos alternativos revelan errores.</p>
+
+</details>
+
+### 3. ¿Cuándo conviene extraer un método?
+
+- A) Cuando una operación tiene una responsabilidad identificable o se reutiliza
+- B) Nunca
+- C) Solo si usa SQL
+- D) Solo con más de 100 líneas
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los métodos ayudan a organizar y reutilizar lógica.</p>
+
+</details>
+
+### 4. ¿Qué es mejor tras completar un paso?
+
+- A) Ejecutar y verificar antes de añadir el siguiente
+- B) Esperar al final
+- C) Cambiar de JDK
+- D) Eliminar mensajes de error
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La validación incremental facilita el desarrollo.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Añade una ampliación propia a la práctica final sin modificar las responsabilidades de los métodos existentes.
+

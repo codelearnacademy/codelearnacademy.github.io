@@ -93,4 +93,53 @@ public class HolaJava {
 ## Después de esta lección
 
 Tras completar este apartado, ya puedes pasar a la estructura del programa y entender cómo encaja el método `main` dentro de una clase.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Cuál es un ciclo de trabajo básico al programar?
+
+- A) Editar → compilar → ejecutar → corregir
+- B) Ejecutar → comprar → borrar
+- C) Diseñar → nunca probar
+- D) Solo escribir código
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La programación es iterativa.</p>
+
+</details>
+
+### 2. ¿Qué distingue un error de sintaxis?
+
+- A) Impide que el código sea válido para el compilador
+- B) Siempre ocurre tras horas de ejecución
+- C) Es un error SQL
+- D) Solo afecta al estilo
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los errores sintácticos se detectan al analizar/compilar el código.</p>
+
+</details>
+
+### 3. ¿Qué conviene hacer tras un cambio pequeño?
+
+- A) Compilar/probar de nuevo
+- B) Esperar al proyecto final
+- C) Borrar target
+- D) Cambiar de JDK siempre
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los ciclos cortos facilitan localizar errores.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Crea un programa mínimo, introduce dos errores de sintaxis diferentes y documenta el mensaje del compilador.
 

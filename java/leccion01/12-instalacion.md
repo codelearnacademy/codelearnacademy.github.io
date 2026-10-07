@@ -18,6 +18,10 @@ Instala un JDK 21 de una distribución compatible con tu sistema operativo. Desp
 java -version
 javac -version
 ```
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/01-instalacion-checklist.png" alt="Pasos para comprobar una instalación de Java preparada para desarrollar" loading="lazy">
+</figure>
+
 
 Ambos comandos deben responder con la versión 21 o con la versión de JDK que hayas elegido explícitamente. Si `java` funciona pero `javac` no existe, probablemente tienes un runtime incompleto o el `PATH` apunta a otra instalación.
 
@@ -47,3 +51,68 @@ La idea es común a Node.js con `node --version`, Python con `python --version` 
 5. Guarda la información en el README del ejercicio.
 
 Si trabajas con Windows, sustituye `which` por `where`. En un equipo, una captura aislada ayuda menos que comandos reproducibles y una salida que otra persona pueda contrastar.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué dos comandos conviene comprobar tras instalar un JDK?
+
+- A) java -version y javac -version
+- B) git status y git push
+- C) npm start y npm test
+- D) sqlite3 y curl
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Verifican runtime y compilador.</p>
+
+</details>
+
+### 2. Si `java` funciona pero `javac` no, ¿qué sospecha es razonable?
+
+- A) Puede faltar un JDK completo o estar mal configurado PATH
+- B) Java funciona perfectamente para desarrollo
+- C) SQLite está roto
+- D) El código tiene un if incorrecto
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> javac forma parte de las herramientas de desarrollo del JDK.</p>
+
+</details>
+
+### 3. ¿Qué variable/configuración del sistema suele afectar a encontrar ejecutables Java?
+
+- A) PATH
+- B) HTML
+- C) SQL
+- D) JSON
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> PATH determina dónde busca el sistema los ejecutables.</p>
+
+</details>
+
+### 4. ¿Qué debes hacer después de instalar?
+
+- A) Verificar versiones antes de empezar a programar
+- B) Asumir que funciona
+- C) Borrar el JDK
+- D) Instalar todas las versiones existentes
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La comprobación evita diagnosticar después problemas de instalación como errores de código.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Documenta una instalación correcta con las salidas de `java -version` y `javac -version`.
+2. Simula un problema de PATH y describe cómo lo diagnosticarías.
+

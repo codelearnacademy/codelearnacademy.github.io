@@ -101,3 +101,93 @@ Falta un argumento. La corrección es llamar al método con ambos valores: `suma
 
 Tras dominar la modularización, llega el momento de consolidar todo con resumen y práctica final.
 
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-metodo-flujo.png" alt="02 metodo flujo" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Parte de una calculadora monolítica y extrae `sumar`, `restar`, `multiplicar` y `dividir`.
+
+### Ejercicio propuesto
+
+Implementa `esPar`, `mayor` y `calcularArea` y úsales desde `main`.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué son los argumentos?
+
+- A) Valores enviados al invocar un método
+- B) Variables globales obligatorias
+- C) Errores de compilación
+- D) Paquetes
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los argumentos proporcionan valores a los parámetros.</p>
+
+</details>
+
+### 2. ¿Qué indica `void` como tipo de retorno?
+
+- A) El método no devuelve un valor
+- B) El método no ejecuta nada
+- C) El método es privado
+- D) El método recibe cero parámetros
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> void significa ausencia de valor de retorno.</p>
+
+</details>
+
+### 3. ¿Qué hace `return` en un método no void?
+
+- A) Devuelve un valor al llamador
+- B) Importa una clase
+- C) Inicia un bucle
+- D) Declara un paquete
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> return entrega el resultado y finaliza esa ejecución del método.</p>
+
+</details>
+
+### 4. ¿Qué es la sobrecarga?
+
+- A) Métodos con mismo nombre y distinta lista de parámetros
+- B) Dos clases con el mismo fichero
+- C) Un bucle infinito
+- D) Una excepción
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La firma permite distinguir versiones sobrecargadas.</p>
+
+</details>
+
+### 5. ¿Una variable local existe fuera de su ámbito?
+
+- A) Sí siempre
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> Su ámbito está limitado al bloque/método donde se declara.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Refactoriza una calculadora para que cada operación esté en un método.
+2. Implementa `esPar`, `mayor` y `calcularArea` y crea pruebas manuales desde `main`.
+

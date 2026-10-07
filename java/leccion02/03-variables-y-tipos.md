@@ -24,6 +24,11 @@ String nombre = "Ana";
 
 ## Tipos principales
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-tipos-java.png" alt="Tipos de datos principales en Java" loading="lazy">
+</figure>
+
 ### Enteros
 
 ```java
@@ -114,4 +119,94 @@ El programa falla porque no puedes asignar un texto a una variable `int` sin con
 ## Después de esta lección
 
 Ya sabes cómo guardar información. El siguiente paso es operar con esa información usando operadores y expresiones.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-variable-tipo-valor.png" alt="02 variable tipo valor" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Crea variables para nombre, edad, altura y matrícula. Muestra todos los valores y cambia solo los que deban ser mutables.
+
+### Ejercicio propuesto
+
+Elige tipos para precio, stock, fecha textual, aprobado y matrícula y justifica cada elección.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué declaración es válida?
+
+- A) int edad = "20";
+- B) double precio = 19.95;
+- C) boolean activo = "true";
+- D) char letra = "A";
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> 19.95 es un literal compatible con double.</p>
+
+</details>
+
+### 2. ¿Qué tipo usarías para verdadero/falso?
+
+- A) boolean
+- B) double
+- C) String obligatoriamente
+- D) char
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> boolean representa valores lógicos.</p>
+
+</details>
+
+### 3. ¿Qué palabra impide reasignar una variable una vez inicializada?
+
+- A) final
+- B) const
+- C) fixed
+- D) readonly
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Java usa final para referencias/variables que no pueden reasignarse.</p>
+
+</details>
+
+### 4. ¿Qué tipo es adecuado para un número entero habitual?
+
+- A) int
+- B) boolean
+- C) char
+- D) String
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> int es el entero de uso general más habitual.</p>
+
+</details>
+
+### 5. ¿Puede una variable Java empezar por un número?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> Los identificadores no pueden comenzar por un dígito.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Modela un producto con id, nombre, precio, stock y disponible eligiendo tipos adecuados.
+2. Añade una constante para el IVA y calcula el precio con impuesto.
 

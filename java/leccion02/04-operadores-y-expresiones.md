@@ -120,3 +120,81 @@ Esto falla porque `=` asigna valores, no compara. La comparación correcta serí
 
 Ahora ya puedes combinar datos y compararlos. El siguiente paso es interactuar con el usuario mediante entrada y salida.
 
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-casting.png" alt="02 casting" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Calcula el precio final de un producto aplicando IVA y descuento usando variables intermedias.
+
+### Ejercicio propuesto
+
+Crea un conversor Celsius/Fahrenheit y un programa que determine si un número pertenece a un intervalo.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué devuelve `7 / 2` si ambos operandos son int?
+
+- A) 3
+- B) 3.5
+- C) 4
+- D) 1
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La división entre enteros descarta la parte decimal.</p>
+
+</details>
+
+### 2. ¿Qué devuelve `7 % 2`?
+
+- A) 3
+- B) 1
+- C) 3.5
+- D) 0
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> % obtiene el resto de la división entera.</p>
+
+</details>
+
+### 3. ¿Qué operador representa AND lógico?
+
+- A) <code>&amp;&amp;</code>
+- B) <code>||</code>
+- C) <code>==</code>
+- D) <code>%</code>
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> <code>&amp;&amp;</code> exige que ambas condiciones sean verdaderas.</p>
+
+</details>
+
+### 4. ¿Qué operador compara igualdad de valores primitivos?
+
+- A) <code>==</code>
+- B) =
+- C) <code>=&gt;</code>
+- D) <code>&lt;&gt;</code>
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> == compara igualdad; = asigna.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Calcula el precio final aplicando IVA y descuento con variables intermedias.
+2. Predice y comprueba el resultado de cinco expresiones que mezclen `/`, `%`, comparaciones y operadores lógicos.
+

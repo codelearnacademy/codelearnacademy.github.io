@@ -360,3 +360,67 @@ Con estos algoritmos, tendrás la lógica básica de Java. El siguiente paso es 
 ## Continua practicando
 
 Utiliza la web <a href="https://retosdeprogramacion.com/ejercicios/" target="_blank">Retos de Programación</a>, y selecciona cualquiera de los algoritmos. Sigue los pasos para solventarlos.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué debería definirse antes de codificar un algoritmo?
+
+- A) Entrada, proceso y salida
+- B) El color del IDE
+- C) La versión de Git únicamente
+- D) Un fichero XML
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Identificar esos elementos aclara el problema.</p>
+
+</details>
+
+### 2. ¿Para qué sirve el pseudocódigo?
+
+- A) Expresar la lógica sin depender totalmente de la sintaxis Java
+- B) Compilar directamente
+- C) Crear bytecode
+- D) Sustituir las pruebas
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Permite razonar sobre la solución antes de implementarla.</p>
+
+</details>
+
+### 3. ¿Qué es una traza?
+
+- A) Seguir paso a paso el estado de un algoritmo
+- B) Una excepción obligatoria
+- C) Un paquete
+- D) Un tipo primitivo
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Las trazas ayudan a entender y depurar algoritmos.</p>
+
+</details>
+
+### 4. ¿Qué conviene hacer tras implementar un algoritmo?
+
+- A) Probarlo con varios casos
+- B) Asumir que funciona
+- C) Cambiar nombres al azar
+- D) No ejecutarlo
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los casos de prueba validan la solución.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Resuelve tres algoritmos primero en pseudocódigo y después en Java; incluye casos de prueba.
+

@@ -197,6 +197,11 @@ Total -> 10
 
 ## Posiciones e índices
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-string-indices.png" alt="Índices de caracteres en String" loading="lazy">
+</figure>
+
 Los caracteres de un `String` se numeran comenzando en `0`.
 
 Para:
@@ -1753,3 +1758,94 @@ formatted()
 Estos métodos aparecen constantemente en programas Java al procesar datos introducidos por usuarios, ficheros, formularios, comunicaciones y cualquier información textual.
 
 El siguiente paso es estudiar con más detalle la clase `Integer` y otras operaciones de conversión y tratamiento de valores enteros.
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/02-string-equals.png" alt="02 string equals" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Compara dos cadenas con `==` y con `equals()`. Después normaliza `"   aNA péREZ  "`.
+
+### Ejercicio propuesto
+
+Crea un normalizador de nombres y un programa que obtenga el nombre de un fichero sin extensión.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Los objetos String son mutables?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> String es inmutable; las operaciones producen nuevas cadenas cuando hay cambios.</p>
+
+</details>
+
+### 2. ¿Cuál es el primer índice de una cadena?
+
+- A) 0
+- B) 1
+- C) -1
+- D) Depende del texto
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Java indexa desde cero.</p>
+
+</details>
+
+### 3. ¿Qué método debe usarse normalmente para comparar contenido de Strings?
+
+- A) equals
+- B) == siempre
+- C) compareMemory
+- D) same
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> equals compara contenido según la implementación de String.</p>
+
+</details>
+
+### 4. ¿Qué hace substring?
+
+- A) Obtiene una parte de la cadena
+- B) Convierte a int siempre
+- C) Ordena caracteres
+- D) Elimina el objeto original
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> substring devuelve una subcadena.</p>
+
+</details>
+
+### 5. ¿Qué suele ser mejor para muchas concatenaciones mutables sucesivas?
+
+- A) StringBuilder
+- B) boolean
+- C) Math
+- D) LocalDate
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> StringBuilder evita crear tantas cadenas intermedias.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Normaliza `"   aNA péREZ  "` y produce una representación consistente.
+2. Extrae nombre de fichero y extensión a partir de una cadena de ruta sencilla.
+

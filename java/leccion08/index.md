@@ -70,6 +70,11 @@ try (ResultSet tablas = connection.getMetaData().getTables(null, null, "alumno",
 
 ## CRUD con JDBC
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/08-resultset-mapping.png" alt="Mapeo manual de ResultSet a objeto Java" loading="lazy">
+</figure>
+
 Usa sentencias parametrizadas para no construir SQL concatenando datos del usuario:
 
 ```java
@@ -133,6 +138,11 @@ try (PreparedStatement query = connection.prepareStatement("DELETE FROM alumno W
 
 ## DAO y transacciones
 
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/08-dao.png" alt="Separación mediante DAO" loading="lazy">
+</figure>
+
 Un DAO concentra el acceso a datos y evita que la interfaz de usuario conozca SQL. Una transacción agrupa operaciones que deben confirmarse juntas:
 
 ```java
@@ -188,6 +198,11 @@ catch (SQLException error) {
 ```
 
 ## Persistencia orientada a objetos con JPA
+
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/08-transaccion.png" alt="Unidad de trabajo y transacción" loading="lazy">
+</figure>
 
 El objetivo es relacionar objetos Java con tablas sin escribir cada operación SQL manualmente. JPA define la API de persistencia; Hibernate es una implementación habitual. Al finalizar, el alumno podrá mapear una entidad, abrir un contexto, guardar cambios y consultar objetos.
 
@@ -249,3 +264,149 @@ JPA facilita el mapeo objeto-relacional, pero no elimina la necesidad de compren
 6. Construye una aplicación de consola CRUD y documenta su modelo.
 
 <div class="cla-note"><strong>Buenas prácticas</strong><p>Usa `try-with-resources`, `PreparedStatement`, transacciones explícitas y excepciones de dominio que no filtren detalles innecesarios del motor.</p></div>
+
+## Refuerzo práctico
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/08-jdbc-sqlite.png" alt="Arquitectura de persistencia: una aplicación Java usa JDBC y el driver SQLite para acceder a una base de datos local" loading="lazy">
+</figure>
+
+### Ejemplo guiado
+
+Crea una tabla `producto`, inserta una fila con `PreparedStatement` y recupérala con `ResultSet`.
+
+### Ejercicio propuesto
+
+Implementa un CRUD de `Vehiculo` con SQLite y separa el acceso en un DAO/repository.
+
+## Tarea para casa
+
+Construye un gestor de alumnos con SQLite y JDBC que persista entre ejecuciones, con CRUD completo y una clase DAO/repository.
+
+### Entrega mínima
+
+- Código fuente compilable.
+- Un `README.md` breve con instrucciones de ejecución.
+- Tres casos de prueba manuales y el resultado esperado.
+
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Qué papel tiene JDBC?
+
+- A) API estándar de Java para interactuar con bases de datos relacionales
+- B) ORM completo obligatorio
+- C) Compilador Java
+- D) Gestor de memoria
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> JDBC define interfaces y operaciones para conexión y SQL.</p>
+
+</details>
+
+### 2. ¿Qué objeto representa una conexión JDBC?
+
+- A) Connection
+- B) Scanner
+- C) Pattern
+- D) Period
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Connection encapsula la sesión/conexión con la base de datos.</p>
+
+</details>
+
+### 3. ¿Por qué usar PreparedStatement?
+
+- A) Permite parametrizar SQL y evita concatenar valores directamente
+- B) Solo para SELECT
+- C) Porque elimina la base
+- D) Porque sustituye a SQLite
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Los parámetros mejoran seguridad y claridad.</p>
+
+</details>
+
+### 4. ¿Qué representa ResultSet?
+
+- A) Resultados tabulares de una consulta
+- B) Una excepción
+- C) Una interfaz de colección
+- D) El JDK
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> ResultSet permite recorrer las filas devueltas.</p>
+
+</details>
+
+### 5. ¿Qué garantiza conceptualmente una transacción?
+
+- A) Agrupar operaciones para confirmar todas o revertir ante fallo
+- B) Que toda consulta sea SELECT
+- C) Que nunca haya errores
+- D) Que JDBC sea ORM
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Commit/rollback protegen la atomicidad del conjunto de operaciones.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Crea una tabla `producto` en SQLite y realiza INSERT y SELECT desde JDBC.
+2. Extrae el SQL de `main` a `ProductoDao` o `ProductoJdbcRepository`.
+3. Implementa una operación de dos pasos dentro de una transacción y fuerza un error para comprobar el rollback.
+
+## Actividades principales de la lección
+
+### Actividad 1 · Primer CRUD con SQLite y JDBC
+
+**Modalidad:** clase · **Tiempo orientativo:** 50–60 minutos
+
+**Objetivo:** relacionar operaciones CRUD con sentencias SQL ejecutadas desde Java.
+
+Crea `productos.db` y una tabla `producto`. Desde Java realiza al menos un `INSERT`, un `SELECT`, un `UPDATE` y un `DELETE` utilizando `PreparedStatement`.
+
+**Comprobación:** después de cada operación realiza una consulta que demuestre el estado de la tabla.
+
+### Actividad 2 · Extraer `ProductoDao`
+
+**Modalidad:** clase · **Tiempo orientativo:** 50–60 minutos
+
+**Objetivo:** separar la lógica de acceso a datos del código cliente.
+
+Parte del CRUD anterior y mueve el SQL y el uso de JDBC a `ProductoDao` o `ProductoJdbcRepository`. `Main` no debe contener sentencias SQL.
+
+**Comprobación:** cambia una consulta dentro del DAO y verifica que `Main` no necesita modificarse.
+
+### Actividad 3 · Gestor persistente de alumnos
+
+**Modalidad:** casa · **Tiempo orientativo:** 90–120 minutos
+
+**Objetivo:** construir una pequeña aplicación CRUD persistente.
+
+Desarrolla una aplicación con SQLite que permita crear, buscar, actualizar, eliminar y listar alumnos. Los datos deben mantenerse entre distintas ejecuciones.
+
+**Requisitos mínimos:**
+
+- uso de `PreparedStatement`;
+- clase de acceso a datos separada;
+- control básico de errores;
+- base de datos local;
+- `README.md` con instrucciones y al menos cinco casos de prueba.
+
+**Ampliación:** compara este enfoque con la ruta ORM y anota qué código repetitivo podría eliminar un ORM.
+
+<div class="cla-lesson-nav"><a href="/java/leccion07/">← 07 · Herencia e interfaces</a><a href="/java/">Volver a la ruta →</a></div>

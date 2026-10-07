@@ -81,3 +81,69 @@ lessons:
 - [{{ reference.title }}]({{ reference.url | relative_url }}): {{ reference.description }}
 {% endfor %}
 - <a href="https://retosdeprogramacion.com/ejercicios/" target="_blank">Retos de programación</a>
+
+## Tarea para casa
+
+Construye una calculadora modular con `Scanner`, menú repetitivo, métodos para cada operación, validación básica y control de división por cero.
+
+### Entrega mínima
+
+- Código fuente compilable.
+- Un `README.md` breve con instrucciones de ejecución.
+- Tres casos de prueba manuales y el resultado esperado.
+
+## Actividades principales de la lección
+
+### Actividad 1 · Ficha de alumno
+
+**Modalidad:** clase · **Tiempo orientativo:** 35–45 minutos
+
+**Objetivo:** integrar variables, tipos, `Scanner`, operadores y condicionales.
+
+Crea un programa que solicite nombre, edad y nota de un alumno. Después debe mostrar una ficha y determinar si está aprobado.
+
+**Requisitos:**
+
+- utilizar tipos adecuados;
+- leer los datos con `Scanner`;
+- validar que la nota esté entre 0 y 10;
+- usar un condicional para indicar `APROBADO` o `SUSPENSO`;
+- mostrar una salida clara y legible.
+
+**Comprobación:** prueba una nota suspensa, una aprobada y una entrada límite como `0` o `10`.
+
+### Actividad 2 · Calculadora modular
+
+**Modalidad:** clase · **Tiempo orientativo:** 50–60 minutos
+
+**Objetivo:** practicar bucles, `switch`, métodos y validación.
+
+Construye una calculadora con menú repetitivo que permita sumar, restar, multiplicar y dividir. Cada operación debe estar implementada en un método diferente.
+
+**Requisitos mínimos:**
+
+- menú dentro de un bucle;
+- opción para salir;
+- métodos `sumar`, `restar`, `multiplicar` y `dividir`;
+- impedir la división entre cero;
+- informar de opciones de menú incorrectas.
+
+**Comprobación:** realiza al menos un caso de prueba por operación y uno de división entre cero.
+
+### Actividad 3 · Gestor de notas
+
+**Modalidad:** casa · **Tiempo orientativo:** 60–90 minutos
+
+**Objetivo:** integrar bucles, métodos, condicionales y acumuladores.
+
+El programa debe solicitar varias notas y calcular:
+
+- media;
+- nota máxima;
+- nota mínima;
+- número de aprobados;
+- número de suspensos.
+
+Separa las operaciones principales en métodos y documenta al menos cinco casos de prueba en un `README.md`.
+
+<div class="cla-lesson-nav"><a href="/java/leccion01/">← 01 · Introducción a Java</a><a href="/java/leccion03/">03 · Estructuras de control →</a></div>

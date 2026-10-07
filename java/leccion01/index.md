@@ -25,6 +25,10 @@ lessons:
 		<div class="cla-lesson-stat"><strong>Inicial</strong><span>nivel</span></div>
 	</div>
 </section>
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/01-mapa-ruta-java.png" alt="Mapa visual de la ruta de aprendizaje de Java" loading="lazy">
+</figure>
+
 
 ## Objetivos
 
@@ -61,3 +65,65 @@ lessons:
 {% for reference in site.data.references.java %}
 - [{{ reference.title }}]({{ reference.url | relative_url }}): {{ reference.description }}
 {% endfor %}
+
+## Tarea para casa
+
+Prepara `EntornoJava.md` con la versión instalada, distribución, salidas de `java -version` y `javac -version`, y un esquema propio del proceso de compilación y ejecución.
+
+### Entrega mínima
+
+- Código fuente compilable.
+- Un `README.md` breve con instrucciones de ejecución.
+- Tres casos de prueba manuales y el resultado esperado.
+
+## Actividades principales de la lección
+
+Estas tres actividades sirven para consolidar la lección. Las dos primeras están pensadas para realizarse en clase y la tercera puede utilizarse como tarea para casa.
+
+### Actividad 1 · Investiga tu instalación de Java
+
+**Modalidad:** clase · **Tiempo orientativo:** 20–30 minutos
+
+**Objetivo:** identificar el JDK instalado y relacionar los comandos del sistema con los conceptos estudiados.
+
+1. Ejecuta `java -version` y `javac -version`.
+2. Anota la distribución y la versión mayor instalada.
+3. Comprueba si se trata de una versión LTS.
+4. Localiza, si es posible, el directorio donde está instalado el JDK.
+5. Explica con una frase qué función cumple `java` y cuál cumple `javac`.
+
+**Comprobación:** la entrega debe permitir distinguir claramente JDK, JVM, compilador y versión de Java.
+
+### Actividad 2 · Del código fuente a la JVM
+
+**Modalidad:** clase · **Tiempo orientativo:** 30–40 minutos
+
+**Objetivo:** observar de forma práctica las fases de compilación y ejecución.
+
+1. Crea `HolaJava.java` con un mensaje sencillo.
+2. Compílalo con `javac HolaJava.java`.
+3. Comprueba que aparece `HolaJava.class`.
+4. Ejecuta el programa con `java HolaJava`.
+5. Inspecciona el bytecode con `javap -c HolaJava`.
+6. Dibuja o escribe el recorrido `fuente → compilador → bytecode → JVM → ejecución`.
+
+**Comprobación:** elimina el `.class` e intenta ejecutar de nuevo. Explica el resultado.
+
+### Actividad 3 · Mi entorno Java
+
+**Modalidad:** casa · **Tiempo orientativo:** 45–60 minutos
+
+**Objetivo:** documentar de forma autónoma un entorno de desarrollo Java.
+
+Crea un fichero `EntornoJava.md` que incluya:
+
+- versión y distribución instalada;
+- salida de `java -version` y `javac -version`;
+- explicación propia de JDK, JVM y bytecode;
+- comandos para compilar y ejecutar un programa;
+- un pequeño esquema textual del proceso de ejecución;
+- dos errores que hayas encontrado y cómo los resolviste.
+
+**Entrega:** `EntornoJava.md` y un programa `HolaJava.java` compilable.
+
+<div class="cla-lesson-nav"><a href="/java/">← Volver a la ruta</a><a href="/java/leccion02/">02 · Fundamentos de Java →</a></div>

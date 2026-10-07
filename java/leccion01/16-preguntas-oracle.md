@@ -39,3 +39,51 @@ Responde antes de abrir la solución.
 ## Cómo razonar la respuesta
 
 En preguntas de certificación, identifica primero el verbo: “compilar” requiere una herramienta de desarrollo; “ejecutar” requiere un runtime; “distribuir” puede requerir empaquetado. El mismo criterio sirve al comparar Java con `python`, `dotnet` o `go`.
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. Antes de mirar una respuesta de documentación, ¿qué conviene hacer?
+
+- A) Formular una hipótesis propia
+- B) Copiarla sin leer
+- C) Cambiar de lenguaje
+- D) Borrar el proyecto
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Intentar responder primero mejora el aprendizaje activo.</p>
+
+</details>
+
+### 2. ¿Qué fuente es especialmente útil para comprobar detalles de una API Java?
+
+- A) Documentación oficial de la versión objetivo
+- B) Un comentario sin versión
+- C) Una imagen cualquiera
+- D) El nombre del fichero
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> La documentación de la versión objetivo es la referencia más fiable.</p>
+
+</details>
+
+### 3. ¿Debes asumir que una respuesta válida para una versión antigua sigue siendo idéntica hoy?
+
+- A) Sí
+- B) No
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> Las APIs y herramientas evolucionan; hay que contextualizar la versión.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Elige tres afirmaciones de la página, contrástalas con la documentación de tu versión y anota la evidencia.
+

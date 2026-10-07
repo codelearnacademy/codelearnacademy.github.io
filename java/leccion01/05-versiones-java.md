@@ -15,6 +15,10 @@ Desde Java 9, el proyecto sigue un ciclo de publicación frecuente. Las versione
 ## Versiones LTS conocidas
 
 Java 8, 11, 17 y 21 son versiones LTS ampliamente utilizadas. Java 21 es la versión objetivo de esta ruta. Elegir una LTS reduce cambios operativos cuando el proyecto necesita estabilidad.
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/java/images/01-versiones-lts.png" alt="Versiones LTS de referencia en Java" loading="lazy">
+</figure>
+
 
 ## Versión del lenguaje y versión del JDK
 
@@ -33,3 +37,67 @@ Java publica versiones con una cadencia regular y distingue algunas versiones LT
 ```bash
 java --version
 ```
+## Autoevaluación
+
+Responde antes de desplegar la solución.
+
+### 1. ¿Por qué importa declarar la versión de Java de un proyecto?
+
+- A) Porque cambia el nombre del fichero
+- B) Porque determina APIs y características disponibles
+- C) Porque elimina Maven
+- D) Porque cambia SQLite
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> La versión objetivo determina qué sintaxis y APIs se pueden utilizar.</p>
+
+</details>
+
+### 2. ¿Qué significa que una versión sea LTS?
+
+- A) Que solo dura seis meses
+- B) Que recibe soporte durante un periodo prolongado
+- C) Que no necesita JVM
+- D) Que es una beta
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: B.</strong> LTS significa Long-Term Support.</p>
+
+</details>
+
+### 3. ¿Qué conviene comprobar antes de usar una API reciente?
+
+- A) Que exista en la versión objetivo
+- B) Que el fichero sea XML
+- C) Que el IDE esté en inglés
+- D) Que el equipo tenga Docker
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Una API puede no estar disponible en versiones anteriores.</p>
+
+</details>
+
+### 4. ¿Qué comando permite ver la versión del runtime?
+
+- A) java -version
+- B) javac -compile
+- C) jdk --info
+- D) mvn java
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> java -version muestra la versión del runtime Java.</p>
+
+</details>
+
+## Ejercicios propuestos
+
+1. Consulta tu versión con `java -version` y anota versión mayor, distribución y si es LTS.
+
