@@ -34,6 +34,101 @@ No declaramos `SQLException`, excepciones de Hibernate ni detalles de SQLite en 
 
 <div class="cla-note"><strong>Regla arquitectónica</strong><p>Las excepciones técnicas no deben obligar al código cliente a saber cómo se persisten los datos.</p></div>
 
+<!-- MEJORAS-DIDACTICAS-ORM -->
+
+## Mapa visual de la lección
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/orm/images/23-exceptions.png" alt="Traducción de excepciones. PersistenceException → ProductoOrmRepository → RepositoryException → Cliente." loading="lazy">
+</figure>
+
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> PersistenceException → ProductoOrmRepository → RepositoryException → Cliente.</p>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/orm/images/23-boundary.png" alt="Frontera de infraestructura. Hibernate/JPA → Repositorio → Dominio / aplicación." loading="lazy">
+</figure>
+
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Hibernate/JPA → Repositorio → Dominio / aplicación.</p>
+
+
+## Ejemplo guiado
+
+### Traducir un error de persistencia
+
+1. Provoca una operación inválida.
+2. Captura la excepción de infraestructura dentro del repositorio.
+3. Haz rollback si la transacción está activa.
+4. Lanza `RepositoryException` con contexto y causa.
+
+<div class="cla-note"><strong>Comprobación</strong><p>No avances hasta poder explicar qué hace cada paso y comprobar el resultado en la base de datos o en la salida del programa.</p></div>
+
+
+## Autoevaluación
+
+### 1. ¿Por qué traducir excepciones?
+
+- A) Para no filtrar detalles de infraestructura al cliente
+- B) Para ocultar todos los errores
+- C) Para evitar rollback
+- D) Para convertir SQL en JSON
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El contrato de aplicación no debe depender de Hibernate.</p>
+
+</details>
+
+### 2. ¿Qué debe conservar RepositoryException?
+
+- A) La causa original
+- B) Solo un mensaje vacío
+- C) El EntityManager abierto
+- D) Una imagen
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Conservar la causa ayuda al diagnóstico.</p>
+
+</details>
+
+### 3. ¿Qué debemos hacer con una transacción fallida?
+
+- A) Rollback
+- B) Commit siempre
+- C) Ignorar
+- D) Crear otra tabla
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> Debe revertirse el trabajo parcial.</p>
+
+</details>
+
+### 4. ¿Dónde se realiza la traducción?
+
+- A) En la frontera del repositorio
+- B) En el record Producto
+- C) En CSS
+- D) En javac
+
+<details>
+<summary>Ver respuesta</summary>
+
+<p><strong>Respuesta correcta: A.</strong> El repositorio encapsula infraestructura.</p>
+
+</details>
+
+
+## Ejercicio propuesto
+
+Provoca una violación de identificador duplicado y verifica que el cliente recibe RepositoryException, no una excepción de Hibernate.
+
+**Entrega mínima:** código o SQL utilizado, resultado obtenido y una explicación breve de las decisiones tomadas.
+
+
 <div class="cla-lesson-nav">
   <a href="/orm/leccion22/">← 22 · ProductoOrmRepository: CRUD completo</a>
   <a href="/orm/leccion24/">24 · Comparar el CRUD JDBC y ORM →</a>

@@ -13,6 +13,32 @@ Esta ruta continúa directamente la ruta de **Ficheros y formatos estructurados*
   <span>CSV / JSON / XML</span><b>→</b><span>SQLite</span><b>→</b><span>JDBC</span><b>→</b><span>JdbcCrudDemo</span><b>→</b><span>ProductoJdbcRepository</span><b>→</b><span>problema de mapeo</span><b>→</b><span>JPA / Hibernate</span><b>→</b><span>ProductoOrmRepository</span><b>→</b><span>VehiculoOrmRepository</span>
 </div>
 
+<!-- MAPA-VISUAL-ORM -->
+
+## Mapa visual de la ruta
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/orm/images/00-mapa-ruta-orm.png" alt="Mapa de aprendizaje: Ficheros, SQLite, JDBC, repositorios, ORM y proyecto final." loading="lazy">
+</figure>
+
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> La ruta avanza de ficheros a SQLite y SQL, después JDBC y repositorios, y finalmente JPA/Hibernate y el proyecto final.</p>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/orm/images/00-arquitectura-repositorios.png" alt="Arquitectura con código cliente, IProductoRepository y varias implementaciones de persistencia." loading="lazy">
+</figure>
+
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El código cliente depende de IProductoRepository; CSV, JDBC y ORM son implementaciones intercambiables.</p>
+
+## Accesibilidad y forma de trabajo
+
+- Los diagramas incluyen texto alternativo y una explicación textual equivalente.
+- Ninguna información esencial depende exclusivamente del color.
+- Los tests muestran la respuesta y su explicación mediante texto.
+- Las actividades pueden seguirse completamente por escrito, sin depender de audio o vídeo.
+- Los bloques `<details>` son navegables con teclado en navegadores modernos.
+
+[Consulta la guía de accesibilidad de esta ruta](/orm/ACCESIBILIDAD/)
+
 ## Principio didáctico
 
 Como en la ruta de ficheros, **primero construimos un CRUD que funciona y después refactorizamos**. El ORM no aparece como magia: antes se implementa el mismo CRUD con JDBC y se identifica qué código repetitivo intenta resolver un ORM.
