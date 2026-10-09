@@ -25,6 +25,14 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: instalar-git-en-windows
+    title: "Instalar Git en Windows"
+  - id: instalar-git-en-debian
+    title: "Instalar Git en Debian"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: evidencia-de-configuracion
+    title: "Evidencia de configuración"
 ---
 
 # Instalación y configuración de Git
@@ -40,6 +48,62 @@ Antes de crear repositorios necesitamos comprobar que Git está disponible y con
 - Diferenciar configuración global y local.
 - Consultar los valores activos de configuración.
 - Preparar una carpeta de trabajo para las siguientes prácticas.
+
+## Instalar Git en Windows
+
+En Windows utilizaremos **Git for Windows**, que incluye la línea de comandos de Git y Git Bash.
+
+1. Descarga Git for Windows desde la web oficial de Git.
+2. Ejecuta el instalador.
+3. Mantén instalada la opción **Git Bash**.
+4. Permite que Git quede disponible desde el terminal para poder usarlo también desde PowerShell, Windows Terminal o el terminal del IDE.
+5. Finaliza la instalación y abre un terminal nuevo.
+
+Comprueba el resultado:
+
+```bash
+git --version
+```
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/02-instalacion-windows.png" alt="Flujo de instalación de Git en Windows: Git for Windows, instalador, terminal y comprobación con git --version." loading="lazy">
+</figure>
+
+No necesitas trabajar obligatoriamente con Git Bash. Una vez que `git` está disponible en el `PATH`, puedes utilizar PowerShell, Windows Terminal o el terminal integrado de IntelliJ IDEA, Visual Studio Code u otro IDE.
+
+## Instalar Git en Debian
+
+En Debian Git puede instalarse desde los repositorios del sistema mediante APT.
+
+Actualiza primero el índice de paquetes:
+
+```bash
+sudo apt update
+```
+
+Instala Git:
+
+```bash
+sudo apt install git
+```
+
+Comprueba dónde se encuentra el ejecutable:
+
+```bash
+which git
+```
+
+Y verifica la versión:
+
+```bash
+git --version
+```
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/02-instalacion-debian.png" alt="Flujo de instalación de Git en Debian: actualizar APT, instalar Git, localizar el ejecutable y comprobar la versión." loading="lazy">
+</figure>
+
+<div class="cla-note"><strong>Windows y Debian</strong><p>Los comandos de Git que aprenderás en esta ruta son los mismos. Lo que cambia principalmente es el modo de instalar Git y el terminal disponible.</p></div>
 
 ## Punto de partida
 
@@ -95,15 +159,15 @@ En GitHub:
 Por ejemplo, una configuración razonable para el aula sería:
 
 ```text
-Token name: practicas-git-2026
+Token name: dam-git-lab-2026
 Expiration: 30 days
 Resource owner: ana-perez
-Repository access: solo practicas-git
+Repository access: solo dam-git-lab
 Contents: Read and write
 Metadata: Read-only
 ```
 
-El valor secreto del token no se muestra aquí ni debe aparecer en apuntes compartidos. El texto `practicas-git-2026` es únicamente el nombre descriptivo del token.
+El valor secreto del token no se muestra aquí ni debe aparecer en apuntes compartidos. El texto `dam-git-lab-2026` es únicamente el nombre descriptivo del token.
 
 No compartas el token, no lo guardes en un README y no lo escribas en la URL del remoto. Si se publica por error, revócalo desde la misma pantalla y genera uno nuevo.
 
@@ -133,11 +197,11 @@ git remote -v
 Debe tener un formato parecido a este:
 
 ```text
-origin  https://github.com/anaperez/practicas-git.git (fetch)
-origin  https://github.com/anaperez/practicas-git.git (push)
+origin  https://github.com/anaperez/dam-git-lab.git (fetch)
+origin  https://github.com/anaperez/dam-git-lab.git (push)
 ```
 
-En este ejemplo, `anaperez` y `practicas-git` son datos ficticios. Sustitúyelos por tu usuario y el nombre real del repositorio, pero nunca sustituyas `pega-aqui-el-token` por un token escrito en un documento o una captura.
+En este ejemplo, `anaperez` y `dam-git-lab` son datos ficticios. Sustitúyelos por tu usuario y el nombre real del repositorio, pero nunca sustituyas `pega-aqui-el-token` por un token escrito en un documento o una captura.
 
 Si Git vuelve a pedir las credenciales, revisa el llavero del sistema y el alcance del token. No uses comandos que incluyan el token directamente, como `https://TOKEN@github.com/...`, porque puede quedar registrado en el historial del terminal.
 
@@ -187,11 +251,11 @@ git config --list --show-origin
 Crea una carpeta donde realizarás los ejercicios:
 
 ```bash
-mkdir practicas-git
-cd practicas-git
+mkdir dam-git-lab
+cd dam-git-lab
 ```
 
-Todavía no es un repositorio Git. En la siguiente lección lo convertiremos en uno.
+`dam-git-lab` será el **repositorio guiado de toda la ruta**. Todavía no es un repositorio Git. En la siguiente lección lo convertiremos en uno y lo iremos ampliando hasta publicarlo en GitHub.
 
 ## Ejemplo guiado
 
@@ -220,6 +284,32 @@ Si falta alguno de los dos valores de identidad, configúralo y vuelve a consult
 **Ejercicio 6.** Ejecuta `git config --list --show-origin` e identifica qué archivo contiene `user.name`.
 
 **Reto.** Explica cuándo podría ser útil tener un nombre o correo local diferente del global.
+
+## Markdown de esta lección
+
+Empieza a documentar el laboratorio con títulos y subtítulos:
+
+```markdown
+# DAM Git Lab
+
+## Entorno
+
+### Sistema operativo
+```
+
+En `README.md` anota si trabajas con Windows o Debian y la versión de Git obtenida con `git --version`.
+
+## Evidencia de configuración
+
+Guarda por escrito el resultado de:
+
+```bash
+git --version
+git config --global user.name
+git config --global user.email
+```
+
+No incluyas tokens, contraseñas ni credenciales en las evidencias.
 
 ## Qué debes recordar
 

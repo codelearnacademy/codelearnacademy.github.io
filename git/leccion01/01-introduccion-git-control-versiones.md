@@ -27,11 +27,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Introducción a Git y al control de versiones
 
 Git es una herramienta para **registrar la evolución de un proyecto**. Permite saber qué cambió, cuándo cambió, quién realizó el cambio y recuperar estados anteriores cuando algo sale mal.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/01-git-vs-copias.png" alt="Comparación entre guardar copias manuales de un proyecto y conservar un historial de commits con Git." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/01-git-vs-github.png" alt="Diferencia entre Git como sistema de control de versiones local y GitHub o GitLab como servicios de alojamiento y colaboración." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -183,6 +195,31 @@ Corregir títulos de películas
 **Ejercicio 3.** Indica cuáles de estas situaciones podrían resolverse mejor con Git: recuperar una versión anterior, enviar un mensaje instantáneo, saber quién modificó una línea, fusionar trabajo paralelo.
 
 **Reto.** Diseña el historial de cinco commits para un proyecto ficticio. Cada mensaje debe describir una modificación concreta.
+
+## Markdown de esta lección
+
+El repositorio de prácticas utilizará Markdown para su documentación. La primera sintaxis que debes reconocer es el título principal:
+
+```markdown
+# DAM Git Lab
+```
+
+El carácter `#` seguido de un espacio crea un título de nivel 1.
+
+## El laboratorio que construiremos
+
+A lo largo de la ruta trabajaremos siempre sobre el mismo proyecto guiado:
+
+```text
+dam-git-lab/
+├── README.md
+├── src/
+├── docs/
+├── images/
+└── .gitignore
+```
+
+No necesitas crearlo todavía. Empezaremos a prepararlo en la lección 2 y lo convertiremos en repositorio Git en la lección 3.
 
 ## Qué debes recordar
 

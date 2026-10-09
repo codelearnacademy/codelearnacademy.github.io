@@ -25,11 +25,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Fetch, pull y push
 
 Sincronizar correctamente requiere distinguir tres operaciones que suelen confundirse: consultar novedades, incorporar novedades y publicar trabajo.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/15-fetch-pull-push.png" alt="Direcciones de fetch, pull y push entre remoto, referencia origin/main y rama main local." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/15-remote-tracking.png" alt="Relación entre origin/main como último estado remoto conocido y main como rama de trabajo local." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -126,6 +138,22 @@ Después crea tu rama de trabajo.
 **Ejercicio 3.** Explica con una flecha la dirección de `push` y de `fetch`.
 
 **Reto.** Construye un esquema que compare `fetch`, `pull` y `push` indicando origen, destino y si modifican la rama actual.
+
+## Markdown de esta lección
+
+Documenta la comparación mediante una tabla:
+
+```markdown
+| Comando | Función |
+|---|---|
+| `fetch` | Actualiza referencias remotas |
+| `pull` | Trae e integra |
+| `push` | Publica commits locales |
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Realiza un cambio desde otra copia o desde GitHub, ejecuta `git fetch` y compara `main` con `origin/main` antes de integrar. Después practica `pull` y un nuevo `push`.
 
 ## Qué debes recordar
 

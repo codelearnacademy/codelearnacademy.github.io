@@ -19,11 +19,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Resolver conflictos
 
 Git puede fusionar muchos cambios automáticamente. Un conflicto aparece cuando no puede decidir qué versión debe conservar en una zona determinada.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/11-conflicto.png" alt="Dos ramas modifican la misma zona del README y Git no puede resolver automáticamente qué texto conservar." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/11-marcadores-conflicto.png" alt="Marcadores HEAD, separador y nombre de rama que Git inserta dentro de un archivo en conflicto." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -110,6 +122,22 @@ Dos ramas modificando la misma línea y convergiendo en un punto de conflicto. -
 **Ejercicio 3.** Tras resolver, utiliza `git status` antes del commit final y describe las instrucciones que muestra Git.
 
 **Reto.** Provoca un conflicto en un archivo Markdown con dos cambios que quieras conservar. Resuélvelo combinando ambas ideas en lugar de elegir una sola.
+
+## Markdown de esta lección
+
+El conflicto se provocará sobre una sección Markdown fácil de interpretar:
+
+```markdown
+## Descripción
+
+Texto de la rama...
+```
+
+Resuelve el conflicto dejando un documento Markdown válido, sin marcadores `<<<<<<<`, `=======` ni `>>>>>>>`.
+
+## Conflicto controlado en `dam-git-lab`
+
+Crea dos ramas que modifiquen la misma línea de `README.md`. Integra una primero y después intenta integrar la segunda. Documenta qué versión elegiste y por qué.
 
 ## Qué debes recordar
 

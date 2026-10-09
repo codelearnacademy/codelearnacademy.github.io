@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Fusionar ramas con merge
 
 Después de desarrollar una tarea en una rama necesitamos integrar sus commits en otra rama, normalmente `main`.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/10-fast-forward.png" alt="Ejemplo visual de un merge fast-forward donde main puede avanzar directamente hasta la rama." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/10-merge-commit.png" alt="Ejemplo visual de un merge con historias divergentes que crea un commit de unión." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -110,6 +122,28 @@ Esto elimina la referencia de rama, no los commits que ya forman parte de `main`
 **Ejercicio 3.** Comprueba qué ocurre al intentar borrar con `-d` una rama que no ha sido integrada.
 
 **Reto.** Dibuja el historial antes y después de un merge y señala qué referencia se mueve.
+
+## Markdown de esta lección
+
+Crea un índice manual en `README.md`:
+
+```markdown
+## Índice
+
+- [Descripción](#descripción)
+- [Objetivos](#objetivos)
+- [Comandos Git](docs/comandos.md)
+```
+
+Los títulos generan anclas que pueden enlazarse desde el índice.
+
+## Trabajo guiado en `dam-git-lab`
+
+Vuelve a `main` y fusiona `feature-documentacion`. Observa antes y después el historial con:
+
+```bash
+git log --oneline --graph --decorate --all
+```
 
 ## Qué debes recordar
 

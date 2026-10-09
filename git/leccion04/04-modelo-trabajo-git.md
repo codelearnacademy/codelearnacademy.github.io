@@ -25,11 +25,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # El modelo de trabajo de Git
 
 Esta es una de las lecciones más importantes de toda la ruta. Git separa los cambios que estás realizando, los que has preparado y los que ya forman parte del historial.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/04-working-staging-repository.png" alt="Las tres áreas de Git: Working Directory, Staging Area y Repository, conectadas por git add y git commit." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/04-estados-archivo.png" alt="Evolución de un archivo entre los estados untracked, staged, committed y modified." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -139,6 +151,37 @@ Lee la salida después de cada comando. No ejecutes la secuencia de memoria sin 
 **Ejercicio 3.** Explica por qué `git add` no significa "subir a GitHub".
 
 **Reto.** Dibuja de memoria las tres áreas de Git y coloca `git add` y `git commit` en el lugar correcto.
+
+## Markdown de esta lección
+
+Añade listas al README:
+
+```markdown
+## Objetivos
+
+- Aprender Git.
+- Trabajar con ramas.
+- Utilizar GitHub.
+
+## Flujo básico
+
+1. Modificar.
+2. Revisar.
+3. Preparar.
+4. Confirmar.
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Prepara únicamente `README.md`:
+
+```bash
+git status
+git add README.md
+git status
+```
+
+Comprueba visualmente el cambio de **untracked** a **staged** y crea después el primer commit.
 
 ## Qué debes recordar
 

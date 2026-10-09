@@ -53,6 +53,39 @@ Comenzaremos entendiendo qué problema resuelve un sistema de control de version
   <p>La ruta está diseñada para trabajar con Git desde el terminal y comprender qué ocurre en cada operación. Los ejemplos guiados se complementan con ejercicios progresivos y un pequeño proyecto colaborativo final.</p>
 </div>
 
+## Proyecto conductor de la ruta
+
+Toda la guía utiliza un mismo repositorio de laboratorio:
+
+```text
+dam-git-lab
+```
+
+El repositorio comienza como una carpeta local, se convierte en repositorio Git, incorpora documentación Markdown, ramas y merges, y finalmente se publica en GitHub. Así cada concepto nuevo se aplica sobre una historia real y acumulativa.
+
+## Markdown dentro de la ruta
+
+Markdown se introduce progresivamente según hace falta documentar el proyecto:
+
+```text
+# títulos → listas → énfasis → código → tablas → citas
+→ enlaces → índice → imágenes → checklists → CHANGELOG
+```
+
+Al terminar, el alumnado habrá construido un README completo además de aprender Git.
+
+## Evidencias de trabajo
+
+En los ejercicios guiados se conservarán evidencias de los comandos y del historial Git. Al cierre de la ruta se utilizarán:
+
+```text
+evidencias/history.txt
+evidencias/git-history.txt
+evidencias/status.txt
+```
+
+Antes de entregar `history.txt` debe revisarse para eliminar cualquier credencial o información sensible.
+
 ## Recorrido de aprendizaje
 
 ```text

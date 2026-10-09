@@ -25,11 +25,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Pull Requests y Merge Requests
 
 GitHub denomina **Pull Request** y GitLab denomina **Merge Request** a una propuesta para integrar una rama después de revisarla.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/17-pull-request.png" alt="Secuencia desde una rama feature hasta Pull Request, revisión y merge." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/17-pr-template.png" alt="Ejemplo de descripción de una Pull Request usando títulos, lista numerada y checklist de Markdown." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -126,6 +138,30 @@ Rama local → push → PR/MR → revisión → merge → main. -->
 **Ejercicio 3.** Añade un commit a una solicitud ya abierta y comprueba que aparece automáticamente.
 
 **Reto.** Completa un ciclo de revisión en el que la primera versión no sea aprobada hasta corregir una observación.
+
+## Markdown en una Pull Request
+
+Las descripciones de las PR también interpretan Markdown. Utiliza esta estructura:
+
+```markdown
+## Qué cambia
+
+Describe el cambio.
+
+## Cómo probarlo
+
+1. ...
+2. ...
+
+## Checklist
+
+- [ ] Compila
+- [ ] Revisado
+```
+
+## Pull Request real
+
+Crea y publica una rama `feature-documentacion`, abre una Pull Request hacia `main`, solicita una revisión y realiza al menos una mejora antes del merge si el revisor la propone.
 
 ## Qué debes recordar
 

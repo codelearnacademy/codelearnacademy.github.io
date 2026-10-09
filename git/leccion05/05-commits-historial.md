@@ -25,11 +25,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Commits y construcción del historial
 
 Los commits son las piezas con las que construimos la historia de un proyecto. Un buen historial explica la evolución del trabajo de forma comprensible.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/05-commit-snapshot.png" alt="Dos commits sucesivos mostrando cómo cada uno registra una instantánea coherente del proyecto." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/05-historial-lineal.png" alt="Historial lineal de cuatro commits conectados en orden temporal." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -137,6 +149,28 @@ Comprueba que puedes explicar qué ocurrió leyendo solo el historial.
 **Ejercicio 3.** Reescribe estos mensajes para que sean útiles: `cosas`, `update`, `final`, `arreglo`.
 
 **Reto.** Revisa tus últimos cinco commits y decide si otra persona podría comprender la evolución del proyecto sin abrir los archivos.
+
+## Markdown de esta lección
+
+Introduce énfasis y código en línea:
+
+```markdown
+**Git** es un sistema de control de versiones.
+
+Antes de hacer commit ejecuta `git status`.
+```
+
+## Historial recomendado de `dam-git-lab`
+
+Construye varios commits pequeños. Por ejemplo:
+
+```text
+chore: crear repositorio inicial
+docs: añadir descripción al README
+docs: añadir objetivos de la práctica
+```
+
+Consulta el resultado con `git log --oneline`.
 
 ## Qué debes recordar
 

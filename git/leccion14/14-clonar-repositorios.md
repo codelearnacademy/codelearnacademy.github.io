@@ -19,11 +19,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Clonar y continuar un repositorio
 
 Cuando un proyecto ya existe en GitHub o GitLab, normalmente no usamos `git init`. Lo habitual es clonar el repositorio completo.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/14-clone.png" alt="git clone descarga desde GitHub una copia de trabajo con archivos y carpeta .git." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/14-zip-vs-clone.png" alt="Comparación entre descargar un ZIP, que solo contiene archivos, y clonar, que incluye el historial Git." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -93,6 +105,28 @@ git push
 **Ejercicio 3.** Explica por qué no deberías ejecutar `git init` dentro de un repositorio recién clonado.
 
 **Reto.** Clona el mismo repositorio en dos carpetas diferentes y explica cómo pueden llegar a tener estados distintos.
+
+## Markdown de esta lección
+
+Utiliza separadores para dividir bloques grandes de documentación:
+
+```markdown
+---
+```
+
+Añade también una sección `## Clonar el proyecto` con el comando usado.
+
+## Prueba de clonación
+
+Clona `dam-git-lab` en una carpeta distinta y comprueba:
+
+```bash
+git status
+git remote -v
+git log --oneline
+```
+
+La nueva copia debe conservar el historial y la referencia a `origin`.
 
 ## Qué debes recordar
 

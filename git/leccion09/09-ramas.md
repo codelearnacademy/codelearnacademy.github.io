@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Ramas: trabajar en paralelo
 
 Las ramas permiten desarrollar cambios sin modificar directamente la línea principal del proyecto.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/09-rama.png" alt="Historial Git con ramas main y feature-documentacion avanzando en paralelo." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/09-head.png" alt="HEAD apuntando a la rama feature-documentacion para indicar la rama activa." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -111,6 +123,26 @@ Las ramas permiten:
 **Ejercicio 3.** Utiliza `git log --oneline --all --graph` para observar ambas líneas de trabajo.
 
 **Reto.** Crea dos ramas diferentes desde `main`, realiza un commit distinto en cada una y dibuja el historial resultante.
+
+## Markdown de esta lección
+
+Introduce enlaces:
+
+```markdown
+[Documentación oficial de Git](https://git-scm.com/)
+
+[Comandos del laboratorio](docs/comandos.md)
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Crea una rama para mejorar documentación:
+
+```bash
+git switch -c feature-documentacion
+```
+
+Añade una sección nueva a `docs/comandos.md`, crea un commit y comprueba con `git log --oneline --graph --all` que la rama ha avanzado de forma independiente.
 
 ## Qué debes recordar
 

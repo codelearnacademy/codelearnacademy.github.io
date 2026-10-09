@@ -21,11 +21,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Repositorios remotos: GitHub y GitLab
 
 Hasta ahora todo el trabajo ha ocurrido en tu equipo. Un repositorio remoto permite almacenar y compartir el historial en otro servidor.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/12-local-remoto.png" alt="Repositorio dam-git-lab local conectado con un repositorio dam-git-lab alojado en GitHub." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/12-origin.png" alt="El nombre origin representa una URL remota de GitHub para dam-git-lab." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -107,6 +119,26 @@ Al publicar el commit C, ambos quedan sincronizados.
 **Ejercicio 3.** Ejecuta `git remote -v` en un repositorio local aún no conectado.
 
 **Reto.** Dibuja local y remoto con historiales diferentes y explica qué tendría que ocurrir para sincronizarlos.
+
+## Markdown de esta lección · imágenes
+
+Markdown permite insertar imágenes con texto alternativo:
+
+```markdown
+![Flujo entre área de trabajo, staging y repositorio](images/flujo-git.png)
+```
+
+El texto entre corchetes debe explicar la información de la imagen; evita textos genéricos como `imagen` o `diagrama`.
+
+## Crear el repositorio remoto `dam-git-lab`
+
+En GitHub crea un repositorio llamado exactamente:
+
+```text
+dam-git-lab
+```
+
+Créalo **vacío** si vas a publicar el historial local existente: no añadas desde GitHub un README, `.gitignore` o licencia inicial que cree un historial diferente. Copia después la URL HTTPS del repositorio.
 
 ## Qué debes recordar
 

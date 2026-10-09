@@ -19,11 +19,21 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
+  - id: evidencias-del-trabajo-guiado
+    title: "Evidencias del trabajo guiado"
 ---
 
 # Flujo de trabajo profesional con Git
 
 Ya conoces las piezas principales. Ahora las uniremos en una rutina repetible que reduce errores y facilita el trabajo en equipo.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/20-flujo-profesional.png" alt="Flujo profesional completo: pull, branch, edición, diff, commit, push, Pull Request y merge." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -116,6 +126,51 @@ Un flujo profesional no consiste en memorizar una receta, sino en saber **qué e
 **Ejercicio 3.** Señala tres puntos donde `git status` aporta información útil.
 
 **Reto.** Realiza el mismo flujo sin consultar la lección, pero detente antes de cada comando y explica qué estado esperas obtener.
+
+## Markdown acumulado
+
+A estas alturas el README debería utilizar de forma natural:
+
+- títulos y subtítulos;
+- índice;
+- listas;
+- tablas;
+- enlaces;
+- imágenes con texto alternativo;
+- bloques de código;
+- checklists.
+
+No se trata de añadir sintaxis por añadirla: úsala para que la documentación sea más fácil de leer.
+
+## Simulación completa
+
+Realiza una mejora pequeña en `dam-git-lab` recorriendo todo el flujo: actualizar `main`, crear rama, modificar, revisar diff, commit, push, Pull Request, revisión y merge.
+
+## Evidencias del trabajo guiado
+
+Al terminar el flujo de clase genera tres archivos dentro de `evidencias/`.
+
+En **Debian o Git Bash**:
+
+```bash
+mkdir -p evidencias
+history > evidencias/history.txt
+git log --oneline --graph --decorate --all > evidencias/git-history.txt
+git status > evidencias/status.txt
+```
+
+En **PowerShell**:
+
+```powershell
+New-Item -ItemType Directory -Force evidencias
+Get-History | Out-File evidencias/history.txt
+git log --oneline --graph --decorate --all | Out-File evidencias/git-history.txt
+git status | Out-File evidencias/status.txt
+```
+
+<div class="cla-note"><strong>Privacidad</strong><p>Revisa <code>history.txt</code> antes de entregarlo. Elimina cualquier línea que pueda contener tokens, contraseñas, claves, rutas personales sensibles u otras credenciales.</p></div>
+
+Los tres archivos demuestran cosas diferentes: `history.txt` permite comprobar la secuencia de comandos, `git-history.txt` muestra el historial real construido por Git y `status.txt` documenta el estado final.
 
 ## Qué debes recordar
 

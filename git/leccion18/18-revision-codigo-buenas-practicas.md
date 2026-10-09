@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Revisión de código y buenas prácticas
 
 Trabajar con Git de forma eficiente no consiste en ejecutar muchos comandos. Consiste en producir cambios fáciles de entender, revisar y recuperar.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/18-code-review.png" alt="Una revisión de código parte del diff y produce comentarios y sugerencias concretas." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/18-feedback.png" alt="Ciclo de revisión: review, modificar, commit y push hasta obtener aprobación." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -109,6 +121,20 @@ Antes de integrar deberías detectar que `passwords.txt` y probablemente `app.lo
 **Ejercicio 3.** Diseña una checklist de revisión para tu clase.
 
 **Reto.** Prepara deliberadamente una rama con dos errores de higiene del repositorio y pide a otra persona que los detecte únicamente mediante el diff.
+
+## Markdown de esta lección
+
+En comentarios y revisiones puedes citar código en línea con backticks o utilizar bloques de código:
+
+````markdown
+```java
+System.out.println("Hola");
+```
+````
+
+## Evidencia de revisión
+
+La PR de `dam-git-lab` debe contener al menos un comentario útil de revisión y, cuando proceda, un commit posterior que responda a ese comentario.
 
 ## Qué debes recordar
 

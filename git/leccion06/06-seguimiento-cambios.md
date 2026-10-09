@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Seguimiento y revisión de cambios
 
 Antes de preparar o confirmar un cambio conviene revisar exactamente qué has modificado. `git diff` permite observar diferencias entre estados.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/06-git-diff.png" alt="git diff compara los cambios no preparados del Working Directory." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/06-diff-staged.png" alt="git diff --staged permite revisar exactamente qué cambios entrarán en el próximo commit." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -100,6 +112,24 @@ Modifica `README.md` y `equipo.md`. Revisa ambos con `git diff`. Prepara solo `R
 **Ejercicio 3.** Diseña una checklist de tres pasos que realizarías antes de cada commit.
 
 **Reto.** Introduce intencionadamente un cambio accidental y detecta el problema únicamente revisando el diff antes de hacer commit.
+
+## Markdown de esta lección
+
+Crea `docs/comandos.md` y documenta comandos mediante bloques de código:
+
+````markdown
+# Comandos Git
+
+## Estado
+
+```bash
+git status
+```
+````
+
+## Trabajo guiado en `dam-git-lab`
+
+Modifica `README.md` y `docs/comandos.md`. Antes de preparar nada ejecuta `git diff`; después de `git add`, ejecuta `git diff --staged`. No hagas commit hasta haber revisado ambas vistas.
 
 ## Qué debes recordar
 

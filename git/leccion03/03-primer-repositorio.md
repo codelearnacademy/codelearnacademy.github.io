@@ -21,11 +21,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Crear el primer repositorio
 
 En esta lección convertirás una carpeta normal en un repositorio Git y aprenderás a preguntar a Git qué está ocurriendo en cada momento.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/03-git-init.png" alt="Transformación de la carpeta dam-git-lab en un repositorio Git mediante git init y la carpeta interna .git." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/03-untracked.png" alt="Estado untracked de un README nuevo que Git detecta pero todavía no sigue." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -40,8 +52,8 @@ En esta lección convertirás una carpeta normal en un repositorio Git y aprende
 Sitúate en una carpeta vacía:
 
 ```bash
-mkdir mi-primer-repo
-cd mi-primer-repo
+mkdir dam-git-lab
+cd dam-git-lab
 ```
 
 Inicializa Git:
@@ -118,6 +130,34 @@ Observa que Git no registra automáticamente todo lo que aparece en la carpeta. 
 **Ejercicio 3.** Usa `git status` y describe con tus palabras qué informa Git.
 
 **Reto.** Averigua qué ocurre si ejecutas `git init` por segunda vez dentro del mismo repositorio. No borres `.git`.
+
+## Markdown de esta lección
+
+Completa `README.md` con una estructura sencilla:
+
+```markdown
+# DAM Git Lab
+
+## Descripción
+
+Repositorio de prácticas de Git para Desarrollo de Aplicaciones Multiplataforma.
+
+## Autor
+
+Nombre Apellidos
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Si preparaste la carpeta en la lección anterior, entra en ella. Si no existe, créala ahora:
+
+```bash
+mkdir dam-git-lab
+cd dam-git-lab
+git init
+```
+
+Crea `README.md`, ejecuta `git status` y comprueba que aparece como **untracked**.
 
 ## Qué debes recordar
 

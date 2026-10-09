@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Ignorar archivos con .gitignore
 
 No todo lo que existe dentro de una carpeta de proyecto debe guardarse en Git. `.gitignore` permite declarar archivos y carpetas que no queremos versionar.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/07-gitignore.png" alt="Separación entre archivos que deben versionarse y carpetas o artefactos que deben ignorarse en un proyecto DAM." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/07-ignore-tracked.png" alt="Advertencia de que añadir un archivo ya versionado a .gitignore no hace que Git deje de seguirlo automáticamente." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -118,6 +130,22 @@ Las reglas reales deben adaptarse al IDE y herramienta de construcción utilizad
 **Ejercicio 3.** Explica por qué `.env` suele excluirse.
 
 **Reto.** Crea tres archivos, configura reglas para ignorar exactamente dos y demuestra el resultado con `git status`.
+
+## Markdown de esta lección
+
+Añade una tabla al README:
+
+```markdown
+| Elemento | ¿Se versiona? |
+|---|---|
+| `src/` | Sí |
+| `target/` | No |
+| `README.md` | Sí |
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Crea `.gitignore` pensando en un proyecto Java/DAM. Incluye al menos archivos compilados y carpetas generadas por el IDE o el build cuando corresponda. Justifica en `README.md` dos patrones ignorados.
 
 ## Qué debes recordar
 

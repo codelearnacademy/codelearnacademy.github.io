@@ -23,11 +23,19 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Corregir errores y recuperar cambios
 
 Git permite recuperar estados anteriores, pero es importante distinguir entre deshacer cambios locales, sacar algo de staging y crear una corrección histórica.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/08-recuperar-cambios.png" alt="Decisión entre git restore, git restore --staged y git revert según dónde se encuentre el cambio." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -106,6 +114,18 @@ Commit ya compartido
 **Ejercicio 3.** Explica por qué `git revert` resulta adecuado para historial compartido.
 
 **Reto.** Dibuja un árbol de decisión que indique qué comando usar según dónde se encuentre el cambio.
+
+## Markdown de esta lección
+
+Utiliza una cita para destacar una recomendación:
+
+```markdown
+> Antes de recuperar cambios, ejecuta `git status` y comprueba dónde se encuentra el archivo.
+```
+
+## Trabajo guiado en `dam-git-lab`
+
+Realiza un cambio temporal en `README.md`, obsérvalo con `git diff` y recupéralo. Después prepara otro cambio, practica cómo retirarlo del staging y vuelve a comprobar el estado.
 
 ## Qué debes recordar
 

@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Etiquetas, versiones y releases
 
 Las ramas se mueven cuando aparecen nuevos commits. Una etiqueta puede marcar un commit concreto como una versión importante.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/19-tag.png" alt="Un tag v1.0.0 apuntando a un commit concreto del historial." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/19-semver.png" alt="Descomposición de una versión 1.4.2 en major, minor y patch." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -106,6 +118,33 @@ GitHub y GitLab pueden crear una **release** asociada a un tag, con notas, enlac
 **Ejercicio 3.** Publica el tag y comprueba que aparece en la plataforma.
 
 **Reto.** Escribe unas notas de versión con tres cambios incluidos en una hipotética `v1.0.0`.
+
+## Markdown de esta lección
+
+Crea `CHANGELOG.md`:
+
+```markdown
+# Changelog
+
+## v1.0.0
+
+### Añadido
+
+- Aplicación inicial.
+- Documentación de Git.
+- README completo.
+```
+
+## Versionar `dam-git-lab`
+
+Cuando el repositorio represente una primera versión estable:
+
+```bash
+git tag -a v1.0.0 -m "Primera versión estable"
+git push origin v1.0.0
+```
+
+Comprueba en GitHub que la etiqueta apunta al commit esperado.
 
 ## Qué debes recordar
 

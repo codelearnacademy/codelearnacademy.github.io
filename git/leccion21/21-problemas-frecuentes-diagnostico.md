@@ -27,11 +27,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Problemas frecuentes y diagnóstico
 
 Git suele explicar qué ocurre, pero al principio sus mensajes pueden resultar intimidantes. La mejor respuesta no es copiar un comando al azar, sino diagnosticar el estado.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/21-diagnostico.png" alt="Árbol de diagnóstico que relaciona errores frecuentes con git status, git branch, git remote -v y git log." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/21-detached-head.png" alt="Representación de HEAD apuntando directamente a un commit en lugar de a una rama." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -135,6 +147,33 @@ Si aparece ese mensaje durante una práctica, detente y consulta al docente o re
 **Ejercicio 3.** Comprueba el remoto de tres repositorios y confirma a qué proyecto pertenece cada uno.
 
 **Reto.** El docente prepara un repositorio con dos problemas. Debes entregar primero un diagnóstico escrito y solo después ejecutar comandos correctivos.
+
+## Markdown de esta lección
+
+Crea `docs/problemas-frecuentes.md` con este patrón:
+
+```markdown
+# Problemas frecuentes
+
+## Push rechazado
+
+### Síntoma
+...
+
+### Diagnóstico
+
+```bash
+git status
+git fetch
+```
+
+### Solución
+...
+```
+
+## Diagnóstico guiado
+
+Recorre `dam-git-lab` utilizando `git status`, `git branch --show-current`, `git remote -v` y `git log --oneline --graph --all`. Debes poder explicar el estado del repositorio antes de intentar corregir un problema.
 
 ## Qué debes recordar
 

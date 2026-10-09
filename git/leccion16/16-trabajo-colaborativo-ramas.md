@@ -23,11 +23,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Trabajo colaborativo con ramas
 
 Cuando varias personas participan en un repositorio, las ramas permiten aislar tareas y reducir interferencias.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/16-colaboracion-ramas.png" alt="Rama main y varias ramas de alumnado que se integran mediante Pull Requests." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/16-flujo-colaborativo.png" alt="Secuencia pull, branch, commit, push y Pull Request en un flujo colaborativo." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -113,6 +125,23 @@ Cada persona modifica un archivo diferente, realiza dos commits y publica su ram
 **Ejercicio 3.** Explica por qué trabajar todos directamente en `main` dificulta la revisión.
 
 **Reto.** En un grupo de tres personas, repartid tres archivos y cread tres ramas independientes sin editar `main` directamente.
+
+## Markdown de esta lección
+
+Utiliza listas de tareas en Markdown:
+
+```markdown
+## Antes de abrir la PR
+
+- [ ] He actualizado `main`.
+- [ ] El proyecto compila.
+- [ ] He revisado `git diff`.
+- [ ] Los commits son comprensibles.
+```
+
+## Trabajo colaborativo sobre `dam-git-lab`
+
+Cada integrante trabaja en una rama con una responsabilidad concreta. Evita que varias personas trabajen directamente sobre `main`. Publica la rama solo después de revisar sus commits y diferencias.
 
 ## Qué debes recordar
 

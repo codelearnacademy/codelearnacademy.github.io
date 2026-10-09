@@ -33,11 +33,21 @@ lessons:
     title: "Ampliación opcional"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
+  - id: tarea-individual-para-casa-dam-git-entrega
+    title: "Tarea individual para casa · dam-git-entrega"
 ---
 
 # Proyecto final colaborativo
 
 El proyecto final integra trabajo local, ramas, repositorio remoto, revisión y versionado. El objetivo principal no es programar una aplicación compleja, sino demostrar un flujo de Git completo y comprensible.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/22-proyecto-final.png" alt="Flujo completo que la entrega final debe demostrar: repositorio local, rama, commits, GitHub, Pull Request y tag v1.0.0." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -219,6 +229,118 @@ Antes de entregar, comprobad:
 ## Ampliación opcional
 
 Si termináis antes, añadid una pequeña mejora en una nueva rama `docs/faq-git`, completad todo el flujo de revisión y publicad después `v1.1.0`.
+
+## Markdown que debe dominar la entrega
+
+El README final debe contener como mínimo: título, índice, descripción, requisitos, instalación, ejecución, estructura del proyecto, enlaces, una imagen con texto alternativo, bloques de código y una checklist. También se entregará `CHANGELOG.md`.
+
+## Repositorio guiado terminado
+
+Al finalizar la ruta, `dam-git-lab` debe mostrar un historial reconocible con ramas, merges, Pull Request revisada y una versión `v1.0.0`. Este repositorio es la evidencia del trabajo realizado durante clase.
+
+## Tarea individual para casa · `dam-git-entrega`
+
+Además del proyecto colaborativo, cada estudiante realizará una entrega individual para demostrar que domina el flujo sin apoyo del grupo.
+
+Crea un repositorio independiente llamado:
+
+```text
+dam-git-entrega
+```
+
+Puede contener una pequeña aplicación Java o una guía técnica en Markdown. Debe demostrar como mínimo:
+
+1. `git init` y estructura inicial coherente.
+2. `.gitignore` apropiado.
+3. Al menos **5 commits** pequeños y descriptivos.
+4. Al menos **2 ramas** de trabajo.
+5. Un merge realizado de forma consciente.
+6. Un conflicto provocado y resuelto.
+7. Publicación en un repositorio GitHub llamado `dam-git-entrega`.
+8. Una Pull Request con descripción en Markdown.
+9. Revisión y merge de esa Pull Request.
+10. Tag `v1.0.0` publicado.
+11. `README.md` completo y `CHANGELOG.md`.
+12. Evidencias del proceso.
+
+### Evidencias obligatorias
+
+Crea:
+
+```text
+evidencias/
+├── history.txt
+├── git-history.txt
+└── status.txt
+```
+
+En Debian o Git Bash:
+
+```bash
+history > evidencias/history.txt
+git log --oneline --graph --decorate --all > evidencias/git-history.txt
+git status > evidencias/status.txt
+```
+
+En PowerShell:
+
+```powershell
+Get-History | Out-File evidencias/history.txt
+git log --oneline --graph --decorate --all | Out-File evidencias/git-history.txt
+git status | Out-File evidencias/status.txt
+```
+
+Revisa `history.txt` antes de subirlo: **nunca entregues tokens, contraseñas ni credenciales**.
+
+### `ENTREGA.md`
+
+Añade además:
+
+```markdown
+# Entrega final Git
+
+## Repositorio
+
+URL del repositorio.
+
+## Pull Request
+
+URL de la Pull Request.
+
+## Ramas utilizadas
+
+- `main`
+- `feature-...`
+- `fix-...`
+
+## Conflicto resuelto
+
+Explica qué ocurrió, qué opciones existían y cómo lo resolviste.
+
+## Versión
+
+`v1.0.0`
+
+## Reflexión
+
+¿Qué comando o concepto te resultó más difícil y qué has aprendido?
+```
+
+### Criterios de evaluación
+
+| Criterio | Puntos |
+|---|---:|
+| Repositorio e `.gitignore` | 1 |
+| Historial de commits | 2 |
+| Uso de ramas | 1.5 |
+| Merge | 1 |
+| Conflicto resuelto | 1 |
+| Publicación en GitHub | 1 |
+| Pull Request y revisión | 1 |
+| Tag `v1.0.0` | 0.5 |
+| README, CHANGELOG y evidencias | 1 |
+
+La evaluación se centra en **el proceso y el historial**, no únicamente en el estado final de los archivos.
 
 ## Qué debes recordar
 

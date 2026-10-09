@@ -25,11 +25,23 @@ lessons:
     title: "Ejercicios propuestos"
   - id: qué-debes-recordar
     title: "Qué debes recordar"
+  - id: markdown-de-esta-leccion
+    title: "Markdown de esta lección"
+  - id: laboratorio-dam-git-lab
+    title: "Trabajo sobre dam-git-lab"
 ---
 
 # Publicar un proyecto local en la nube
 
 En esta lección conectarás un repositorio existente con un repositorio vacío en GitHub o GitLab y publicarás su historial.
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/13-push-inicial.png" alt="Flujo del primer push desde dam-git-lab local, pasando por origin, hasta la rama main de GitHub." loading="lazy">
+</figure>
+
+<figure class="cla-diagram cla-diagram--small">
+  <img src="/git/images/13-upstream.png" alt="Relación de seguimiento entre la rama main local y origin/main." loading="lazy">
+</figure>
 
 ## Qué vas a conseguir
 
@@ -115,6 +127,28 @@ No copies la URL de otra persona ni publiques credenciales.
 **Ejercicio 3.** Explica con tus palabras la diferencia entre `origin` y `main`.
 
 **Reto.** Realiza un nuevo commit local, comprueba que todavía no aparece en la web, ejecuta `git push` y verifica el cambio.
+
+## Markdown de esta lección
+
+Añade al README un enlace al repositorio remoto:
+
+```markdown
+## Repositorio remoto
+
+[Ver `dam-git-lab` en GitHub](https://github.com/USUARIO/dam-git-lab)
+```
+
+## Publicar `dam-git-lab`
+
+Conecta el repositorio local con el creado en GitHub:
+
+```bash
+git remote add origin https://github.com/USUARIO/dam-git-lab.git
+git remote -v
+git push -u origin main
+```
+
+Sustituye `USUARIO` por tu cuenta. Nunca incluyas el token dentro de la URL.
 
 ## Qué debes recordar
 
