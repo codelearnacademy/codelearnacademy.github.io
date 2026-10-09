@@ -133,6 +133,20 @@ Crea variables para nombre, edad, altura y matrícula. Muestra todos los valores
 ### Ejercicio propuesto
 
 Elige tipos para precio, stock, fecha textual, aprobado y matrícula y justifica cada elección.
+## Ejercicios de práctica · Variables y tipos
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a declarar datos adecuados para un dominio. Debes utilizar explícitamente primitivos, `String`, `final` y casting. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Variables y tipos**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por rangos, pérdida de precisión y tipos incompatibles. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Variables y tipos**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en modelar un producto o vehículo. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## Autoevaluación
 
 Responde antes de desplegar la solución.

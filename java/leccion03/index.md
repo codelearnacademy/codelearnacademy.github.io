@@ -35,6 +35,20 @@ switch (día) {
 }
 ```
 
+### Ejercicios de práctica · Condiciones
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a resolver decisiones complejas. Debes utilizar explícitamente condiciones compuestas, orden de reglas y guard clauses. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Condiciones**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por solapamientos y casos frontera. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Condiciones**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un sistema de acceso o tarifas. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## Bucles
 
 Usa `for` cuando conoces el recorrido, `while` cuando depende de una condición y `do-while` cuando debe ejecutarse al menos una vez.
@@ -53,6 +67,20 @@ while (intentos < 3) {
 ```
 
 `break` termina el bucle y `continue` salta a la siguiente iteración. Úsalos con una condición evidente para no ocultar el flujo.
+
+### Ejercicios de práctica · Bucles
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a controlar repeticiones más complejas. Debes utilizar explícitamente bucles anidados, `break`, `continue` y contadores. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Bucles**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por bucles infinitos y condiciones de salida. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Bucles**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en matrices, búsqueda o juegos de intentos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Excepciones y depuración
 
@@ -77,6 +105,20 @@ Durante la depuración, reproduce el fallo, coloca un punto de ruptura, inspecci
 ```java
 assert saldo >= 0 : "El saldo no puede ser negativo";
 ```
+
+### Ejercicios de práctica · Excepciones y depuración
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a detectar, tratar y localizar errores. Debes utilizar explícitamente `try/catch/finally`, stack trace, breakpoint, step into/over. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Excepciones y depuración**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por excepciones no controladas y bugs lógicos. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Excepciones y depuración**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en una entrada robusta y una sesión de depuración. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Ejercicios
 
@@ -195,6 +237,46 @@ Responde antes de desplegar la solución.
 1. Crea una lectura de entero que repita la pregunta hasta recibir un valor válido.
 2. Depura un bucle con un error lógico usando breakpoint y documenta el valor que causa el fallo.
 3. Provoca una excepción, interpreta su stack trace y localiza la primera línea de tu código implicada.
+
+## Ejercicios de repaso de la lección
+
+Realiza estos retos después de completar los ejercicios de práctica. Cada concepto de la lección dispone de cinco ejercicios de repaso más autónomos.
+
+### Condiciones
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible resolver decisiones complejas. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Condiciones** a un contexto distinto del explicado en clase, por ejemplo un sistema de acceso o tarifas. Usa condiciones compuestas, orden de reglas y guard clauses y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Condiciones** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con solapamientos y casos frontera. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Condiciones**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Bucles
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible controlar repeticiones más complejas. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Bucles** a un contexto distinto del explicado en clase, por ejemplo matrices, búsqueda o juegos de intentos. Usa bucles anidados, `break`, `continue` y contadores y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Bucles** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con bucles infinitos y condiciones de salida. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Bucles**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Excepciones y depuración
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible detectar, tratar y localizar errores. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Excepciones y depuración** a un contexto distinto del explicado en clase, por ejemplo una entrada robusta y una sesión de depuración. Usa `try/catch/finally`, stack trace, breakpoint, step into/over y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Excepciones y depuración** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con excepciones no controladas y bugs lógicos. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Excepciones y depuración**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
 
 ## Actividades principales de la lección
 

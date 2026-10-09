@@ -37,6 +37,20 @@ public class Pedido {
 
 `public` expone un tipo o miembro; `private` lo limita a su clase; `protected` permite acceso a subclases y al paquete; sin modificador se limita al paquete.
 
+### Ejercicios de práctica · Paquetes y visibilidad
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a organizar código y controlar acceso. Debes utilizar explícitamente paquetes, imports, `public`, `protected`, package-private y `private`. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Paquetes y visibilidad**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por imports ambiguos y miembros demasiado expuestos. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Paquetes y visibilidad**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en organizar una aplicación por capas. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## Encapsulación
 
 
@@ -52,6 +66,20 @@ public void cancelar() {
   estado = Estado.CANCELADO;
 }
 ```
+
+### Ejercicios de práctica · Encapsulación
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a proteger invariantes del objeto. Debes utilizar explícitamente campos privados, constructores y métodos de intención. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Encapsulación**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por setters que permiten estados inválidos. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Encapsulación**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en una cuenta, reserva o producto consistente. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Composición y reutilización
 
@@ -75,6 +103,20 @@ public class Coche {
 ```
 
 Organiza cada clase alrededor de una responsabilidad y separa dominio, entrada/salida y presentación. Esta decisión facilita las pruebas y la evolución del proyecto.
+
+### Ejercicios de práctica · Composición y reutilización
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a combinar objetos sin herencia innecesaria. Debes utilizar explícitamente delegación, colaboradores y composición. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Composición y reutilización**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por acoplamiento y jerarquías artificiales. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Composición y reutilización**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en pedido-líneas o servicio-estrategia. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Ejercicios
 
@@ -187,6 +229,46 @@ Responde antes de desplegar la solución.
 1. Diseña `CuentaBancaria` manteniendo el saldo privado e impidiendo operaciones inválidas.
 2. Modela `Biblioteca`, `Libro` y `Autor` usando composición donde corresponda.
 3. Organiza las clases en paquetes `model`, `service` y `app` y justifica las dependencias.
+
+## Ejercicios de repaso de la lección
+
+Realiza estos retos después de completar los ejercicios de práctica. Cada concepto de la lección dispone de cinco ejercicios de repaso más autónomos.
+
+### Paquetes y visibilidad
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible organizar código y controlar acceso. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Paquetes y visibilidad** a un contexto distinto del explicado en clase, por ejemplo organizar una aplicación por capas. Usa paquetes, imports, `public`, `protected`, package-private y `private` y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Paquetes y visibilidad** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con imports ambiguos y miembros demasiado expuestos. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Paquetes y visibilidad**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Encapsulación
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible proteger invariantes del objeto. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Encapsulación** a un contexto distinto del explicado en clase, por ejemplo una cuenta, reserva o producto consistente. Usa campos privados, constructores y métodos de intención y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Encapsulación** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con setters que permiten estados inválidos. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Encapsulación**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Composición y reutilización
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible combinar objetos sin herencia innecesaria. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Composición y reutilización** a un contexto distinto del explicado en clase, por ejemplo pedido-líneas o servicio-estrategia. Usa delegación, colaboradores y composición y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Composición y reutilización** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con acoplamiento y jerarquías artificiales. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Composición y reutilización**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
 
 ## Actividades principales de la lección
 

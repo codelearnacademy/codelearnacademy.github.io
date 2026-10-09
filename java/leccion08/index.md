@@ -68,6 +68,20 @@ try (ResultSet tablas = connection.getMetaData().getTables(null, null, "alumno",
 }
 ```
 
+### Ejercicios de práctica · Modelo y conexión
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a conectar Java con SQLite y crear esquema. Debes utilizar explícitamente JDBC URL, `Connection`, `Statement`, metadatos y SQL DDL. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Modelo y conexión**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por rutas de base, tablas repetidas y restricciones. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Modelo y conexión**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en crear una base de academia o catálogo. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## CRUD con JDBC
 
 
@@ -136,6 +150,20 @@ try (PreparedStatement query = connection.prepareStatement("DELETE FROM alumno W
 }
 ```
 
+### Ejercicios de práctica · CRUD con JDBC
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a persistir y recuperar filas. Debes utilizar explícitamente `PreparedStatement`, `ResultSet`, INSERT, SELECT, UPDATE, DELETE. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **CRUD con JDBC**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por ids inexistentes, filas afectadas y caracteres especiales. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **CRUD con JDBC**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un CRUD de productos o vehículos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## DAO y transacciones
 
 
@@ -197,6 +225,20 @@ catch (SQLException error) {
 }
 ```
 
+### Ejercicios de práctica · DAO y transacciones
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a separar acceso a datos y asegurar atomicidad. Debes utilizar explícitamente DAO/repository, `commit`, `rollback`, excepciones de persistencia. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **DAO y transacciones**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por operaciones parciales y SQL filtrándose al cliente. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **DAO y transacciones**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en matrícula o transferencia atómica. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## Persistencia orientada a objetos con JPA
 
 
@@ -253,6 +295,20 @@ JPA facilita el mapeo objeto-relacional, pero no elimina la necesidad de compren
 2. Mapea `Alumno` y `Curso` con una relación.
 3. Implementa un repositorio con alta, consulta, modificación y baja.
 4. Compara la misma operación con JDBC y con JPA.
+
+### Ejercicios de práctica · Persistencia orientada a objetos con JPA
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a mapear objetos a tablas mediante ORM. Debes utilizar explícitamente `@Entity`, `@Id`, `EntityManager`, JPQL y transacciones. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Persistencia orientada a objetos con JPA**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por estado de entidades y diferencias con JDBC. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Persistencia orientada a objetos con JPA**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un CRUD ORM de alumnos o productos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Ejercicios
 
@@ -368,6 +424,58 @@ Responde antes de desplegar la solución.
 1. Crea una tabla `producto` en SQLite y realiza INSERT y SELECT desde JDBC.
 2. Extrae el SQL de `main` a `ProductoDao` o `ProductoJdbcRepository`.
 3. Implementa una operación de dos pasos dentro de una transacción y fuerza un error para comprobar el rollback.
+
+## Ejercicios de repaso de la lección
+
+Realiza estos retos después de completar los ejercicios de práctica. Cada concepto de la lección dispone de cinco ejercicios de repaso más autónomos.
+
+### Modelo y conexión
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible conectar Java con SQLite y crear esquema. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Modelo y conexión** a un contexto distinto del explicado en clase, por ejemplo crear una base de academia o catálogo. Usa JDBC URL, `Connection`, `Statement`, metadatos y SQL DDL y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Modelo y conexión** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con rutas de base, tablas repetidas y restricciones. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Modelo y conexión**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### CRUD con JDBC
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible persistir y recuperar filas. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **CRUD con JDBC** a un contexto distinto del explicado en clase, por ejemplo un CRUD de productos o vehículos. Usa `PreparedStatement`, `ResultSet`, INSERT, SELECT, UPDATE, DELETE y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **CRUD con JDBC** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con ids inexistentes, filas afectadas y caracteres especiales. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **CRUD con JDBC**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### DAO y transacciones
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible separar acceso a datos y asegurar atomicidad. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **DAO y transacciones** a un contexto distinto del explicado en clase, por ejemplo matrícula o transferencia atómica. Usa DAO/repository, `commit`, `rollback`, excepciones de persistencia y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **DAO y transacciones** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con operaciones parciales y SQL filtrándose al cliente. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **DAO y transacciones**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Persistencia orientada a objetos con JPA
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible mapear objetos a tablas mediante ORM. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Persistencia orientada a objetos con JPA** a un contexto distinto del explicado en clase, por ejemplo un CRUD ORM de alumnos o productos. Usa `@Entity`, `@Id`, `EntityManager`, JPQL y transacciones y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Persistencia orientada a objetos con JPA** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con estado de entidades y diferencias con JDBC. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Persistencia orientada a objetos con JPA**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
 
 ## Actividades principales de la lección
 

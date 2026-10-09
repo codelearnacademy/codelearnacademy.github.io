@@ -75,6 +75,20 @@ public static void main(String[] args) {
 }
 ```
 
+### Ejercicios de práctica · Consola y streams
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a procesar entrada y salida estándar. Debes utilizar explícitamente `System.in`, `System.out`, `System.err` y transformación de líneas. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Consola y streams**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por mezcla de lógica y E/S. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Consola y streams**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un filtro de consola. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## Ficheros
 
 
@@ -126,6 +140,20 @@ try (Stream<String> líneas = Files.lines(ruta, StandardCharsets.UTF_8)) {
 }
 ```
 
+### Ejercicios de práctica · Ficheros
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a leer y escribir datos persistentes. Debes utilizar explícitamente `Path`, `Files`, lectura, escritura y directorios. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Ficheros**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por rutas inexistentes, contenido vacío y errores de E/S. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Ficheros**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un procesador de logs o informes. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
+
 ## CSV, XML y JSON
 
 CSV es sencillo y compacto, pero requiere acordar separador y escape de comillas. XML estructura los datos con etiquetas. JSON suele ser práctico para intercambiar objetos entre aplicaciones. No dividas una línea CSV con `split(",")` si el formato permite comas entrecomilladas: usa una biblioteca adecuada.
@@ -161,6 +189,20 @@ if (formato.equals("csv")) {
   System.out.println("Intercambio entre aplicaciones");
 }
 ```
+
+### Ejercicios de práctica · CSV, XML y JSON
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a comparar formatos estructurados. Debes utilizar explícitamente estructura tabular, jerárquica y serialización conceptual. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **CSV, XML y JSON**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por escapado, datos anidados y elección de formato. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **CSV, XML y JSON**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en representar el mismo producto en tres formatos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Ejercicios
 
@@ -222,6 +264,20 @@ El controlador asociado concentra `aceptar`, mientras FXML describe la vista. Pa
 2. Construye un conversor de euros a dólares.
 3. Muestra una lista de alumnos en `ListView` y responde a la selección.
 4. Repite el formulario usando FXML y un controlador separado.
+
+### Ejercicios de práctica · Interfaces gráficas con JavaFX
+
+Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
+
+**1. Aplicación directa.** Crea un ejemplo mínimo que te obligue a crear una interfaz gráfica básica. Debes utilizar explícitamente Stage, Scene, controles, eventos y FXML. Al final, muestra o documenta el resultado esperado y compáralo con el obtenido. **Entrega:** código fuente, salida obtenida y una tabla con al menos tres casos de prueba.
+
+**2. Variación controlada.** Parte del ejemplo anterior y cambia al menos dos datos, reglas o entradas. Explica qué partes del código necesitan modificarse y cuáles permanecen iguales gracias al concepto **Interfaces gráficas con JavaFX**. **Entrega:** versión inicial y versión modificada, más una lista de los cambios realizados y su efecto.
+
+**3. Diagnóstico de errores.** Construye o recibe un ejemplo que falle por campos vacíos y lógica demasiado acoplada al controlador. Localiza el problema, copia el mensaje o comportamiento observado, corrígelo y escribe una explicación breve de la causa. **Entrega:** código que falla, mensaje o comportamiento observado, código corregido y explicación de la causa.
+
+**4. Comparación de alternativas.** Resuelve el mismo problema de dos formas posibles dentro de **Interfaces gráficas con JavaFX**. Compara legibilidad, seguridad y facilidad de mantenimiento, e indica cuál elegirías para un proyecto de clase. **Entrega:** las dos soluciones funcionando y una comparación escrita de al menos tres criterios.
+
+**5. Mini integración.** Desarrolla un ejercicio pequeño basado en un formulario o calculadora gráfica. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Refuerzo práctico
 
@@ -326,6 +382,58 @@ Responde antes de desplegar la solución.
 1. Lee un fichero de texto y genera otro con las líneas numeradas.
 2. Representa el mismo `Producto` en CSV, JSON y XML y compara legibilidad y estructura.
 3. Decide qué contenido debe quedarse aquí y qué estudiarías en la ruta Ficheros.
+
+## Ejercicios de repaso de la lección
+
+Realiza estos retos después de completar los ejercicios de práctica. Cada concepto de la lección dispone de cinco ejercicios de repaso más autónomos.
+
+### Consola y streams
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible procesar entrada y salida estándar. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Consola y streams** a un contexto distinto del explicado en clase, por ejemplo un filtro de consola. Usa `System.in`, `System.out`, `System.err` y transformación de líneas y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Consola y streams** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con mezcla de lógica y E/S. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Consola y streams**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Ficheros
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible leer y escribir datos persistentes. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Ficheros** a un contexto distinto del explicado en clase, por ejemplo un procesador de logs o informes. Usa `Path`, `Files`, lectura, escritura y directorios y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Ficheros** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con rutas inexistentes, contenido vacío y errores de E/S. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Ficheros**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### CSV, XML y JSON
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible comparar formatos estructurados. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **CSV, XML y JSON** a un contexto distinto del explicado en clase, por ejemplo representar el mismo producto en tres formatos. Usa estructura tabular, jerárquica y serialización conceptual y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **CSV, XML y JSON** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con escapado, datos anidados y elección de formato. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **CSV, XML y JSON**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
+
+### Interfaces gráficas con JavaFX
+
+**1. Desde cero.** Sin copiar el ejemplo de los apuntes, crea una solución nueva donde sea imprescindible crear una interfaz gráfica básica. Antes de programar, escribe en 3–5 líneas el plan y después verificalo con al menos cuatro casos. **Entrega:** planteamiento previo, solución completa y cuatro pruebas con resultado esperado y real.
+
+**2. Cambio de dominio.** Aplica **Interfaces gráficas con JavaFX** a un contexto distinto del explicado en clase, por ejemplo un formulario o calculadora gráfica. Usa Stage, Scene, controles, eventos y FXML y documenta qué decisiones has tenido que adaptar. **Entrega:** código, descripción del nuevo dominio y explicación de cómo adaptaste el concepto.
+
+**3. Integración con contenidos anteriores.** Combina **Interfaces gráficas con JavaFX** con al menos dos conceptos estudiados previamente. La solución debe tener varias operaciones o pasos, no un único `println`, y debe mostrar claramente dónde interviene cada concepto. **Entrega:** solución integrada y un esquema o comentario que identifique claramente los conceptos combinados.
+
+**4. Casos límite y robustez.** Diseña cinco casos de prueba que incluyan situaciones normales y problemas relacionados con campos vacíos y lógica demasiado acoplada al controlador. Ejecuta todos, anota resultado esperado/real y corrige la implementación si alguno falla. **Entrega:** tabla de cinco casos límite con resultado esperado/real y las correcciones realizadas.
+
+**5. Refactorización y explicación.** Parte de una solución funcional pero poco clara para **Interfaces gráficas con JavaFX**, reorganízala para mejorar nombres, responsabilidades y legibilidad. Entrega versión antes/después y justifica al menos tres cambios. **Entrega:** versión antes/después y justificación de al menos tres decisiones de refactorización.
 
 ## Actividades principales de la lección
 
