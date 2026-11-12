@@ -7,68 +7,40 @@ permalink: "/orm/"
 
 # Persistencia relacional y ORM con Java y SQLite
 
-Esta ruta continúa directamente la ruta de **Ficheros y formatos estructurados**. Conserva `Producto`, `Vehiculo`, `IRepository<T, ID>`, `IProductoRepository`, `IVehiculoRepository` y la configuración externa mediante `.properties`.
+Esta ruta introduce el almacenamiento de datos en SQLite, el acceso mediante JDBC y la persistencia de objetos con JPA e Hibernate. Las actividades avanzan desde operaciones SQL hasta aplicaciones Java organizadas en capas y verificadas mediante pruebas automatizadas.
 
-<div class="cla-route-flow">
-  <span>CSV / JSON / XML</span><b>→</b><span>SQLite</span><b>→</b><span>JDBC</span><b>→</b><span>JdbcCrudDemo</span><b>→</b><span>ProductoJdbcRepository</span><b>→</b><span>problema de mapeo</span><b>→</b><span>JPA / Hibernate</span><b>→</b><span>ProductoOrmRepository</span><b>→</b><span>VehiculoOrmRepository</span>
-</div>
+## Itinerario de aprendizaje
 
-<!-- MAPA-VISUAL-ORM -->
+| Lecciones | Contenidos |
+|---|---|
+| **01–04 · Fundamentos** | SQLite, tablas, claves y operaciones SQL |
+| **05–12 · Acceso con JDBC** | Conexiones, `PreparedStatement`, CRUD, transacciones y tests |
+| **13–17 · Introducción a ORM** | Mapeo objeto-relacional, JPA, Hibernate y configuración |
+| **18–24 · Persistencia con JPA** | Entidades, mappers, `EntityManager` y operaciones de persistencia |
+| **25–28 · Integración** | Relaciones, pruebas y proyecto práctico |
+| **29–31 · Arquitectura DAO** | Modelos, entidades JPA, relaciones, CRUD y tratamiento de errores |
+| **32–33 · Consultas JPQL** | Filtros, agrupaciones, agregaciones, límites y subconsultas |
+| **34–35 · Verificación y calidad** | JUnit 5, pruebas con SQLite, Javadoc y análisis de código |
 
-## Mapa visual de la ruta
+## Metodología
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/00-mapa-ruta-orm.png" alt="Mapa de aprendizaje: Ficheros, SQLite, JDBC, repositorios, ORM y proyecto final." loading="lazy">
-</figure>
+Cada lección presenta los conceptos necesarios, ejemplos y actividades para comprobar lo aprendido. El objetivo es comprender cómo se almacenan y recuperan los datos, cómo se organiza el código de persistencia y cómo se verifica su comportamiento.
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> La ruta avanza de ficheros a SQLite y SQL, después JDBC y repositorios, y finalmente JPA/Hibernate y el proyecto final.</p>
+Se recomienda seguir el orden de las lecciones: primero SQL y JDBC, después JPA e Hibernate, y finalmente la separación entre modelos, entidades, mappers y DAO.
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/00-arquitectura-repositorios.png" alt="Arquitectura con código cliente, IProductoRepository y varias implementaciones de persistencia." loading="lazy">
-</figure>
+## Prácticas de arquitectura DAO
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El código cliente depende de IProductoRepository; CSV, JDBC y ORM son implementaciones intercambiables.</p>
+En las últimas lecciones se trabaja con una aplicación de alquiler de material deportivo que utiliza tres entidades relacionadas: clientes, equipos y alquileres.
 
-## Accesibilidad y forma de trabajo
+- **Lección 29:** separación entre modelos Java, entidades JPA, mappers y DAO.
+- **Lección 30:** tablas, identificadores y relaciones de la base de datos.
+- **Lección 31:** operaciones CRUD con `EntityManager` y transacciones.
+- **Lecciones 32–33:** consultas JPQL y modelos de resultados.
+- **Lección 34:** pruebas JUnit para resultados y casos especiales.
+- **Lección 35:** documentación de código y herramientas de calidad.
 
-- Los diagramas incluyen texto alternativo y una explicación textual equivalente.
-- Ninguna información esencial depende exclusivamente del color.
-- Los tests muestran la respuesta y su explicación mediante texto.
-- Las actividades pueden seguirse completamente por escrito, sin depender de audio o vídeo.
-- Los bloques `<details>` son navegables con teclado en navegadores modernos.
+## Accesibilidad
 
-[Consulta la guía de accesibilidad de esta ruta](/orm/ACCESIBILIDAD/)
+Los diagramas tienen alternativas textuales y las actividades pueden seguirse por escrito. Los ejemplos y el código se acompañan de explicaciones que no dependen exclusivamente de elementos visuales.
 
-## Principio didáctico
-
-Como en la ruta de ficheros, **primero construimos un CRUD que funciona y después refactorizamos**. El ORM no aparece como magia: antes se implementa el mismo CRUD con JDBC y se identifica qué código repetitivo intenta resolver un ORM.
-
-## Bloques
-
-- **01–04 · De fichero a base de datos:** SQLite, `sqlite3`, tablas, claves y SQL básico.
-- **05–12 · JDBC:** conexión, DDL, consultas, `PreparedStatement`, CRUD monolítico, repositorio, transacciones y tests.
-- **13–17 · Del mapeo manual al ORM:** problema objeto-relacional, JPA, Hibernate, dependencias y configuración.
-- **18–24 · CRUD ORM:** entidades de persistencia, mappers, `EntityManager`, CRUD y repositorios.
-- **25–28 · Generalización y cierre:** `Vehiculo`, tests, comparación de estrategias y proyecto final.
-
-## Contrato heredado de la ruta anterior
-
-```java
-public interface IRepository<T, ID> {
-    List<T> findAll();
-    Optional<T> findById(ID id);
-    void create(T entity);
-    boolean update(T entity);
-    boolean delete(ID id);
-}
-```
-
-El objetivo final es poder cambiar la infraestructura sin cambiar el código cliente:
-
-```java
-IProductoRepository repository;
-
-repository = new ProductoCsvRepository(path);
-repository = new ProductoJdbcRepository(url);
-repository = new ProductoOrmRepository(entityManagerFactory);
-```
+[Guía de accesibilidad](/orm/ACCESIBILIDAD/)

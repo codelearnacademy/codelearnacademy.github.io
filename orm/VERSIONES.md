@@ -1,8 +1,5 @@
-# Versiones de referencia
+# Tecnologías utilizadas
 
-- Java: 21
-- Xerial SQLite JDBC: 3.53.4.0
-- Hibernate ORM: 7.4.11.Final
-- SQLite Hibernate dialect: `hibernate-community-dialects`
+La ruta presenta SQLite, JDBC, Java, JPA, Hibernate y JUnit 5. Los proyectos Maven incluyen sus versiones concretas de dependencias y plugins en `pom.xml`.
 
-Estas versiones se fijan para que alumnado y profesorado trabajen sobre el mismo entorno reproducible.
+Para ejecutar un proyecto de ejemplo se requiere un JDK compatible con su configuración Maven y acceso a las dependencias declaradas. Las versiones deben consultarse en cada proyecto antes de reproducirlo.

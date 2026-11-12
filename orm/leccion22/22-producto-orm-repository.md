@@ -140,3 +140,5 @@ Completa create, findAll, update y delete manteniendo las firmas exactas de IPro
   <a href="/orm/leccion21/">← 21 · UPDATE y DELETE con entidades administradas</a>
   <a href="/orm/leccion23/">23 · Errores y RepositoryException en ORM →</a>
 </div>
+
+---

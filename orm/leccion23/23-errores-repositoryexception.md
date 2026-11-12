@@ -133,3 +133,5 @@ Provoca una violación de identificador duplicado y verifica que el cliente reci
   <a href="/orm/leccion22/">← 22 · ProductoOrmRepository: CRUD completo</a>
   <a href="/orm/leccion24/">24 · Comparar el CRUD JDBC y ORM →</a>
 </div>
+
+---

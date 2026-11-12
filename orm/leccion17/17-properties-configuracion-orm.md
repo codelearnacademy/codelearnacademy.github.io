@@ -146,3 +146,5 @@ Configura Hibernate + SQLite, crea `ProductoEntity`, separa dominio y persistenc
   <a href="/orm/leccion16/">← 16 · Dominio record frente a entidad JPA</a>
   <a href="/orm/leccion18/">18 · ProductoMapper: dominio y persistencia →</a>
 </div>
+
+---

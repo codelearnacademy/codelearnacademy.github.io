@@ -131,3 +131,5 @@ Escribe una consulta JPQL que recupere productos ordenados por precio y conviert
   <a href="/orm/leccion19/">← 19 · CREATE con EntityManager y persist()</a>
   <a href="/orm/leccion21/">21 · UPDATE y DELETE con entidades administradas →</a>
 </div>
+
+---

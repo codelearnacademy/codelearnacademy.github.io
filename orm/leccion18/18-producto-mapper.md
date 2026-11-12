@@ -135,3 +135,5 @@ Crea `VehiculoMapper` y comprueba que normaliza la matrícula de acuerdo con el 
   <a href="/orm/leccion17/">← 17 · .properties y configuración ORM</a>
   <a href="/orm/leccion19/">19 · CREATE con EntityManager y persist() →</a>
 </div>
+
+---

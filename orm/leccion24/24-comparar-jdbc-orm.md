@@ -137,3 +137,5 @@ Implementa y prueba la misma secuencia CRUD con `ProductoJdbcRepository` y `Prod
   <a href="/orm/leccion23/">← 23 · Errores y RepositoryException en ORM</a>
   <a href="/orm/leccion25/">25 · VehiculoEntity e IVehiculoRepository →</a>
 </div>
+
+---

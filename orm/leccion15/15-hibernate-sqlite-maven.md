@@ -140,3 +140,5 @@ Identifica qué dependencia aporta `SQLiteDialect` y explica por qué no pertene
   <a href="/orm/leccion14/">← 14 · Qué es un ORM: JPA y Hibernate</a>
   <a href="/orm/leccion16/">16 · Dominio record frente a entidad JPA →</a>
 </div>
+
+---

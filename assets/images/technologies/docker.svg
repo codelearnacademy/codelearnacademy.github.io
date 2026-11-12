@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="docker">
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#e5e7eb"/>
+  <circle cx="32" cy="32" r="20" fill="#2563eb" opacity="0.12"/>
+  <text x="32" y="39" text-anchor="middle" fill="#2563eb" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800">D</text>
+</svg>

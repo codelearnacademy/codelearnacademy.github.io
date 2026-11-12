@@ -150,3 +150,5 @@ Diseña `VehiculoEntity` manteniendo `Vehiculo` como record y usa matrícula com
   <a href="/orm/leccion15/">← 15 · Hibernate y SQLite con Maven</a>
   <a href="/orm/leccion17/">17 · .properties y configuración ORM →</a>
 </div>
+
+---

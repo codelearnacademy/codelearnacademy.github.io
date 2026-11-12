@@ -133,3 +133,5 @@ Inserta dos productos y comprueba en sqlite3 que Hibernate ha persistido las fil
   <a href="/orm/leccion18/">← 18 · ProductoMapper: dominio y persistencia</a>
   <a href="/orm/leccion20/">20 · READ con find() y JPQL →</a>
 </div>
+
+---

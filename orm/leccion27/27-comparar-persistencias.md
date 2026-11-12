@@ -134,3 +134,5 @@ Elabora una matriz de decisión para elegir ficheros, JDBC u ORM en tres proyect
   <a href="/orm/leccion26/">← 26 · Tests ORM con SQLite</a>
   <a href="/orm/leccion28/">28 · Proyecto final PersistenceLab →</a>
 </div>
+
+---

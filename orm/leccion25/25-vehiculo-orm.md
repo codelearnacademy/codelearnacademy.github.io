@@ -140,3 +140,5 @@ Implementa create y delete para Vehiculo y comprueba que la identidad es la matr
   <a href="/orm/leccion24/">← 24 · Comparar el CRUD JDBC y ORM</a>
   <a href="/orm/leccion26/">26 · Tests ORM con SQLite →</a>
 </div>
+
+---

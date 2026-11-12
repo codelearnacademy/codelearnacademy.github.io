@@ -163,3 +163,5 @@ Entrega el proyecto final completo con Producto y Vehiculo, implementaciones JDB
   <a href="/orm/leccion27/">← 27 · Comparar ficheros, JDBC y ORM</a>
   <a href="/orm/">Volver a la ruta →</a>
 </div>
+
+---

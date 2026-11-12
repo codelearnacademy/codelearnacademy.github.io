@@ -142,3 +142,5 @@ Haz una lista de responsabilidades repetidas en ProductoJdbcRepository que un OR
   <a href="/orm/leccion12/">← 12 · Testear JDBC con SQLite temporal</a>
   <a href="/orm/leccion14/">14 · Qué es un ORM: JPA y Hibernate →</a>
 </div>
+
+---

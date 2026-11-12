@@ -144,3 +144,5 @@ Añade tests para update, delete y error por duplicado asegurando que cada caso 
   <a href="/orm/leccion25/">← 25 · VehiculoEntity e IVehiculoRepository</a>
   <a href="/orm/leccion27/">27 · Comparar ficheros, JDBC y ORM →</a>
 </div>
+
+---

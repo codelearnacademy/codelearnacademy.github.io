@@ -129,3 +129,5 @@ Explica en no más de cinco líneas la diferencia entre ORM, JPA e Hibernate y d
   <a href="/orm/leccion13/">← 13 · El problema del mapeo objeto-relacional</a>
   <a href="/orm/leccion15/">15 · Hibernate y SQLite con Maven →</a>
 </div>
+
+---

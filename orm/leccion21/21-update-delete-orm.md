@@ -136,3 +136,5 @@ Implementa update y delete devolviendo `false` cuando la entidad no existe.
   <a href="/orm/leccion20/">← 20 · READ con find() y JPQL</a>
   <a href="/orm/leccion22/">22 · ProductoOrmRepository: CRUD completo →</a>
 </div>
+
+---
