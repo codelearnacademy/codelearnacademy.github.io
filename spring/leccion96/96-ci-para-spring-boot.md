@@ -12,8 +12,6 @@ lessons:
     title: Qué vas a conseguir
   - id: punto-de-partida
     title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
   - id: ejemplo-guiado
     title: Ejemplo guiado
   - id: relación-con-el-resto-de-la-ruta
@@ -29,42 +27,17 @@ Integra Spring con Git, Maven, imágenes Docker, registries y despliegues automa
 
 ## Qué vas a conseguir
 
-- Comprender el concepto de **CI para Spring Boot**.
-- Aplicarlo sobre una aplicación Java/Spring pequeña.
-- Relacionarlo con Maven, Tomcat, PostgreSQL, Git o Docker cuando corresponda.
-- Diferenciar qué responsabilidad pertenece a Spring Framework y cuál a Spring Boot.
+Al terminar esta lección podrás:
 
-<div class="cla-note"><strong>Ruta de estudio</strong><p>La prioridad es comprender el modelo mental. No avances solo porque el proyecto compila: debes poder explicar quién crea los objetos, quién resuelve las bibliotecas, quién atiende HTTP y qué parte se ejecuta dentro del contenedor.</p></div>
+- Explicar **CI para Spring Boot** y reconocer cuándo se aplica.
+- Interpretar el ejemplo guiado y señalar el resultado esperado.
+- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
 
 ## Punto de partida
 
-Esta lección pertenece al bloque **Git + CI/CD**.
+**Bloque:** Git, integración y despliegue continuos.
 
-Mantén este mapa durante toda la ruta:
-
-```text
-Maven
-  ↓ bibliotecas y build
-Spring Framework
-  ↓ objetos, IoC, MVC, transacciones...
-Spring Boot
-  ↓ auto-configuración + aplicación ejecutable
-Tomcat
-  ↓ runtime Servlet / HTTP
-PostgreSQL
-  ↓ persistencia
-Docker
-  ↓ entorno reproducible
-Git + CI/CD
-  ↓ versionado, verificación y entrega
-```
-
-## Conceptos clave
-
-- **Git**
-- **CI**
-- **registry**
-- **CD**
+Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
 ## Ejemplo guiado
 
@@ -80,37 +53,42 @@ checkout → Java 21 → ./mvnw clean verify
 
 Git conserva el cambio; CI lo verifica; un registry conserva la imagen; CD despliega una versión inmutable.
 
-Cuando utilices una anotación o dependencia, intenta responder siempre:
 
-```text
-¿Quién la proporciona?
-¿Quién la interpreta?
-¿Cuándo actúa?
-¿Está relacionada con build, runtime, HTTP, datos o infraestructura?
+
+## Ejemplo adicional: aplicación práctica
+
+```yaml
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: mvn -B verify
 ```
+
+La versión de Java de CI debe coincidir con la configurada en el proyecto.
+
+**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo de **CI para Spring Boot** y documenta qué cambia en el proyecto.
-2. Introduce una variación controlada, predice el resultado antes de ejecutarla y comprueba si tu predicción era correcta.
-3. Explica qué responsabilidad corresponde a Spring, cuál a Spring Boot y cuál a Maven/Git/Docker en este escenario.
+1. Incorpora **CI para Spring Boot** a un flujo de construcción automatizado.
+2. Ejecuta las pruebas y comprueba que un fallo provoca un estado de pipeline fallido.
+3. Documenta cómo identificar la versión desplegada y cómo volver a una versión anterior.
 
-### Ejercicio de explicación
-
-Sin ejecutar código, explica a otra persona:
-
-- qué problema resuelve esta lección;
-- qué ocurriría si eliminases la configuración o dependencia principal;
-- cómo comprobarías el comportamiento con una prueba;
-- si el concepto pertenece a Spring Framework, Spring Boot o a otra herramienta.
+**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
 
 ## Qué debes recordar
 
-- **Maven** resuelve dependencias y construye; no realiza inyección de objetos.
-- **Spring Framework** contiene el contenedor IoC y los módulos fundamentales.
-- **Spring Boot** se apoya en Spring Framework y reduce configuración repetitiva.
-- **Tomcat** participa en el stack Servlet, embebido o como servidor externo.
-- El código debe poder probarse y construirse antes de empaquetarlo con Docker.
+- **CI para Spring Boot** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
+- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
+- Distingue entre código de negocio, configuración y servicios aportados por Spring.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion95/">← 95 · Spring dentro del flujo Git</a>

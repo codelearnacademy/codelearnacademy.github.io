@@ -12,8 +12,6 @@ lessons:
     title: Qué vas a conseguir
   - id: punto-de-partida
     title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
   - id: ejemplo-guiado
     title: Ejemplo guiado
   - id: relación-con-el-resto-de-la-ruta
@@ -29,42 +27,17 @@ Prepara la aplicación para operación mediante logs, health, métricas y config
 
 ## Qué vas a conseguir
 
-- Comprender el concepto de **Spring Boot Actuator**.
-- Aplicarlo sobre una aplicación Java/Spring pequeña.
-- Relacionarlo con Maven, Tomcat, PostgreSQL, Git o Docker cuando corresponda.
-- Diferenciar qué responsabilidad pertenece a Spring Framework y cuál a Spring Boot.
+Al terminar esta lección podrás:
 
-<div class="cla-note"><strong>Ruta de estudio</strong><p>La prioridad es comprender el modelo mental. No avances solo porque el proyecto compila: debes poder explicar quién crea los objetos, quién resuelve las bibliotecas, quién atiende HTTP y qué parte se ejecuta dentro del contenedor.</p></div>
+- Explicar **Spring Boot Actuator** y reconocer cuándo se aplica.
+- Interpretar el ejemplo guiado y señalar el resultado esperado.
+- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
 
 ## Punto de partida
 
-Esta lección pertenece al bloque **Producción y observabilidad**.
+**Bloque:** Observabilidad y producción.
 
-Mantén este mapa durante toda la ruta:
-
-```text
-Maven
-  ↓ bibliotecas y build
-Spring Framework
-  ↓ objetos, IoC, MVC, transacciones...
-Spring Boot
-  ↓ auto-configuración + aplicación ejecutable
-Tomcat
-  ↓ runtime Servlet / HTTP
-PostgreSQL
-  ↓ persistencia
-Docker
-  ↓ entorno reproducible
-Git + CI/CD
-  ↓ versionado, verificación y entrega
-```
-
-## Conceptos clave
-
-- **logging**
-- **Actuator**
-- **Micrometer**
-- **health**
+Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
 ## Ejemplo guiado
 
@@ -83,37 +56,32 @@ y revisa qué endpoints no deberían ser públicos.
 
 Actuator y Micrometer conectan la aplicación con Docker, CI/CD y plataformas de monitorización.
 
-Cuando utilices una anotación o dependencia, intenta responder siempre:
 
-```text
-¿Quién la proporciona?
-¿Quién la interpreta?
-¿Cuándo actúa?
-¿Está relacionada con build, runtime, HTTP, datos o infraestructura?
+
+## Ejemplo adicional: aplicación práctica
+
+```properties
+management.endpoints.web.exposure.include=health,info,metrics
+management.endpoint.health.show-details=never
 ```
+
+Expón únicamente los endpoints necesarios y protégelos según el entorno.
+
+**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo de **Spring Boot Actuator** y documenta qué cambia en el proyecto.
-2. Introduce una variación controlada, predice el resultado antes de ejecutarla y comprueba si tu predicción era correcta.
-3. Explica qué responsabilidad corresponde a Spring, cuál a Spring Boot y cuál a Maven/Git/Docker en este escenario.
+1. Configura **Spring Boot Actuator** en un perfil local y describe qué información ofrece.
+2. Comprueba que los datos sensibles no aparecen en logs ni endpoints públicos.
+3. Define un indicador o prueba observable que permita distinguir aplicación iniciada de aplicación lista para atender peticiones.
 
-### Ejercicio de explicación
-
-Sin ejecutar código, explica a otra persona:
-
-- qué problema resuelve esta lección;
-- qué ocurriría si eliminases la configuración o dependencia principal;
-- cómo comprobarías el comportamiento con una prueba;
-- si el concepto pertenece a Spring Framework, Spring Boot o a otra herramienta.
+**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
 
 ## Qué debes recordar
 
-- **Maven** resuelve dependencias y construye; no realiza inyección de objetos.
-- **Spring Framework** contiene el contenedor IoC y los módulos fundamentales.
-- **Spring Boot** se apoya en Spring Framework y reduce configuración repetitiva.
-- **Tomcat** participa en el stack Servlet, embebido o como servidor externo.
-- El código debe poder probarse y construirse antes de empaquetarlo con Docker.
+- **Spring Boot Actuator** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
+- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
+- Distingue entre código de negocio, configuración y servicios aportados por Spring.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion83/">← 83 · Logging</a>

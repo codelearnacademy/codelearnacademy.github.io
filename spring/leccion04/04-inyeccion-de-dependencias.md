@@ -12,8 +12,6 @@ lessons:
     title: Qué vas a conseguir
   - id: punto-de-partida
     title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
   - id: ejemplo-guiado
     title: Ejemplo guiado
   - id: relación-con-el-resto-de-la-ruta
@@ -29,42 +27,17 @@ Comprende el problema de acoplamiento, creación de objetos e inversión de cont
 
 ## Qué vas a conseguir
 
-- Comprender el concepto de **Inyección de dependencias**.
-- Aplicarlo sobre una aplicación Java/Spring pequeña.
-- Relacionarlo con Maven, Tomcat, PostgreSQL, Git o Docker cuando corresponda.
-- Diferenciar qué responsabilidad pertenece a Spring Framework y cuál a Spring Boot.
+Al terminar esta lección podrás:
 
-<div class="cla-note"><strong>Ruta de estudio</strong><p>La prioridad es comprender el modelo mental. No avances solo porque el proyecto compila: debes poder explicar quién crea los objetos, quién resuelve las bibliotecas, quién atiende HTTP y qué parte se ejecuta dentro del contenedor.</p></div>
+- Explicar **Inyección de dependencias** y reconocer cuándo se aplica.
+- Interpretar el ejemplo guiado y señalar el resultado esperado.
+- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
 
 ## Punto de partida
 
-Esta lección pertenece al bloque **Fundamentos: el problema que Spring resuelve**.
+**Bloque:** Diseño de objetos, acoplamiento e inyección.
 
-Mantén este mapa durante toda la ruta:
-
-```text
-Maven
-  ↓ bibliotecas y build
-Spring Framework
-  ↓ objetos, IoC, MVC, transacciones...
-Spring Boot
-  ↓ auto-configuración + aplicación ejecutable
-Tomcat
-  ↓ runtime Servlet / HTTP
-PostgreSQL
-  ↓ persistencia
-Docker
-  ↓ entorno reproducible
-Git + CI/CD
-  ↓ versionado, verificación y entrega
-```
-
-## Conceptos clave
-
-- **acoplamiento**
-- **IoC**
-- **Dependency Injection**
-- **diseño**
+Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
 ## Ejemplo guiado
 
@@ -87,37 +60,39 @@ La clase declara lo que necesita, pero no crea la implementación.
 
 Relaciona estas ideas con SOLID y Clean Code: Spring puede facilitar el desacoplamiento, pero no sustituye un buen diseño.
 
-Cuando utilices una anotación o dependencia, intenta responder siempre:
 
-```text
-¿Quién la proporciona?
-¿Quién la interpreta?
-¿Cuándo actúa?
-¿Está relacionada con build, runtime, HTTP, datos o infraestructura?
+
+## Ejemplo adicional: aplicación práctica
+
+```java
+@Component
+class EmailNotificador implements Notificador {
+    public void enviar(String mensaje) { /* enviar correo */ }
+}
+@Service
+class PedidoService {
+    private final Notificador notificador;
+    PedidoService(Notificador notificador) { this.notificador = notificador; }
+}
 ```
+
+La inyección por constructor hace explícitas las dependencias necesarias.
+
+**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo de **Inyección de dependencias** y documenta qué cambia en el proyecto.
-2. Introduce una variación controlada, predice el resultado antes de ejecutarla y comprueba si tu predicción era correcta.
-3. Explica qué responsabilidad corresponde a Spring, cuál a Spring Boot y cuál a Maven/Git/Docker en este escenario.
+1. Identifica en el ejemplo de **Inyección de dependencias** qué clase decide la creación o selección de dependencias.
+2. Modifica el ejemplo para recibir una dependencia desde fuera; compara las dos implementaciones sin introducir Spring si no es necesario.
+3. Escribe una prueba unitaria que utilice un colaborador falso y razona qué cambió en el acoplamiento.
 
-### Ejercicio de explicación
-
-Sin ejecutar código, explica a otra persona:
-
-- qué problema resuelve esta lección;
-- qué ocurriría si eliminases la configuración o dependencia principal;
-- cómo comprobarías el comportamiento con una prueba;
-- si el concepto pertenece a Spring Framework, Spring Boot o a otra herramienta.
+**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
 
 ## Qué debes recordar
 
-- **Maven** resuelve dependencias y construye; no realiza inyección de objetos.
-- **Spring Framework** contiene el contenedor IoC y los módulos fundamentales.
-- **Spring Boot** se apoya en Spring Framework y reduce configuración repetitiva.
-- **Tomcat** participa en el stack Servlet, embebido o como servidor externo.
-- El código debe poder probarse y construirse antes de empaquetarlo con Docker.
+- **Inyección de dependencias** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
+- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
+- Distingue entre código de negocio, configuración y servicios aportados por Spring.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion03/">← 03 · Inversión de Control</a>

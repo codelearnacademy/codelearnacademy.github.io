@@ -12,8 +12,6 @@ lessons:
     title: Qué vas a conseguir
   - id: punto-de-partida
     title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
   - id: ejemplo-guiado
     title: Ejemplo guiado
   - id: relación-con-el-resto-de-la-ruta
@@ -31,42 +29,17 @@ Integra Spring Boot, Tomcat, PostgreSQL, Angular, Docker, Git y CI/CD en una ent
 
 ## Qué vas a conseguir
 
-- Comprender el concepto de **Proyecto final · Plataforma de gestión de tareas**.
-- Aplicarlo sobre una aplicación Java/Spring pequeña.
-- Relacionarlo con Maven, Tomcat, PostgreSQL, Git o Docker cuando corresponda.
-- Diferenciar qué responsabilidad pertenece a Spring Framework y cuál a Spring Boot.
+Al terminar esta lección podrás:
 
-<div class="cla-note"><strong>Ruta de estudio</strong><p>La prioridad es comprender el modelo mental. No avances solo porque el proyecto compila: debes poder explicar quién crea los objetos, quién resuelve las bibliotecas, quién atiende HTTP y qué parte se ejecuta dentro del contenedor.</p></div>
+- Explicar **Proyecto final · Plataforma de gestión de tareas** y reconocer cuándo se aplica.
+- Interpretar el ejemplo guiado y señalar el resultado esperado.
+- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
 
 ## Punto de partida
 
-Esta lección pertenece al bloque **Proyecto final**.
+**Bloque:** Proyecto integrador.
 
-Mantén este mapa durante toda la ruta:
-
-```text
-Maven
-  ↓ bibliotecas y build
-Spring Framework
-  ↓ objetos, IoC, MVC, transacciones...
-Spring Boot
-  ↓ auto-configuración + aplicación ejecutable
-Tomcat
-  ↓ runtime Servlet / HTTP
-PostgreSQL
-  ↓ persistencia
-Docker
-  ↓ entorno reproducible
-Git + CI/CD
-  ↓ versionado, verificación y entrega
-```
-
-## Conceptos clave
-
-- **arquitectura**
-- **Spring Boot**
-- **Docker**
-- **CI/CD**
+Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
 ## Ejemplo guiado
 
@@ -241,41 +214,47 @@ en el servidor de destino.
 Otra persona debe poder clonar el repositorio, configurar únicamente secretos/variables de entorno y reproducir el entorno sin instalar manualmente PostgreSQL o Tomcat.
 
 
+### Requisitos de arquitectura
+
+Usa clases Java normales para los DTO y modelos. Separa `TaskEntity` (persistencia), `Task` (modelo), `TaskMapper` (conversión), `TaskRepository` (JPA), `TaskService` (reglas de negocio) y `TaskController` (HTTP). Cada operación debe documentar su tipo de retorno y el comportamiento ante ausencia de datos.
+
+La evaluación se basará en resultados observables: listas vacías, operaciones CRUD, manejo de errores, pruebas de relaciones y persistencia, y documentación de la API.
+
 ## Relación con el resto de la ruta
 
 El objetivo es conectar Java, Maven, Spring, PostgreSQL, Git, Docker, Angular y CI/CD como un único flujo reproducible.
 
-Cuando utilices una anotación o dependencia, intenta responder siempre:
 
-```text
-¿Quién la proporciona?
-¿Quién la interpreta?
-¿Cuándo actúa?
-¿Está relacionada con build, runtime, HTTP, datos o infraestructura?
+
+## Ejemplo adicional: aplicación práctica
+
+```bash
+# Comprobación final del backend
+./mvnw clean verify
+./mvnw spring-boot:run
+curl -i http://localhost:8080/api/tareas
+# Comprobación de contenedores
+docker compose config
+docker compose up --build -d
 ```
+
+Documenta los valores reales de los endpoints, variables y servicios de tu entrega.
+
+**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
 ## Ejercicios propuestos
 
-1. Reproduce el ejemplo de **Proyecto final · Plataforma de gestión de tareas** y documenta qué cambia en el proyecto.
-2. Introduce una variación controlada, predice el resultado antes de ejecutarla y comprueba si tu predicción era correcta.
-3. Explica qué responsabilidad corresponde a Spring, cuál a Spring Boot y cuál a Maven/Git/Docker en este escenario.
+1. Diseña las entidades, modelos, mappers, DTO, servicios, controladores y repositorios de la plataforma de tareas.
+2. Implementa CRUD y filtros con pruebas unitarias, MVC y de integración; entrega datos y resultados esperados.
+3. Prepara perfiles, migraciones, imágenes y un flujo CI que permita reproducir la aplicación desde cero.
 
-### Ejercicio de explicación
-
-Sin ejecutar código, explica a otra persona:
-
-- qué problema resuelve esta lección;
-- qué ocurriría si eliminases la configuración o dependencia principal;
-- cómo comprobarías el comportamiento con una prueba;
-- si el concepto pertenece a Spring Framework, Spring Boot o a otra herramienta.
+**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
 
 ## Qué debes recordar
 
-- **Maven** resuelve dependencias y construye; no realiza inyección de objetos.
-- **Spring Framework** contiene el contenedor IoC y los módulos fundamentales.
-- **Spring Boot** se apoya en Spring Framework y reduce configuración repetitiva.
-- **Tomcat** participa en el stack Servlet, embebido o como servidor externo.
-- El código debe poder probarse y construirse antes de empaquetarlo con Docker.
+- **Proyecto final · Plataforma de gestión de tareas** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
+- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
+- Distingue entre código de negocio, configuración y servicios aportados por Spring.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion106/">← 106 · Spring MVC frente a WebFlux</a>
