@@ -10,20 +10,14 @@ permalink: /software/leccion28/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,39 +28,45 @@ lessons:
 
 Comprender Kanban como enfoque para visualizar y gestionar flujo.
 
-## Punto de partida
+## Infografía
 
-CodeTasks combina mejoras e incidencias. El equipo quiere ver dónde se acumula trabajo y terminarlo con menos esperas.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/28-introduccion-a-kanban.webp' | relative_url }}" aria-label="Ampliar infografía: Introducción a Kanban">
+    <img src="{{ '/assets/images/software/infografias/28-introduccion-a-kanban.webp' | relative_url }}" alt="Resumen visual: Introducción a Kanban" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>El tablero ayuda si refleja políticas y provoca decisiones. El objetivo es terminar trabajo, no mantener a todos iniciando tareas.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/28-introduccion-a-kanban.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Flujo:** recorrido de los elementos desde el inicio hasta el final acordados.
 - **WIP:** trabajo iniciado y aún no terminado.
 - **Pull:** incorporar trabajo cuando existe capacidad.
 
-## Desarrollo
+CodeTasks combina mejoras e incidencias. El equipo quiere ver dónde se acumula trabajo y terminarlo con menos esperas.
 
 Kanban busca optimizar el flujo mediante su definición y visualización, gestión activa y mejora. Un tablero sin políticas ni decisiones sobre el trabajo es insuficiente.
 
 Para el ejercicio acordamos qué representa una tarjeta, cuándo empieza, qué significa terminar y cómo tratar bloqueos. Los límites deben influir en decisiones: si una etapa está llena, ayudamos a terminar antes de iniciar más. El tablero debe reflejar el trabajo real, incluidas esperas relevantes.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 En CodeTasks usamos Pendiente → En curso → Revisión → Terminado. Permitimos dos tarjetas en curso y una en revisión. Cuando revisión está llena, otra persona ayuda a comprobar esa tarjeta. No movemos trabajo a terminado para liberar espacio artificialmente. Anotamos el bloqueo y buscamos su causa.
 
-## Relación con otras rutas
-
-Git permite relacionar tarjetas con cambios; Testing aporta criterios para revisar y finalizar.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Define inicio y final para una incidencia de CodeTasks.
 2. Escribe una política de entrada en Revisión.
 3. Decide qué harías con una tarjeta bloqueada cuando se alcanza el límite.
 
-## Qué debes recordar
+## Para repasar
 
-El tablero ayuda si refleja políticas y provoca decisiones. El objetivo es terminar trabajo, no mantener a todos iniciando tareas.
+Git permite relacionar tarjetas con cambios; Testing aporta criterios para revisar y finalizar.
 
 ## Referencias
 

@@ -10,20 +10,14 @@ permalink: /software/leccion52/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
 ---
 
 # Proyecto final · Planificación de un producto software
@@ -32,17 +26,27 @@ lessons:
 
 Elaborar una propuesta completa de planificación y metodología para un producto propio.
 
-## Punto de partida
+## Infografía
 
-Reúne las decisiones del caso CodeTasks en una propuesta que otra persona pueda revisar y ejecutar. Puedes elegir otro producto si documentas su contexto y mantienes los mismos entregables.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/52-proyecto-final-planificacion-de-un-producto-software.webp' | relative_url }}" aria-label="Ampliar infografía: Proyecto final · Planificación de un producto software">
+    <img src="{{ '/assets/images/software/infografias/52-proyecto-final-planificacion-de-un-producto-software.webp' | relative_url }}" alt="Resumen visual: Proyecto final · Planificación de un producto software" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>La propuesta se evalúa por coherencia y evidencia. Acumular documentos sin relacionarlos no demuestra una planificación aplicable.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/52-proyecto-final-planificacion-de-un-producto-software.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Coherencia:** objetivo, requisitos, prioridades y plan se corresponden.
 - **Evidencia:** ejemplo, registro o comprobación que sostiene una decisión.
 - **Evaluación:** criterios conocidos para valorar la propuesta.
 
-## Desarrollo
+Reúne las decisiones del caso CodeTasks en una propuesta que otra persona pueda revisar y ejecutar. Puedes elegir otro producto si documentas su contexto y mantienes los mismos entregables.
 
 Entrega un dossier con: problema e interesados; alcance y exclusiones; cuatro requisitos funcionales y dos de calidad como mínimo; backlog ordenado de seis a ocho elementos; criterios de aceptación de los dos primeros; Definition of Done; plan de un Sprint simulado; registro Kanban de seis tarjetas; tres riesgos con respuesta y responsable; y justificación de la forma de trabajo.
 
@@ -59,23 +63,19 @@ Incluye una hipótesis de MVP con experimento y decisión posible, además de un
 
 Para cada criterio, una evidencia ausente obtiene 0; una parcial o contradictoria, la mitad; una completa, coherente y justificada, el peso íntegro. Esta rúbrica es la propuesta de evaluación del ejercicio.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 La necesidad «encontrar próximas entregas» enlaza con RF-04, el elemento B3, un criterio de ordenación y su prueba. Si B3 se pospone, el dossier explica por qué y cómo se limita el objetivo del primer Sprint. Esa cadena permite revisar decisiones sin adivinar qué documento está actualizado.
 
-## Relación con otras rutas
-
-La propuesta permite continuar en Java, Spring, Git, Testing, Maven o Docker con objetivos y comprobaciones definidos.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Entrega el dossier con una tabla necesidad → requisito → backlog → comprobación.
 2. Revisa un caso de error, una dependencia y un cálculo de flujo de otra propuesta.
 3. Corrige contradicciones detectadas y registra qué cambió y por qué.
 
-## Qué debes recordar
+## Para repasar
 
-La propuesta se evalúa por coherencia y evidencia. Acumular documentos sin relacionarlos no demuestra una planificación aplicable.
+La propuesta permite continuar en Java, Spring, Git, Testing, Maven o Docker con objetivos y comprobaciones definidos.
 
 <div class="cla-lesson-nav">
   <a href="{{ '/software/leccion51/' | relative_url }}">← 51 · Simular el flujo Kanban</a>

@@ -9,6 +9,12 @@ permalink: /software/
 
 {% assign route = site.data.routes.software %}
 
+## Infografías
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver la galería de Software y metodologías</a>
+</div>
+
 ## Tecnologías y marcos relacionados
 
 <div class="cla-tech-grid">

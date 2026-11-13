@@ -10,20 +10,14 @@ permalink: /software/leccion21/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,17 +28,27 @@ lessons:
 
 Comprender Scrum como marco iterativo e incremental.
 
-## Punto de partida
+## Infografía
 
-El equipo de CodeTasks necesita una forma de aprender del producto sin perder un objetivo compartido.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/21-introduccion-a-scrum.webp' | relative_url }}" aria-label="Ampliar infografía: Introducción a Scrum">
+    <img src="{{ '/assets/images/software/infografias/21-introduccion-a-scrum.webp' | relative_url }}" alt="Resumen visual: Introducción a Scrum" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Scrum utiliza inspección y adaptación. El Sprint contiene sus demás eventos; no es únicamente un tramo de programación.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/21-introduccion-a-scrum.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Empirismo:** decidir a partir de lo observado.
 - **Incremento:** resultado integrado y utilizable.
 - **Transparencia:** hacer visible el estado real del trabajo.
 
-## Desarrollo
+El equipo de CodeTasks necesita una forma de aprender del producto sin perder un objetivo compartido.
 
 Scrum es un marco iterativo e incremental basado en transparencia, inspección y adaptación. El Sprint contiene Planning, Daily Scrums, Review y Retrospective, además del trabajo de desarrollo.
 
@@ -60,23 +64,19 @@ Sprint
 └─ Retrospective: mejorar la forma de trabajar
 ```
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 Para el primer Sprint del ejercicio buscamos que un estudiante registre y encuentre una tarea. Construimos ese recorrido y lo comprobamos con datos ficticios. En la Review observamos una dificultad al localizar pendientes; después ordenamos la mejora. En la Retrospective tratamos una espera en revisión de código, que es un problema de trabajo diferente.
 
-## Relación con otras rutas
-
-Git y Testing permiten producir y comprobar el resultado que después se inspecciona.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Sitúa Planning y Review dentro del dibujo del Sprint.
 2. Identifica qué evidencia mostrarías del objetivo del ejemplo.
 3. Distingue una mejora del producto de una mejora de trabajo.
 
-## Qué debes recordar
+## Para repasar
 
-Scrum utiliza inspección y adaptación. El Sprint contiene sus demás eventos; no es únicamente un tramo de programación.
+Git y Testing permiten producir y comprobar el resultado que después se inspecciona.
 
 ## Referencias
 

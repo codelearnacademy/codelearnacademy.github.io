@@ -10,20 +10,14 @@ permalink: /software/leccion25/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,17 +28,27 @@ lessons:
 
 Relacionar Sprint Goal, selección de trabajo y plan de ejecución.
 
-## Punto de partida
+## Infografía
 
-Antes de empezar el Sprint, el equipo necesita entender para qué trabaja, qué prevé lograr y cómo lo abordará.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/25-sprint-planning-y-sprint-backlog.webp' | relative_url }}" aria-label="Ampliar infografía: Sprint Planning y Sprint Backlog">
+    <img src="{{ '/assets/images/software/infografias/25-sprint-planning-y-sprint-backlog.webp' | relative_url }}" alt="Resumen visual: Sprint Planning y Sprint Backlog" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Planning conecta propósito, selección y plan. Las comprobaciones necesarias forman parte de la previsión.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/25-sprint-planning-y-sprint-backlog.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Objetivo:** propósito del Sprint.
 - **Selección:** elementos elegidos para contribuir al objetivo.
 - **Plan:** trabajo necesario para obtener el resultado.
 
-## Desarrollo
+Antes de empezar el Sprint, el equipo necesita entender para qué trabaja, qué prevé lograr y cómo lo abordará.
 
 Planning inicia el Sprint. Los Developers seleccionan trabajo en conversación con el Product Owner. El Sprint Backlog reúne objetivo, elementos seleccionados y plan; no es solo una lista de tareas.
 
@@ -52,25 +56,19 @@ Participa el Scrum Team completo. Para un Sprint de un mes, Planning tiene un m�
 
 Para preparar el ejercicio revisamos disponibilidad real y conocimiento del producto. Debemos incluir pruebas y revisión en el trabajo previsto. La selección es una previsión razonada: no una obligación de llenar todas las horas ni una excusa para omitir incertidumbre.
 
-## Ejemplo guiado
-
-Aplicación al caso CodeTasks:
+### Ejemplo guiado
 
 Objetivo: que el estudiante encuentre sus próximas entregas. Seleccionamos fecha opcional y ordenación de pendientes. El plan contempla aclarar tareas sin fecha, cambiar almacenamiento, implementar orden y probar casos. Una ausencia conocida reduce la capacidad; dejamos los filtros avanzados para después. La previsión contiene un recorrido coherente.
 
-## Relación con otras rutas
-
-Maven y Testing aportan tareas de construcción y verificación que deben contemplarse al planificar.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Escribe un Sprint Backlog con objetivo, dos elementos y sus tareas.
 2. Incluye una comprobación para tareas sin fecha.
 3. Ajusta la selección si una persona no está disponible, conservando un resultado útil.
 
-## Qué debes recordar
+## Para repasar
 
-Planning conecta propósito, selección y plan. Las comprobaciones necesarias forman parte de la previsión.
+Maven y Testing aportan tareas de construcción y verificación que deben contemplarse al planificar.
 
 ## Referencias
 

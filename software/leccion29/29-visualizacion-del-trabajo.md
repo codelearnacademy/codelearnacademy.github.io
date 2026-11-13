@@ -10,20 +10,14 @@ permalink: /software/leccion29/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,39 +28,45 @@ lessons:
 
 Representar estados, políticas y bloqueos mediante un tablero.
 
-## Punto de partida
+## Infografía
 
-Una tarjeta situada en «En curso» puede estar programándose o esperando información. Ocultar esa diferencia dificulta mejorar el flujo.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/29-visualizacion-del-trabajo.webp' | relative_url }}" aria-label="Ampliar infografía: Visualización del trabajo">
+    <img src="{{ '/assets/images/software/infografias/29-visualizacion-del-trabajo.webp' | relative_url }}" alt="Resumen visual: Visualización del trabajo" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Visualizar significa hacer visible la situación real. Las políticas explican qué condiciones permiten mover una tarjeta.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/29-visualizacion-del-trabajo.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Estado:** situación real del elemento.
 - **Política explícita:** condición para entrar o salir de un estado.
 - **Bloqueo:** impedimento visible con causa y seguimiento.
 
-## Desarrollo
+Una tarjeta situada en «En curso» puede estar programándose o esperando información. Ocultar esa diferencia dificulta mejorar el flujo.
 
 El tablero debe mostrar estados útiles para tomar decisiones. No existe una lista universal de columnas. Para CodeTasks distinguimos construcción y revisión porque sus esperas tienen causas diferentes.
 
 Una tarjeta necesita suficiente información para comprender su propósito y comprobarla. Indicamos identificador, resultado esperado, fecha de inicio y bloqueos. Una política de salida como «pruebas acordadas superadas y revisión realizada» reduce discusiones sobre qué significa finalizar. Evitamos columnas que solo sirven para aparentar progreso.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 CT-12, «Ordenar pendientes por fecha», está en Revisión. Sus pruebas pasan, pero falta acordar cómo colocar las tareas sin fecha. Marcamos el bloqueo y la pregunta pendiente. Sigue siendo trabajo iniciado. Tras aclararlo, se adapta y comprueba antes de moverlo a Terminado.
 
-## Relación con otras rutas
-
-Las pruebas y revisiones del repositorio pueden enlazarse como evidencias de las condiciones de salida.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Diseña una tarjeta CT-13 para completar tareas.
 2. Escribe condiciones de entrada y salida de Revisión.
 3. Representa un bloqueo sin eliminar la tarjeta del trabajo en curso.
 
-## Qué debes recordar
+## Para repasar
 
-Visualizar significa hacer visible la situación real. Las políticas explican qué condiciones permiten mover una tarjeta.
+Las pruebas y revisiones del repositorio pueden enlazarse como evidencias de las condiciones de salida.
 
 ## Referencias
 

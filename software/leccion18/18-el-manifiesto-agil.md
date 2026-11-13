@@ -10,20 +10,14 @@ permalink: /software/leccion18/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,17 +28,27 @@ lessons:
 
 Interpretar los cuatro valores del Manifiesto Ágil con ejemplos.
 
-## Punto de partida
+## Infografía
 
-El equipo debe decidir entre completar documentación, enseñar una versión y atender una nueva necesidad. Los valores ágiles ayudan a razonar esas decisiones.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/18-el-manifiesto-agil.webp' | relative_url }}" aria-label="Ampliar infografía: El Manifiesto Ágil">
+    <img src="{{ '/assets/images/software/infografias/18-el-manifiesto-agil.webp' | relative_url }}" alt="Resumen visual: El Manifiesto Ágil" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Los valores expresan prioridades relativas, no prohibiciones. Deben aplicarse junto con las restricciones reales del proyecto.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/18-el-manifiesto-agil.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Preferencia:** dar más peso a un elemento sin eliminar el otro.
 - **Colaboración:** construir comprensión compartida.
 - **Adaptación:** revisar el plan cuando aparece información relevante.
 
-## Desarrollo
+El equipo debe decidir entre completar documentación, enseñar una versión y atender una nueva necesidad. Los valores ágiles ayudan a razonar esas decisiones.
 
 Los cuatro valores del Manifiesto se pueden explicar así, en forma de paráfrasis:
 
@@ -55,23 +59,19 @@ Los cuatro valores del Manifiesto se pueden explicar así, en forma de paráfras
 
 Los elementos de menor prioridad siguen teniendo valor. Estos valores no justifican eliminar documentación, acuerdos, herramientas o planificación.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 CodeTasks necesita un manual breve para el piloto. El equipo prepara instrucciones de acceso y recuperación y muestra la versión a estudiantes. Evita dedicar toda la semana a describir pantallas aún hipotéticas. Documenta lo necesario para usar el producto y utiliza la sesión para decidir la siguiente mejora.
 
-## Relación con otras rutas
-
-Git puede conservar documentación útil junto al código y permitir revisar ambos en una entrega.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Propón una decisión de CodeTasks para cada uno de los cuatro valores.
 2. Identifica documentación que sería perjudicial omitir.
 3. Explica cómo atenderías un cambio que aporta valor pero supera el presupuesto.
 
-## Qué debes recordar
+## Para repasar
 
-Los valores expresan prioridades relativas, no prohibiciones. Deben aplicarse junto con las restricciones reales del proyecto.
+Git puede conservar documentación útil junto al código y permitir revisar ambos en una entrega.
 
 ## Referencias
 

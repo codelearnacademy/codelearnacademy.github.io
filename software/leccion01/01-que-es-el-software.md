@@ -10,20 +10,14 @@ permalink: /software/leccion01/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
 ---
 
 # Qué es el software
@@ -32,40 +26,38 @@ lessons:
 
 Comprender qué es el software y por qué un producto software incluye código, datos, configuración y documentación.
 
-## Punto de partida
+## Infografía
 
-CodeTasks es el caso ficticio de esta ruta: una aplicación para que estudiantes organicen tareas y fechas de entrega. Un archivo de código aislado no permite utilizarla ni mantenerla.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/01-que-es-el-software.webp' | relative_url }}" aria-label="Ampliar infografía: Qué es el software">
+    <img src="{{ '/assets/images/software/infografias/01-que-es-el-software.webp' | relative_url }}" alt="Resumen visual: Qué es el software" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>El programa es una parte de la entrega. Datos, configuración y documentación deben gestionarse junto con él; personas y equipos pertenecen al contexto.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/01-que-es-el-software.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Programa:** instrucciones que ejecuta un ordenador.
 - **Datos:** información que el programa procesa.
 - **Configuración:** valores que adaptan su funcionamiento al entorno.
 - **Documentación:** información para utilizar, operar y modificar el sistema.
 
-## Desarrollo
+CodeTasks muestra el título y la fecha de cada tarea. El programa recupera esos datos y la configuración indica dónde buscarlos. Si falta la dirección de la base de datos, la aplicación puede abrirse y fallar al consultar tareas. Antes de entregar el producto, comprueba que otra persona pueda instalarlo y abrir una tarea siguiendo la documentación.
 
-El software comprende programas y elementos asociados necesarios para su funcionamiento y mantenimiento. Conviene distinguir el programa del producto entregado: este puede incluir instaladores, configuración inicial, documentación y procedimientos de recuperación.
-
-Los usuarios interactúan con el software, pero no son componentes del software. Tampoco lo son el ordenador o la red física: forman parte de su entorno. Esta distinción ayuda a localizar problemas: una aplicación puede estar bien programada y fallar porque utiliza una configuración equivocada.
-
-## Ejemplo guiado
-
-Para entregar CodeTasks identificamos cinco piezas: el programa que guarda tareas, los registros de tareas, la dirección de la base de datos, las instrucciones de instalación y las pruebas que comprueban el comportamiento. Los estudiantes son usuarios; el servidor es infraestructura. Si solo copiamos el programa y omitimos la configuración, la entrega puede no funcionar.
-
-## Relación con otras rutas
-
-Git permite versionar código y documentación; Ficheros permite trabajar con datos y configuración. No guardes contraseñas reales en el repositorio.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Clasifica un archivo de tareas, un manual, un portátil y una variable de configuración.
 2. Prepara una lista de lo necesario para instalar CodeTasks en otro equipo.
 3. Explica qué comprobarías si el programa funciona en tu equipo pero no en el de otra persona.
 
-## Qué debes recordar
+## Para repasar
 
-El programa es una parte de la entrega. Datos, configuración y documentación deben gestionarse junto con él; personas y equipos pertenecen al contexto.
+Git permite versionar código y documentación; Ficheros permite trabajar con datos y configuración. No guardes contraseñas reales en el repositorio.
 
 <div class="cla-lesson-nav">
   <span></span>

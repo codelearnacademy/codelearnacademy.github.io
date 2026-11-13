@@ -10,20 +10,14 @@ permalink: /software/leccion30/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,41 +28,39 @@ lessons:
 
 Entender cómo limitar trabajo en progreso ayuda a mejorar el flujo.
 
-## Punto de partida
+## Infografía
 
-Hay cinco cambios abiertos y ninguno revisado. Empezar otro puede aumentar las esperas sin aportar una nueva entrega.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/30-limites-wip.webp' | relative_url }}" aria-label="Ampliar infografía: Límites WIP">
+    <img src="{{ '/assets/images/software/infografias/30-limites-wip.webp' | relative_url }}" alt="Resumen visual: Límites WIP" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Los límites deben cambiar decisiones. Medir requiere inicio, final y unidad de tiempo consistentes.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/30-limites-wip.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Límite WIP:** restricción sobre trabajo iniciado simultáneamente.
 - **Cuello de botella:** parte que limita el flujo.
 - **Edad:** tiempo transcurrido de un elemento aún abierto.
 
-## Desarrollo
+En CodeTasks hay dos tarjetas en curso y una en revisión. Ambas columnas han alcanzado su límite. La nueva petición espera mientras el equipo ayuda a terminar la revisión. Una tarjeta bloqueada sigue contando como trabajo iniciado. Si el bloqueo depende de una decisión externa, el equipo debe resolver esa causa.
 
-Limitar WIP favorece terminar antes de iniciar. Kanban observa WIP, rendimiento, edad del trabajo abierto y tiempo de ciclo de los elementos terminados; sus límites de medición deben ser explícitos.
+La **edad** se calcula mientras la tarjeta está abierta. El **tiempo de ciclo** se calcula al cerrarla. Si CT-12 empieza el día 1 y termina el día 4, su ciclo es de tres días transcurridos. Usa la misma convención para todas las tarjetas.
 
-Un límite no garantiza por sí solo que todo vaya más rápido. Si faltan conocimientos o una decisión externa, hace falta actuar sobre esa causa. En el ejercicio los bloqueos cuentan dentro del trabajo iniciado: esconderlos haría parecer disponible una capacidad que no existe.
-
-## Ejemplo guiado
-
-Aplicación al caso CodeTasks:
-
-Dos tarjetas están en curso y una en revisión; esos son nuestros límites. Una nueva petición espera. El equipo ayuda a revisar y termina una tarjeta antes de iniciar otra. Si CT-12 comenzó el día 1 y termina el día 4, su ciclo es de tres días transcurridos bajo esa convención. Registramos la misma convención para todas las tarjetas.
-
-## Relación con otras rutas
-
-Git y CI ayudan a identificar esperas de revisión y construcción, pero sus tiempos no sustituyen automáticamente el ciclo completo de una tarjeta.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Decide qué hacer si Revisión está llena y llega una mejora no urgente.
 2. Calcula la edad al día 6 de una tarjeta iniciada el día 2.
 3. Propón una acción para un bloqueo externo que limitar WIP no resolvería.
 
-## Qué debes recordar
+## Para repasar
 
-Los límites deben cambiar decisiones. Medir requiere inicio, final y unidad de tiempo consistentes.
+Git y CI ayudan a identificar esperas de revisión y construcción, pero sus tiempos no sustituyen automáticamente el ciclo completo de una tarjeta.
 
 ## Referencias
 

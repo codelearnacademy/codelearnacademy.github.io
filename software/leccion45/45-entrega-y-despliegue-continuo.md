@@ -10,20 +10,14 @@ permalink: /software/leccion45/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,17 +28,27 @@ lessons:
 
 Diferenciar Continuous Delivery y Continuous Deployment.
 
-## Punto de partida
+## Infografía
 
-Una versión de CodeTasks supera sus pruebas. Decidir si puede desplegarse y si se desplegará automáticamente son preguntas distintas.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/45-entrega-y-despliegue-continuo.webp' | relative_url }}" aria-label="Ampliar infografía: Entrega y despliegue continuo">
+    <img src="{{ '/assets/images/software/infografias/45-entrega-y-despliegue-continuo.webp' | relative_url }}" alt="Resumen visual: Entrega y despliegue continuo" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Estar preparado para desplegar y desplegar automáticamente son capacidades diferentes. Ambas requieren controlar riesgos de la entrega.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/45-entrega-y-despliegue-continuo.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Entrega continua:** capacidad de desplegar bajo demanda de forma fiable.
 - **Despliegue continuo:** paso automático a producción tras superar las comprobaciones acordadas.
 - **Artefacto:** versión identificable que recorre el proceso de entrega.
 
-## Desarrollo
+Una versión de CodeTasks supera sus pruebas. Decidir si puede desplegarse y si se desplegará automáticamente son preguntas distintas.
 
 La entrega continua mantiene el software preparado para desplegar; puede existir una decisión humana de publicación. El despliegue continuo automatiza también ese paso. Son prácticas relacionadas, pero distintas.
 
@@ -56,23 +60,19 @@ CI → artefacto → comprobaciones de entrega → listo para producción
                                            └─ publicación automática
 ```
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 CodeTasks genera una versión y la valida en el entorno de pruebas. En el piloto, el docente decide cuándo publicarla: es compatible con entrega continua. Si más adelante cada versión que pasa controles se publica automáticamente, se añade despliegue continuo. En ambos casos comprobamos el servicio después y conservamos un procedimiento de recuperación.
 
-## Relación con otras rutas
-
-Maven produce artefactos; Docker ayuda a distribuirlos; Testing aporta verificaciones.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Identifica dónde situarías una decisión humana en el dibujo.
 2. Define una comprobación antes y otra después del despliegue.
 3. Explica por qué una migración obliga a planificar recuperación de datos.
 
-## Qué debes recordar
+## Para repasar
 
-Estar preparado para desplegar y desplegar automáticamente son capacidades diferentes. Ambas requieren controlar riesgos de la entrega.
+Maven produce artefactos; Docker ayuda a distribuirlos; Testing aporta verificaciones.
 
 ## Referencias
 

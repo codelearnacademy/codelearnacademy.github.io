@@ -10,20 +10,14 @@ permalink: /software/leccion13/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
 ---
 
 # Modelo en V
@@ -32,39 +26,45 @@ lessons:
 
 Relacionar fases de desarrollo con verificación y validación.
 
-## Punto de partida
+## Infografía
 
-Una regla de CodeTasks debe poder seguirse desde su definición hasta la evidencia que demuestra su cumplimiento.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/13-modelo-en-v.webp' | relative_url }}" aria-label="Ampliar infografía: Modelo en V">
+    <img src="{{ '/assets/images/software/infografias/13-modelo-en-v.webp' | relative_url }}" alt="Resumen visual: Modelo en V" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>La V conecta definición y comprobación. Cumplir una especificación no garantiza que la necesidad estuviera bien entendida.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/13-modelo-en-v.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Verificación:** comprobar conformidad con lo especificado.
 - **Validación:** comprobar adecuación a las necesidades de uso.
 - **Trazabilidad:** relación entre requisito, diseño y comprobación.
 
-## Desarrollo
+Una regla de CodeTasks debe poder seguirse desde su definición hasta la evidencia que demuestra su cumplimiento.
 
 El modelo en V relaciona actividades de definición y descomposición con actividades de integración y pruebas. Una representación habitual asocia necesidades con aceptación, requisitos del sistema con pruebas de sistema, arquitectura con integración y diseño de componentes con pruebas unitarias. Los nombres y detalles varían según el modelo empleado.
 
 La enseñanza principal es preparar cómo comprobar cada nivel mientras se define, no esperar al final para pensar en pruebas. Verificación y validación pueden incluir revisiones y otras técnicas, además de ejecutar software.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 Necesidad: encontrar la próxima entrega. Requisito: ordenar pendientes por fecha. Diseñamos un componente de ordenación y su conexión con persistencia. Una prueba unitaria comprueba el orden; una de integración comprueba recuperar fechas; una de sistema recorre la pantalla; una sesión de aceptación confirma que estudiantes encuentran su próxima entrega.
 
-## Relación con otras rutas
-
-Testing desarrolla niveles de prueba; UML ayuda a conectar responsabilidades y componentes.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Relaciona la regla «título obligatorio» con una comprobación de componente y otra de sistema.
 2. Explica cómo puede pasar una prueba técnica y fallar la validación con usuarios.
 3. Construye una tabla requisito → diseño → prueba para dos requisitos.
 
-## Qué debes recordar
+## Para repasar
 
-La V conecta definición y comprobación. Cumplir una especificación no garantiza que la necesidad estuviera bien entendida.
+Testing desarrolla niveles de prueba; UML ayuda a conectar responsabilidades y componentes.
 
 <div class="cla-lesson-nav">
   <a href="{{ '/software/leccion12/' | relative_url }}">← 12 · Modelo en cascada</a>

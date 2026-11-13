@@ -10,20 +10,14 @@ permalink: /software/leccion40/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,39 +28,45 @@ lessons:
 
 Comprender el MVP como herramienta para entregar valor y obtener aprendizaje.
 
-## Punto de partida
+## Infografía
 
-No sabemos si una vista de próximas entregas cambiará la organización de los estudiantes. Construir todas las funciones no resolverá esa duda más deprisa.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/40-mvp-y-entregas-incrementales.webp' | relative_url }}" aria-label="Ampliar infografía: MVP y entregas incrementales">
+    <img src="{{ '/assets/images/software/infografias/40-mvp-y-entregas-incrementales.webp' | relative_url }}" alt="Resumen visual: MVP y entregas incrementales" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>El MVP se diseña para aprender. Una capacidad pequeña sin hipótesis ni evaluación no constituye por sí sola un experimento útil.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/40-mvp-y-entregas-incrementales.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **MVP:** versión o experimento mínimo para obtener aprendizaje validado.
 - **Hipótesis:** afirmación que queremos contrastar.
 - **Indicador:** observación que ayuda a decidir el siguiente paso.
 
-## Desarrollo
+No sabemos si una vista de próximas entregas cambiará la organización de los estudiantes. Construir todas las funciones no resolverá esa duda más deprisa.
 
 Un MVP busca aprender sobre una hipótesis relevante con el menor esfuerzo razonable. No significa entregar código defectuoso ni escoger funciones al azar. Debe ser adecuado para la pregunta y proteger las condiciones necesarias de uso.
 
 Un incremento añade capacidad al producto; un MVP se define por su propósito de aprendizaje. Pueden coincidir, pero no son sinónimos. Antes del piloto acordamos hipótesis, participantes, duración, evidencia y decisión posible. Un resultado pequeño no debe generalizarse automáticamente a todo el alumnado.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 Hipótesis de CodeTasks: una vista ordenada ayuda a identificar la próxima entrega. Probamos con cinco participantes y tareas ficticias. Como criterio exploratorio, esperamos que cuatro encuentren la próxima tarea sin ayuda en un minuto. Observamos dificultades y entrevistamos después. Si no ocurre, revisamos la vista antes de añadir recordatorios. El criterio es didáctico, no una garantía estadística.
 
-## Relación con otras rutas
-
-Prototipos y pruebas de uso pueden aportar aprendizaje antes de desarrollar con Java o Angular.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Formula una hipótesis sobre completar tareas.
 2. Diseña el experimento mínimo para contrastarla.
 3. Define qué cambiarías según dos resultados posibles.
 
-## Qué debes recordar
+## Para repasar
 
-El MVP se diseña para aprender. Una capacidad pequeña sin hipótesis ni evaluación no constituye por sí sola un experimento útil.
+Prototipos y pruebas de uso pueden aportar aprendizaje antes de desarrollar con Java o Angular.
 
 ## Referencias
 

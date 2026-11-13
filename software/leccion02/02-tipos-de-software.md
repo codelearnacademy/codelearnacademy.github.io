@@ -10,20 +10,14 @@ permalink: /software/leccion02/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
 ---
 
 # Tipos de software
@@ -32,39 +26,45 @@ lessons:
 
 Distinguir software de sistema, escritorio, web, móvil, servicios, APIs y software embebido.
 
-## Punto de partida
+## Infografía
 
-CodeTasks podría ofrecerse como web o aplicación de escritorio. Elegir una categoría exige indicar qué estamos clasificando.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/02-tipos-de-software.webp' | relative_url }}" aria-label="Ampliar infografía: Tipos de software">
+    <img src="{{ '/assets/images/software/infografias/02-tipos-de-software.webp' | relative_url }}" alt="Resumen visual: Tipos de software" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Las categorías dependen del criterio. Una API puede formar parte de una aplicación web o móvil.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/02-tipos-de-software.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Finalidad:** software de sistema o de aplicación.
 - **Plataforma:** web, escritorio, móvil o sistema embebido.
 - **Interfaz:** mecanismo de interacción, como una API.
 
-## Desarrollo
+CodeTasks podría ofrecerse como web o aplicación de escritorio. Elegir una categoría exige indicar qué estamos clasificando.
 
 El software de sistema facilita el funcionamiento del equipo: un sistema operativo administra recursos. El software de aplicación resuelve necesidades de usuarios, como editar documentos o gestionar tareas. El software embebido opera integrado en un dispositivo, por ejemplo un controlador de climatización.
 
 Web, escritorio y móvil describen formas de acceso o ejecución. Una API describe un contrato de comunicación entre programas, no una categoría excluyente frente a las anteriores. Un mismo producto puede tener web, aplicación móvil y API. Por eso una clasificación útil admite varios ejes.
 
-## Ejemplo guiado
+### Ejemplo guiado
 
 CodeTasks es software de aplicación por su finalidad. Su versión accesible con navegador es web. Si un cliente móvil consulta sus tareas mediante HTTP, sigue siendo el mismo producto con otra interfaz. El sistema operativo del servidor es software de sistema, no otra pantalla de CodeTasks.
 
-## Relación con otras rutas
-
-Java permite construir aplicaciones y servicios; Spring desarrolla servicios web; Angular permite construir interfaces web.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Clasifica un navegador, un sistema operativo y el programa de una lavadora por finalidad y plataforma.
 2. Explica por qué «web» y «API» pueden coexistir.
 3. Compara una versión local de CodeTasks con una web: instalación, conexión y actualización.
 
-## Qué debes recordar
+## Para repasar
 
-Las categorías dependen del criterio. Una API puede formar parte de una aplicación web o móvil.
+Java permite construir aplicaciones y servicios; Spring desarrolla servicios web; Angular permite construir interfaces web.
 
 <div class="cla-lesson-nav">
   <a href="{{ '/software/leccion01/' | relative_url }}">← 01 · Qué es el software</a>

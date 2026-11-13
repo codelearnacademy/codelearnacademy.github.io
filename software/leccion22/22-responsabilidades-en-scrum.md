@@ -10,20 +10,14 @@ permalink: /software/leccion22/
 lessons:
   - id: qué-vas-a-conseguir
     title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: conceptos-clave
-    title: Conceptos clave
-  - id: desarrollo
-    title: Desarrollo
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-otras-rutas
-    title: Relación con otras rutas
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: infografía
+    title: Infografía
+  - id: explicación-y-ejemplo
+    title: Explicación y ejemplo
+  - id: práctica
+    title: Práctica
+  - id: para-repasar
+    title: Para repasar
   - id: referencias
     title: Referencias
 ---
@@ -34,41 +28,45 @@ lessons:
 
 Distinguir Product Owner, Scrum Master y Developers.
 
-## Punto de partida
+## Infografía
 
-En el piloto hay que decidir prioridades, construir una solución y mejorar la colaboración sin convertir todo en órdenes de una sola persona.
+<figure class="cla-lesson-infografia" style="margin-inline:0">
+  <a href="{{ '/assets/images/software/infografias/22-responsabilidades-en-scrum.webp' | relative_url }}" aria-label="Ampliar infografía: Responsabilidades en Scrum">
+    <img src="{{ '/assets/images/software/infografias/22-responsabilidades-en-scrum.webp' | relative_url }}" alt="Resumen visual: Responsabilidades en Scrum" style="display:block;max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Las responsabilidades complementan perspectivas de valor, efectividad y construcción. No forman una cadena jerárquica de asignación de tareas.</figcaption>
+</figure>
 
-## Conceptos clave
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/software/infografias/22-responsabilidades-en-scrum.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/software/infografias/' | relative_url }}">Ver galería</a>
+</div>
+
+## Explicación y ejemplo
 
 - **Product Owner:** orienta valor y orden del producto.
 - **Scrum Master:** ayuda a establecer Scrum y mejorar la efectividad.
 - **Developers:** crean el resultado y organizan su trabajo.
 
-## Desarrollo
+En el piloto hay que decidir prioridades, construir una solución y mejorar la colaboración sin convertir todo en órdenes de una sola persona.
 
 Son tres responsabilidades del Scrum Team. El equipo se autogestiona; Developers no significa exclusivamente programadores. El Scrum Master no es un jefe que reparte tareas.
 
 Para practicar, podemos representar situaciones y justificar quién debe intervenir. Una decisión de prioridad no resuelve por sí sola cómo implementar una función. Del mismo modo, una dificultad técnica no debería ocultarse hasta el último día: requiere conversación y ajuste del plan.
 
-## Ejemplo guiado
-
-Aplicación al caso CodeTasks:
+### Ejemplo guiado
 
 Una docente pide exportar tareas. En el ejercicio, el Product Owner compara su valor con ordenar pendientes. Los Developers explican coste y dependencias y organizan la solución elegida. El Scrum Master ayuda al equipo a resolver una espera recurrente para obtener información. La docente aporta una necesidad; no asigna directamente trabajo a cada integrante.
 
-## Relación con otras rutas
-
-Java, Testing y diseño aportan habilidades complementarias para crear un resultado utilizable.
-
-## Ejercicios propuestos
+## Práctica
 
 1. Explica quién ordenaría una petición nueva y quién decidiría su implementación.
 2. Propón una intervención del Scrum Master ante reuniones sin objetivo.
 3. Describe una contribución de pruebas o diseño dentro de Developers.
 
-## Qué debes recordar
+## Para repasar
 
-Las responsabilidades complementan perspectivas de valor, efectividad y construcción. No forman una cadena jerárquica de asignación de tareas.
+Java, Testing y diseño aportan habilidades complementarias para crear un resultado utilizable.
 
 ## Referencias
 
