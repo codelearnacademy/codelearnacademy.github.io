@@ -7,9 +7,44 @@ lesson_number: "04"
 title: "SQL para el CRUD"
 description: "SQL para el CRUD"
 permalink: "/orm/leccion04/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: sql-mínimo-para-nuestro-crud
+  title: SQL mínimo para nuestro CRUD
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
+- id: actividad-integradora-de-ficheros-a-sqlite
+  title: Actividad integradora · De ficheros a SQLite
 ---
 
 # SQL para el CRUD
+
+## Objetivo de aprendizaje
+
+Distingue las cuatro operaciones CRUD y comprueba qué filas selecciona WHERE.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/04-sql-crud.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 04">
+    <img src="{{ '/assets/images/orm/infografias/04-sql-crud.webp' | relative_url }}" alt="Resumen visual de la lección 04. SQL para el CRUD" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 04.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/04-sql-crud.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## SQL mínimo para nuestro CRUD
 
@@ -57,19 +92,19 @@ Los `?` serán parámetros de `PreparedStatement`; no concatenaremos valores rec
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/04-crud-sql.png" alt="CRUD y sentencias SQL. CREATE → INSERT → READ → SELECT → UPDATE → UPDATE → DELETE → DELETE." loading="lazy">
+  <img src="{{ '/assets/images/orm/04-crud-sql.png' | relative_url }}" alt="CRUD con SQL" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> CREATE → INSERT → READ → SELECT → UPDATE → UPDATE → DELETE → DELETE.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Cuatro operaciones sobre la tabla producto. Comprueba qué filas identifica WHERE antes de actualizar o borrar.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/04-repository-sql.png" alt="Repositorio y SQL. IRepository → Operación CRUD → Sentencia SQL." loading="lazy">
+  <img src="{{ '/assets/images/orm/04-repository-sql.png' | relative_url }}" alt="Del repositorio a SQL" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> IRepository → Operación CRUD → Sentencia SQL.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El contrato expresa operaciones que la implementación traduce a SQL. El cliente puede trabajar con el contrato sin conocer la sentencia SQL.</p>
 
 
 ## Ejemplo guiado
@@ -89,57 +124,57 @@ Los `?` serán parámetros de `PreparedStatement`; no concatenaremos valores rec
 
 ### 1. ¿Qué sentencia implementa create?
 
-- A) SELECT
-- B) INSERT
-- C) UPDATE
+- A) UPDATE
+- B) SELECT
+- C) INSERT
 - D) DELETE
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> INSERT crea una fila.</p>
+<p><strong>Respuesta correcta: C.</strong> INSERT crea una fila.</p>
 
 </details>
 
 ### 2. ¿Qué cláusula suele limitar update/delete a una entidad?
 
-- A) ORDER BY
-- B) WHERE
-- C) GROUP BY
-- D) HAVING
+- A) HAVING
+- B) GROUP BY
+- C) ORDER BY
+- D) WHERE
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> WHERE identifica las filas afectadas.</p>
+<p><strong>Respuesta correcta: D.</strong> WHERE identifica las filas afectadas.</p>
 
 </details>
 
 ### 3. ¿Qué riesgo tiene un DELETE sin WHERE?
 
-- A) No compila
-- B) Puede eliminar todas las filas
-- C) Solo borra la primera
+- A) Puede eliminar todas las filas
+- B) Solo borra la primera
+- C) No compila
 - D) Convierte la tabla en JSON
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Sin filtro el DELETE puede afectar a todas las filas.</p>
+<p><strong>Respuesta correcta: A.</strong> Sin filtro el DELETE puede afectar a todas las filas.</p>
 
 </details>
 
 ### 4. ¿Qué operación de IRepository suele corresponder a SELECT por PK?
 
-- A) create
-- B) findById
-- C) update
-- D) delete
+- A) update
+- B) delete
+- C) findById
+- D) create
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> findById recupera una entidad por identificador.</p>
+<p><strong>Respuesta correcta: C.</strong> findById recupera una entidad por identificador.</p>
 
 </details>
 

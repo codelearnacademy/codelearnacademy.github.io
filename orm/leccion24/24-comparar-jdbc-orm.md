@@ -7,9 +7,44 @@ lesson_number: "24"
 title: "Comparar el CRUD JDBC y ORM"
 description: "Comparar el CRUD JDBC y ORM"
 permalink: "/orm/leccion24/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: crud-completo-jdbc-frente-a-orm
+  title: 'CRUD completo: JDBC frente a ORM'
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
+- id: actividad-integradora-el-mismo-crud-con-dos-estrategias
+  title: Actividad integradora · El mismo CRUD con dos estrategias
 ---
 
 # Comparar el CRUD JDBC y ORM
+
+## Objetivo de aprendizaje
+
+Compara el trabajo que realiza el código JDBC con el que realiza JPA en un mismo CRUD.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/24-comparar-jdbc-orm.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 24">
+    <img src="{{ '/assets/images/orm/infografias/24-comparar-jdbc-orm.webp' | relative_url }}" alt="Resumen visual de la lección 24. Comparar el CRUD JDBC y ORM" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 24.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/24-comparar-jdbc-orm.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## CRUD completo: JDBC frente a ORM
 
@@ -26,19 +61,19 @@ El ORM reduce código repetitivo, pero no elimina SQL, tablas, claves, índices 
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/24-jdbc-vs-orm.png" alt="JDBC frente a ORM. JDBC expone SQL, PreparedStatement, ResultSet y mapping manual; ORM desplaza parte de ese trabajo a EntityManager, entidades y Hibernate." loading="lazy">
+  <img src="{{ '/assets/images/orm/24-jdbc-vs-orm.png' | relative_url }}" alt="La misma actualización en JDBC y ORM" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> JDBC expone SQL, PreparedStatement, ResultSet y mapping manual; ORM desplaza parte de ese trabajo a EntityManager, entidades y Hibernate.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Dos implementaciones pueden producir el mismo cambio en SQLite. Ambas estrategias deben respetar el contrato y gestionar los errores.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/24-misma-api.png" alt="Mismo contrato, distinta infraestructura. IProductoRepository → ProductoJdbcRepository → ProductoOrmRepository." loading="lazy">
+  <img src="{{ '/assets/images/orm/24-misma-api.png' | relative_url }}" alt="Mismo contrato, dos implementaciones" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> IProductoRepository → ProductoJdbcRepository → ProductoOrmRepository.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> IProductoRepository es el punto de entrada común. El cliente puede elegir cualquiera de las implementaciones del contrato.</p>
 
 
 ## Ejemplo guiado
@@ -57,57 +92,57 @@ El ORM reduce código repetitivo, pero no elimina SQL, tablas, claves, índices 
 
 ### 1. ¿Qué suele tener JDBC que ORM abstrae?
 
-- A) ResultSet y SQL explícito
-- B) Interfaces Java
-- C) Objetos Producto
-- D) Tests
+- A) Tests
+- B) ResultSet y SQL explícito
+- C) Interfaces Java
+- D) Objetos Producto
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> ORM reduce gran parte del mapping y SQL repetitivo.</p>
+<p><strong>Respuesta correcta: B.</strong> ORM reduce gran parte del mapping y SQL repetitivo.</p>
 
 </details>
 
 ### 2. ¿ORM elimina la necesidad de entender SQL?
 
-- A) No
+- A) Solo con SQLite
 - B) Sí por completo
-- C) Solo en test
-- D) Solo con SQLite
+- C) No
+- D) Solo en test
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El modelo relacional y el SQL siguen importando.</p>
+<p><strong>Respuesta correcta: C.</strong> El modelo relacional y el SQL siguen importando.</p>
 
 </details>
 
 ### 3. ¿Qué permanece igual en ambas implementaciones?
 
-- A) IProductoRepository
-- B) El código interno de persistencia
-- C) PreparedStatement
-- D) EntityManager
+- A) EntityManager
+- B) PreparedStatement
+- C) El código interno de persistencia
+- D) IProductoRepository
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La interfaz permite comparar estrategias.</p>
+<p><strong>Respuesta correcta: D.</strong> La interfaz permite comparar estrategias.</p>
 
 </details>
 
 ### 4. ¿Cuál es la mejor opción siempre?
 
-- A) No existe una respuesta universal
+- A) Siempre JDBC
 - B) Siempre ORM
-- C) Siempre JDBC
+- C) No existe una respuesta universal
 - D) Siempre CSV
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Depende de requisitos, complejidad y control deseado.</p>
+<p><strong>Respuesta correcta: C.</strong> Depende de requisitos, complejidad y control deseado.</p>
 
 </details>
 

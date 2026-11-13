@@ -7,9 +7,42 @@ lesson_number: "31"
 title: "CRUD con DAO y EntityManager"
 description: "Implementar listar, buscar, insertar, actualizar y eliminar con contratos defensivos."
 permalink: "/orm/leccion31/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: contrato-de-los-dao-del-ejercicio
+  title: Contrato de los DAO del ejercicio
+- id: buscar-sin-transacción-de-escritura
+  title: Buscar sin transacción de escritura
+- id: insertar-con-transacción-y-rollback
+  title: Insertar con transacción y rollback
+- id: actualizar-y-eliminar-decisiones-clave
+  title: 'Actualizar y eliminar: decisiones clave'
+- id: actividad
+  title: Actividad
 ---
 
 # CRUD con DAO y EntityManager
+
+## Objetivo de aprendizaje
+
+Aplica el contrato del DAO a las consultas, las escrituras y los casos de error.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/31-crud-dao-entitymanager.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 31">
+    <img src="{{ '/assets/images/orm/infografias/31-crud-dao-entitymanager.webp' | relative_url }}" alt="Resumen visual de la lección 31. CRUD con DAO y EntityManager" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 31.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/31-crud-dao-entitymanager.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Contrato de los DAO del ejercicio
 

@@ -7,9 +7,44 @@ lesson_number: "03"
 title: "Modelo relacional: Producto y Vehiculo"
 description: "Modelo relacional: Producto y Vehiculo"
 permalink: "/orm/leccion03/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: del-record-a-la-tabla
+  title: Del record a la tabla
+- id: clave-primaria
+  title: Clave primaria
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Modelo relacional: Producto y Vehiculo
+
+## Objetivo de aprendizaje
+
+Identifica la clave primaria y relaciona los atributos Java con las columnas de Producto y Vehiculo.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/03-modelo-relacional.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 03">
+    <img src="{{ '/assets/images/orm/infografias/03-modelo-relacional.webp' | relative_url }}" alt="Resumen visual de la lección 03. Modelo relacional: Producto y Vehiculo" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 03.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/03-modelo-relacional.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Del `record` a la tabla
 
@@ -52,19 +87,19 @@ CREATE TABLE vehiculo (
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/03-tabla-fila-columna.png" alt="Elementos del modelo relacional. Tabla → Filas → Columnas." loading="lazy">
+  <img src="{{ '/assets/images/orm/03-tabla-fila-columna.png' | relative_url }}" alt="Tabla, fila y columna" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Tabla → Filas → Columnas.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Lee la tabla producto a tres niveles. La clave primaria distingue cada fila.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/03-producto-tabla.png" alt="Producto y su tabla. Producto record → Mapeo de campos → tabla producto." loading="lazy">
+  <img src="{{ '/assets/images/orm/03-producto-tabla.png' | relative_url }}" alt="Producto y su tabla" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Producto record → Mapeo de campos → tabla producto.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Sigue el mismo objeto desde Java hasta SQLite. El mapeo hace explícita la correspondencia entre ambos modelos.</p>
 
 
 ## Ejemplo guiado
@@ -83,57 +118,57 @@ CREATE TABLE vehiculo (
 
 ### 1. ¿Qué representa una fila?
 
-- A) Una tabla completa
-- B) Una ocurrencia o registro
+- A) Una ocurrencia o registro
+- B) Un repositorio
 - C) Una consulta
-- D) Un repositorio
+- D) Una tabla completa
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Cada fila representa una entidad almacenada.</p>
+<p><strong>Respuesta correcta: A.</strong> Cada fila representa una entidad almacenada.</p>
 
 </details>
 
 ### 2. ¿Para qué sirve una clave primaria?
 
-- A) Para ordenar siempre
-- B) Para identificar de forma única una fila
-- C) Para guardar decimales
-- D) Para conectar JDBC
+- A) Para guardar decimales
+- B) Para ordenar siempre
+- C) Para conectar JDBC
+- D) Para identificar de forma única una fila
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> La clave primaria identifica cada fila.</p>
+<p><strong>Respuesta correcta: D.</strong> La clave primaria identifica cada fila.</p>
 
 </details>
 
 ### 3. En `Producto`, ¿qué campo es la identidad natural del repositorio?
 
 - A) nombre
-- B) precio
-- C) id
+- B) id
+- C) precio
 - D) ninguno
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: C.</strong> El contrato usa `Long` como ID de Producto.</p>
+<p><strong>Respuesta correcta: B.</strong> El contrato usa `Long` como ID de Producto.</p>
 
 </details>
 
 ### 4. En `Vehiculo`, ¿qué identidad usamos en la ruta?
 
-- A) marca
+- A) matricula
 - B) modelo
-- C) anio
-- D) matricula
+- C) marca
+- D) anio
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: D.</strong> `IVehiculoRepository` usa `String` y la matrícula como identidad.</p>
+<p><strong>Respuesta correcta: A.</strong> `IVehiculoRepository` usa `String` y la matrícula como identidad.</p>
 
 </details>
 

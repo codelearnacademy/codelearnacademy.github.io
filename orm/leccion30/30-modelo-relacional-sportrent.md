@@ -7,9 +7,40 @@ lesson_number: "30"
 title: "SportRent: tablas, relaciones y claves"
 description: "Diseñar claves String manuales, relaciones muchos a uno y fechas TEXT."
 permalink: "/orm/leccion30/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: modelo-entidad-relación
+  title: Modelo entidad-relación
+- id: ddl-ilustrativo-sqlite
+  title: DDL ilustrativo SQLite
+- id: relaciones-jpa
+  title: Relaciones JPA
+- id: ejercicio
+  title: Ejercicio
 ---
 
 # SportRent: tablas, relaciones y claves
+
+## Objetivo de aprendizaje
+
+Relaciona clientes y equipos con sus alquileres mediante claves primarias y foráneas.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/30-modelo-relacional-sportrent.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 30">
+    <img src="{{ '/assets/images/orm/infografias/30-modelo-relacional-sportrent.webp' | relative_url }}" alt="Resumen visual de la lección 30. SportRent: tablas, relaciones y claves" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 30.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/30-modelo-relacional-sportrent.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Modelo entidad-relación
 

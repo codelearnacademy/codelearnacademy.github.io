@@ -7,9 +7,42 @@ lesson_number: "26"
 title: "Tests ORM con SQLite"
 description: "Tests ORM con SQLite"
 permalink: "/orm/leccion26/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: test-orm-con-sqlite-real
+  title: Test ORM con SQLite real
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Tests ORM con SQLite
+
+## Objetivo de aprendizaje
+
+Prueba un repositorio ORM con SQLite y comprueba el estado persistido.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/26-tests-orm-sqlite.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 26">
+    <img src="{{ '/assets/images/orm/infografias/26-tests-orm-sqlite.webp' | relative_url }}" alt="Resumen visual de la lección 26. Tests ORM con SQLite" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 26.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/26-tests-orm-sqlite.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Test ORM con SQLite real
 
@@ -46,19 +79,19 @@ No simulamos el ORM: el test utiliza una base SQLite real en un fichero temporal
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/26-test-orm.png" alt="Test ORM real. JUnit → ProductoOrmRepository → Hibernate → SQLite temporal." loading="lazy">
+  <img src="{{ '/assets/images/orm/26-test-orm.png' | relative_url }}" alt="Probar ORM con SQLite" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> JUnit → ProductoOrmRepository → Hibernate → SQLite temporal.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Verifica la persistencia usando una base temporal real. Comprueba el efecto en SQLite además del valor devuelto.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/26-test-isolation.png" alt="Aislamiento del test. Base temporal nueva → Ejecutar caso → Destruir/descartar." loading="lazy">
+  <img src="{{ '/assets/images/orm/26-test-isolation.png' | relative_url }}" alt="Aislar una prueba de persistencia" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Base temporal nueva → Ejecutar caso → Destruir/descartar.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Cada caso empieza con un estado conocido. Una prueba aislada puede ejecutarse por separado.</p>
 
 
 ## Ejemplo guiado
@@ -78,24 +111,24 @@ No simulamos el ORM: el test utiliza una base SQLite real en un fichero temporal
 
 ### 1. ¿Qué estamos probando?
 
-- A) Integración ORM-Hibernate-SQLite
+- A) Solo Maven
 - B) Solo un getter
-- C) Solo JUnit
-- D) Solo Maven
+- C) Integración ORM-Hibernate-SQLite
+- D) Solo JUnit
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El repositorio se prueba contra infraestructura real.</p>
+<p><strong>Respuesta correcta: C.</strong> El repositorio se prueba contra infraestructura real.</p>
 
 </details>
 
 ### 2. ¿Por qué una base temporal?
 
 - A) Aislamiento y repetibilidad
-- B) Para compartir datos
-- C) Para evitar asserts
-- D) Para usar CSV
+- B) Para usar CSV
+- C) Para compartir datos
+- D) Para evitar asserts
 
 <details>
 <summary>Ver respuesta</summary>
@@ -106,29 +139,29 @@ No simulamos el ORM: el test utiliza una base SQLite real en un fichero temporal
 
 ### 3. ¿Qué recurso debe cerrarse?
 
-- A) EntityManagerFactory
-- B) Solo String
-- C) Record Producto
-- D) La JVM
+- A) Record Producto
+- B) EntityManagerFactory
+- C) La JVM
+- D) Solo String
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Es un recurso costoso que debe liberarse.</p>
+<p><strong>Respuesta correcta: B.</strong> Es un recurso costoso que debe liberarse.</p>
 
 </details>
 
 ### 4. ¿Qué conviene verificar además del retorno?
 
-- A) El estado persistido real
+- A) La versión de Git
 - B) Solo que no lance excepción
 - C) El color del IDE
-- D) La versión de Git
+- D) El estado persistido real
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El objetivo es validar persistencia efectiva.</p>
+<p><strong>Respuesta correcta: D.</strong> El objetivo es validar persistencia efectiva.</p>
 
 </details>
 

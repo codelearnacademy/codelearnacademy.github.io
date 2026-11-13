@@ -7,9 +7,44 @@ lesson_number: "05"
 title: "JDBC con SQLite"
 description: "JDBC con SQLite"
 permalink: "/orm/leccion05/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: driver-jdbc-para-sqlite
+  title: Driver JDBC para SQLite
+- id: conexión
+  title: Conexión
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # JDBC con SQLite
+
+## Objetivo de aprendizaje
+
+Sigue el recorrido de una conexión desde Java hasta el archivo SQLite mediante el driver JDBC.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/05-jdbc-sqlite.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 05">
+    <img src="{{ '/assets/images/orm/infografias/05-jdbc-sqlite.webp' | relative_url }}" alt="Resumen visual de la lección 05. JDBC con SQLite" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 05.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/05-jdbc-sqlite.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Driver JDBC para SQLite
 
@@ -39,19 +74,19 @@ Como en la ruta de ficheros, el código de infraestructura controla su propia ex
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/05-jdbc-arquitectura.png" alt="Java, JDBC y SQLite. Java → JDBC API + driver → SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/05-jdbc-arquitectura.png' | relative_url }}" alt="Java, JDBC y SQLite" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Java → JDBC API + driver → SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Sigue el recorrido de una consulta. JDBC es la API y el driver realiza el acceso específico a SQLite.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/05-connection.png" alt="Abrir una conexión JDBC. URL jdbc:sqlite:... → DriverManager → Connection." loading="lazy">
+  <img src="{{ '/assets/images/orm/05-connection.png' | relative_url }}" alt="Abrir una conexión JDBC" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> URL jdbc:sqlite:... → DriverManager → Connection.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> La URL identifica dónde se encuentran los datos. Usa try-with-resources para cerrar la conexión.</p>
 
 
 ## Ejemplo guiado
@@ -70,15 +105,15 @@ Como en la ruta de ficheros, el código de infraestructura controla su propia ex
 
 ### 1. ¿Qué API estándar usa Java para bases de datos relacionales?
 
-- A) JPA
-- B) JDBC
-- C) JVM
-- D) JSON
+- A) JVM
+- B) JPA
+- C) JSON
+- D) JDBC
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> JDBC define la API de acceso relacional.</p>
+<p><strong>Respuesta correcta: D.</strong> JDBC define la API de acceso relacional.</p>
 
 </details>
 
@@ -98,29 +133,29 @@ Como en la ruta de ficheros, el código de infraestructura controla su propia ex
 
 ### 3. ¿Qué representa `Connection`?
 
-- A) Una tabla
-- B) Una conexión activa a la base
-- C) Una fila
-- D) Un fichero CSV
+- A) Una fila
+- B) Una tabla
+- C) Un fichero CSV
+- D) Una conexión activa a la base
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Connection es la sesión JDBC con la base.</p>
+<p><strong>Respuesta correcta: D.</strong> Connection es la sesión JDBC con la base.</p>
 
 </details>
 
 ### 4. ¿Qué ventaja aporta try-with-resources?
 
-- A) Hace SQL más rápido
-- B) Cierra recursos automáticamente
-- C) Elimina excepciones
-- D) Crea entidades JPA
+- A) Cierra recursos automáticamente
+- B) Elimina excepciones
+- C) Crea entidades JPA
+- D) Hace SQL más rápido
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Facilita el cierre seguro de Connection, Statement y ResultSet.</p>
+<p><strong>Respuesta correcta: A.</strong> Facilita el cierre seguro de Connection, Statement y ResultSet.</p>
 
 </details>
 

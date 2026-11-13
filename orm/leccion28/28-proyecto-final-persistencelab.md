@@ -7,9 +7,44 @@ lesson_number: "28"
 title: "Proyecto final PersistenceLab"
 description: "Proyecto final PersistenceLab"
 permalink: "/orm/leccion28/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: proyecto-final-persistencelab
+  title: 'Proyecto final: PersistenceLab'
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
+- id: tarea-final-para-casa-persistencelab
+  title: Tarea final para casa · PersistenceLab
 ---
 
 # Proyecto final PersistenceLab
+
+## Objetivo de aprendizaje
+
+Planifica PersistenceLab y relaciona sus capas con entregables que puedan verificarse.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/28-proyecto-final-persistencelab.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 28">
+    <img src="{{ '/assets/images/orm/infografias/28-proyecto-final-persistencelab.webp' | relative_url }}" alt="Resumen visual de la lección 28. Proyecto final PersistenceLab" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 28.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/28-proyecto-final-persistencelab.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Proyecto final: `PersistenceLab`
 
@@ -37,19 +72,19 @@ Construye una aplicación que pueda ejecutar el mismo CRUD de `Producto` y `Vehi
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/28-architecture.png" alt="Arquitectura final de PersistenceLab. Aplicación → IRepository → JDBC / ORM → SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/28-architecture.png' | relative_url }}" alt="Arquitectura de PersistenceLab" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Aplicación → IRepository → JDBC / ORM → SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Diferentes repositorios dan acceso al mismo dominio. Demuestra el CRUD y comprueba los resultados persistidos.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/28-packages.png" alt="Paquetes del proyecto. model → entity + mapper → repository → config + app." loading="lazy">
+  <img src="{{ '/assets/images/orm/28-packages.png' | relative_url }}" alt="Paquetes de PersistenceLab" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> model → entity + mapper → repository → config + app.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Organiza el código por responsabilidad. Localiza cada clase por la responsabilidad que le corresponde.</p>
 
 
 ## Ejemplo guiado
@@ -69,43 +104,43 @@ Construye una aplicación que pueda ejecutar el mismo CRUD de `Producto` y `Vehi
 
 ### 1. ¿Qué debe demostrar el proyecto final?
 
-- A) La evolución JDBC → repositorio → ORM
-- B) Solo sintaxis SQL
-- C) Solo Maven
-- D) Solo una clase main
+- A) Solo una clase main
+- B) La evolución JDBC → repositorio → ORM
+- C) Solo sintaxis SQL
+- D) Solo Maven
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Integra toda la progresión de la ruta.</p>
+<p><strong>Respuesta correcta: B.</strong> Integra toda la progresión de la ruta.</p>
 
 </details>
 
 ### 2. ¿Qué contrato debe mantenerse?
 
-- A) IRepository y sus especializaciones
-- B) ResultSet
-- C) Statement
+- A) ResultSet
+- B) Statement
+- C) IRepository y sus especializaciones
 - D) sqlite3 CLI
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El diseño se apoya en el mismo contrato.</p>
+<p><strong>Respuesta correcta: C.</strong> El diseño se apoya en el mismo contrato.</p>
 
 </details>
 
 ### 3. ¿Qué dos implementaciones relacionales se comparan?
 
-- A) JDBC y ORM
+- A) Git y Maven
 - B) CSV y XML únicamente
 - C) JVM y JDK
-- D) Git y Maven
+- D) JDBC y ORM
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El proyecto culmina comparando JDBC y Hibernate.</p>
+<p><strong>Respuesta correcta: D.</strong> El proyecto culmina comparando JDBC y Hibernate.</p>
 
 </details>
 
@@ -125,15 +160,15 @@ Construye una aplicación que pueda ejecutar el mismo CRUD de `Producto` y `Vehi
 
 ### 5. ¿Qué criterio arquitectónico resume la ruta?
 
-- A) Cambiar infraestructura sin cambiar el cliente
-- B) Acoplar Main a Hibernate
-- C) Evitar interfaces
-- D) Guardar todo en memoria
+- A) Guardar todo en memoria
+- B) Cambiar infraestructura sin cambiar el cliente
+- C) Acoplar Main a Hibernate
+- D) Evitar interfaces
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Ese desacoplamiento conecta Ficheros, JDBC y ORM.</p>
+<p><strong>Respuesta correcta: B.</strong> Ese desacoplamiento conecta Ficheros, JDBC y ORM.</p>
 
 </details>
 

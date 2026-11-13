@@ -7,9 +7,44 @@ lesson_number: "14"
 title: "Qué es un ORM: JPA y Hibernate"
 description: "Qué es un ORM: JPA y Hibernate"
 permalink: "/orm/leccion14/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: orm
+  title: ORM
+- id: jpa-y-hibernate-no-son-lo-mismo
+  title: JPA y Hibernate no son lo mismo
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Qué es un ORM: JPA y Hibernate
+
+## Objetivo de aprendizaje
+
+Distingue la especificación JPA, su implementación Hibernate y el acceso a SQLite mediante JDBC.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/14-orm-jpa-hibernate.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 14">
+    <img src="{{ '/assets/images/orm/infografias/14-orm-jpa-hibernate.webp' | relative_url }}" alt="Resumen visual de la lección 14. Qué es un ORM: JPA y Hibernate" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 14.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/14-orm-jpa-hibernate.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## ORM
 
@@ -32,19 +67,19 @@ En la ruta programaremos principalmente contra tipos de JPA (`EntityManager`, `@
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/14-orm.png" alt="Mapeo objeto-relacional. Objeto / entidad Java → ORM → Tabla / fila SQL." loading="lazy">
+  <img src="{{ '/assets/images/orm/14-orm.png' | relative_url }}" alt="Mapeo objeto-relacional" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Objeto / entidad Java → ORM → Tabla / fila SQL.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El ORM vincula atributos de entidades con columnas de tablas. El mapeo permite recuperar entidades a partir de las filas.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/14-jpa-hibernate.png" alt="JPA y Hibernate. Jakarta Persistence: API/especificación → Hibernate: implementación → JDBC + base de datos." loading="lazy">
+  <img src="{{ '/assets/images/orm/14-jpa-hibernate.png' | relative_url }}" alt="JPA, Hibernate y JDBC" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Jakarta Persistence: API/especificación → Hibernate: implementación → JDBC + base de datos.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Tres nombres con funciones diferentes. SQLite sigue siendo la base de datos de la aplicación.</p>
 
 
 ## Ejemplo guiado
@@ -63,57 +98,57 @@ En la ruta programaremos principalmente contra tipos de JPA (`EntityManager`, `@
 
 ### 1. ¿Qué significa ORM?
 
-- A) Object-Relational Mapping
-- B) Open Runtime Manager
+- A) Open Runtime Manager
+- B) Object-Relational Mapping
 - C) Object Repository Maven
 - D) Ordered Row Model
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> ORM es mapeo objeto-relacional.</p>
+<p><strong>Respuesta correcta: B.</strong> ORM es mapeo objeto-relacional.</p>
 
 </details>
 
 ### 2. ¿Qué es Jakarta Persistence?
 
-- A) Una base de datos
-- B) Una especificación/API
-- C) Un IDE
-- D) Un formato de fichero
+- A) Un IDE
+- B) Un formato de fichero
+- C) Una especificación/API
+- D) Una base de datos
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Define el estándar de persistencia.</p>
+<p><strong>Respuesta correcta: C.</strong> Define el estándar de persistencia.</p>
 
 </details>
 
 ### 3. ¿Qué es Hibernate?
 
-- A) Una implementación ORM/proveedor
+- A) JUnit
 - B) El compilador Java
 - C) SQLite
-- D) JUnit
+- D) Una implementación ORM/proveedor
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Hibernate implementa la API y realiza el trabajo ORM.</p>
+<p><strong>Respuesta correcta: D.</strong> Hibernate implementa la API y realiza el trabajo ORM.</p>
 
 </details>
 
 ### 4. ¿Qué suele haber debajo de Hibernate al hablar con SQLite?
 
-- A) JDBC
-- B) CSV
-- C) CSS
+- A) CSV
+- B) CSS
+- C) JDBC
 - D) JVM bytecode directamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Hibernate termina usando conectividad JDBC.</p>
+<p><strong>Respuesta correcta: C.</strong> Hibernate termina usando conectividad JDBC.</p>
 
 </details>
 

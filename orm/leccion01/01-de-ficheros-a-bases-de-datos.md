@@ -7,9 +7,44 @@ lesson_number: "01"
 title: "De ficheros a bases de datos"
 description: "De ficheros a bases de datos"
 permalink: "/orm/leccion01/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: punto-de-partida
+  title: Punto de partida
+- id: diferencia-esencial
+  title: Diferencia esencial
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # De ficheros a bases de datos
+
+## Objetivo de aprendizaje
+
+Contrasta el acceso a una colección en fichero con una consulta que selecciona filas en SQLite.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/01-de-ficheros-a-bases-de-datos.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 01">
+    <img src="{{ '/assets/images/orm/infografias/01-de-ficheros-a-bases-de-datos.webp' | relative_url }}" alt="Resumen visual de la lección 01. De ficheros a bases de datos" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 01.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/01-de-ficheros-a-bases-de-datos.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Punto de partida
 
@@ -41,19 +76,19 @@ DELETE FROM producto WHERE id = 2;
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/01-evolucion-persistencia.png" alt="Evolución de la persistencia. Colección en memoria → CSV / JSON / XML → SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/01-evolucion-persistencia.png' | relative_url }}" alt="De la memoria a SQLite" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Colección en memoria → CSV / JSON / XML → SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El producto con ID 2 se busca en una lista, en un fichero o en la tabla producto. La colección en memoria se pierde al cerrar. El fichero guardado y los cambios confirmados en SQLite permanecen.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/01-fichero-vs-bd.png" alt="Fichero frente a base de datos. A la izquierda se resumen rasgos habituales de persistencia en fichero; a la derecha, operaciones y capacidades que aporta una base de datos." loading="lazy">
+  <img src="{{ '/assets/images/orm/01-fichero-vs-bd.png' | relative_url }}" alt="Fichero frente a base de datos" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> A la izquierda se resumen rasgos habituales de persistencia en fichero; a la derecha, operaciones y capacidades que aporta una base de datos.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Dos formas de recuperar el producto con ID 2. La consulta SQL expresa qué filas necesitas.</p>
 
 
 ## Ejemplo guiado
@@ -72,15 +107,15 @@ DELETE FROM producto WHERE id = 2;
 
 ### 1. ¿Qué cambia al pasar de CSV a SQLite?
 
-- A) El modelo de dominio
-- B) La infraestructura de persistencia
+- A) La JVM
+- B) El modelo de dominio
 - C) La sintaxis de Java
-- D) La JVM
+- D) La infraestructura de persistencia
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Seguimos trabajando con los mismos objetos; cambia cómo se almacenan.</p>
+<p><strong>Respuesta correcta: D.</strong> Seguimos trabajando con los mismos objetos; cambia cómo se almacenan.</p>
 
 </details>
 
@@ -88,8 +123,8 @@ DELETE FROM producto WHERE id = 2;
 
 - A) Obliga a reescribir todo el fichero
 - B) Permite operar sobre filas concretas
-- C) Elimina la necesidad de identificadores
-- D) No necesita consultas
+- C) No necesita consultas
+- D) Elimina la necesidad de identificadores
 
 <details>
 <summary>Ver respuesta</summary>
@@ -114,15 +149,15 @@ DELETE FROM producto WHERE id = 2;
 
 ### 4. ¿Debe desaparecer `IProductoRepository` al introducir SQLite?
 
-- A) Sí
-- B) No
-- C) Solo en producción
-- D) Solo si usamos Maven
+- A) Solo si usamos Maven
+- B) Solo en producción
+- C) Sí
+- D) No
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> El contrato puede mantenerse mientras cambia la implementación.</p>
+<p><strong>Respuesta correcta: D.</strong> El contrato puede mantenerse mientras cambia la implementación.</p>
 
 </details>
 

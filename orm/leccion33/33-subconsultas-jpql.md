@@ -7,6 +7,19 @@ lesson_number: "33"
 title: "Subconsultas JPQL y modelos de resultado"
 description: "Comprender consultas correlacionadas y DTO como clases normales."
 permalink: "/orm/leccion33/"
+lessons:
+- id: objetivo
+  title: Objetivo
+- id: infografía
+  title: Infografía
+- id: subconsulta-correlacionada-precio-sobre-la-media-de-la-categoría
+  title: 'Subconsulta correlacionada: precio sobre la media de la categoría'
+- id: datos-que-devuelve-una-consulta-clase-de-resultado
+  title: 'Datos que devuelve una consulta: clase de resultado'
+- id: otra-comparación-avanzada-referencia-por-cliente
+  title: 'Otra comparación avanzada: referencia por cliente'
+- id: actividad-de-análisis
+  title: Actividad de análisis
 ---
 
 # Subconsultas JPQL y modelos de resultado
@@ -14,6 +27,20 @@ permalink: "/orm/leccion33/"
 ## Objetivo
 
 Resolver comparaciones entre cada fila y un valor calculado en otra consulta, sin descargar todos los datos para filtrarlos con Java Streams.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/33-subconsultas-jpql.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 33">
+    <img src="{{ '/assets/images/orm/infografias/33-subconsultas-jpql.webp' | relative_url }}" alt="Resumen visual de la lección 33. Subconsultas JPQL y modelos de resultado" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Relaciona una subconsulta con la consulta exterior y transforma su proyección en un objeto de resultado.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/33-subconsultas-jpql.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Subconsulta correlacionada: precio sobre la media de la categoría
 

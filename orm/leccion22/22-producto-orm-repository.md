@@ -7,9 +7,42 @@ lesson_number: "22"
 title: "ProductoOrmRepository: CRUD completo"
 description: "ProductoOrmRepository: CRUD completo"
 permalink: "/orm/leccion22/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: repositorio-orm-completo
+  title: Repositorio ORM completo
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # ProductoOrmRepository: CRUD completo
+
+## Objetivo de aprendizaje
+
+Ubica el mapper, el EntityManager y las transacciones en el CRUD del repositorio.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/22-producto-orm-repository.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 22">
+    <img src="{{ '/assets/images/orm/infografias/22-producto-orm-repository.webp' | relative_url }}" alt="Resumen visual de la lección 22. ProductoOrmRepository: CRUD completo" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 22.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/22-producto-orm-repository.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Repositorio ORM completo
 
@@ -42,19 +75,19 @@ La aplicación no conoce `EntityManager`, `ProductoEntity` ni SQL.
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/22-orm-repository.png" alt="Arquitectura del repositorio ORM. Cliente → IProductoRepository → ProductoOrmRepository → EntityManager/Hibernate → SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/22-orm-repository.png' | relative_url }}" alt="Arquitectura del repositorio ORM" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Cliente → IProductoRepository → ProductoOrmRepository → EntityManager/Hibernate → SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El cliente accede al dominio a través del contrato. La aplicación recibe objetos de dominio.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/22-crud-orm.png" alt="CRUD dentro del repositorio. create → find/read → update → delete." loading="lazy">
+  <img src="{{ '/assets/images/orm/22-crud-orm.png' | relative_url }}" alt="CRUD dentro del repositorio ORM" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> create → find/read → update → delete.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Acciones habituales sobre una entidad JPA. Las escrituras se ejecutan dentro de transacciones.</p>
 
 
 ## Ejemplo guiado
@@ -74,57 +107,57 @@ La aplicación no conoce `EntityManager`, `ProductoEntity` ni SQL.
 
 ### 1. ¿Qué interfaz implementa el repositorio?
 
-- A) IProductoRepository
-- B) Connection
-- C) ResultSet
+- A) Connection
+- B) ResultSet
+- C) IProductoRepository
 - D) Serializable obligatoriamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Conservamos el contrato de la ruta de ficheros.</p>
+<p><strong>Respuesta correcta: C.</strong> Conservamos el contrato de la ruta de ficheros.</p>
 
 </details>
 
 ### 2. ¿Qué detalle oculta al cliente?
 
-- A) EntityManager/Hibernate
-- B) Producto
-- C) Long
-- D) Optional
+- A) Long
+- B) Optional
+- C) Producto
+- D) EntityManager/Hibernate
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La infraestructura ORM queda encapsulada.</p>
+<p><strong>Respuesta correcta: D.</strong> La infraestructura ORM queda encapsulada.</p>
 
 </details>
 
 ### 3. ¿Qué devuelve findById?
 
-- A) <code>Optional&lt;Producto&gt;</code>
-- B) ProductoEntity siempre
-- C) ResultSet
-- D) Connection
+- A) Connection
+- B) <code>Optional&lt;Producto&gt;</code>
+- C) ProductoEntity siempre
+- D) ResultSet
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El contrato trabaja con dominio.</p>
+<p><strong>Respuesta correcta: B.</strong> El contrato trabaja con dominio.</p>
 
 </details>
 
 ### 4. ¿Puede sustituirse el repositorio JDBC por ORM sin cambiar el cliente?
 
-- A) Sí, si ambos respetan la interfaz
-- B) No nunca
-- C) Solo con Spring
-- D) Solo sin SQLite
+- A) Solo sin SQLite
+- B) Solo con Spring
+- C) No nunca
+- D) Sí, si ambos respetan la interfaz
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Ese es el objetivo del desacoplamiento.</p>
+<p><strong>Respuesta correcta: D.</strong> Ese es el objetivo del desacoplamiento.</p>
 
 </details>
 

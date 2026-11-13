@@ -7,9 +7,44 @@ lesson_number: "12"
 title: "Testear JDBC con SQLite temporal"
 description: "Testear JDBC con SQLite temporal"
 permalink: "/orm/leccion12/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: test-con-una-base-temporal
+  title: Test con una base temporal
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
+- id: actividad-integradora-crud-jdbc-completo
+  title: Actividad integradora · CRUD JDBC completo
 ---
 
 # Testear JDBC con SQLite temporal
+
+## Objetivo de aprendizaje
+
+Prepara una base temporal, ejecuta una operación del repositorio y verifica su resultado en una prueba aislada.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/12-tests-jdbc-sqlite.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 12">
+    <img src="{{ '/assets/images/orm/infografias/12-tests-jdbc-sqlite.webp' | relative_url }}" alt="Resumen visual de la lección 12. Testear JDBC con SQLite temporal" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 12.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/12-tests-jdbc-sqlite.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Test con una base temporal
 
@@ -42,19 +77,19 @@ Cada test trabaja contra una base SQLite real y aislada.
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/12-test-sqlite.png" alt="Test de repositorio JDBC. JUnit → Repositorio JDBC → SQLite temporal." loading="lazy">
+  <img src="{{ '/assets/images/orm/12-test-sqlite.png' | relative_url }}" alt="Probar un repositorio JDBC" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> JUnit → Repositorio JDBC → SQLite temporal.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Una base temporal permite comprobar el acceso real a datos. Libera conexiones y elimina los recursos temporales.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/12-aaa.png" alt="Estructura de un test. Arrange → Act → Assert." loading="lazy">
+  <img src="{{ '/assets/images/orm/12-aaa.png' | relative_url }}" alt="Arrange, Act, Assert" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Arrange → Act → Assert.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Tres fases de un test, ilustradas con un producto. Cada fase ayuda a localizar por qué falla la prueba.</p>
 
 
 ## Ejemplo guiado
@@ -74,24 +109,24 @@ Cada test trabaja contra una base SQLite real y aislada.
 
 ### 1. ¿Por qué usar SQLite temporal?
 
-- A) Para compartir datos entre tests
-- B) Para aislar pruebas
-- C) Para eliminar JUnit
-- D) Para compilar SQL
+- A) Para eliminar JUnit
+- B) Para compartir datos entre tests
+- C) Para compilar SQL
+- D) Para aislar pruebas
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Cada test puede partir de un estado controlado.</p>
+<p><strong>Respuesta correcta: D.</strong> Cada test puede partir de un estado controlado.</p>
 
 </details>
 
 ### 2. ¿Qué significa Arrange?
 
-- A) Ejecutar operación
+- A) Borrar Maven
 - B) Preparar contexto
 - C) Comprobar resultado
-- D) Borrar Maven
+- D) Ejecutar operación
 
 <details>
 <summary>Ver respuesta</summary>
@@ -102,29 +137,29 @@ Cada test trabaja contra una base SQLite real y aislada.
 
 ### 3. ¿Qué debería evitar un test de repositorio?
 
-- A) Ser repetible
-- B) Depender de datos dejados por otro test
-- C) Verificar resultados
-- D) Usar asserts
+- A) Usar asserts
+- B) Ser repetible
+- C) Depender de datos dejados por otro test
+- D) Verificar resultados
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Los tests deben ser independientes.</p>
+<p><strong>Respuesta correcta: C.</strong> Los tests deben ser independientes.</p>
 
 </details>
 
 ### 4. ¿Qué estamos probando aquí?
 
-- A) Solo getters
-- B) Integración repositorio-JDBC-SQLite
-- C) HTML
-- D) JVM
+- A) Integración repositorio-JDBC-SQLite
+- B) Solo getters
+- C) JVM
+- D) HTML
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> El test cruza varias capas de infraestructura.</p>
+<p><strong>Respuesta correcta: A.</strong> El test cruza varias capas de infraestructura.</p>
 
 </details>
 

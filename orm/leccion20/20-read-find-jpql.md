@@ -7,9 +7,44 @@ lesson_number: "20"
 title: "READ con find() y JPQL"
 description: "READ con find() y JPQL"
 permalink: "/orm/leccion20/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: buscar-por-clave
+  title: Buscar por clave
+- id: listar-con-jpql
+  title: Listar con JPQL
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # READ con find() y JPQL
+
+## Objetivo de aprendizaje
+
+Distingue una búsqueda por identificador con find() de una consulta por criterios en JPQL.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/20-read-find-jpql.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 20">
+    <img src="{{ '/assets/images/orm/infografias/20-read-find-jpql.webp' | relative_url }}" alt="Resumen visual de la lección 20. READ con find() y JPQL" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 20.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/20-read-find-jpql.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Buscar por clave
 
@@ -34,19 +69,19 @@ JPQL consulta **entidades y atributos**, no nombres físicos de tablas y columna
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/20-find.png" alt="Buscar por clave primaria. EntityManager.find → ProductoEntity → Mapper → Producto." loading="lazy">
+  <img src="{{ '/assets/images/orm/20-find.png' | relative_url }}" alt="Buscar por clave primaria" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> EntityManager.find → ProductoEntity → Mapper → Producto.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Recupera un producto por su identificador. Aplica el contrato del repositorio al representar una ausencia.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/20-jpql.png" alt="JPQL consulta entidades. JPQL → Hibernate genera SQL → Lista de entidades." loading="lazy">
+  <img src="{{ '/assets/images/orm/20-jpql.png' | relative_url }}" alt="Consultar entidades con JPQL" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> JPQL → Hibernate genera SQL → Lista de entidades.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Escribe la consulta usando nombres de entidades y atributos. El nombre de la entidad puede diferir del nombre de la tabla.</p>
 
 
 ## Ejemplo guiado
@@ -65,24 +100,24 @@ JPQL consulta **entidades y atributos**, no nombres físicos de tablas y columna
 
 ### 1. ¿Qué método busca por PK?
 
-- A) find
-- B) persist
-- C) remove
-- D) rollback
+- A) rollback
+- B) remove
+- C) find
+- D) persist
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> find recibe clase e identificador.</p>
+<p><strong>Respuesta correcta: C.</strong> find recibe clase e identificador.</p>
 
 </details>
 
 ### 2. ¿JPQL consulta directamente nombres de tablas?
 
 - A) Normalmente consulta entidades y atributos
-- B) Sí, siempre tablas físicas
+- B) Solo funciona con CSV
 - C) No permite SELECT
-- D) Solo funciona con CSV
+- D) Sí, siempre tablas físicas
 
 <details>
 <summary>Ver respuesta</summary>
@@ -93,24 +128,24 @@ JPQL consulta **entidades y atributos**, no nombres físicos de tablas y columna
 
 ### 3. ¿Quién traduce JPQL a SQL?
 
-- A) El proveedor ORM como Hibernate
-- B) javac
+- A) javac
+- B) JUnit
 - C) sqlite3 CLI
-- D) JUnit
+- D) El proveedor ORM como Hibernate
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Hibernate genera el SQL apropiado.</p>
+<p><strong>Respuesta correcta: D.</strong> Hibernate genera el SQL apropiado.</p>
 
 </details>
 
 ### 4. ¿Qué hacemos con ProductoEntity al devolver desde repositorio?
 
 - A) La convertimos a Producto
-- B) La imprimimos y descartamos siempre
+- B) La compilamos
 - C) La convertimos a XML
-- D) La compilamos
+- D) La imprimimos y descartamos siempre
 
 <details>
 <summary>Ver respuesta</summary>

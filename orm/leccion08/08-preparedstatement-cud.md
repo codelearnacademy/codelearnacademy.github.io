@@ -7,9 +7,42 @@ lesson_number: "08"
 title: "INSERT, UPDATE y DELETE con PreparedStatement"
 description: "INSERT, UPDATE y DELETE con PreparedStatement"
 permalink: "/orm/leccion08/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: preparedstatement
+  title: PreparedStatement
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # INSERT, UPDATE y DELETE con PreparedStatement
+
+## Objetivo de aprendizaje
+
+Asigna los valores de un PreparedStatement por posición y comprueba las filas afectadas.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/08-preparedstatement-cud.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 08">
+    <img src="{{ '/assets/images/orm/infografias/08-preparedstatement-cud.webp' | relative_url }}" alt="Resumen visual de la lección 08. INSERT, UPDATE y DELETE con PreparedStatement" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 08.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/08-preparedstatement-cud.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## `PreparedStatement`
 
@@ -42,19 +75,19 @@ String sql = "DELETE FROM producto WHERE id = ?";
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/08-preparedstatement.png" alt="PreparedStatement y parámetros. SQL con ? → setLong / setString → executeUpdate." loading="lazy">
+  <img src="{{ '/assets/images/orm/08-preparedstatement.png' | relative_url }}" alt="Asignar parámetros con PreparedStatement" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> SQL con ? → setLong / setString → executeUpdate.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El SQL define la estructura y cada marcador recibe un valor. Comprueba el resultado de la escritura.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/08-parametros-vs-concatenacion.png" alt="Parámetros frente a concatenación. Concatenar valores → SQL parametrizado → Más seguro y claro." loading="lazy">
+  <img src="{{ '/assets/images/orm/08-parametros-vs-concatenacion.png' | relative_url }}" alt="Parámetros frente a concatenación" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Concatenar valores → SQL parametrizado → Más seguro y claro.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Un valor recibido puede contener comillas u otros caracteres. Parametriza los valores para que se traten como datos.</p>
 
 
 ## Ejemplo guiado
@@ -75,14 +108,14 @@ String sql = "DELETE FROM producto WHERE id = ?";
 ### 1. ¿Qué símbolo representa un parámetro JDBC?
 
 - A) #
-- B) ?
+- B) $
 - C) @
-- D) $
+- D) ?
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> PreparedStatement usa `?` como placeholder.</p>
+<p><strong>Respuesta correcta: D.</strong> PreparedStatement usa `?` como placeholder.</p>
 
 </details>
 
@@ -90,8 +123,8 @@ String sql = "DELETE FROM producto WHERE id = ?";
 
 - A) Evita tipos Java
 - B) Separa SQL y datos
-- C) No necesita Connection
-- D) Sustituye a SQLite
+- C) Sustituye a SQLite
+- D) No necesita Connection
 
 <details>
 <summary>Ver respuesta</summary>
@@ -102,23 +135,23 @@ String sql = "DELETE FROM producto WHERE id = ?";
 
 ### 3. ¿Qué devuelve normalmente executeUpdate?
 
-- A) Un ResultSet
-- B) Número de filas afectadas
-- C) Un EntityManager
-- D) Un fichero
+- A) Un fichero
+- B) Un EntityManager
+- C) Número de filas afectadas
+- D) Un ResultSet
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Indica cuántas filas cambiaron.</p>
+<p><strong>Respuesta correcta: C.</strong> Indica cuántas filas cambiaron.</p>
 
 </details>
 
 ### 4. ¿Qué operación usa normalmente SELECT?
 
 - A) executeQuery
-- B) executeUpdate
-- C) persist
+- B) persist
+- C) executeUpdate
 - D) remove
 
 <details>

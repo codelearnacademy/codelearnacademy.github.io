@@ -7,9 +7,42 @@ lesson_number: "15"
 title: "Hibernate y SQLite con Maven"
 description: "Hibernate y SQLite con Maven"
 permalink: "/orm/leccion15/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: dependencias
+  title: Dependencias
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Hibernate y SQLite con Maven
+
+## Objetivo de aprendizaje
+
+Reconoce la función del proveedor ORM, el driver de SQLite y el dialecto en la configuración Maven.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/15-hibernate-sqlite-maven.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 15">
+    <img src="{{ '/assets/images/orm/infografias/15-hibernate-sqlite-maven.webp' | relative_url }}" alt="Resumen visual de la lección 15. Hibernate y SQLite con Maven" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 15.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/15-hibernate-sqlite-maven.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Dependencias
 
@@ -43,19 +76,19 @@ Eso significa que es útil para esta ruta docente, pero no tiene el mismo nivel 
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/15-dependencias.png" alt="Dependencias del proyecto. hibernate-core → hibernate-community-dialects → sqlite-jdbc." loading="lazy">
+  <img src="{{ '/assets/images/orm/15-dependencias.png' | relative_url }}" alt="Dependencias Maven para ORM" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> hibernate-core → hibernate-community-dialects → sqlite-jdbc.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Cada dependencia cubre una función en la aplicación. Consulta el pom.xml para las versiones del proyecto.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/15-sqlite-dialect.png" alt="Dialectos Hibernate. Hibernate → SQLiteDialect comunitario → SQL específico de SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/15-sqlite-dialect.png' | relative_url }}" alt="El dialecto de SQLite" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Hibernate → SQLiteDialect comunitario → SQL específico de SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Hibernate necesita conocer las particularidades del motor SQL. El dialecto y el driver cumplen funciones distintas.</p>
 
 
 ## Ejemplo guiado
@@ -74,57 +107,57 @@ Eso significa que es útil para esta ruta docente, pero no tiene el mismo nivel 
 
 ### 1. ¿Qué dependencia contiene el núcleo ORM?
 
-- A) hibernate-core
-- B) sqlite-jdbc
-- C) junit-jupiter
-- D) commons-csv
+- A) junit-jupiter
+- B) commons-csv
+- C) hibernate-core
+- D) sqlite-jdbc
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> hibernate-core contiene el motor Hibernate.</p>
+<p><strong>Respuesta correcta: C.</strong> hibernate-core contiene el motor Hibernate.</p>
 
 </details>
 
 ### 2. ¿Dónde se encuentra SQLiteDialect en esta ruta?
 
-- A) hibernate-community-dialects
-- B) java.base
-- C) sqlite3 CLI
+- A) sqlite3 CLI
+- B) hibernate-community-dialects
+- C) java.base
 - D) jackson
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> SQLite se trata mediante dialectos comunitarios.</p>
+<p><strong>Respuesta correcta: B.</strong> SQLite se trata mediante dialectos comunitarios.</p>
 
 </details>
 
 ### 3. ¿Qué aporta sqlite-jdbc?
 
-- A) El driver JDBC
-- B) Las anotaciones @Entity
-- C) JUnit
-- D) JPQL
+- A) JUnit
+- B) JPQL
+- C) El driver JDBC
+- D) Las anotaciones @Entity
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Permite comunicación JDBC con SQLite.</p>
+<p><strong>Respuesta correcta: C.</strong> Permite comunicación JDBC con SQLite.</p>
 
 </details>
 
 ### 4. ¿Qué gestiona Maven aquí?
 
-- A) Dependencias del proyecto
-- B) Filas SQL
+- A) Objetos en Heap
+- B) Dependencias del proyecto
 - C) Transacciones de negocio
-- D) Objetos en Heap
+- D) Filas SQL
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Maven resuelve librerías y versiones.</p>
+<p><strong>Respuesta correcta: B.</strong> Maven resuelve librerías y versiones.</p>
 
 </details>
 

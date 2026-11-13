@@ -7,6 +7,21 @@ lesson_number: "29"
 title: "Arquitectura DAO: modelo, entidad y mapper"
 description: "Separar clases Java, entidades JPA y mappers antes de implementar los DAO."
 permalink: "/orm/leccion29/"
+lessons:
+- id: objetivos-de-aprendizaje
+  title: Objetivos de aprendizaje
+- id: infografía
+  title: Infografía
+- id: diagrama-de-capas
+  title: Diagrama de capas
+- id: modelo-clase-no-record
+  title: Modelo (clase, no record)
+- id: entidad-jpa
+  title: Entidad JPA
+- id: mapper
+  title: Mapper
+- id: ejercicio-guiado
+  title: Ejercicio guiado
 ---
 
 # Arquitectura DAO: modelo, entidad y mapper
@@ -14,6 +29,20 @@ permalink: "/orm/leccion29/"
 ## Objetivos de aprendizaje
 
 Al terminar podrás diferenciar una clase de modelo, una entidad JPA, un mapper y un DAO; identificar quién usa `EntityManager`; y explicar por qué los métodos públicos devuelven modelos en vez de entidades.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/29-arquitectura-dao-entidades-modelos.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 29">
+    <img src="{{ '/assets/images/orm/infografias/29-arquitectura-dao-entidades-modelos.webp' | relative_url }}" alt="Resumen visual de la lección 29. Arquitectura DAO: modelo, entidad y mapper" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Separa las responsabilidades del modelo, la entidad JPA, el mapper y el DAO de SportRent.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/29-arquitectura-dao-entidades-modelos.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Diagrama de capas
 

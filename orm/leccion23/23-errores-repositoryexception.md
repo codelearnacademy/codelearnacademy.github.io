@@ -7,9 +7,42 @@ lesson_number: "23"
 title: "Errores y RepositoryException en ORM"
 description: "Errores y RepositoryException en ORM"
 permalink: "/orm/leccion23/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: errores-de-persistencia
+  title: Errores de persistencia
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Errores y RepositoryException en ORM
+
+## Objetivo de aprendizaje
+
+Gestiona el fallo de una operación de persistencia y conserva su causa al propagar el error.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/23-errores-repositoryexception.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 23">
+    <img src="{{ '/assets/images/orm/infografias/23-errores-repositoryexception.webp' | relative_url }}" alt="Resumen visual de la lección 23. Errores y RepositoryException en ORM" width="1235" height="1274" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 23.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/23-errores-repositoryexception.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Errores de persistencia
 
@@ -36,19 +69,19 @@ No declaramos `SQLException`, excepciones de Hibernate ni detalles de SQLite en 
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/23-exceptions.png" alt="Traducción de excepciones. PersistenceException → ProductoOrmRepository → RepositoryException → Cliente." loading="lazy">
+  <img src="{{ '/assets/images/orm/23-exceptions.png' | relative_url }}" alt="Traducir errores de persistencia" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> PersistenceException → ProductoOrmRepository → RepositoryException → Cliente.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El repositorio comunica los fallos sin perder información. La causa original permite diagnosticar el fallo.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/23-boundary.png" alt="Frontera de infraestructura. Hibernate/JPA → Repositorio → Dominio / aplicación." loading="lazy">
+  <img src="{{ '/assets/images/orm/23-boundary.png' | relative_url }}" alt="La frontera de infraestructura" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Hibernate/JPA → Repositorio → Dominio / aplicación.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Cada capa trabaja con tipos adecuados a su responsabilidad. Evita acoplar al cliente a tipos internos del proveedor.</p>
 
 
 ## Ejemplo guiado
@@ -69,8 +102,8 @@ No declaramos `SQLException`, excepciones de Hibernate ni detalles de SQLite en 
 
 - A) Para no filtrar detalles de infraestructura al cliente
 - B) Para ocultar todos los errores
-- C) Para evitar rollback
-- D) Para convertir SQL en JSON
+- C) Para convertir SQL en JSON
+- D) Para evitar rollback
 
 <details>
 <summary>Ver respuesta</summary>
@@ -81,24 +114,24 @@ No declaramos `SQLException`, excepciones de Hibernate ni detalles de SQLite en 
 
 ### 2. ¿Qué debe conservar RepositoryException?
 
-- A) La causa original
-- B) Solo un mensaje vacío
-- C) El EntityManager abierto
-- D) Una imagen
+- A) Una imagen
+- B) El EntityManager abierto
+- C) Solo un mensaje vacío
+- D) La causa original
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Conservar la causa ayuda al diagnóstico.</p>
+<p><strong>Respuesta correcta: D.</strong> Conservar la causa ayuda al diagnóstico.</p>
 
 </details>
 
 ### 3. ¿Qué debemos hacer con una transacción fallida?
 
 - A) Rollback
-- B) Commit siempre
-- C) Ignorar
-- D) Crear otra tabla
+- B) Ignorar
+- C) Crear otra tabla
+- D) Commit siempre
 
 <details>
 <summary>Ver respuesta</summary>
@@ -109,15 +142,15 @@ No declaramos `SQLException`, excepciones de Hibernate ni detalles de SQLite en 
 
 ### 4. ¿Dónde se realiza la traducción?
 
-- A) En la frontera del repositorio
-- B) En el record Producto
-- C) En CSS
-- D) En javac
+- A) En javac
+- B) En CSS
+- C) En el record Producto
+- D) En la frontera del repositorio
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El repositorio encapsula infraestructura.</p>
+<p><strong>Respuesta correcta: D.</strong> El repositorio encapsula infraestructura.</p>
 
 </details>
 

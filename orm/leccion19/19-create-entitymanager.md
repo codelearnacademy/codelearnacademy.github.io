@@ -7,9 +7,42 @@ lesson_number: "19"
 title: "CREATE con EntityManager y persist()"
 description: "CREATE con EntityManager y persist()"
 permalink: "/orm/leccion19/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: crear-con-entitymanager
+  title: Crear con EntityManager
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # CREATE con EntityManager y persist()
+
+## Objetivo de aprendizaje
+
+Persiste una entidad nueva con EntityManager y confirma la transacción.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/19-create-entitymanager.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 19">
+    <img src="{{ '/assets/images/orm/infografias/19-create-entitymanager.webp' | relative_url }}" alt="Resumen visual de la lección 19. CREATE con EntityManager y persist()" width="1239" height="1269" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 19.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/19-create-entitymanager.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Crear con `EntityManager`
 
@@ -35,19 +68,19 @@ Compara esto con JDBC: ya no escribimos `INSERT INTO`, ni asignamos tres paráme
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/19-persist.png" alt="Crear una entidad ORM. begin → persist(entity) → commit." loading="lazy">
+  <img src="{{ '/assets/images/orm/19-persist.png' | relative_url }}" alt="Persistir una entidad nueva" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> begin → persist(entity) → commit.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Una transacción delimita la creación del registro. La sincronización con la base puede ocurrir antes de confirmar.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/19-create-flow.png" alt="CREATE ORM completo. Producto → Mapper → ProductoEntity → EntityManager → SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/19-create-flow.png' | relative_url }}" alt="Crear un producto mediante JPA" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Producto → Mapper → ProductoEntity → EntityManager → SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Sigue el objeto que recibe el repositorio. El repositorio coordina la conversión y la escritura.</p>
 
 
 ## Ejemplo guiado
@@ -67,57 +100,57 @@ Compara esto con JDBC: ya no escribimos `INSERT INTO`, ni asignamos tres paráme
 
 ### 1. ¿Qué método JPA se usa para una entidad nueva?
 
-- A) persist
-- B) find
-- C) remove
+- A) remove
+- B) persist
+- C) find
 - D) clear
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> persist registra una entidad nueva.</p>
+<p><strong>Respuesta correcta: B.</strong> persist registra una entidad nueva.</p>
 
 </details>
 
 ### 2. ¿Qué debe rodear normalmente una escritura?
 
-- A) Una transacción
+- A) Un stream
 - B) Un ResultSet
 - C) Un StringBuilder
-- D) Un stream
+- D) Una transacción
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Las escrituras ORM se realizan en transacción.</p>
+<p><strong>Respuesta correcta: D.</strong> Las escrituras ORM se realizan en transacción.</p>
 
 </details>
 
 ### 3. ¿Qué objeto crea/gestiona operaciones de persistencia?
 
-- A) EntityManager
-- B) Scanner
-- C) Path
-- D) PreparedStatement exclusivamente
+- A) PreparedStatement exclusivamente
+- B) Path
+- C) EntityManager
+- D) Scanner
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> EntityManager es la API principal de JPA.</p>
+<p><strong>Respuesta correcta: C.</strong> EntityManager es la API principal de JPA.</p>
 
 </details>
 
 ### 4. ¿Qué ocurre antes de persistir en este diseño?
 
-- A) Mapeamos dominio a entidad
-- B) Borramos Producto
-- C) Convertimos a CSV
-- D) Llamamos javac
+- A) Llamamos javac
+- B) Mapeamos dominio a entidad
+- C) Borramos Producto
+- D) Convertimos a CSV
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Producto no es directamente la entidad JPA.</p>
+<p><strong>Respuesta correcta: B.</strong> Producto no es directamente la entidad JPA.</p>
 
 </details>
 

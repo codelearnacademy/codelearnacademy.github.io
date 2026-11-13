@@ -7,9 +7,42 @@ lesson_number: "18"
 title: "ProductoMapper: dominio y persistencia"
 description: "ProductoMapper: dominio y persistencia"
 permalink: "/orm/leccion18/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: mapper-entre-dominio-y-persistencia
+  title: Mapper entre dominio y persistencia
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # ProductoMapper: dominio y persistencia
+
+## Objetivo de aprendizaje
+
+Convierte Producto en ProductoEntity para guardar y aplica la conversión inversa al leer.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/18-producto-mapper.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 18">
+    <img src="{{ '/assets/images/orm/infografias/18-producto-mapper.webp' | relative_url }}" alt="Resumen visual de la lección 18. ProductoMapper: dominio y persistencia" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 18.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/18-producto-mapper.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Mapper entre dominio y persistencia
 
@@ -38,19 +71,19 @@ El resto de la aplicación no necesita conocer las entidades ORM.
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/18-mapper.png" alt="Mapper bidireccional. Producto → toEntity / toDomain → ProductoEntity." loading="lazy">
+  <img src="{{ '/assets/images/orm/18-mapper.png' | relative_url }}" alt="ProductoMapper en ambos sentidos" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Producto → toEntity / toDomain → ProductoEntity.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> La dirección del mapeo depende de la operación. Comprueba que el identificador y los datos se conservan según el contrato.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/18-separacion.png" alt="Separar modelos. Dominio independiente → Mapper explícito → Persistencia JPA." loading="lazy">
+  <img src="{{ '/assets/images/orm/18-separacion.png' | relative_url }}" alt="Un mapper entre dos modelos" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Dominio independiente → Mapper explícito → Persistencia JPA.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El repositorio puede trabajar con el ORM y devolver objetos de dominio. La API del repositorio evita exponer entidades al cliente.</p>
 
 
 ## Ejemplo guiado
@@ -70,9 +103,9 @@ El resto de la aplicación no necesita conocer las entidades ORM.
 ### 1. ¿Qué responsabilidad tiene el mapper?
 
 - A) Convertir entre modelos
-- B) Abrir Connection
+- B) Ejecutar JPQL siempre
 - C) Crear tablas
-- D) Ejecutar JPQL siempre
+- D) Abrir Connection
 
 <details>
 <summary>Ver respuesta</summary>
@@ -83,38 +116,38 @@ El resto de la aplicación no necesita conocer las entidades ORM.
 
 ### 2. ¿Debe contener SQL?
 
-- A) No
-- B) Sí siempre
-- C) Solo SELECT
+- A) Sí siempre
+- B) Solo SELECT
+- C) No
 - D) Solo DELETE
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El mapper no es repositorio.</p>
+<p><strong>Respuesta correcta: C.</strong> El mapper no es repositorio.</p>
 
 </details>
 
 ### 3. ¿Qué ventaja aporta?
 
-- A) Evita duplicar conversiones
+- A) Sustituye EntityManager
 - B) Elimina entidades
-- C) Sustituye EntityManager
-- D) Crea tests automáticamente
+- C) Crea tests automáticamente
+- D) Evita duplicar conversiones
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La conversión queda centralizada y explícita.</p>
+<p><strong>Respuesta correcta: D.</strong> La conversión queda centralizada y explícita.</p>
 
 </details>
 
 ### 4. ¿Qué dos direcciones necesitamos?
 
 - A) dominio→entidad y entidad→dominio
-- B) SQL→HTML y HTML→SQL
-- C) JVM→JDK y JDK→JVM
-- D) CSV→XML únicamente
+- B) CSV→XML únicamente
+- C) SQL→HTML y HTML→SQL
+- D) JVM→JDK y JDK→JVM
 
 <details>
 <summary>Ver respuesta</summary>

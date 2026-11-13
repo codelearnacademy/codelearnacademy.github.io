@@ -7,9 +7,42 @@ lesson_number: "35"
 title: "Calidad, Javadoc y rúbrica automática"
 description: "Comprender las métricas y el umbral de documentación de SportRent."
 permalink: "/orm/leccion35/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: evaluación-aplicada
+  title: Evaluación aplicada
+- id: escalones-orientativos
+  title: Escalones orientativos
+- id: javadoc-útil
+  title: Javadoc útil
+- id: calidad-técnica
+  title: Calidad técnica
+- id: actividad-final
+  title: Actividad final
 ---
 
 # Calidad, Javadoc y rúbrica automática
+
+## Objetivo de aprendizaje
+
+Interpreta la rúbrica de SportRent y el umbral de 6,40 sobre 8,00 que habilita la documentación.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/35-calidad-javadoc-rubrica.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 35">
+    <img src="{{ '/assets/images/orm/infografias/35-calidad-javadoc-rubrica.webp' | relative_url }}" alt="Resumen visual de la lección 35. Calidad, Javadoc y rúbrica automática" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 35.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/35-calidad-javadoc-rubrica.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Evaluación aplicada
 

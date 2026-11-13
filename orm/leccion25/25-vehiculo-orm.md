@@ -7,9 +7,42 @@ lesson_number: "25"
 title: "VehiculoEntity e IVehiculoRepository"
 description: "VehiculoEntity e IVehiculoRepository"
 permalink: "/orm/leccion25/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: generalizar-con-vehiculo
+  title: Generalizar con Vehiculo
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # VehiculoEntity e IVehiculoRepository
+
+## Objetivo de aprendizaje
+
+Aplica el patrón de repositorio y el mapeo JPA al modelo Vehiculo.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/25-vehiculo-orm.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 25">
+    <img src="{{ '/assets/images/orm/infografias/25-vehiculo-orm.webp' | relative_url }}" alt="Resumen visual de la lección 25. VehiculoEntity e IVehiculoRepository" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 25.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/25-vehiculo-orm.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Generalizar con `Vehiculo`
 
@@ -43,19 +76,19 @@ No necesitamos modificar `IRepository<T, ID>`. La prueba de que la abstracción 
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/25-generalizacion.png" alt="Generalizar el diseño. IRepository<T,ID> → IProductoRepository → IVehiculoRepository." loading="lazy">
+  <img src="{{ '/assets/images/orm/25-generalizacion.png' | relative_url }}" alt="Generalizar el contrato del repositorio" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> IRepository<T,ID> → IProductoRepository → IVehiculoRepository.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> IRepository&lt;T, ID&gt; expresa operaciones comunes. Las dos interfaces reutilizan el contrato genérico con tipos propios.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/25-vehiculo-mapping.png" alt="Vehiculo y persistencia. Vehiculo record → VehiculoMapper → VehiculoEntity." loading="lazy">
+  <img src="{{ '/assets/images/orm/25-vehiculo-mapping.png' | relative_url }}" alt="Mapear un Vehiculo" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Vehiculo record → VehiculoMapper → VehiculoEntity.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El identificador debe conservarse al pasar de un modelo a otro. Cada capa usa su representación del vehículo.</p>
 
 
 ## Ejemplo guiado
@@ -76,8 +109,8 @@ No necesitamos modificar `IRepository<T, ID>`. La prueba de que la abstracción 
 
 - A) String
 - B) Long
-- C) double
-- D) UUID obligatoriamente
+- C) UUID obligatoriamente
+- D) double
 
 <details>
 <summary>Ver respuesta</summary>
@@ -88,43 +121,43 @@ No necesitamos modificar `IRepository<T, ID>`. La prueba de que la abstracción 
 
 ### 2. ¿Qué demuestra añadir Vehiculo?
 
-- A) Que el patrón se generaliza
+- A) Que SQLite no soporta Strings
 - B) Que Producto era incorrecto
-- C) Que no necesitamos interfaces
-- D) Que SQLite no soporta Strings
+- C) Que el patrón se generaliza
+- D) Que no necesitamos interfaces
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Verificamos que la arquitectura no depende de una sola entidad.</p>
+<p><strong>Respuesta correcta: C.</strong> Verificamos que la arquitectura no depende de una sola entidad.</p>
 
 </details>
 
 ### 3. ¿Qué campo usa @Id?
 
-- A) matricula
-- B) marca
-- C) modelo
-- D) anio
+- A) anio
+- B) matricula
+- C) marca
+- D) modelo
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La matrícula identifica Vehiculo.</p>
+<p><strong>Respuesta correcta: B.</strong> La matrícula identifica Vehiculo.</p>
 
 </details>
 
 ### 4. ¿Qué interfaz comparte la estructura CRUD genérica?
 
-- A) <code>IRepository&lt;T,ID&gt;</code>
-- B) EntityManager
-- C) PreparedStatement
-- D) Path
+- A) Path
+- B) PreparedStatement
+- C) EntityManager
+- D) <code>IRepository&lt;T,ID&gt;</code>
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Las interfaces específicas extienden el contrato genérico.</p>
+<p><strong>Respuesta correcta: D.</strong> Las interfaces específicas extienden el contrato genérico.</p>
 
 </details>
 

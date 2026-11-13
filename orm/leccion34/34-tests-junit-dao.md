@@ -7,9 +7,42 @@ lesson_number: "34"
 title: "JUnit 5: tests ordenados, aislados y defensivos"
 description: "Organizar pruebas de DAO, verificar listas vacías y gestionar errores sin propagar excepciones."
 permalink: "/orm/leccion34/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: secuencia-de-aprendizaje
+  title: Secuencia de aprendizaje
+- id: orden-explícito
+  title: Orden explícito
+- id: listas-vacías-y-ausencia-de-excepciones
+  title: Listas vacías y ausencia de excepciones
+- id: qué-comprueban-los-tests
+  title: Qué comprueban los tests
+- id: actividad
+  title: Actividad
 ---
 
 # JUnit 5: tests ordenados, aislados y defensivos
+
+## Objetivo de aprendizaje
+
+Diseña pruebas JUnit 5 con datos aislados y verifica los casos normales, vacíos e inválidos.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/34-tests-junit-dao.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 34">
+    <img src="{{ '/assets/images/orm/infografias/34-tests-junit-dao.webp' | relative_url }}" alt="Resumen visual de la lección 34. JUnit 5: tests ordenados, aislados y defensivos" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 34.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/34-tests-junit-dao.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Secuencia de aprendizaje
 

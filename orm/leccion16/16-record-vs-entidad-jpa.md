@@ -7,9 +7,42 @@ lesson_number: "16"
 title: "Dominio record frente a entidad JPA"
 description: "Dominio record frente a entidad JPA"
 permalink: "/orm/leccion16/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: por-qué-no-convertir-directamente-producto-en-entidad
+  title: ¿Por qué no convertir directamente Producto en entidad?
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Dominio record frente a entidad JPA
+
+## Objetivo de aprendizaje
+
+Separa los datos del dominio del mapeo de persistencia de una entidad JPA.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/16-record-vs-entidad-jpa.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 16">
+    <img src="{{ '/assets/images/orm/infografias/16-record-vs-entidad-jpa.webp' | relative_url }}" alt="Resumen visual de la lección 16. Dominio record frente a entidad JPA" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 16.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/16-record-vs-entidad-jpa.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## ¿Por qué no convertir directamente `Producto` en entidad?
 
@@ -53,19 +86,19 @@ ProductoEntity (persistencia ORM)
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/16-record-entity.png" alt="Dominio y persistencia. Producto record de dominio → Mapper → ProductoEntity JPA." loading="lazy">
+  <img src="{{ '/assets/images/orm/16-record-entity.png' | relative_url }}" alt="Record de dominio y entidad JPA" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Producto record de dominio → Mapper → ProductoEntity JPA.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El mismo producto tiene una representación para cada responsabilidad. El mapper transforma datos entre ambos tipos.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/16-responsabilidades.png" alt="Separar responsabilidades. Modelo de dominio → Modelo de persistencia." loading="lazy">
+  <img src="{{ '/assets/images/orm/16-responsabilidades.png' | relative_url }}" alt="Separar dominio y persistencia" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Modelo de dominio → Modelo de persistencia.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> La aplicación y el ORM necesitan información distinta. Cambiar el mapeo puede afectar solo a la capa de persistencia.</p>
 
 
 ## Ejemplo guiado
@@ -86,8 +119,8 @@ ProductoEntity (persistencia ORM)
 
 - A) Para distinguir dominio de persistencia
 - B) Porque Java prohíbe records
-- C) Porque SQLite no acepta Strings
-- D) Para eliminar mappers
+- C) Para eliminar mappers
+- D) Porque SQLite no acepta Strings
 
 <details>
 <summary>Ver respuesta</summary>
@@ -98,43 +131,43 @@ ProductoEntity (persistencia ORM)
 
 ### 2. ¿Qué anotación marca una entidad JPA?
 
-- A) @Entity
-- B) @Record
-- C) @Sql
-- D) @Jdbc
+- A) @Sql
+- B) @Jdbc
+- C) @Record
+- D) @Entity
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> @Entity declara una clase persistente.</p>
+<p><strong>Respuesta correcta: D.</strong> @Entity declara una clase persistente.</p>
 
 </details>
 
 ### 3. ¿Qué anotación marca la identidad?
 
-- A) @Table
-- B) @Id
-- C) @Column
-- D) @Override
+- A) @Id
+- B) @Column
+- C) @Override
+- D) @Table
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> @Id identifica la clave de entidad.</p>
+<p><strong>Respuesta correcta: A.</strong> @Id identifica la clave de entidad.</p>
 
 </details>
 
 ### 4. ¿Quién transforma entre ambos modelos?
 
-- A) Mapper
-- B) JVM
-- C) sqlite3
+- A) sqlite3
+- B) Mapper
+- C) JVM
 - D) Maven Surefire
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El mapper convierte dominio y entidad.</p>
+<p><strong>Respuesta correcta: B.</strong> El mapper convierte dominio y entidad.</p>
 
 </details>
 

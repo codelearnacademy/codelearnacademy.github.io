@@ -7,9 +7,42 @@ lesson_number: "27"
 title: "Comparar ficheros, JDBC y ORM"
 description: "Comparar ficheros, JDBC y ORM"
 permalink: "/orm/leccion27/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: cinco-implementaciones-un-contrato
+  title: Cinco implementaciones, un contrato
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # Comparar ficheros, JDBC y ORM
+
+## Objetivo de aprendizaje
+
+Compara ficheros, JDBC y ORM según las consultas, las transacciones y el trabajo de mapeo.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/27-comparar-persistencias.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 27">
+    <img src="{{ '/assets/images/orm/infografias/27-comparar-persistencias.webp' | relative_url }}" alt="Resumen visual de la lección 27. Comparar ficheros, JDBC y ORM" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 27.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/27-comparar-persistencias.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## Cinco implementaciones, un contrato
 
@@ -36,19 +69,19 @@ La interfaz no cambia. Esa es la conexión arquitectónica más importante entre
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/27-strategies.png" alt="Estrategias de persistencia. CSV / JSON / XML → JDBC + SQLite → ORM + Hibernate + SQLite." loading="lazy">
+  <img src="{{ '/assets/images/orm/27-strategies.png' | relative_url }}" alt="Elegir una estrategia de persistencia" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> CSV / JSON / XML → JDBC + SQLite → ORM + Hibernate + SQLite.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Compara el trabajo necesario para guardar y recuperar productos. La elección depende del acceso a datos y del coste de configuración.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/27-contract.png" alt="Un contrato común. Código cliente → IProductoRepository → Implementaciones intercambiables." loading="lazy">
+  <img src="{{ '/assets/images/orm/27-contract.png' | relative_url }}" alt="Un contrato para varias estrategias" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Código cliente → IProductoRepository → Implementaciones intercambiables.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El código cliente solicita las mismas operaciones. Las pruebas de contrato ayudan a comparar el comportamiento.</p>
 
 
 ## Ejemplo guiado
@@ -69,9 +102,9 @@ La interfaz no cambia. Esa es la conexión arquitectónica más importante entre
 ### 1. ¿Qué permite intercambiar estrategias?
 
 - A) El contrato común
-- B) La misma URL JDBC
+- B) No tener dominio
 - C) Usar siempre Hibernate
-- D) No tener dominio
+- D) La misma URL JDBC
 
 <details>
 <summary>Ver respuesta</summary>
@@ -82,43 +115,43 @@ La interfaz no cambia. Esa es la conexión arquitectónica más importante entre
 
 ### 2. ¿Qué estrategia suele ser más simple para datos pequeños y portables?
 
-- A) Ficheros estructurados
-- B) ORM siempre
-- C) Un servidor remoto siempre
-- D) Ninguna
+- A) Ninguna
+- B) Un servidor remoto siempre
+- C) Ficheros estructurados
+- D) ORM siempre
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> CSV/JSON/XML pueden ser suficientes en casos sencillos.</p>
+<p><strong>Respuesta correcta: C.</strong> CSV/JSON/XML pueden ser suficientes en casos sencillos.</p>
 
 </details>
 
 ### 3. ¿Qué estrategia ofrece mayor control SQL directo?
 
-- A) JDBC
-- B) ORM
-- C) JSON
-- D) record
+- A) record
+- B) JDBC
+- C) ORM
+- D) JSON
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> JDBC expone las sentencias explícitamente.</p>
+<p><strong>Respuesta correcta: B.</strong> JDBC expone las sentencias explícitamente.</p>
 
 </details>
 
 ### 4. ¿Qué estrategia automatiza más mapping?
 
-- A) ORM
+- A) sqlite3 CLI
 - B) JDBC
 - C) CSV manual
-- D) sqlite3 CLI
+- D) ORM
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Ese es el objetivo principal del ORM.</p>
+<p><strong>Respuesta correcta: D.</strong> Ese es el objetivo principal del ORM.</p>
 
 </details>
 

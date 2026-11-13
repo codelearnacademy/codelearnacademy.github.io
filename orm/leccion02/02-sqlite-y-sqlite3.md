@@ -7,9 +7,44 @@ lesson_number: "02"
 title: "SQLite y la consola sqlite3"
 description: "SQLite y la consola sqlite3"
 permalink: "/orm/leccion02/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: sqlite
+  title: SQLite
+- id: probarla-con-sqlite3
+  title: Probarla con sqlite3
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # SQLite y la consola sqlite3
+
+## Objetivo de aprendizaje
+
+Abre una base de datos desde sqlite3, inspecciona el esquema y consulta una tabla.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/02-sqlite-y-sqlite3.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 02">
+    <img src="{{ '/assets/images/orm/infografias/02-sqlite-y-sqlite3.webp' | relative_url }}" alt="Resumen visual de la lección 02. SQLite y la consola sqlite3" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 02.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/02-sqlite-y-sqlite3.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## SQLite
 
@@ -58,19 +93,19 @@ El fichero `app.db` sustituye al conjunto de ficheros de datos, pero conserva pe
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/02-sqlite-archivo.png" alt="SQLite como base de datos embebida. Aplicación → Motor SQLite → app.db." loading="lazy">
+  <img src="{{ '/assets/images/orm/02-sqlite-archivo.png' | relative_url }}" alt="SQLite como base de datos embebida" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Aplicación → Motor SQLite → app.db.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El motor se ejecuta dentro del proceso que lo utiliza. SQLite no requiere un servidor de base de datos separado.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/02-sqlite3-flujo.png" alt="Flujo de trabajo con sqlite3. sqlite3 app.db → SQL → Comprobar resultados." loading="lazy">
+  <img src="{{ '/assets/images/orm/02-sqlite3-flujo.png' | relative_url }}" alt="Explorar SQLite desde la consola" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> sqlite3 app.db → SQL → Comprobar resultados.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Abre una base, inspecciona su esquema y comprueba los datos. Los comandos con punto pertenecen a la consola sqlite3.</p>
 
 
 ## Ejemplo guiado
@@ -90,24 +125,24 @@ El fichero `app.db` sustituye al conjunto de ficheros de datos, pero conserva pe
 
 ### 1. ¿Qué característica define a SQLite?
 
-- A) Necesita un servidor separado
-- B) Es una base embebida
-- C) Solo almacena texto
-- D) No usa SQL
+- A) No usa SQL
+- B) Solo almacena texto
+- C) Es una base embebida
+- D) Necesita un servidor separado
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> SQLite se integra en la aplicación y almacena datos en un fichero.</p>
+<p><strong>Respuesta correcta: C.</strong> SQLite se integra en la aplicación y almacena datos en un fichero.</p>
 
 </details>
 
 ### 2. ¿Qué comando abre una base con la consola?
 
-- A) java app.db
+- A) jdbc app.db
 - B) sqlite3 app.db
-- C) mvn sqlite
-- D) jdbc app.db
+- C) java app.db
+- D) mvn sqlite
 
 <details>
 <summary>Ver respuesta</summary>
@@ -119,23 +154,23 @@ El fichero `app.db` sustituye al conjunto de ficheros de datos, pero conserva pe
 ### 3. ¿Qué ocurre si el fichero no existe al abrirlo con sqlite3?
 
 - A) Siempre falla
-- B) Puede crearse al escribir la base
-- C) Se descarga de Internet
+- B) Se descarga de Internet
+- C) Puede crearse al escribir la base
 - D) Se convierte en CSV
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> SQLite puede crear el fichero de base de datos.</p>
+<p><strong>Respuesta correcta: C.</strong> SQLite puede crear el fichero de base de datos.</p>
 
 </details>
 
 ### 4. ¿Para qué usamos la consola sqlite3 en la ruta?
 
-- A) Para sustituir Java
+- A) Para generar bytecode
 - B) Para probar SQL de forma directa
-- C) Para compilar Hibernate
-- D) Para generar bytecode
+- C) Para sustituir Java
+- D) Para compilar Hibernate
 
 <details>
 <summary>Ver respuesta</summary>

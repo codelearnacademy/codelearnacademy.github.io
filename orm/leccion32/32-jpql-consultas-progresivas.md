@@ -7,9 +7,42 @@ lesson_number: "32"
 title: "Consultas JPQL: de filtros a agregaciones"
 description: "Practicar JOIN, COUNT, HAVING, MAX, LIMIT, SUM y proyecciones."
 permalink: "/orm/leccion32/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: jpql-no-es-sql
+  title: JPQL no es SQL
+- id: escalera-de-aprendizaje
+  title: Escalera de aprendizaje
+- id: consulta-de-ejemplo-1-having
+  title: 'Consulta de ejemplo 1: HAVING'
+- id: consulta-de-ejemplo-2-max
+  title: 'Consulta de ejemplo 2: MAX'
+- id: actividad-guiada
+  title: Actividad guiada
 ---
 
 # Consultas JPQL: de filtros a agregaciones
+
+## Objetivo de aprendizaje
+
+Agrupa datos en JPQL, filtra los grupos con HAVING y limita el resultado con setMaxResults().
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/32-jpql-consultas-progresivas.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 32">
+    <img src="{{ '/assets/images/orm/infografias/32-jpql-consultas-progresivas.webp' | relative_url }}" alt="Resumen visual de la lección 32. Consultas JPQL: de filtros a agregaciones" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 32.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/32-jpql-consultas-progresivas.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## JPQL no es SQL
 

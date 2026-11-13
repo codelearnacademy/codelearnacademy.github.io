@@ -7,9 +7,42 @@ lesson_number: "13"
 title: "El problema del mapeo objeto-relacional"
 description: "El problema del mapeo objeto-relacional"
 permalink: "/orm/leccion13/"
+lessons:
+- id: objetivo-de-aprendizaje
+  title: Objetivo de aprendizaje
+- id: infografía
+  title: Infografía
+- id: qué-se-repite-en-jdbc
+  title: ¿Qué se repite en JDBC?
+- id: diagramas-de-apoyo
+  title: Diagramas de apoyo
+- id: ejemplo-guiado
+  title: Ejemplo guiado
+- id: autoevaluación
+  title: Autoevaluación
+- id: ejercicio-propuesto
+  title: Ejercicio propuesto
 ---
 
 # El problema del mapeo objeto-relacional
+
+## Objetivo de aprendizaje
+
+Identifica qué trabajo requiere traducir entre objetos Java y filas de una tabla.
+
+## Infografía
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/orm/infografias/13-problema-mapeo-objeto-relacional.webp' | relative_url }}" aria-label="Ampliar la infografía de la lección 13">
+    <img src="{{ '/assets/images/orm/infografias/13-problema-mapeo-objeto-relacional.webp' | relative_url }}" alt="Resumen visual de la lección 13. El problema del mapeo objeto-relacional" width="1236" height="1272" style="max-width:100%;height:auto" decoding="async">
+  </a>
+  <figcaption>Infografía resumen de la lección 13.</figcaption>
+</figure>
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/images/orm/infografias/13-problema-mapeo-objeto-relacional.webp' | relative_url }}">Ampliar imagen</a>
+  <a href="{{ '/orm/infografias/' | relative_url }}">Ver galería</a>
+</div>
 
 ## ¿Qué se repite en JDBC?
 
@@ -45,19 +78,19 @@ Un ORM intenta automatizar gran parte de esta correspondencia.
 
 <!-- MEJORAS-DIDACTICAS-ORM -->
 
-## Mapa visual de la lección
+## Diagramas de apoyo
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/13-mapeo-manual.png" alt="Mapeo manual repetitivo. ResultSet → getXxx por columna → Constructor de entidad de dominio." loading="lazy">
+  <img src="{{ '/assets/images/orm/13-mapeo-manual.png' | relative_url }}" alt="De ResultSet a objeto de dominio" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> ResultSet → getXxx por columna → Constructor de entidad de dominio.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> El código JDBC convierte cada fila de manera explícita. El mismo tipo de conversión reaparece en las consultas.</p>
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/orm/images/13-codigo-repetido.png" alt="Qué repetimos con JDBC. SQL → Extracción de columnas → Conversión objeto ↔ fila." loading="lazy">
+  <img src="{{ '/assets/images/orm/13-codigo-repetido.png' | relative_url }}" alt="Qué se repite con JDBC" loading="lazy">
 </figure>
 
-<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> SQL → Extracción de columnas → Conversión objeto ↔ fila.</p>
+<p class="cla-diagram-text"><strong>Lectura del diagrama:</strong> Un listado y una búsqueda por ID comparten varias tareas. Un mapper puede centralizar la conversión; un ORM automatiza parte del trabajo.</p>
 
 
 ## Ejemplo guiado
@@ -76,24 +109,24 @@ Un ORM intenta automatizar gran parte de esta correspondencia.
 
 ### 1. ¿Cuál es el problema central que introduce ORM?
 
-- A) No poder usar SQL
-- B) Repetición del mapeo objeto-relacional
-- C) Falta de JVM
-- D) Ausencia de clases
+- A) Ausencia de clases
+- B) Falta de JVM
+- C) Repetición del mapeo objeto-relacional
+- D) No poder usar SQL
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> JDBC obliga a mapear filas y objetos manualmente.</p>
+<p><strong>Respuesta correcta: C.</strong> JDBC obliga a mapear filas y objetos manualmente.</p>
 
 </details>
 
 ### 2. ¿Qué información se repite?
 
 - A) Nombres de campos/columnas y conversiones
-- B) Solo comentarios
-- C) Versiones de Java
-- D) URLs web
+- B) URLs web
+- C) Solo comentarios
+- D) Versiones de Java
 
 <details>
 <summary>Ver respuesta</summary>
@@ -104,10 +137,10 @@ Un ORM intenta automatizar gran parte de esta correspondencia.
 
 ### 3. ¿ORM elimina siempre toda necesidad de SQL?
 
-- A) Sí
+- A) Solo en Java 21
 - B) No
-- C) Solo en SQLite
-- D) Solo en Java 21
+- C) Sí
+- D) Solo en SQLite
 
 <details>
 <summary>Ver respuesta</summary>
@@ -118,15 +151,15 @@ Un ORM intenta automatizar gran parte de esta correspondencia.
 
 ### 4. ¿Por qué estudiamos JDBC antes de ORM?
 
-- A) Para ver el problema que ORM intenta resolver
+- A) Para no usar Maven
 - B) Porque Hibernate no funciona
 - C) Para evitar entidades
-- D) Para no usar Maven
+- D) Para ver el problema que ORM intenta resolver
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Da contexto y evita tratar ORM como magia.</p>
+<p><strong>Respuesta correcta: D.</strong> Da contexto y evita tratar ORM como magia.</p>
 
 </details>
 
