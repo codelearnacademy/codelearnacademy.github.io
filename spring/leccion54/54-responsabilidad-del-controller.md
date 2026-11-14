@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Responsabilidad del Controller
 
 Organiza una aplicación separando HTTP, negocio y persistencia con dependencias explícitas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Arquitectura por capas.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Entrada HTTP: Recibe DTO y ruta. Controlador: Delega al servicio. Salida HTTP: Devuelve estado y cuerpo.]({{ "/assets/images/spring/54-responsabilidad-del-controller.webp" | relative_url }})
 
 ## Ejemplo guiado
 

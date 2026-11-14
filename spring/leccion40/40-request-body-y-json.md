@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Request body y JSON
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Spring MVC y construcción de APIs REST.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Cliente: Envía JSON. @RequestBody: Convierte el cuerpo. Objeto Java: Contiene el título.]({{ "/assets/images/spring/40-request-body-y-json.webp" | relative_url }})
 
 ## Ejemplo guiado
 

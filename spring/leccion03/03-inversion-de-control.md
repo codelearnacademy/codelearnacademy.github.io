@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Inversión de Control
 
 Comprende el problema de acoplamiento, creación de objetos e inversión de control antes de utilizar Spring.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Diseño de objetos, acoplamiento e inyección.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![A la izquierda, PedidoService crea EmailService con new. A la derecha, Spring crea EmailService y lo entrega al constructor de PedidoService mediante un parámetro Notificador.]({{ "/assets/images/spring/03-inversion-de-control.webp" | relative_url }})
 
 ## Ejemplo guiado
 

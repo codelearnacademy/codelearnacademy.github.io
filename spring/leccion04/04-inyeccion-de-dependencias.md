@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Inyección de dependencias
 
 Comprende el problema de acoplamiento, creación de objetos e inversión de control antes de utilizar Spring.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Diseño de objetos, acoplamiento e inyección.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![El código externo crea el notificador y lo pasa al constructor de PedidoService, que lo usa al confirmar un pedido.]({{ "/assets/images/spring/04-inyeccion-de-dependencias.webp" | relative_url }})
 
 ## Ejemplo guiado
 

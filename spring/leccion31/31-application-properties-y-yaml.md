@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # application.properties y YAML
 
 Comprende cómo Spring Boot reduce configuración mediante starters, auto-configuración y convenciones.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Primer proyecto Spring Boot y configuración.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Properties: server.port=8081. YAML: server con port 8081. Aplicación: Escucha en el mismo puerto.]({{ "/assets/images/spring/31-application-properties-y-yaml.webp" | relative_url }})
 
 ## Ejemplo guiado
 

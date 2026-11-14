@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring JDBC, JPA y Spring Data JPA
 
 Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Persistencia con JPA y PostgreSQL.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Spring JDBC: SQL explícito. JPA: Mapeo de entidades. Spring Data JPA: Abstracción de repositorio sobre JPA.]({{ "/assets/images/spring/59-spring-jdbc-jpa-y-spring-data-jpa.webp" | relative_url }})
 
 ## Ejemplo guiado
 

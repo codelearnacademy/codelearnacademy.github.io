@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Acoplamiento entre clases
 
 Comprende el problema de acoplamiento, creación de objetos e inversión de control antes de utilizar Spring.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Diseño de objetos, acoplamiento e inyección.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![PedidoService crea EmailService directamente. Cambiar de correo a SMS obliga a editar la clase concreta que instancia PedidoService.]({{ "/assets/images/spring/02-acoplamiento-entre-clases.webp" | relative_url }})
 
 ## Ejemplo guiado
 

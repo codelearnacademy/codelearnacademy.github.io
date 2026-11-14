@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring Framework frente a Spring Boot
 
 Sitúa Spring Framework y Spring Boot dentro del ecosistema y distingue sus responsabilidades.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Fundamentos y versiones de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Framework: Contenedor, MVC y transacciones. Boot: Starters, convenciones y arranque.]({{ "/assets/images/spring/08-spring-framework-frente-a-spring-boot.webp" | relative_url }})
 
 ## Ejemplo guiado
 

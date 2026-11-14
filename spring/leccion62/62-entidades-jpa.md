@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Entidades JPA
 
 Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Persistencia con JPA y PostgreSQL.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![TaskEntity: Campos anotados. Mapeo JPA: Asocia atributos a columnas. Tabla: Conserva la fila.]({{ "/assets/images/spring/62-entidades-jpa.webp" | relative_url }})
 
 ## Ejemplo guiado
 

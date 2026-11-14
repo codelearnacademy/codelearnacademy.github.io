@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Clientes HTTP
 
 Introduce mecanismos transversales de Spring y alternativas arquitectónicas sin perder el modelo mental.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Capacidades avanzadas de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Aplicación: Realiza la petición saliente. Cliente HTTP: Envía y recibe. Servicio: Interpreta la respuesta.]({{ "/assets/images/spring/105-clientes-http.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring dentro del flujo Git
 
 Integra Spring con Git, Maven, imágenes Docker, registries y despliegues automatizados.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Git, integración y despliegue continuos.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Cambio: Edita y prueba. Git: Registra el commit. Revisión: Evalúa el cambio.]({{ "/assets/images/spring/95-spring-dentro-del-flujo-git.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # DTOs
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Spring MVC y construcción de APIs REST.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![DTO de entrada: Solo los datos necesarios. Modelo: Representa la tarea. DTO de salida: Expone la respuesta acordada.]({{ "/assets/images/spring/41-dtos.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,9 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # GET
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
@@ -38,6 +41,12 @@ Al terminar esta lección podrás:
 **Bloque:** Spring MVC y construcción de APIs REST.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Petición: GET /api/tareas. Controlador: Solicita la lista. Respuesta: 200 con un array JSON.]({{ "/assets/images/spring/36-get.webp" | relative_url }})
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el proyecto base con JDK 21 y Spring Boot 4.1.2</a></div>
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # IoC, DI y DIP no son lo mismo
 
 Comprende el problema de acoplamiento, creación de objetos e inversión de control antes de utilizar Spring.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Diseño de objetos, acoplamiento e inyección.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![IoC: Quién controla la creación. DI: Cómo llega el colaborador. DIP: De qué abstracción depende el servicio.]({{ "/assets/images/spring/05-ioc-di-y-dip-no-son-lo-mismo.webp" | relative_url }})
 
 ## Ejemplo guiado
 

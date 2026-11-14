@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Dependency Injection entre capas
 
 Organiza una aplicación separando HTTP, negocio y persistencia con dependencias explícitas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Arquitectura por capas.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Controller: Recibe el servicio. Service: Recibe el repositorio. Repository: Bean de acceso a datos.]({{ "/assets/images/spring/57-dependency-injection-entre-capas.webp" | relative_url }})
 
 ## Ejemplo guiado
 

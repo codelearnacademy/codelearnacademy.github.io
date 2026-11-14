@@ -3,11 +3,15 @@ layout: route
 route: spring
 title: Spring
 search_title: Spring y Spring Boot
-search_description: Ruta Spring con IoC, Dependency Injection, Spring Boot, MVC, Tomcat, PostgreSQL, testing, Docker y CI/CD.
+search_description: Spring Framework y Spring Boot con JDK 21, inyección de dependencias, API REST con Swagger UI, acceso a datos, pruebas y despliegue.
 permalink: /spring/
 ---
 
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 {% assign route = site.data.routes.spring %}
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/infografias/" | relative_url }}'>Ver la galería de infografías</a> <a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el ejemplo de tareas</a></div>
 
 ## Tecnologías utilizadas
 

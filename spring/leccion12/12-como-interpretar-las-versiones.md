@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Cómo interpretar las versiones
 
 Aprende a interpretar generaciones de Spring, Spring Boot, Java, Jakarta y servidores Servlet.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Fundamentos y versiones de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Identificar: Lee la versión exacta de Boot. Comprobar: Contrasta Java, Spring y Servlet.]({{ "/assets/images/spring/12-como-interpretar-las-versiones.webp" | relative_url }})
 
 ## Ejemplo guiado
 

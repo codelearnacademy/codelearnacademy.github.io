@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Variables de entorno en Docker
 
 Empaqueta y ejecuta Spring Boot de forma reproducible con Docker y PostgreSQL.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Contenedores y despliegue.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Entorno Docker: Inyecta valores. Contenedor: Los recibe al arrancar. Spring: Resuelve sus propiedades.]({{ "/assets/images/spring/91-variables-de-entorno-en-docker.webp" | relative_url }})
 
 ## Ejemplo guiado
 

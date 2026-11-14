@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Tomcat 10 frente a Tomcat 11
 
 Comprende el papel de Tomcat, el servidor embebido y el despliegue tradicional mediante WAR.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Tomcat y empaquetado.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Tomcat 10.1: Servlet 6.0. Tomcat 11: Servlet 6.1. Verificar: Contrasta los requisitos de Boot.]({{ "/assets/images/spring/52-tomcat-10-frente-a-tomcat-11.webp" | relative_url }})
 
 ## Ejemplo guiado
 

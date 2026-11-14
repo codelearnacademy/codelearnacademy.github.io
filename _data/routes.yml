@@ -53,7 +53,7 @@ spring:
   level: Ruta
   url: /spring/
   status: published
-  description: Spring Framework, Spring Boot, inyección de dependencias, MVC, Tomcat, persistencia, testing, Docker y CI/CD.
+  description: Spring Framework y Spring Boot con JDK 21, inyección de dependencias, API REST con Swagger UI, acceso a datos, pruebas y despliegue.
   project: Sí
   exam: Sí
   technologies:

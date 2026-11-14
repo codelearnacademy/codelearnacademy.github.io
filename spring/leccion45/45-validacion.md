@@ -21,6 +21,9 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # Validación
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
@@ -38,6 +41,12 @@ Al terminar esta lección podrás:
 **Bloque:** Spring MVC y construcción de APIs REST.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Entrada: Título en blanco. Validación: @Valid y @NotBlank. Respuesta: 400 antes de guardar.]({{ "/assets/images/spring/45-validacion.webp" | relative_url }})
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el proyecto base con JDK 21 y Spring Boot 4.1.2</a></div>
 
 ## Ejemplo guiado
 

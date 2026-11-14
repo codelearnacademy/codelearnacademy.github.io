@@ -21,6 +21,9 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # POST
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
@@ -38,6 +41,12 @@ Al terminar esta lección podrás:
 **Bloque:** Spring MVC y construcción de APIs REST.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![El cliente envía POST /api/tareas con Preparar entrega. El controlador valida, el servicio guarda en memoria y la API devuelve 201 con Location. Si el título está en blanco devuelve 400.]({{ "/assets/images/spring/37-post.webp" | relative_url }})
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el proyecto base con JDK 21 y Spring Boot 4.1.2</a></div>
 
 ## Ejemplo guiado
 
@@ -70,6 +79,17 @@ ResponseEntity<TareaResponse> crear(@Valid @RequestBody TareaRequest request) {
 POST recibe un DTO de entrada y devuelve 201 cuando se crea el recurso.
 
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+
+## Probar la API con Swagger UI
+
+1. Arranca el ejemplo con `mvn spring-boot:run`.
+2. Abre <a class="cla-maven-card-link" href="http://localhost:8080/swagger-ui/index.html">Swagger UI</a>. La descripción OpenAPI está en [`/v3/api-docs`](http://localhost:8080/v3/api-docs).
+3. Despliega `POST /api/tareas`, pulsa **Try it out**, escribe `{"titulo":"Preparar entrega"}` y pulsa **Execute**. Comprueba el **201** y copia el identificador que aparece en el cuerpo o en la cabecera `Location`.
+4. Abre `GET /api/tareas/{id}`, escribe ese identificador y verifica el **200** y el título. Repite el POST con `{"titulo":" "}` y verifica el **400**.
+
+Observa el campo **Request URL**. Es la URL HTTP que recibe la petición. Cuando cambies el almacenamiento a fichero, SQLite o PostgreSQL, podrás repetir la práctica desde la misma interfaz y comprobar el dato en el almacenamiento de ese perfil.
+
+El ejemplo de partida ofrece creación y consulta. Cuando implementes actualización, borrado y búsquedas en el controlador, springdoc incorporará esas operaciones a Swagger UI.
 
 ## Ejercicios propuestos
 

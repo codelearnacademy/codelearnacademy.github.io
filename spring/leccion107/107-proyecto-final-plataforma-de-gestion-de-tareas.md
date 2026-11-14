@@ -23,6 +23,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Proyecto final · Plataforma de gestión de tareas
 
 Integra Spring Boot, Tomcat, PostgreSQL, Angular, Docker, Git y CI/CD en una entrega reproducible.
@@ -40,6 +42,12 @@ Al terminar esta lección podrás:
 **Bloque:** Proyecto integrador.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Navegador: Angular y Nginx. API: Controller, Service y Repository. PostgreSQL: Datos y migraciones Flyway.]({{ "/assets/images/spring/107-proyecto-final-plataforma-de-gestion-de-tareas.webp" | relative_url }})
+
+![Git y CI: Verifica backend y frontend. Registry: Publica imágenes versionadas. Compose: Despliega la versión. Ejecución: JAR embebido o WAR externo.]({{ "/assets/images/spring/107b-entrega-reproducible.webp" | relative_url }})
 
 ## Ejemplo guiado
 

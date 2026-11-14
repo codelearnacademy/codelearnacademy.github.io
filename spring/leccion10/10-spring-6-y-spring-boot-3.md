@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring 6 y Spring Boot 3
 
 Aprende a interpretar generaciones de Spring, Spring Boot, Java, Jakarta y servidores Servlet.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Fundamentos y versiones de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Java: Comprueba el mínimo requerido. Boot 3: Spring Framework 6. Servlet: API jakarta.servlet.]({{ "/assets/images/spring/10-spring-6-y-spring-boot-3.webp" | relative_url }})
 
 ## Ejemplo guiado
 

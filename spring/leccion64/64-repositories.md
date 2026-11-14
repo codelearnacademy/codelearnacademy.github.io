@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Repositories
 
 Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Persistencia con JPA y PostgreSQL.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Interfaz: Declara el método. Spring Data: Implementa el repositorio. Base: Devuelve las tareas.]({{ "/assets/images/spring/64-repositories.webp" | relative_url }})
 
 ## Ejemplo guiado
 

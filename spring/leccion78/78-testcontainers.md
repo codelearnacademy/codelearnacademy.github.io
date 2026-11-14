@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Testcontainers
 
 Comprueba unidades, contexto, MVC, persistencia e integración con una estrategia progresiva.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Pruebas automatizadas.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Preparar: Inicia PostgreSQL de prueba. Ejecutar: Conecta la aplicación. Limpiar: El contenedor termina.]({{ "/assets/images/spring/78-testcontainers.webp" | relative_url }})
 
 ## Ejemplo guiado
 

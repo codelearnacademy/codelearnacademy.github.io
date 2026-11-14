@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Incorporar Spring con Maven
 
 Relaciona Maven con Spring distinguiendo gestión de bibliotecas de inyección de objetos.
@@ -39,6 +41,10 @@ Al terminar esta lección podrás:
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
+## Infografía
+
+![pom.xml: Declara Spring. Maven: Resuelve bibliotecas. Classpath: Spring queda disponible.]({{ "/assets/images/spring/13-incorporar-spring-con-maven.webp" | relative_url }})
+
 ## Ejemplo guiado
 
 Proyecto Spring Framework sin Boot:
@@ -47,7 +53,7 @@ Proyecto Spring Framework sin Boot:
 <dependency>
   <groupId>org.springframework</groupId>
   <artifactId>spring-context</artifactId>
-  <version>7.0.9</version>
+  <version>7.0.10</version>
 </dependency>
 ```
 

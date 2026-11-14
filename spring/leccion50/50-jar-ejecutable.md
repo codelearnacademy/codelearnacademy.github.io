@@ -21,6 +21,9 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # JAR ejecutable
 
 Comprende el papel de Tomcat, el servidor embebido y el despliegue tradicional mediante WAR.
@@ -38,6 +41,12 @@ Al terminar esta lección podrás:
 **Bloque:** Tomcat y empaquetado.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Empaquetar: mvn package. Arrancar: java -jar. Comprobar: La API responde.]({{ "/assets/images/spring/50-jar-ejecutable.webp" | relative_url }})
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el proyecto base con JDK 21 y Spring Boot 4.1.2</a></div>
 
 ## Ejemplo guiado
 

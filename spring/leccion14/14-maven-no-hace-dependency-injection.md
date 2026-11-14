@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Maven no hace Dependency Injection
 
 Relaciona Maven con Spring distinguiendo gestión de bibliotecas de inyección de objetos.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Maven y gestión de dependencias.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Maven: Resuelve archivos JAR. Spring: Crea objetos e inyecta dependencias.]({{ "/assets/images/spring/14-maven-no-hace-dependency-injection.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring Boot Starter Parent y BOM
 
 Relaciona Maven con Spring distinguiendo gestión de bibliotecas de inyección de objetos.
@@ -39,6 +41,10 @@ Al terminar esta lección podrás:
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
+## Infografía
+
+![Parent: Hereda gestión y configuración. BOM: Importa versiones gestionadas.]({{ "/assets/images/spring/16-spring-boot-starter-parent-y-bom.webp" | relative_url }})
+
 ## Ejemplo guiado
 
 Con Spring Boot parent, muchas versiones se omiten:
@@ -47,7 +53,7 @@ Con Spring Boot parent, muchas versiones se omiten:
 <parent>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>4.1.1</version>
+  <version>4.1.2</version>
 </parent>
 ```
 

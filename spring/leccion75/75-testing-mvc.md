@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Testing MVC
 
 Comprueba unidades, contexto, MVC, persistencia e integración con una estrategia progresiva.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Pruebas automatizadas.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Petición: Envía JSON de prueba. MockMvc: Ejecuta el flujo MVC. Verificar: Estado y cuerpo esperados.]({{ "/assets/images/spring/75-testing-mvc.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Cambiar Tomcat por otro servidor
 
 Comprende el papel de Tomcat, el servidor embebido y el despliegue tradicional mediante WAR.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Tomcat y empaquetado.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Dependencias: Selecciona el servidor. Arranque: Ejecuta la misma API. Comprobación: Identifica el servidor en el log.]({{ "/assets/images/spring/49-cambiar-tomcat-por-otro-servidor.webp" | relative_url }})
 
 ## Ejemplo guiado
 

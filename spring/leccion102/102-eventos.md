@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Eventos
 
 Introduce mecanismos transversales de Spring y alternativas arquitectónicas sin perder el modelo mental.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Capacidades avanzadas de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Publicador: Emite un evento. Evento: Contiene los datos. Receptor: Reacciona al evento.]({{ "/assets/images/spring/102-eventos.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Spring 7 y Spring Boot 4
 
 Aprende a interpretar generaciones de Spring, Spring Boot, Java, Jakarta y servidores Servlet.
@@ -39,6 +41,10 @@ Al terminar esta lección podrás:
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
 
+## Infografía
+
+![JDK 21: Base del aula. Boot 4.1.2: Spring Framework 7. Tomcat 11: Jakarta Servlet 6.1.]({{ "/assets/images/spring/11-spring-7-y-spring-boot-4.webp" | relative_url }})
+
 ## Ejemplo guiado
 
 En la generación actual de la ruta:
@@ -52,7 +58,7 @@ Jakarta Servlet 6.1
 ```
 
 
-<div class="cla-note"><strong>Base de la ruta</strong><p>La ruta utiliza Java 21 y la generación Spring Boot 4 / Spring Framework 7. Spring Boot 4.1.1 requiere como mínimo Java 17, usa Spring Framework 7.0.9 o superior y soporta Tomcat 11.0.x para el stack Servlet.</p></div>
+<div class="cla-note"><strong>Base de la ruta</strong><p>La ruta utiliza Java 21 y la generación Spring Boot 4 / Spring Framework 7. Spring Boot 4.1.2 requiere como mínimo Java 17, usa Spring Framework 7.0.10 o superior y soporta Tomcat 11.0.x para el stack Servlet.</p></div>
 
 
 ## Relación con el resto de la ruta

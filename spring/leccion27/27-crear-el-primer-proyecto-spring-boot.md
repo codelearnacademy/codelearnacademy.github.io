@@ -21,6 +21,9 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # Crear el primer proyecto Spring Boot
 
 Comprende cómo Spring Boot reduce configuración mediante starters, auto-configuración y convenciones.
@@ -38,6 +41,12 @@ Al terminar esta lección podrás:
 **Bloque:** Primer proyecto Spring Boot y configuración.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Abrir: Ejemplo api-tareas. Ejecutar: mvn spring-boot:run. Comprobar: GET /api/tareas devuelve 200.]({{ "/assets/images/spring/27-crear-el-primer-proyecto-spring-boot.webp" | relative_url }})
+
+<div class="cla-lesson-nav"><a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el proyecto base con JDK 21 y Spring Boot 4.1.2</a></div>
 
 ## Ejemplo guiado
 
@@ -59,12 +68,16 @@ Boot aplica convenciones y auto-configuración sobre Spring Framework; Maven o G
 
 ```bash
 ./mvnw spring-boot:run
-curl -i http://localhost:8080/api/saludo
+curl -i http://localhost:8080/api/tareas
 ```
 
 Arranca la aplicación antes de realizar la primera petición HTTP.
 
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+
+## Probar la API con Swagger UI
+
+Con el ejemplo descargable en marcha, abre <a class="cla-maven-card-link" href="http://localhost:8080/swagger-ui/index.html">Swagger UI</a>. Despliega `GET /api/tareas`, pulsa **Try it out** y **Execute**, y comprueba el estado **200**. La [lección 37]({{ "/spring/leccion37/" | relative_url }}) muestra cómo crear y verificar una tarea desde la interfaz.
 
 ## Ejercicios propuestos
 

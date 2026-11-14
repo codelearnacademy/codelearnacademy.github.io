@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Testing de servicios
 
 Comprueba unidades, contexto, MVC, persistencia e integración con una estrategia progresiva.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Pruebas automatizadas.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Preparar: Simula el repositorio. Ejecutar: Llama al servicio. Verificar: Comprueba la regla.]({{ "/assets/images/spring/73-testing-de-servicios.webp" | relative_url }})
 
 ## Ejemplo guiado
 

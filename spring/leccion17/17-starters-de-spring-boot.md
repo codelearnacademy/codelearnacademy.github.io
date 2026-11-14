@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Starters de Spring Boot
 
 Relaciona Maven con Spring distinguiendo gestión de bibliotecas de inyección de objetos.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Maven y gestión de dependencias.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Starter: Elige una capacidad. Dependencias: Obtén el conjunto asociado. Aplicación: Usa la capacidad.]({{ "/assets/images/spring/17-starters-de-spring-boot.webp" | relative_url }})
 
 ## Ejemplo guiado
 

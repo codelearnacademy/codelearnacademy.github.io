@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Historia de Spring y Spring Boot
 
 Aprende a interpretar generaciones de Spring, Spring Boot, Java, Jakarta y servidores Servlet.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Fundamentos y versiones de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Spring Framework: Aplicaciones Java. Spring Boot: Arranque y configuración simplificados. Jakarta: Cambio de generación.]({{ "/assets/images/spring/09-historia-de-spring-y-spring-boot.webp" | relative_url }})
 
 ## Ejemplo guiado
 

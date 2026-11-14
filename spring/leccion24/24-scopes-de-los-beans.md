@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Scopes de los beans
 
 Trabaja directamente con el contenedor IoC de Spring para entender beans, configuración e inyección.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Contenedor IoC y beans.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Singleton: Un bean por definición y contexto. Prototype: Instancia nueva al solicitarla.]({{ "/assets/images/spring/24-scopes-de-los-beans.webp" | relative_url }})
 
 ## Ejemplo guiado
 

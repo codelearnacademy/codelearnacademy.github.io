@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Migraciones de base de datos
 
 Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Persistencia con JPA y PostgreSQL.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Script versionado: Describe un cambio. Flyway: Aplica migraciones pendientes. Esquema: Evoluciona de forma controlada.]({{ "/assets/images/spring/67-migraciones-de-base-de-datos.webp" | relative_url }})
 
 ## Ejemplo guiado
 

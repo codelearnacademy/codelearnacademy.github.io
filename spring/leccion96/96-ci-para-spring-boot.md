@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # CI para Spring Boot
 
 Integra Spring con Git, Maven, imágenes Docker, registries y despliegues automatizados.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Git, integración y despliegue continuos.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Checkout: Obtiene el código. JDK 21: Prepara el entorno. Verificación: Ejecuta Maven verify.]({{ "/assets/images/spring/96-ci-para-spring-boot.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Convention over configuration
 
 Comprende cómo Spring Boot reduce configuración mediante starters, auto-configuración y convenciones.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Primer proyecto Spring Boot y configuración.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Convención: Puerto predeterminado. Configuración: server.port=8081. Comprobar: Petición al nuevo puerto.]({{ "/assets/images/spring/30-convention-over-configuration.webp" | relative_url }})
 
 ## Ejemplo guiado
 

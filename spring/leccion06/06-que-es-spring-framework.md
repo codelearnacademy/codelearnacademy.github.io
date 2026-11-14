@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Qué es Spring Framework
 
 Sitúa Spring Framework y Spring Boot dentro del ecosistema y distingue sus responsabilidades.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Fundamentos y versiones de Spring.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Objetos Java: Clases de la aplicación. Spring Framework: Gestiona componentes e infraestructura.]({{ "/assets/images/spring/06-que-es-spring-framework.webp" | relative_url }})
 
 ## Ejemplo guiado
 

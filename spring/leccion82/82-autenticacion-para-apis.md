@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Autenticación para APIs
 
 Introduce autenticación, autorización y protección de credenciales con Spring Security.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Seguridad.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Cliente: Presenta una credencial. Seguridad: Verifica la identidad. API: Aplica permisos.]({{ "/assets/images/spring/82-autenticacion-para-apis.webp" | relative_url }})
 
 ## Ejemplo guiado
 

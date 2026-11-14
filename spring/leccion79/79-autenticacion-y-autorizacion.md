@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Autenticación y autorización
 
 Introduce autenticación, autorización y protección de credenciales con Spring Security.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Seguridad.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Autenticación: Quién realiza la petición. Autorización: Qué operaciones puede hacer.]({{ "/assets/images/spring/79-autenticacion-y-autorizacion.webp" | relative_url }})
 
 ## Ejemplo guiado
 

@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Configuración para producción
 
 Prepara la aplicación para operación mediante logs, health, métricas y configuración.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Observabilidad y producción.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Ajustes: Configura perfiles y secretos. Estado: Comprueba señales operativas. Entrega: Valida el arranque.]({{ "/assets/images/spring/87-configuracion-para-produccion.webp" | relative_url }})
 
 ## Ejemplo guiado
 

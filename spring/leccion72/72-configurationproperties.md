@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # @ConfigurationProperties
 
 Externaliza configuración y secretos para trabajar con varios entornos de forma segura.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Configuración y entornos.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Prefijo: Agrupa claves. Binding: Lee propiedades. Objeto: Contiene valores tipados.]({{ "/assets/images/spring/72-configurationproperties.webp" | relative_url }})
 
 ## Ejemplo guiado
 

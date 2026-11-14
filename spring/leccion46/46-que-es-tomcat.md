@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # Qué es Tomcat
 
 Comprende el papel de Tomcat, el servidor embebido y el despliegue tradicional mediante WAR.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Tomcat y empaquetado.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Cliente: Petición HTTP. Tomcat: Contenedor Servlet. Aplicación: Spring MVC procesa la petición.]({{ "/assets/images/spring/46-que-es-tomcat.webp" | relative_url }})
 
 ## Ejemplo guiado
 

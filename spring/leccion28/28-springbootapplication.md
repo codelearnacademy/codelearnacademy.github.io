@@ -21,6 +21,8 @@ lessons:
   - id: qué-debes-recordar
     title: Qué debes recordar
 ---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 # @SpringBootApplication
 
 Comprende cómo Spring Boot reduce configuración mediante starters, auto-configuración y convenciones.
@@ -38,6 +40,10 @@ Al terminar esta lección podrás:
 **Bloque:** Primer proyecto Spring Boot y configuración.
 
 Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![Configuración: Define beans. Autoconfiguración: Activa ajustes condicionales. Escaneo: Busca componentes.]({{ "/assets/images/spring/28-springbootapplication.webp" | relative_url }})
 
 ## Ejemplo guiado
 
