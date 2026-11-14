@@ -439,3 +439,11 @@ permalink: /spring/infografias/
 ## Proyecto final · Entrega reproducible
 
 <a class="cla-maven-card-link" href="{{ "/assets/images/spring/107b-entrega-reproducible.webp" | relative_url }}"><img src="{{ "/assets/images/spring/miniaturas/107b-entrega-reproducible.webp" | relative_url }}" alt="Git y CI: Verifica backend y frontend. Registry: Publica imágenes versionadas. Compose: Despliega la versión. Ejecución: JAR embebido o WAR externo." width="480" height="270" loading="lazy"></a>
+
+## Diseño de servicios REST
+
+<a class="cla-maven-card-link" href='{{ "/assets/images/spring/108-servicios-rest.webp" | relative_url }}'><img src='{{ "/assets/images/spring/miniaturas/108-servicios-rest.webp" | relative_url }}' alt="Cliente: Envía POST con la tarea. API REST: Valida y guarda la tarea. Respuesta: 201 y cabecera Location." width="480" height="270" loading="lazy"></a>
+
+## Swagger UI y documentación OpenAPI
+
+<a class="cla-maven-card-link" href='{{ "/assets/images/spring/109-swagger-openapi.webp" | relative_url }}'><img src='{{ "/assets/images/spring/miniaturas/109-swagger-openapi.webp" | relative_url }}' alt="OpenAPI: Describe POST y sus respuestas. Swagger UI: Envía la petición de prueba. Resultado: Comprueba 201 o 400." width="480" height="270" loading="lazy"></a>

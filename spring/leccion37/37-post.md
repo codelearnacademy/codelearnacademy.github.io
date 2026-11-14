@@ -91,6 +91,10 @@ Observa el campo **Request URL**. Es la URL HTTP que recibe la petición. Cuando
 
 El ejemplo de partida ofrece creación y consulta. Cuando implementes actualización, borrado y búsquedas en el controlador, springdoc incorporará esas operaciones a Swagger UI.
 
+<div class="cla-lesson-nav">
+  <a href="{{ '/spring/leccion109/' | relative_url }}">109 · Swagger UI y documentación OpenAPI</a>
+</div>
+
 ## Ejercicios propuestos
 
 1. Implementa en una API de tareas un endpoint que demuestre **POST**.

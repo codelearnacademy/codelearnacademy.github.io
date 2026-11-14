@@ -250,6 +250,10 @@ Documenta los valores reales de los endpoints, variables y servicios de tu entre
 
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
+<div class="cla-lesson-nav">
+  <a href="{{ '/spring/leccion108/' | relative_url }}">108 · Diseño de servicios REST</a>
+</div>
+
 ## Ejercicios propuestos
 
 1. Diseña las entidades, modelos, mappers, DTO, servicios, controladores y repositorios de la plataforma de tareas.

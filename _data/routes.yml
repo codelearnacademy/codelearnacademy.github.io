@@ -492,6 +492,14 @@ spring:
     number: '107'
     title: Proyecto final · Plataforma de gestión de tareas
     url: /spring/leccion107/
+  - id: leccion108
+    number: '108'
+    title: Diseño de servicios REST
+    url: /spring/leccion108/
+  - id: leccion109
+    number: '109'
+    title: Swagger UI y documentación OpenAPI
+    url: /spring/leccion109/
 sql:
   title: SQL
   short_title: SQL
