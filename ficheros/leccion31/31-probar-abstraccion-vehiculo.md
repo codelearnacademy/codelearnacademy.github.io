@@ -7,11 +7,36 @@ lesson_number: "31"
 title: "Vehiculo en CSV, JSON y XML"
 description: "Implementar y probar IVehiculoRepository en los tres formatos."
 permalink: "/ficheros/leccion31/"
+lessons:
+  - id: mapa-visual
+    title: "Mapa visual"
+  - id: las-tres-implementaciones
+    title: "Las tres implementaciones"
+  - id: csv
+    title: "CSV"
+  - id: json
+    title: "JSON"
+  - id: xml
+    title: "XML"
+  - id: crud-mediante-ivehiculorepository
+    title: "CRUD mediante IVehiculoRepository"
+  - id: que-deben-comprobar-los-tests
+    title: "Qué deben comprobar los tests"
+  - id: microproyecto-contrato-compartido-de-vehiculos
+    title: "Microproyecto · Contrato compartido de vehículos"
 ---
 
 # Repositorios de `Vehiculo`
 
+## Mapa visual
+{: #mapa-visual }
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/conceptos/31.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/conceptos/31.webp' | relative_url }}" alt="Contrato común en tres formatos. CSV, JSON y XML representan la misma matrícula con estructuras distintas. Pasa las mismas comprobaciones de negocio para cada formato." loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
 ## Las tres implementaciones
+{: #las-tres-implementaciones }
 
 El proyecto de ejemplo contiene:
 
@@ -29,6 +54,7 @@ implements IVehiculoRepository
 ```
 
 ## CSV
+{: #csv }
 
 ```java
 public VehiculoCsvRepository(Path path) {
@@ -38,6 +64,7 @@ public VehiculoCsvRepository(Path path) {
 ```
 
 ## JSON
+{: #json }
 
 ```java
 public VehiculoJsonRepository(Path path) {
@@ -47,6 +74,7 @@ public VehiculoJsonRepository(Path path) {
 ```
 
 ## XML
+{: #xml }
 
 ```java
 public VehiculoXmlRepository(Path path) {
@@ -58,6 +86,7 @@ public VehiculoXmlRepository(Path path) {
 Lo que cambia entre ellas es únicamente la implementación de `readAll()` y `writeAll()`.
 
 ## CRUD mediante `IVehiculoRepository`
+{: #crud-mediante-ivehiculorepository }
 
 ```java
 IVehiculoRepository repository =
@@ -78,6 +107,7 @@ repository.delete("5678DEF");
 La matrícula se normaliza a mayúsculas en el constructor compacto del record.
 
 ## Qué deben comprobar los tests
+{: #que-deben-comprobar-los-tests }
 
 Para cada formato:
 
@@ -90,4 +120,20 @@ Para cada formato:
 
 El mismo patrón de test se utiliza para `Producto` y `Vehiculo` en CSV, JSON y XML.
 
-<div class="cla-lesson-nav"><a href="/ficheros/leccion30/">← 30 · Vehiculo</a><a href="/ficheros/leccion32/">32 · Configuración .properties →</a></div>
+
+## Microproyecto · Contrato compartido de vehículos
+{: #microproyecto-contrato-compartido-de-vehiculos }
+
+Recupera la matrícula desde CSV con cabecera matricula, JSON con campo matricula o XML con elemento matricula. El argumento formato indica csv, json o xml.
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/microproyectos/F31-tarea-01.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/microproyectos/F31-tarea-01.webp' | relative_url }}" alt="Contrato compartido de vehículos. Resultado esperado: 1234ABC en los tres formatos" loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
+**Resultado esperado:** 1234ABC en los tres formatos.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/proyectos/ficheros/leccion31/F31-tarea-01.zip' | relative_url }}">Descargar F31-tarea-01</a>
+</div>
+
+<div class="cla-lesson-nav"><a href="{{ '/ficheros/leccion30/' | relative_url }}">← 30 · Vehiculo</a><a href="{{ '/ficheros/leccion32/' | relative_url }}">32 · Configuración .properties →</a></div>

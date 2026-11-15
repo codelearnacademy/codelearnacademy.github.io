@@ -7,17 +7,34 @@ lesson_number: "27"
 title: "CRUD con XML: XmlCrudDemo"
 description: "CRUD completo con Jackson XML manteniendo XmlCrudDemo como demo previa a la refactorización."
 permalink: "/ficheros/leccion27/"
+lessons:
+  - id: que-vas-a-conseguir
+    title: "Qué vas a conseguir"
+  - id: punto-de-partida
+    title: "Punto de partida"
+  - id: mapa-visual
+    title: "Mapa visual"
+  - id: ejemplo-completo-xmlcruddemo-java
+    title: "Ejemplo completo: XmlCrudDemo.java"
+  - id: que-debes-recordar
+    title: "Qué debes recordar"
+  - id: antes-de-abrir-el-fichero
+    title: "Antes de abrir el fichero"
+  - id: microproyecto-crud-xml
+    title: "Microproyecto · CRUD XML"
 ---
 
 # CRUD con XML: `XmlCrudDemo`
 
 ## Qué vas a conseguir
+{: #que-vas-a-conseguir }
 
 - Implementar un CRUD XML completo con Jackson XML.
 - Usar una clase wrapper para conservar una raíz XML estable.
 - Mantener `XmlCrudDemo` como tercer ejemplo monolítico antes de refactorizar.
 
 ## Punto de partida
+{: #punto-de-partida }
 
 XML necesita representar explícitamente la colección bajo `<productos>` y cada registro como `<producto>`.
 
@@ -26,7 +43,15 @@ XML necesita representar explícitamente la colección bajo `<productos>` y cada
 
 <div class="cla-note"><strong>Contrato provisional del CRUD.</strong><p>Las demos iniciales mantienen <code>throws IOException</code> porque todavía mezclan aplicación e infraestructura. Durante la refactorización eliminaremos ese detalle de las interfaces y cada repositorio concreto controlará sus errores.</p></div>
 
+## Mapa visual
+{: #mapa-visual }
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/conceptos/27.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/conceptos/27.webp' | relative_url }}" alt="CRUD XML. Localiza un elemento mediante su atributo id. Guarda el resultado y reabre el catálogo para comprobarlo." loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
 ## Ejemplo completo: `XmlCrudDemo.java`
+{: #ejemplo-completo-xmlcruddemo-java }
 
 Dependencia Maven:
 
@@ -75,7 +100,9 @@ public class XmlCrudDemo {
     }
 
     public List<Producto> findAll() throws IOException {
-        if (Files.notExists(path) || Files.size(path) == 0) return new ArrayList<>();
+        if (Files.notExists(path) || Files.size(path) == 0) {
+            return new ArrayList<>();
+        }
         DocumentoProductos data = mapper.readValue(path.toFile(), DocumentoProductos.class);
         return new ArrayList<>(data.productos);
     }
@@ -86,8 +113,9 @@ public class XmlCrudDemo {
 
     public void create(Producto producto) throws IOException {
         List<Producto> items = findAll();
-        if (items.stream().anyMatch(p -> p.id() == producto.id()))
+        if (items.stream().anyMatch(p -> p.id() == producto.id())) {
             throw new IllegalArgumentException("Id duplicado: " + producto.id());
+        }
         items.add(producto);
         saveAll(items);
     }
@@ -107,13 +135,17 @@ public class XmlCrudDemo {
     public boolean delete(long id) throws IOException {
         List<Producto> items = findAll();
         boolean removed = items.removeIf(p -> p.id() == id);
-        if (removed) saveAll(items);
+        if (removed) {
+            saveAll(items);
+        }
         return removed;
     }
 
     private void saveAll(List<Producto> items) throws IOException {
         Path parent = path.getParent();
-        if (parent != null) Files.createDirectories(parent);
+        if (parent != null) {
+            Files.createDirectories(parent);
+        }
         mapper.writerWithDefaultPrettyPrinter()
               .writeValue(path.toFile(), new DocumentoProductos(items));
     }
@@ -132,9 +164,36 @@ public class XmlCrudDemo {
 ```
 
 ## Qué debes recordar
+{: #que-debes-recordar }
 
 - El wrapper resuelve la raíz XML; el dominio puede seguir usando `Producto`.
 - `XmlMapper` permite reutilizar gran parte del patrón aprendido con JSON.
 - `XmlCrudDemo` permanece como demo; la arquitectura se extrae en el siguiente paso.
 
-<div class="cla-lesson-nav"><a href="/ficheros/leccion26/">← 26 · Serializar XML</a><a href="/ficheros/leccion28/">28 · Refactorizar XmlCrudDemo →</a></div>
+
+## Antes de abrir el fichero
+{: #antes-de-abrir-el-fichero }
+
+Anota el directorio de trabajo y la ruta absoluta normalizada. Comprueba si es un fichero regular, una carpeta o una ruta ausente. Trata los errores de acceso de forma separada. Si el archivo es una entrada obligatoria, informa de su ausencia. Si estás abriendo un repositorio nuevo, aplica el contrato de inicialización de la lección.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/ficheros/leccion02/#diagnostico-de-una-ruta-de-fichero' | relative_url }}">Ver cómo diagnosticar la ruta</a>
+</div>
+
+
+## Microproyecto · CRUD XML
+{: #microproyecto-crud-xml }
+
+Trabaja con catalogo y elementos producto con atributo id. Inserta o actualiza el texto, o elimina si nombre es nulo. Devuelve el valor anterior o null.
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/microproyectos/F27-tarea-01.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/microproyectos/F27-tarea-01.webp' | relative_url }}" alt="CRUD XML. Resultado esperado: Alta, modificación y baja persistidas" loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
+**Resultado esperado:** Alta, modificación y baja persistidas.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/proyectos/ficheros/leccion27/F27-tarea-01.zip' | relative_url }}">Descargar F27-tarea-01</a>
+</div>
+
+<div class="cla-lesson-nav"><a href="{{ '/ficheros/leccion26/' | relative_url }}">← 26 · Serializar XML</a><a href="{{ '/ficheros/leccion28/' | relative_url }}">28 · Refactorizar XmlCrudDemo →</a></div>

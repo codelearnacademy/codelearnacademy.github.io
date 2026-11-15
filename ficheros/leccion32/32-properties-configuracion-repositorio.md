@@ -7,11 +7,36 @@ lesson_number: "32"
 title: ".properties: configuración de los repositorios"
 description: "Usar RepositoryConfig para sacar tipos y rutas de fichero fuera del código Java."
 permalink: "/ficheros/leccion32/"
+lessons:
+  - id: mapa-visual
+    title: "Mapa visual"
+  - id: el-problema
+    title: "El problema"
+  - id: application-properties
+    title: "application.properties"
+  - id: repositoryconfig
+    title: "RepositoryConfig"
+  - id: seleccionar-una-implementacion
+    title: "Seleccionar una implementación"
+  - id: test-de-configuracion
+    title: "Test de configuración"
+  - id: antes-de-abrir-el-fichero
+    title: "Antes de abrir el fichero"
+  - id: microproyecto-resolver-configuracion
+    title: "Microproyecto · Resolver configuración"
 ---
 
 # Configurar los repositorios con `.properties`
 
+## Mapa visual
+{: #mapa-visual }
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/conceptos/32.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/conceptos/32.webp' | relative_url }}" alt="Configuración → fichero. Lee el formato y la ruta en properties. Explicita la base respecto a la que se resuelve la ruta de datos." loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
 ## El problema
+{: #el-problema }
 
 Hasta ahora escribimos rutas directamente en Java:
 
@@ -23,6 +48,7 @@ new ProductoCsvRepository(
 Un fichero `.properties` permite sacar esa configuración del código.
 
 ## `application.properties`
+{: #application-properties }
 
 El proyecto utiliza estas claves:
 
@@ -37,6 +63,7 @@ repository.vehiculos.path=data/vehiculos.json
 ```
 
 ## `RepositoryConfig`
+{: #repositoryconfig }
 
 ```java
 package es.educacion.ficheros.config;
@@ -81,6 +108,7 @@ public class RepositoryConfig {
 Aquí sí se controla `IOException`, porque `RepositoryConfig` es precisamente la clase que conoce el fichero `.properties`.
 
 ## Seleccionar una implementación
+{: #seleccionar-una-implementacion }
 
 Sin introducir todavía una factoría obligatoria, podemos construir el repositorio desde la configuración:
 
@@ -104,6 +132,7 @@ IProductoRepository productos = switch (type) {
 La selección puede extraerse a una factoría como ampliación posterior, pero no forma parte del núcleo del proyecto de referencia actual.
 
 ## Test de configuración
+{: #test-de-configuracion }
 
 ```java
 @Test
@@ -121,4 +150,30 @@ void debeLeerValoresYPathsDesdeProperties() {
 }
 ```
 
-<div class="cla-lesson-nav"><a href="/ficheros/leccion31/">← 31 · Vehiculo</a><a href="/ficheros/leccion33/">33 · Proyecto final →</a></div>
+
+## Antes de abrir el fichero
+{: #antes-de-abrir-el-fichero }
+
+Anota el directorio de trabajo y la ruta absoluta normalizada. Comprueba si es un fichero regular, una carpeta o una ruta ausente. Trata los errores de acceso de forma separada. Si el archivo es una entrada obligatoria, informa de su ausencia. Si estás abriendo un repositorio nuevo, aplica el contrato de inicialización de la lección.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/ficheros/leccion02/#diagnostico-de-una-ruta-de-fichero' | relative_url }}">Ver cómo diagnosticar la ruta</a>
+</div>
+
+
+## Microproyecto · Resolver configuración
+{: #microproyecto-resolver-configuracion }
+
+Lee repository.type y repository.path. Admite csv, json y xml. Resuelve la ruta respecto a la carpeta del properties. Rechaza formato desconocido.
+
+<figure class="cla-diagram">
+  <a href="{{ '/assets/images/ficheros/microproyectos/F32-tarea-01.webp' | relative_url }}"><img src="{{ '/assets/images/ficheros/microproyectos/F32-tarea-01.webp' | relative_url }}" alt="Resolver configuración. Resultado esperado: Ruta absoluta de datos" loading="lazy" style="max-width:100%;height:auto"></a>
+</figure>
+
+**Resultado esperado:** Ruta absoluta de datos.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/assets/proyectos/ficheros/leccion32/F32-tarea-01.zip' | relative_url }}">Descargar F32-tarea-01</a>
+</div>
+
+<div class="cla-lesson-nav"><a href="{{ '/ficheros/leccion31/' | relative_url }}">← 31 · Vehiculo</a><a href="{{ '/ficheros/leccion33/' | relative_url }}">33 · Proyecto final →</a></div>
