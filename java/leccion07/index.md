@@ -8,6 +8,10 @@ search_title: Lección 07 - Herencia e interfaces
 search_description: Aplicarás herencia, interfaces y polimorfismo para diseñar soluciones extensibles.
 description: Aplicarás herencia, interfaces, polimorfismo y composición.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: herencia
     title: Herencia y sobrescritura
   - id: interfaces
@@ -19,12 +23,52 @@ lessons:
 permalink: /java/leccion07/
 ---
 
+## Objetivo
+
+Aplicarás herencia, interfaces, polimorfismo y composición.
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion07/50-superclase-y-subclases/' | relative_url }}"><span aria-hidden="true">01</span><strong>Superclase y subclases</strong></a>
+  <a href="{{ '/java/leccion07/51-constructores-y-super/' | relative_url }}"><span aria-hidden="true">02</span><strong>Constructores y super</strong></a>
+  <a href="{{ '/java/leccion07/52-sobrescritura-y-polimorfismo/' | relative_url }}"><span aria-hidden="true">03</span><strong>Sobrescritura y polimorfismo</strong></a>
+  <a href="{{ '/java/leccion07/53-abstract-y-final/' | relative_url }}"><span aria-hidden="true">04</span><strong>Abstract y final</strong></a>
+  <a href="{{ '/java/leccion07/54-interfaces-como-contratos/' | relative_url }}"><span aria-hidden="true">05</span><strong>Interfaces como contratos</strong></a>
+  <a href="{{ '/java/leccion07/55-composicion-y-delegacion/' | relative_url }}"><span aria-hidden="true">06</span><strong>Composición y delegación</strong></a>
+  <a href="{{ '/java/leccion07/56-probar-y-documentar-una-jerarquia/' | relative_url }}"><span aria-hidden="true">07</span><strong>Probar y documentar una jerarquía</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Políticas de préstamo
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+
+
+
+1. **Punto de partida.** Parte de Material y prepara dos tipos de material con plazos distintos.
+2. **Pasos.** Define una clase base abstracta, usa super y sobrescribe plazoDias() en dos subclases. Usa final para bloquear una extensión indebida. Invoca ambos objetos a través del tipo base y compara con una interfaz PoliticaPrestamo delegada por composición.
+3. **Resultado esperado.** Una lista de materiales produce los plazos 3 y 7 con el mismo método.
+4. **Caso de fallo.** Inyecta temporalmente un plazo incorrecto y localízalo con el depurador.
+
+**Evidencia de entrega.** Pruebas, traza breve, Javadoc del contrato y decisión razonada sobre herencia, interfaz y composición.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Usa una jerarquía con sobrescritura y llamadas polimórficas. | 1 |
+| Prueba ambos tipos y documenta un fallo depurado. | 1 |
+| Justifica herencia o composición y documenta el contrato público. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
+
 ## Herencia y sobrescritura
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/07-herencia.png" alt="Jerarquía de herencia y polimorfismo" loading="lazy">
-</figure>
 
 La herencia expresa una especialización. La subclase recibe miembros accesibles de la superclase y puede sobrescribir comportamiento con `@Override`.
 
@@ -95,10 +139,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## Composición y diseño
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/07-herencia-composicion.png" alt="Herencia frente a composición" loading="lazy">
-</figure>
-
 Prefiere composición cuando un objeto utiliza a otro sin ser una especialización. `Pedido` puede tener un `CalculadorDePrecios`; no necesita heredar de él. Esta decisión reduce acoplamiento y facilita sustituir colaboraciones en pruebas.
 
 ### Ejercicios de práctica · Composición y diseño
@@ -125,10 +165,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Refuerzo práctico
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/07-interface.png" alt="Una interfaz Java define un contrato que puede tener varias implementaciones" loading="lazy">
-</figure>
-
 ### Ejemplo guiado
 
 Define `IPago`, implementa tarjeta y transferencia y haz que el cliente dependa solo de la interfaz.
@@ -151,40 +187,40 @@ Implementa un sistema de pagos con `IPago` y al menos tres implementaciones. El 
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué relación modela herencia?
+### 1. Si una variable de tipo Material contiene una subclase que sobrescribe plazoDias(), ¿qué implementación se invoca?
 
-- A) Es-un
-- B) Tiene-un
-- C) Clave-valor
-- D) Entrada-salida
+- A) La de Material por el tipo declarado
+- B) La del constructor de la subclase
+- C) La de la subclase concreta
+- D) La de Material salvo que se use un cast
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Una subclase es un tipo más específico de su superclase.</p>
+<p><strong>Respuesta correcta: C.</strong> La JVM selecciona la implementación del método de instancia según el tipo real del objeto.</p>
 
 </details>
 
 ### 2. ¿Qué palabra se usa para heredar de una clase?
 
-- A) extends
-- B) implements siempre
-- C) inherits
-- D) superclass
+- A) implements siempre
+- B) superclass
+- C) extends
+- D) inherits
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> extends declara la superclase.</p>
+<p><strong>Respuesta correcta: C.</strong> extends declara la superclase.</p>
 
 </details>
 
 ### 3. ¿Qué palabra se usa para implementar una interfaz?
 
 - A) implements
-- B) extends siempre
-- C) interfaceOf
-- D) with
+- B) interfaceOf
+- C) with
+- D) extends siempre
 
 <details>
 <summary>Ver respuesta</summary>
@@ -195,29 +231,29 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué permite el polimorfismo?
 
-- A) Usar una referencia de un tipo común con implementaciones distintas
+- A) Evitar métodos
 - B) Eliminar todos los tipos
-- C) Evitar métodos
-- D) Compilar sin JVM
+- C) Compilar sin JVM
+- D) Usar una referencia de un tipo común con implementaciones distintas
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El código cliente puede trabajar contra una abstracción común.</p>
+<p><strong>Respuesta correcta: D.</strong> El código cliente puede trabajar contra una abstracción común.</p>
 
 </details>
 
 ### 5. ¿Cuándo suele ser preferible composición a herencia?
 
-- A) Cuando queremos combinar comportamiento sin una relación es-un natural
-- B) Nunca
+- A) Nunca
+- B) Cuando queremos combinar comportamiento sin una relación es-un natural
 - C) Solo con Strings
 - D) Solo con bases de datos
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La composición suele reducir acoplamiento cuando la jerarquía no es una relación de sustitución clara.</p>
+<p><strong>Respuesta correcta: B.</strong> La composición suele reducir acoplamiento cuando la jerarquía no es una relación de sustitución clara.</p>
 
 </details>
 
@@ -299,4 +335,4 @@ Diseña `INotificacion` con implementaciones para correo electrónico, SMS y un 
 
 **Entrega:** código, pequeño diagrama de tipos y explicación de cómo añadirías una cuarta implementación.
 
-<div class="cla-lesson-nav"><a href="/java/leccion06/">← 06 · Colecciones y tipos avanzados</a><a href="/java/leccion08/">08 · Persistencia con SQLite →</a></div>
+<div class="cla-lesson-nav"><a href="/java/leccion06/">← 06 · Colecciones y tipos avanzados</a><a href="/java/leccion08/">08 · Persistencia en Base de Datos →</a></div>

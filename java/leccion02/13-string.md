@@ -6,6 +6,87 @@ lesson_file: 13-string
 lesson_number: "13"
 title: Clase String en Java
 description: Aprende a crear, comparar, buscar, transformar y dividir cadenas de caracteres con la clase String en Java 21.
+lessons:
+  - id: string-es-una-clase
+    title: "String es una clase"
+  - id: las-cadenas-son-inmutables
+    title: "Las cadenas son inmutables"
+  - id: crear-cadenas
+    title: "Crear cadenas"
+  - id: longitud-de-una-cadena-length
+    title: "Longitud de una cadena: length()"
+  - id: posiciones-e-indices
+    title: "Posiciones e índices"
+  - id: obtener-un-caracter-charat
+    title: "Obtener un carácter: charAt()"
+  - id: obtener-una-subcadena-substring
+    title: "Obtener una subcadena: substring()"
+  - id: buscar-texto-indexof
+    title: "Buscar texto: indexOf()"
+  - id: buscar-la-ultima-aparicion-lastindexof
+    title: "Buscar la última aparición: lastIndexOf()"
+  - id: comprobar-si-contiene-texto-contains
+    title: "Comprobar si contiene texto: contains()"
+  - id: comprobar-el-comienzo-y-el-final
+    title: "Comprobar el comienzo y el final"
+  - id: convertir-a-mayusculas-y-minusculas
+    title: "Convertir a mayúsculas y minúsculas"
+  - id: eliminar-espacios-trim-y-strip
+    title: "Eliminar espacios: trim() y strip()"
+  - id: comprobar-si-una-cadena-esta-vacia
+    title: "Comprobar si una cadena está vacía"
+  - id: reemplazar-contenido-replace
+    title: "Reemplazar contenido: replace()"
+  - id: comparar-cadenas
+    title: "Comparar cadenas"
+  - id: comparar-ignorando-mayusculas-y-minusculas
+    title: "Comparar ignorando mayúsculas y minúsculas"
+  - id: comparacion-alfabetica-compareto
+    title: "Comparación alfabética: compareTo()"
+  - id: dividir-una-cadena-split
+    title: "Dividir una cadena: split()"
+  - id: concatenar-cadenas
+    title: "Concatenar cadenas"
+  - id: concatenar-con-concat
+    title: "Concatenar con concat()"
+  - id: convertir-valores-a-texto-string-valueof
+    title: "Convertir valores a texto: String.valueOf()"
+  - id: unir-varias-cadenas-string-join
+    title: "Unir varias cadenas: String.join()"
+  - id: repetir-texto-repeat
+    title: "Repetir texto: repeat()"
+  - id: formatear-cadenas
+    title: "Formatear cadenas"
+  - id: bloques-de-texto
+    title: "Bloques de texto"
+  - id: recorrer-los-caracteres-de-un-string
+    title: "Recorrer los caracteres de un String"
+  - id: contar-caracteres
+    title: "Contar caracteres"
+  - id: string-y-null
+    title: "String y null"
+  - id: metodos-importantes-de-string
+    title: "Métodos importantes de String"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: para-recordar
+    title: "Para recordar"
+  - id: ejercicio-rapido
+    title: "Ejercicio rápido"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: prueba-tus-conocimientos
+    title: "Prueba tus conocimientos"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-string
+    title: "Ejercicios de práctica · String"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Clase `String` en Java
@@ -41,6 +122,7 @@ Hola, Java 21
 ```
 
 ## `String` es una clase
+{: #string-es-una-clase }
 
 Aunque utilizamos `String` constantemente y su sintaxis parece sencilla, no es un tipo primitivo.
 
@@ -72,6 +154,7 @@ char letra = 'H';
 <div class="cla-note"><strong>Idea clave</strong><p><code>String</code> representa cadenas de caracteres y es una clase. <code>char</code> representa un único carácter y es un tipo primitivo.</p></div>
 
 ## Las cadenas son inmutables
+{: #las-cadenas-son-inmutables }
 
 Una característica fundamental de `String` es que sus objetos son **inmutables**.
 
@@ -132,6 +215,7 @@ ANA
 <div class="cla-note"><strong>Regla importante</strong><p>Los métodos de <code>String</code> no modifican la cadena original. Cuando una operación cambia el texto, normalmente devuelve un nuevo objeto <code>String</code>.</p></div>
 
 ## Crear cadenas
+{: #crear-cadenas }
 
 La forma habitual de crear una cadena es mediante un literal:
 
@@ -154,6 +238,7 @@ String lenguaje = "Java";
 porque es más sencillo y permite aprovechar el tratamiento interno que Java realiza con los literales de cadena.
 
 ## Longitud de una cadena: `length()`
+{: #longitud-de-una-cadena-length }
 
 El método `length()` devuelve el número de caracteres de una cadena.
 
@@ -196,10 +281,11 @@ Total -> 10
 ```
 
 ## Posiciones e índices
+{: #posiciones-e-indices }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-string-indices.png" alt="Índices de caracteres en String" loading="lazy">
+  <img src="{{ '/assets/images/java/02-string-indices.webp' | relative_url }}" alt="Índices de caracteres en String" loading="lazy">
 </figure>
 
 Los caracteres de un `String` se numeran comenzando en `0`.
@@ -240,6 +326,7 @@ Salida:
 ```
 
 ## Obtener un carácter: `charAt()`
+{: #obtener-un-caracter-charat }
 
 El método `charAt(int index)` devuelve el carácter situado en una posición determinada.
 
@@ -310,6 +397,7 @@ length() - 1
 ```
 
 ## Obtener una subcadena: `substring()`
+{: #obtener-una-subcadena-substring }
 
 El método `substring()` permite extraer una parte de una cadena.
 
@@ -360,6 +448,7 @@ excluye: 4
 <div class="cla-note"><strong>Idea clave</strong><p>En <code>substring(inicio, fin)</code>, el índice inicial se incluye y el índice final no se incluye.</p></div>
 
 ## Buscar texto: `indexOf()`
+{: #buscar-texto-indexof }
 
 `indexOf()` devuelve la posición de la primera aparición de un carácter o una cadena.
 
@@ -424,6 +513,7 @@ if (texto.indexOf("Java") != -1) {
 ```
 
 ## Buscar la última aparición: `lastIndexOf()`
+{: #buscar-la-ultima-aparicion-lastindexof }
 
 `lastIndexOf()` devuelve la posición de la última aparición.
 
@@ -442,6 +532,7 @@ Salida:
 ```
 
 ## Comprobar si contiene texto: `contains()`
+{: #comprobar-si-contiene-texto-contains }
 
 `contains()` devuelve `true` si una cadena contiene una determinada secuencia de caracteres.
 
@@ -503,6 +594,7 @@ boolean contiene = texto.indexOf(caracter) >= 0;
 ```
 
 ## Comprobar el comienzo y el final
+{: #comprobar-el-comienzo-y-el-final }
 
 ### `startsWith()`
 
@@ -547,6 +639,7 @@ if (archivo.endsWith(".png")) {
 ```
 
 ## Convertir a mayúsculas y minúsculas
+{: #convertir-a-mayusculas-y-minusculas }
 
 ### `toUpperCase()`
 
@@ -603,6 +696,7 @@ JAVA
 ```
 
 ## Eliminar espacios: `trim()` y `strip()`
+{: #eliminar-espacios-trim-y-strip }
 
 ### `trim()`
 
@@ -653,6 +747,7 @@ System.out.println("|" + texto.stripTrailing() + "|");
 ```
 
 ## Comprobar si una cadena está vacía
+{: #comprobar-si-una-cadena-esta-vacia }
 
 ### `isEmpty()`
 
@@ -725,6 +820,7 @@ false
 <div class="cla-note"><strong>Para recordar</strong><p><code>isEmpty()</code> comprueba si la longitud es cero. <code>isBlank()</code> también considera vacía una cadena formada únicamente por espacios en blanco.</p></div>
 
 ## Reemplazar contenido: `replace()`
+{: #reemplazar-contenido-replace }
 
 `replace()` devuelve una nueva cadena sustituyendo texto por otro.
 
@@ -777,6 +873,7 @@ Hola Java
 ```
 
 ## Comparar cadenas
+{: #comparar-cadenas }
 
 Una de las reglas más importantes al trabajar con `String` es conocer la diferencia entre `==` y `equals()`.
 
@@ -827,6 +924,7 @@ texto1.equals(texto2)
 <div class="cla-note"><strong>Regla importante</strong><p>Para comparar el contenido de dos objetos <code>String</code>, utiliza <code>equals()</code>. No utilices <code>==</code> para decidir si contienen el mismo texto.</p></div>
 
 ## Comparar ignorando mayúsculas y minúsculas
+{: #comparar-ignorando-mayusculas-y-minusculas }
 
 `equalsIgnoreCase()` compara dos cadenas sin distinguir entre mayúsculas y minúsculas.
 
@@ -854,6 +952,7 @@ if (respuesta.equalsIgnoreCase("si")) {
 ```
 
 ## Comparación alfabética: `compareTo()`
+{: #comparacion-alfabetica-compareto }
 
 `compareTo()` compara dos cadenas lexicográficamente.
 
@@ -883,6 +982,7 @@ if (a.compareTo(b) < 0) {
 ```
 
 ## Dividir una cadena: `split()`
+{: #dividir-una-cadena-split }
 
 `split()` divide una cadena en diferentes partes y devuelve un array de `String`.
 
@@ -951,6 +1051,7 @@ Salida:
 ```
 
 ## Concatenar cadenas
+{: #concatenar-cadenas }
 
 Podemos unir cadenas mediante el operador `+`.
 
@@ -1013,6 +1114,7 @@ Resultado: 30
 ```
 
 ## Concatenar con `concat()`
+{: #concatenar-con-concat }
 
 También existe el método `concat()`:
 
@@ -1034,6 +1136,7 @@ Hola Ana
 Para concatenaciones sencillas suele ser más habitual utilizar `+`.
 
 ## Convertir valores a texto: `String.valueOf()`
+{: #convertir-valores-a-texto-string-valueof }
 
 `String.valueOf()` permite convertir distintos tipos de datos a texto.
 
@@ -1068,6 +1171,7 @@ System.out.println(textoCaracter);
 ```
 
 ## Unir varias cadenas: `String.join()`
+{: #unir-varias-cadenas-string-join }
 
 `String.join()` permite unir varios textos utilizando un separador.
 
@@ -1108,6 +1212,7 @@ usuarios/alumno/documentos
 ```
 
 ## Repetir texto: `repeat()`
+{: #repetir-texto-repeat }
 
 `repeat()` devuelve una cadena repetida varias veces.
 
@@ -1138,6 +1243,7 @@ Java Java Java
 ```
 
 ## Formatear cadenas
+{: #formatear-cadenas }
 
 Java permite construir cadenas con valores utilizando `formatted()`.
 
@@ -1178,6 +1284,7 @@ System.out.println(mensaje);
 ```
 
 ## Bloques de texto
+{: #bloques-de-texto }
 
 Java permite representar textos de varias líneas mediante **text blocks**.
 
@@ -1214,6 +1321,7 @@ String html = """
 ```
 
 ## Recorrer los caracteres de un `String`
+{: #recorrer-los-caracteres-de-un-string }
 
 Podemos utilizar `length()` y `charAt()` para recorrer todos sus caracteres.
 
@@ -1260,6 +1368,7 @@ Salida:
 ```
 
 ## Contar caracteres
+{: #contar-caracteres }
 
 Podemos combinar `charAt()` con un bucle para contar apariciones.
 
@@ -1290,6 +1399,7 @@ El carácter aparece 2 veces
 En este caso sí utilizamos `==` porque estamos comparando valores de tipo primitivo `char`, no objetos `String`.
 
 ## `String` y `null`
+{: #string-y-null }
 
 Una variable `String` puede contener `null`.
 
@@ -1348,6 +1458,7 @@ if ("si".equals(respuesta)) {
 Si `respuesta` vale `null`, `equals()` simplemente devuelve `false`.
 
 ## Métodos importantes de `String`
+{: #metodos-importantes-de-string }
 
 | Método | Descripción |
 | --- | --- |
@@ -1380,6 +1491,7 @@ Si `respuesta` vale `null`, `equals()` simplemente devuelve `false`.
 | `String.join(...)` | Une varias cadenas utilizando un separador. |
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 El siguiente programa utiliza varios de los métodos estudiados:
 
@@ -1487,6 +1599,7 @@ Mundo
 ```
 
 ## Para recordar
+{: #para-recordar }
 
 - `String` es una clase, no un tipo primitivo.
 - Las cadenas son **inmutables**.
@@ -1506,6 +1619,7 @@ Mundo
 - Una variable `String` puede contener `null`.
 
 ## Ejercicio rápido
+{: #ejercicio-rapido }
 
 Dado:
 
@@ -1532,6 +1646,7 @@ lenguaje.endsWith("Java");
 Comprueba después tus respuestas ejecutando un programa.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 Crea un programa llamado `AnalizadorTexto.java`.
 
@@ -1617,6 +1732,7 @@ public class AnalizadorTexto {
 ```
 
 ## Prueba tus conocimientos
+{: #prueba-tus-conocimientos }
 
 ### Caso 1
 
@@ -1724,6 +1840,7 @@ NullPointerException
 porque no existe ningún objeto sobre el que ejecutar `length()`.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras completar este apartado debes ser capaz de crear y manipular cadenas de caracteres utilizando los métodos principales de `String`.
 
@@ -1760,9 +1877,10 @@ Estos métodos aparecen constantemente en programas Java al procesar datos intro
 El siguiente paso es estudiar con más detalle la clase `Integer` y otras operaciones de conversión y tratamiento de valores enteros.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-string-equals.png" alt="02 string equals" loading="lazy">
+  <img src="{{ '/assets/images/java/02-string-equals.webp' | relative_url }}" alt="02 string equals" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -1773,6 +1891,7 @@ Compara dos cadenas con `==` y con `equals()`. Después normaliza `"   aNA péRE
 
 Crea un normalizador de nombres y un programa que obtenga el nombre de un fichero sin extensión.
 ## Ejercicios de práctica · String
+{: #ejercicios-de-practica-string }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -1787,6 +1906,7 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en normalizar nombres, correos o identificadores. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
@@ -1804,38 +1924,38 @@ Responde antes de desplegar la solución.
 
 ### 2. ¿Cuál es el primer índice de una cadena?
 
-- A) 0
-- B) 1
+- A) Depende del texto
+- B) 0
 - C) -1
-- D) Depende del texto
+- D) 1
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Java indexa desde cero.</p>
+<p><strong>Respuesta correcta: B.</strong> Java indexa desde cero.</p>
 
 </details>
 
 ### 3. ¿Qué método debe usarse normalmente para comparar contenido de Strings?
 
-- A) equals
-- B) == siempre
-- C) compareMemory
-- D) same
+- A) compareMemory
+- B) same
+- C) equals
+- D) == siempre
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> equals compara contenido según la implementación de String.</p>
+<p><strong>Respuesta correcta: C.</strong> equals compara contenido según la implementación de String.</p>
 
 </details>
 
 ### 4. ¿Qué hace substring?
 
 - A) Obtiene una parte de la cadena
-- B) Convierte a int siempre
+- B) Elimina el objeto original
 - C) Ordena caracteres
-- D) Elimina el objeto original
+- D) Convierte a int siempre
 
 <details>
 <summary>Ver respuesta</summary>
@@ -1846,19 +1966,20 @@ Responde antes de desplegar la solución.
 
 ### 5. ¿Qué suele ser mejor para muchas concatenaciones mutables sucesivas?
 
-- A) StringBuilder
-- B) boolean
-- C) Math
-- D) LocalDate
+- A) boolean
+- B) StringBuilder
+- C) LocalDate
+- D) Math
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> StringBuilder evita crear tantas cadenas intermedias.</p>
+<p><strong>Respuesta correcta: B.</strong> StringBuilder evita crear tantas cadenas intermedias.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Normaliza `"   aNA péREZ  "` y produce una representación consistente.
 2. Extrae nombre de fichero y extensión a partir de una cadena de ruta sencilla.

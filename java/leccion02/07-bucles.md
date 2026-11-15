@@ -6,6 +6,33 @@ lesson_file: 07-bucles
 lesson_number: "07"
 title: Bucles
 description: Repite acciones automáticamente con for, while y do while.
+lessons:
+  - id: for
+    title: "for"
+  - id: while
+    title: "while"
+  - id: do-while
+    title: "do while"
+  - id: break-y-continue
+    title: "break y continue"
+  - id: ejemplo-practico
+    title: "Ejemplo práctico"
+  - id: cuando-usar-cada-uno
+    title: "Cuándo usar cada uno"
+  - id: ejercicio
+    title: "Ejercicio"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-bucles
+    title: "Ejercicios de práctica · Bucles"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Bucles
@@ -13,6 +40,7 @@ description: Repite acciones automáticamente con for, while y do while.
 Los bucles permiten repetir instrucciones varias veces sin escribir el mismo código manualmente.
 
 ## for
+{: #for }
 
 ```java
 for (int i = 0; i < 5; i++) {
@@ -21,6 +49,7 @@ for (int i = 0; i < 5; i++) {
 ```
 
 ## while
+{: #while }
 
 ```java
 int contador = 0;
@@ -32,6 +61,7 @@ while (contador < 5) {
 ```
 
 ## do while
+{: #do-while }
 
 ```java
 int numero = 0;
@@ -43,6 +73,7 @@ do {
 ```
 
 ## break y continue
+{: #break-y-continue }
 
 ```java
 for (int i = 0; i < 10; i++) {
@@ -57,6 +88,7 @@ for (int i = 0; i < 10; i++) {
 ```
 
 ## Ejemplo práctico
+{: #ejemplo-practico }
 
 ```java
 public class BuclesDemo {
@@ -69,10 +101,11 @@ public class BuclesDemo {
 ```
 
 ## Cuándo usar cada uno
+{: #cuando-usar-cada-uno }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-bucles-comparacion.png" alt="Comparación entre for while y do while" loading="lazy">
+  <img src="{{ '/assets/images/java/02-bucles-comparacion.webp' | relative_url }}" alt="Comparación entre for while y do while" loading="lazy">
 </figure>
 
 - `for`: cuando sabes cuántas veces quieres repetir.
@@ -82,10 +115,12 @@ public class BuclesDemo {
 <div class="cla-note"><strong>Regla</strong><p>Todos los bucles necesitan una condición que eventualmente deje de cumplirse; de lo contrario se convierte en un bucle infinito.</p></div>
 
 ## Ejercicio
+{: #ejercicio }
 
 Escribe un programa que imprima los números del 1 al 10 y luego la suma de todos ellos.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Haz un bucle `for` para imprimir del 1 al 10.
 2. Haz el mismo ejercicio con `while`.
@@ -108,13 +143,15 @@ public class ErrorBucle {
 Este bucle no termina porque la variable `i` nunca cambia. La corrección es incrementar `i` dentro del bloque.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Cuando ya sabes repetir tareas, el siguiente paso es encapsular lógica en métodos.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-for.png" alt="02 for" loading="lazy">
+  <img src="{{ '/assets/images/java/02-for.svg' | relative_url }}" alt="La actualización vuelve a comprobar la condición. El bucle termina cuando la condición es falsa." loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -125,6 +162,7 @@ Traza un `for` del 1 al 5 en una tabla con contador, condición y salida. Despu�
 
 Haz una tabla de multiplicar, suma pares y dibuja un triángulo de asteriscos con bucles.
 ## Ejercicios de práctica · Bucles
+{: #ejercicios-de-practica-bucles }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -139,41 +177,42 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en estadísticas, menús repetitivos o patrones. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué bucle es cómodo cuando conoces el número de iteraciones?
 
-- A) for
-- B) if
-- C) switch
-- D) try
+- A) for-each, para recorrer elementos sin controlar un índice
+- B) do while, para ejecutar al menos una vez aunque el límite sea cero
+- C) for
+- D) while, para repetir hasta una condición sin contar iteraciones
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> for concentra inicialización, condición y actualización.</p>
+<p><strong>Respuesta correcta: C.</strong> for concentra inicialización, condición y actualización.</p>
 
 </details>
 
 ### 2. ¿Puede un `while` ejecutarse cero veces?
 
-- A) Sí
-- B) No
+- A) No
+- B) Sí
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Comprueba la condición antes de entrar.</p>
+<p><strong>Respuesta correcta: B.</strong> Comprueba la condición antes de entrar.</p>
 
 </details>
 
 ### 3. ¿Qué diferencia principal tiene `do while`?
 
 - A) Ejecuta el cuerpo al menos una vez
-- B) Nunca comprueba condición
-- C) No puede repetir
-- D) Solo funciona con Strings
+- B) No puede repetir
+- C) Solo funciona con Strings
+- D) Nunca comprueba condición
 
 <details>
 <summary>Ver respuesta</summary>
@@ -184,33 +223,34 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué es un acumulador?
 
-- A) Una variable que va combinando resultados durante iteraciones
-- B) Una clase de JVM
-- C) Un operador SQL
-- D) Un paquete
+- A) Un contador que siempre aumenta en 1
+- B) Una variable que solo guarda el último valor leído
+- C) Una variable que va combinando resultados durante iteraciones
+- D) La variable que indica la posición actual del recorrido
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Por ejemplo, suma += valor.</p>
+<p><strong>Respuesta correcta: C.</strong> Por ejemplo, suma += valor.</p>
 
 </details>
 
 ### 5. ¿Qué riesgo tiene un bucle cuya condición nunca pasa a false?
 
-- A) Bucle infinito
-- B) Error de sintaxis necesariamente
-- C) Autoboxing
-- D) Garbage collection inmediata
+- A) El bucle termina en cuanto se actualiza el contador
+- B) Bucle infinito
+- C) El cuerpo se ejecuta una sola vez
+- D) El compilador siempre rechaza la condición
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El programa puede quedar repitiendo indefinidamente.</p>
+<p><strong>Respuesta correcta: B.</strong> El programa puede quedar repitiendo indefinidamente.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Genera la tabla de multiplicar de un número leído por teclado.
 2. Pide números hasta introducir 0 y muestra suma y cantidad de valores introducidos.

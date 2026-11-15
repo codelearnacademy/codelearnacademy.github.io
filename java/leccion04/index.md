@@ -8,6 +8,10 @@ search_title: Lección 04 - Organización de clases
 search_description: Organizarás el código en paquetes, clases y responsabilidades claras.
 description: Organizarás clases Java con paquetes, visibilidad y composición.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: paquetes
     title: Paquetes y visibilidad
   - id: encapsulacion
@@ -18,6 +22,52 @@ lessons:
     title: Ejercicios
 permalink: /java/leccion04/
 ---
+
+## Objetivo
+
+Organizarás clases Java con paquetes, visibilidad y composición.
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion04/29-clases-objetos-y-estado/' | relative_url }}"><span aria-hidden="true">01</span><strong>Clases, objetos y estado</strong></a>
+  <a href="{{ '/java/leccion04/30-constructores-y-metodos/' | relative_url }}"><span aria-hidden="true">02</span><strong>Constructores y métodos</strong></a>
+  <a href="{{ '/java/leccion04/31-encapsulacion-y-validacion/' | relative_url }}"><span aria-hidden="true">03</span><strong>Encapsulación y validación</strong></a>
+  <a href="{{ '/java/leccion04/32-paquetes-visibilidad-e-importaciones/' | relative_url }}"><span aria-hidden="true">04</span><strong>Paquetes, visibilidad e importaciones</strong></a>
+  <a href="{{ '/java/leccion04/33-metodos-estaticos-y-de-instancia/' | relative_url }}"><span aria-hidden="true">05</span><strong>Métodos estáticos y de instancia</strong></a>
+  <a href="{{ '/java/leccion04/34-composicion-entre-objetos/' | relative_url }}"><span aria-hidden="true">06</span><strong>Composición entre objetos</strong></a>
+  <a href="{{ '/java/leccion04/35-crear-y-consumir-un-jar/' | relative_url }}"><span aria-hidden="true">07</span><strong>Crear y consumir un JAR</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Biblioteca de inventario
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+<div class="cla-lesson-nav"><a href="{{ '/assets/proyectos/java/04-biblioteca.zip' | relative_url }}">Descargar Biblioteca y cliente</a></div>
+
+
+
+
+1. **Punto de partida.** Crea un proyecto biblioteca y otro cliente, con paquetes distintos.
+2. **Pasos.** Define Material y Movimiento con campos privados y constructores. Añade un método estático de validación. Empaqueta las clases en inventario.jar con jar --create --file inventario.jar -C out . Añade el JAR al cliente en el IDE e importa sus clases.
+3. **Resultado esperado.** El cliente crea un material de 5 unidades y registra una salida de 1, obteniendo 4.
+4. **Caso de fallo.** Intenta crear un material con cantidad negativa y verifica el rechazo.
+
+**Evidencia de entrega.** JAR, fuentes en ambos proyectos y prueba del contrato público.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Mantiene campos privados y valida estados. | 1 |
+| Genera un JAR y lo utiliza desde el cliente. | 1 |
+| Comprueba una operación correcta y una retirada inválida. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
 
 ## Paquetes y visibilidad
 
@@ -54,10 +104,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## Encapsulación
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/04-encapsulacion.png" alt="Encapsulación del estado de una clase" loading="lazy">
-</figure>
-
 Una clase debe proteger sus invariantes y ofrecer operaciones significativas. Es preferible `pedido.cancelar()` a exponer un campo que cualquiera pueda cambiar.
 
 ```java
@@ -83,10 +129,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Composición y reutilización
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/04-composicion.png" alt="Composición entre objetos" loading="lazy">
-</figure>
 
 La composición modela relaciones “tiene un”. Permite cambiar una pieza sin crear jerarquías artificiales.
 
@@ -128,10 +170,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Refuerzo práctico
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/04-clase-objeto.png" alt="Comparación entre una clase Java como plantilla y varios objetos creados a partir de ella" loading="lazy">
-</figure>
-
 ### Ejemplo guiado
 
 Construye `Producto` empezando con atributos, añade constructor, encapsula el estado y crea dos instancias.
@@ -154,40 +192,40 @@ Diseña una biblioteca con `Libro`, `Autor` y `Biblioteca`. Encapsula el estado,
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué es encapsulación?
+### 1. ¿Qué diseño permite impedir existencias negativas después de construir Material?
 
-- A) Ocultar estado interno y exponer una API controlada
-- B) Poner todos los campos public
-- C) Evitar clases
-- D) Usar solo métodos static
+- A) Campo público y validación solo en el constructor
+- B) Campo privado y operaciones que validan cada cambio
+- C) Campo protegido y un getter público
+- D) Campo privado y un setter sin validación
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La encapsulación protege invariantes y reduce acoplamiento.</p>
+<p><strong>Respuesta correcta: B.</strong> La invariante debe protegerse también después de construir el objeto.</p>
 
 </details>
 
 ### 2. ¿Qué relación expresa normalmente composición?
 
-- A) Tiene-un
-- B) Es-un
+- A) Es-un
+- B) Ejecuta-en
 - C) Compila-a
-- D) Ejecuta-en
+- D) Tiene-un
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La composición modela que un objeto contiene/usa otros como partes.</p>
+<p><strong>Respuesta correcta: D.</strong> La composición modela que un objeto contiene/usa otros como partes.</p>
 
 </details>
 
 ### 3. ¿Para qué sirven los paquetes?
 
 - A) Organizar tipos y controlar nombres/visibilidad
-- B) Guardar imágenes únicamente
-- C) Sustituir métodos
-- D) Crear SQL
+- B) Crear SQL
+- C) Guardar imágenes únicamente
+- D) Sustituir métodos
 
 <details>
 <summary>Ver respuesta</summary>
@@ -198,23 +236,23 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué ventaja aporta un constructor?
 
-- A) Inicializar un objeto en un estado válido
-- B) Ejecutar SQL siempre
-- C) Sustituir la JVM
-- D) Crear variables globales
+- A) Ejecutar SQL siempre
+- B) Crear variables globales
+- C) Inicializar un objeto en un estado válido
+- D) Sustituir la JVM
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El constructor prepara el estado inicial.</p>
+<p><strong>Respuesta correcta: C.</strong> El constructor prepara el estado inicial.</p>
 
 </details>
 
 ### 5. ¿Qué elemento debería proteger una clase?
 
 - A) Sus invariantes
-- B) Solo sus comentarios
-- C) El nombre del fichero
+- B) El nombre del fichero
+- C) Solo sus comentarios
 - D) La versión del IDE
 
 <details>

@@ -8,6 +8,10 @@ search_title: Lección 05 - Entrada y salida
 search_description: Trabajarás con entrada y salida de datos en aplicaciones de consola.
 description: Leerás y escribirás información con consola, ficheros y formatos.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: consola
     title: Consola y streams
   - id: ficheros
@@ -22,6 +26,49 @@ permalink: /java/leccion05/
 <div class="cla-note"><strong>Qué se pretende</strong><p>Dominar la entrada y salida de información desde una aplicación Java, pasando de la consola a ficheros, formatos de intercambio e interfaces gráficas.</p></div>
 
 <div class="cla-note"><strong>Qué se consigue</strong><p>Al finalizar, podrás leer datos de forma validada, gestionar recursos, guardar información y construir una interfaz JavaFX básica con eventos y FXML.</p></div>
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion05/36-entrada-y-salida-estandar/' | relative_url }}"><span aria-hidden="true">01</span><strong>Entrada y salida estándar</strong></a>
+  <a href="{{ '/java/leccion05/37-leer-y-escribir-con-path-y-files/' | relative_url }}"><span aria-hidden="true">02</span><strong>Leer y escribir con Path y Files</strong></a>
+  <a href="{{ '/java/leccion05/38-procesar-un-fichero-linea-a-linea/' | relative_url }}"><span aria-hidden="true">03</span><strong>Procesar un fichero línea a línea</strong></a>
+  <a href="{{ '/java/leccion05/39-csv-json-y-xml/' | relative_url }}"><span aria-hidden="true">04</span><strong>CSV, JSON y XML</strong></a>
+  <a href="{{ '/java/leccion05/40-crear-una-vista-javafx/' | relative_url }}"><span aria-hidden="true">05</span><strong>Crear una vista JavaFX</strong></a>
+  <a href="{{ '/java/leccion05/41-controlar-eventos-y-validar/' | relative_url }}"><span aria-hidden="true">06</span><strong>Controlar eventos y validar</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Editor de existencias
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+<div class="cla-lesson-nav"><a href="{{ '/assets/proyectos/java/05-javafx.zip' | relative_url }}">Descargar Editor JavaFX</a></div>
+
+
+
+
+1. **Punto de partida.** Crea un proyecto JavaFX en el IDE con un fichero UTF-8 que contiene MAT-01,5.
+2. **Pasos.** Lee el fichero con Files.readString y compara con Files.lines para varias filas. Crea una vista con campo de cantidad, botón y etiqueta. Vincula el evento a un controlador y guarda con Files.writeString tras validar.
+3. **Resultado esperado.** Cambiar 5 a 4 actualiza el fichero y vuelve a mostrar 4 al abrir.
+4. **Caso de fallo.** Una cantidad negativa o no numérica muestra un mensaje y conserva el fichero anterior.
+
+**Evidencia de entrega.** Vista, controlador, fichero antes/después y prueba de entrada, escritura y lectura.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Asocia el evento al controlador del formulario. | 1 |
+| Guarda y recupera el valor tras reabrir. | 1 |
+| Rechaza una entrada inválida y conserva el fichero. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
+
+
 
 ## Consola y streams
 
@@ -91,10 +138,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Ficheros
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/05-formatos.png" alt="Comparación entre CSV JSON y XML" loading="lazy">
-</figure>
 
 La API `java.nio.file` ofrece una forma directa de trabajar con rutas y ficheros. `try-with-resources` garantiza el cierre de recursos.
 
@@ -281,10 +324,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Refuerzo práctico
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/05-io-flujo.png" alt="Flujo de entrada y salida: los datos entran al programa, se procesan y se envían a consola o fichero" loading="lazy">
-</figure>
-
 ### Ejemplo guiado
 
 Lee líneas de un fichero de texto y genera un fichero resumen.
@@ -307,73 +346,73 @@ Lee un fichero de datos sencillo y genera un informe de salida. Documenta qué r
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué representa System.in?
+### 1. El formulario recibe -1 al pulsar Guardar. ¿Qué debe hacer el controlador?
 
-- A) Entrada estándar
-- B) Salida estándar
-- C) Error de compilación
-- D) JVM
+- A) Guardar -1 y ocultarlo al reabrir
+- B) Mostrar el error y conservar el valor anterior en disco
+- C) Sustituir automáticamente por 0 y escribir en disco
+- D) Validar después de escribir y mostrar el error
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> System.in es el flujo de entrada estándar.</p>
+<p><strong>Respuesta correcta: B.</strong> La validación se realiza antes de modificar el fichero.</p>
 
 </details>
 
 ### 2. ¿Qué API moderna simplifica operaciones con rutas y ficheros?
 
-- A) Path y Files
-- B) Math e Integer
-- C) Pattern y Matcher
-- D) LocalDate y Period
+- A) Math e Integer
+- B) Pattern y Matcher
+- C) LocalDate y Period
+- D) Path y Files
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> java.nio.file ofrece Path y Files.</p>
+<p><strong>Respuesta correcta: D.</strong> java.nio.file ofrece Path y Files.</p>
 
 </details>
 
 ### 3. ¿Qué formato es tabular y suele separar campos por delimitadores?
 
-- A) CSV
-- B) JSON únicamente
-- C) XML únicamente
-- D) Bytecode
+- A) XML únicamente
+- B) Bytecode
+- C) CSV
+- D) JSON únicamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> CSV representa filas y columnas mediante delimitadores.</p>
+<p><strong>Respuesta correcta: C.</strong> CSV representa filas y columnas mediante delimitadores.</p>
 
 </details>
 
 ### 4. ¿Qué formato representa datos mediante objetos/arrays y pares clave-valor?
 
-- A) JSON
-- B) CSV exclusivamente
-- C) Bytecode
-- D) JVM
+- A) JVM
+- B) Bytecode
+- C) CSV exclusivamente
+- D) JSON
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> JSON usa objetos y arrays.</p>
+<p><strong>Respuesta correcta: D.</strong> JSON usa objetos y arrays.</p>
 
 </details>
 
 ### 5. ¿Dónde debería profundizarse en CSV/JSON/XML dentro de este proyecto formativo?
 
-- A) En la ruta especializada de Ficheros
-- B) Solo en JVM
+- A) Solo en JVM
+- B) En la ruta especializada de Ficheros
 - C) En Git
 - D) En CSS
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La ruta Java introduce el tema y la ruta Ficheros lo desarrolla.</p>
+<p><strong>Respuesta correcta: B.</strong> La ruta Java introduce el tema y la ruta Ficheros lo desarrolla.</p>
 
 </details>
 

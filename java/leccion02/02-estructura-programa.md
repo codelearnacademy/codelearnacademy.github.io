@@ -6,6 +6,29 @@ lesson_file: 02-estructura-programa
 lesson_number: "02"
 title: Estructura de un programa
 description: Entiende la estructura base de una clase y del método main en Java.
+lessons:
+  - id: forma-minima
+    title: "Forma mínima"
+  - id: desglose
+    title: "Desglose"
+  - id: buenas-practicas
+    title: "Buenas prácticas"
+  - id: ejemplo-con-varios-mensajes
+    title: "Ejemplo con varios mensajes"
+  - id: errores-comunes
+    title: "Errores comunes"
+  - id: ejercicio
+    title: "Ejercicio"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: ejercicios-de-practica-estructura-de-un-programa
+    title: "Ejercicios de práctica · Estructura de un programa"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Estructura de un programa en Java
@@ -13,6 +36,7 @@ description: Entiende la estructura base de una clase y del método main en Java
 Un programa Java se escribe como una o varias clases. Una clase agrupa datos y comportamiento relacionado.
 
 ## Forma mínima
+{: #forma-minima }
 
 ```java
 public class MiPrograma {
@@ -23,6 +47,7 @@ public class MiPrograma {
 ```
 
 ## Desglose
+{: #desglose }
 
 ```java
 public class MiPrograma {
@@ -50,12 +75,14 @@ System.out.println("Programa ejecutado");
 - `println` añade salto de línea.
 
 ## Buenas prácticas
+{: #buenas-practicas }
 
 - Cada clase debe tener una responsabilidad clara.
 - El nombre de la clase debe empezar en mayúscula.
 - La clase pública debe estar en un archivo con el mismo nombre.
 
 ## Ejemplo con varios mensajes
+{: #ejemplo-con-varios-mensajes }
 
 ```java
 public class Saludo {
@@ -68,6 +95,7 @@ public class Saludo {
 ```
 
 ## Errores comunes
+{: #errores-comunes }
 
 - Olvidar la llave de cierre `}`.
 - Escribir `main` con una firma distinta.
@@ -76,10 +104,12 @@ public class Saludo {
 <div class="cla-note"><strong>Regla práctica</strong><p>Cuando el programa no arranca, revisa primero si la clase se llama igual que el archivo y si el método `main` está escrito correctamente.</p></div>
 
 ## Ejercicio
+{: #ejercicio }
 
 Crea una clase `Mensaje` que muestre tres frases en consola.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Escribe una clase simple y asegúrate de que el nombre del archivo coincide con el nombre de la clase.
 2. Cambia el orden de las llaves y observa el error del compilador.
@@ -98,9 +128,11 @@ public class ErrorEstructura {
 El programa fallará por una llave faltante. La corrección es cerrar correctamente el bloque con `}`.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Ahora ya conoces la base de una clase. El siguiente paso es aprender a guardar información real en variables y tipos.
 ## Ejercicios de práctica · Estructura de un programa
+{: #ejercicios-de-practica-estructura-de-un-programa }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -115,64 +147,66 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en refactorizar un `main` largo en métodos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Dónde se agrupan las sentencias de un método?
 
-- A) Entre llaves
+- A) En pom.xml
 - B) Entre comillas
-- C) En pom.xml
+- C) Entre llaves
 - D) En una tabla
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Las llaves delimitan el bloque.</p>
+<p><strong>Respuesta correcta: C.</strong> Las llaves delimitan el bloque.</p>
 
 </details>
 
 ### 2. ¿Qué es `main`?
 
-- A) Un método
+- A) Una variable
 - B) Una clase obligatoria
-- C) Una variable
-- D) Un paquete
+- C) Un paquete
+- D) Un método
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> main es el punto de entrada clásico y es un método.</p>
+<p><strong>Respuesta correcta: D.</strong> main es el punto de entrada clásico y es un método.</p>
 
 </details>
 
 ### 3. ¿Qué suele terminar una sentencia simple en Java?
 
-- A) ;
+- A) @
 - B) :
-- C) #
-- D) @
+- C) ;
+- D) #
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> El punto y coma termina muchas sentencias.</p>
+<p><strong>Respuesta correcta: C.</strong> El punto y coma termina muchas sentencias.</p>
 
 </details>
 
 ### 4. ¿La indentación cambia por sí sola la semántica de los bloques Java?
 
-- A) Sí
-- B) No
+- A) No
+- B) Sí
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Los bloques se delimitan por llaves, aunque una buena indentación mejora legibilidad.</p>
+<p><strong>Respuesta correcta: A.</strong> Los bloques se delimitan por llaves, aunque una buena indentación mejora legibilidad.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Corrige una clase con llaves, punto y coma y firma de `main` incorrectos.
 

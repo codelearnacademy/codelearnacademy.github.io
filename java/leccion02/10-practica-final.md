@@ -6,6 +6,31 @@ lesson_file: 10-practica-final
 lesson_number: "10"
 title: Práctica final guiada
 description: Proyecto integrador guiado de una hora para consolidar variables, condicionales, bucles y métodos.
+lessons:
+  - id: objetivo
+    title: "Objetivo"
+  - id: enunciado
+    title: "Enunciado"
+  - id: requisitos-de-la-practica
+    title: "Requisitos de la práctica"
+  - id: estructura-sugerida
+    title: "Estructura sugerida"
+  - id: alternativas-de-practica
+    title: "Alternativas de práctica"
+  - id: guia-de-trabajo-por-bloques
+    title: "Guía de trabajo por bloques"
+  - id: preguntas-de-reflexion
+    title: "Preguntas de reflexión"
+  - id: criterio-de-evaluacion
+    title: "Criterio de evaluación"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Práctica final guiada
@@ -13,10 +38,12 @@ description: Proyecto integrador guiado de una hora para consolidar variables, c
 Esta práctica tiene una duración estimada de 60 minutos. Está diseñada para apliques todo lo aprendido en la lección: variables, operadores, entrada/salida, condicionales, bucles y métodos.
 
 ## Objetivo
+{: #objetivo }
 
 Crea una pequeña aplicación que gestione la nota final de varios alumnos y calcule si han aprobado o suspendido.
 
 ## Enunciado
+{: #enunciado }
 
 Desarrolla una aplicación en Java que:
 
@@ -28,6 +55,7 @@ Desarrolla una aplicación en Java que:
 6. Al final muestre cuántos alumnos han aprobado y cuántos han suspendido.
 
 ## Requisitos de la práctica
+{: #requisitos-de-la-practica }
 
 - Debes usar `Scanner` para leer datos.
 - Usa variables para almacenar nombre y notas.
@@ -40,6 +68,7 @@ Desarrolla una aplicación en Java que:
   - `mostrarResultado()`
 
 ## Estructura sugerida
+{: #estructura-sugerida }
 
 - Crea el fichero PracticaNotas.java
 
@@ -56,6 +85,7 @@ public class PracticaNotas {
 ```
 
 ## Alternativas de práctica
+{: #alternativas-de-practica }
 
 ### Alternativa A: versión mínima
 
@@ -79,6 +109,7 @@ public class PracticaNotas {
 - Nota estimada si funciona todo: 9.
 
 ## Guía de trabajo por bloques
+{: #guia-de-trabajo-por-bloques }
 
 ### Bloque 1: planteamiento
 
@@ -123,6 +154,7 @@ Añade una mejora opcional:
 - formatear el resultado con una salida clara.
 
 ## Preguntas de reflexión
+{: #preguntas-de-reflexion }
 
 - ¿Qué parte del programa se repite y puede convertirse en método?
 - ¿Qué ocurre si introduces una nota fuera de rango?
@@ -130,6 +162,7 @@ Añade una mejora opcional:
 - ¿Cuál es la diferencia entre `if` y `while`?
 
 ## Criterio de evaluación
+{: #criterio-de-evaluacion }
 
 Se considera que la práctica está completada si:
 
@@ -141,6 +174,7 @@ Se considera que la práctica está completada si:
 - y entrega una salida clara y comprensible.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Haz una versión mínima del programa para un único alumno.
 2. Añade una segunda vuelta para más alumnos.
@@ -162,69 +196,72 @@ Este ejemplo puede no fallar, pero si la nota se introduce como texto o fuera de
 <div class="cla-note"><strong>Objetivo final</strong><p>Como alumno no solo debes “hacer que funcione”, sino explicar por qué cada bloque del código existe y qué responsabilidad tiene cada método, además de mostrar en el informe su correcto funcionamiento con varios casos</p></div>
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Esta lección termina con la consolidación de fundamentos. La siguiente etapa es la programación orientada a objetos, donde se aprenden clases, atributos, encapsulación y relaciones entre objetos.
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué enfoque conviene al resolver una práctica grande?
 
-- A) Dividirla en pasos pequeños
-- B) Escribir todo sin ejecutar
-- C) Copiar una solución completa
-- D) Evitar métodos
+- A) Evitar métodos
+- B) Dividirla en pasos pequeños
+- C) Escribir todo sin ejecutar
+- D) Copiar una solución completa
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La descomposición reduce complejidad y facilita comprobar cada fase.</p>
+<p><strong>Respuesta correcta: B.</strong> La descomposición reduce complejidad y facilita comprobar cada fase.</p>
 
 </details>
 
 ### 2. ¿Qué deberías probar además del caso correcto?
 
-- A) Casos límite y entradas inválidas relevantes
+- A) Solo comentarios
 - B) Nada
-- C) Solo el primer valor
-- D) Solo comentarios
+- C) Casos límite y entradas inválidas relevantes
+- D) Solo el primer valor
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Los casos alternativos revelan errores.</p>
+<p><strong>Respuesta correcta: C.</strong> Los casos alternativos revelan errores.</p>
 
 </details>
 
 ### 3. ¿Cuándo conviene extraer un método?
 
-- A) Cuando una operación tiene una responsabilidad identificable o se reutiliza
-- B) Nunca
-- C) Solo si usa SQL
+- A) Solo si usa SQL
+- B) Cuando una operación tiene una responsabilidad identificable o se reutiliza
+- C) Nunca
 - D) Solo con más de 100 líneas
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Los métodos ayudan a organizar y reutilizar lógica.</p>
+<p><strong>Respuesta correcta: B.</strong> Los métodos ayudan a organizar y reutilizar lógica.</p>
 
 </details>
 
 ### 4. ¿Qué es mejor tras completar un paso?
 
-- A) Ejecutar y verificar antes de añadir el siguiente
+- A) Cambiar de JDK
 - B) Esperar al final
-- C) Cambiar de JDK
-- D) Eliminar mensajes de error
+- C) Eliminar mensajes de error
+- D) Ejecutar y verificar antes de añadir el siguiente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La validación incremental facilita el desarrollo.</p>
+<p><strong>Respuesta correcta: D.</strong> La validación incremental facilita el desarrollo.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Añade una ampliación propia a la práctica final sin modificar las responsabilidades de los métodos existentes.
 

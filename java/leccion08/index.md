@@ -3,11 +3,15 @@ layout: lesson
 route: java
 lesson_id: leccion08
 lesson_number: "08"
-title: Persistencia con SQLite
-search_title: Lección 08 - Persistencia con SQLite
+title: Persistencia en Base de Datos
+search_title: Lección 08 - Persistencia en Base de Datos
 search_description: Integrarás SQLite para persistir información en una aplicación Java.
 description: Persistirás información con SQLite y JDBC en aplicaciones Java.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: modelo
     title: Modelo y conexión
   - id: crud
@@ -22,6 +26,52 @@ permalink: /java/leccion08/
 <div class="cla-note"><strong>Qué se pretende</strong><p>Comprender cómo una aplicación Java mantiene información mediante SQLite, JDBC y técnicas de persistencia orientada a objetos.</p></div>
 
 <div class="cla-note"><strong>Qué se consigue</strong><p>Al finalizar, podrás diseñar tablas, ejecutar operaciones CRUD, organizar un DAO, controlar transacciones y mapear entidades con JPA.</p></div>
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion08/57-tablas-claves-y-restricciones/' | relative_url }}"><span aria-hidden="true">01</span><strong>Tablas, claves y restricciones</strong></a>
+  <a href="{{ '/java/leccion08/58-conectar-java-con-sqlite/' | relative_url }}"><span aria-hidden="true">02</span><strong>Conectar Java con SQLite</strong></a>
+  <a href="{{ '/java/leccion08/59-consultar-con-preparedstatement-y-resultset/' | relative_url }}"><span aria-hidden="true">03</span><strong>Consultar con PreparedStatement y ResultSet</strong></a>
+  <a href="{{ '/java/leccion08/60-insertar-actualizar-y-eliminar/' | relative_url }}"><span aria-hidden="true">04</span><strong>Insertar, actualizar y eliminar</strong></a>
+  <a href="{{ '/java/leccion08/61-encapsular-el-acceso-en-un-dao/' | relative_url }}"><span aria-hidden="true">05</span><strong>Encapsular el acceso en un DAO</strong></a>
+  <a href="{{ '/java/leccion08/62-confirmar-y-revertir-transacciones/' | relative_url }}"><span aria-hidden="true">06</span><strong>Confirmar y revertir transacciones</strong></a>
+  <a href="{{ '/java/leccion08/63-comprobar-integridad-al-reabrir/' | relative_url }}"><span aria-hidden="true">07</span><strong>Comprobar integridad al reabrir</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Inventario SQLite
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+<div class="cla-lesson-nav"><a href="{{ '/assets/proyectos/java/08-sqlite.zip' | relative_url }}">Descargar Inventario SQLite</a></div>
+
+
+
+
+<a href="{{ '/java/proyectos/inventario/InventarioJdbc.java' | relative_url }}">Descargar ejemplo de transacción</a>. Añade el driver SQLite JDBC al classpath. Ejecuta el ejemplo sin argumentos y repite con el argumento `fallo`.
+
+1. **Punto de partida.** Crea una base con materiales y movimientos, y utiliza un driver JDBC de SQLite.
+2. **Pasos.** Implementa un menú para crear, listar, actualizar y eliminar materiales con PreparedStatement. Activa claves foráneas por conexión. En una transacción registra una salida y descuenta una unidad. Si la actualización no afecta a una fila, usa rollback.
+3. **Resultado esperado.** Desde 5 unidades, una salida exitosa deja 4 unidades y un movimiento.
+4. **Caso de fallo.** Fuerza un fallo en la segunda operación y comprueba que el saldo sigue en 5 y no aparece un movimiento nuevo.
+
+**Evidencia de entrega.** Aplicación, esquema y consultas de comprobación antes y después de commit y rollback.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Completa CRUD sobre un fichero SQLite. | 1 |
+| Demuestra 4 unidades y 1 salida al confirmar. | 1 |
+| Demuestra 5 unidades y 0 salidas tras revertir, más un fallo de integridad. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
+
+
 
 ## Modelo y conexión
 
@@ -84,10 +134,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## CRUD con JDBC
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/08-resultset-mapping.png" alt="Mapeo manual de ResultSet a objeto Java" loading="lazy">
-</figure>
 
 Usa sentencias parametrizadas para no construir SQL concatenando datos del usuario:
 
@@ -167,10 +213,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## DAO y transacciones
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/08-dao.png" alt="Separación mediante DAO" loading="lazy">
-</figure>
-
 Un DAO concentra el acceso a datos y evita que la interfaz de usuario conozca SQL. Una transacción agrupa operaciones que deben confirmarse juntas:
 
 ```java
@@ -241,10 +283,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Persistencia orientada a objetos con JPA
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/08-transaccion.png" alt="Unidad de trabajo y transacción" loading="lazy">
-</figure>
 
 El objetivo es relacionar objetos Java con tablas sin escribir cada operación SQL manualmente. JPA define la API de persistencia; Hibernate es una implementación habitual. Al finalizar, el alumno podrá mapear una entidad, abrir un contexto, guardar cambios y consultar objetos.
 
@@ -323,10 +361,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Refuerzo práctico
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/08-jdbc-sqlite.png" alt="Arquitectura de persistencia: una aplicación Java usa JDBC y el driver SQLite para acceder a una base de datos local" loading="lazy">
-</figure>
-
 ### Ejemplo guiado
 
 Crea una tabla `producto`, inserta una fila con `PreparedStatement` y recupérala con `ResultSet`.
@@ -349,17 +383,17 @@ Construye un gestor de alumnos con SQLite y JDBC que persista entre ejecuciones,
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué papel tiene JDBC?
+### 1. Hay 5 unidades. Se inserta una salida, falla el descuento y se ejecuta rollback(). ¿Qué queda?
 
-- A) API estándar de Java para interactuar con bases de datos relacionales
-- B) ORM completo obligatorio
-- C) Compilador Java
-- D) Gestor de memoria
+- A) 5 unidades y una salida nueva
+- B) 4 unidades y ninguna salida nueva
+- C) 4 unidades y una salida nueva
+- D) 5 unidades y ninguna salida nueva
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> JDBC define interfaces y operaciones para conexión y SQL.</p>
+<p><strong>Respuesta correcta: D.</strong> La inserción pendiente y el descuento pertenecen a la misma transacción.</p>
 
 </details>
 
@@ -379,43 +413,43 @@ Responde antes de desplegar la solución.
 
 ### 3. ¿Por qué usar PreparedStatement?
 
-- A) Permite parametrizar SQL y evita concatenar valores directamente
+- A) Porque elimina la base
 - B) Solo para SELECT
-- C) Porque elimina la base
+- C) Permite parametrizar SQL y evita concatenar valores directamente
 - D) Porque sustituye a SQLite
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Los parámetros mejoran seguridad y claridad.</p>
+<p><strong>Respuesta correcta: C.</strong> Los parámetros mejoran seguridad y claridad.</p>
 
 </details>
 
 ### 4. ¿Qué representa ResultSet?
 
-- A) Resultados tabulares de una consulta
-- B) Una excepción
+- A) El JDK
+- B) Resultados tabulares de una consulta
 - C) Una interfaz de colección
-- D) El JDK
+- D) Una excepción
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> ResultSet permite recorrer las filas devueltas.</p>
+<p><strong>Respuesta correcta: B.</strong> ResultSet permite recorrer las filas devueltas.</p>
 
 </details>
 
 ### 5. ¿Qué garantiza conceptualmente una transacción?
 
-- A) Agrupar operaciones para confirmar todas o revertir ante fallo
-- B) Que toda consulta sea SELECT
+- A) Que toda consulta sea SELECT
+- B) Que JDBC sea ORM
 - C) Que nunca haya errores
-- D) Que JDBC sea ORM
+- D) Agrupar operaciones para confirmar todas o revertir ante fallo
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Commit/rollback protegen la atomicidad del conjunto de operaciones.</p>
+<p><strong>Respuesta correcta: D.</strong> Commit/rollback protegen la atomicidad del conjunto de operaciones.</p>
 
 </details>
 
@@ -518,3 +552,7 @@ Desarrolla una aplicación con SQLite que permita crear, buscar, actualizar, eli
 **Ampliación:** compara este enfoque con la ruta ORM y anota qué código repetitivo podría eliminar un ORM.
 
 <div class="cla-lesson-nav"><a href="/java/leccion07/">← 07 · Herencia e interfaces</a><a href="/java/">Volver a la ruta →</a></div>
+
+## Siguiente lección
+
+<div class="cla-lesson-nav"><a href="{{ '/java/leccion09/' | relative_url }}">09 · Persistencia y consultas avanzadas →</a></div>

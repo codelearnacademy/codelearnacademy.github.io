@@ -6,6 +6,25 @@ lesson_file: 11-algoritmos
 lesson_number: "10"
 title: Algoritmos guiados
 description: Practica algoritmos progresivos con Java, desde lo más sencillo hasta problemas de mayor complejidad.
+lessons:
+  - id: que-es-un-algoritmo
+    title: "¿Qué es un algoritmo?"
+  - id: progresion-recomendada
+    title: "Progresión recomendada"
+  - id: como-trabajar-esta-seccion
+    title: "Cómo trabajar esta sección"
+  - id: preguntas-de-reflexion
+    title: "Preguntas de reflexión"
+  - id: practica-e-intante-los-siguientes-conceptos
+    title: "Práctica e intante los siguientes conceptos"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: continua-practicando
+    title: "Continua practicando"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Algoritmos guiados
@@ -13,10 +32,12 @@ description: Practica algoritmos progresivos con Java, desde lo más sencillo ha
 Esta sección tiene como objetivo que el alumno practique la lógica de programación a partir de las nociones aprendidas: variables, condiciones, bucles y métodos.
 
 ## ¿Qué es un algoritmo?
+{: #que-es-un-algoritmo }
 
 Un algoritmo es una secuencia ordenada de pasos para resolver un problema. En Java, un algoritmo se implementa con variables, decisiones y repeticiones.
 
 ## Progresión recomendada
+{: #progresion-recomendada }
 
 Te propongo trabajar con 20 algoritmos:
 
@@ -317,6 +338,7 @@ if (password.length() >= 6) {
 <div class="cla-note"><strong>Cambia:</strong><p>Crea el fichero <strong>Algoritmo20B.java</strong>, construye el  método Main, <strong>solicita la palabra por teclado, y el tamaño de verificación de la contraseña</strong>, compila desde la terminal y ejecuta el fichero .class. Describe los pasos que has realizado.</p></div>
 
 ## Cómo trabajar esta sección
+{: #como-trabajar-esta-seccion }
 
 Como programador debes:
 
@@ -328,6 +350,7 @@ Como programador debes:
 6. revisar el resultado y detectar errores.
 
 ## Preguntas de reflexión
+{: #preguntas-de-reflexion }
 
 - ¿Qué problema resuelve cada algoritmo?
 - ¿Qué estructura de control conviene en cada caso?
@@ -335,6 +358,7 @@ Como programador debes:
 - ¿Qué ocurre si la condición nunca cambia?
 
 ## Práctica e intante los siguientes conceptos
+{: #practica-e-intante-los-siguientes-conceptos }
 
 1. Resuelve los algoritmos sin mirar la solución.
 2. Intenta reescribir uno con otra estructura de control.
@@ -354,13 +378,16 @@ while (i < 5) {
 El programa queda atrapado en un bucle infinito porque `i` nunca cambia. La corrección es incluir `i++` dentro del bloque.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Con estos algoritmos, tendrás la lógica básica de Java. El siguiente paso es ver clases y objetos en profundidad.
 
 ## Continua practicando
+{: #continua-practicando }
 
 Utiliza la web <a href="https://retosdeprogramacion.com/ejercicios/" target="_blank">Retos de Programación</a>, y selecciona cualquiera de los algoritmos. Sigue los pasos para solventarlos.
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
@@ -368,8 +395,8 @@ Responde antes de desplegar la solución.
 
 - A) Entrada, proceso y salida
 - B) El color del IDE
-- C) La versión de Git únicamente
-- D) Un fichero XML
+- C) Un fichero XML
+- D) La versión de Git únicamente
 
 <details>
 <summary>Ver respuesta</summary>
@@ -380,24 +407,24 @@ Responde antes de desplegar la solución.
 
 ### 2. ¿Para qué sirve el pseudocódigo?
 
-- A) Expresar la lógica sin depender totalmente de la sintaxis Java
-- B) Compilar directamente
+- A) Sustituir las pruebas
+- B) Expresar la lógica sin depender totalmente de la sintaxis Java
 - C) Crear bytecode
-- D) Sustituir las pruebas
+- D) Compilar directamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Permite razonar sobre la solución antes de implementarla.</p>
+<p><strong>Respuesta correcta: B.</strong> Permite razonar sobre la solución antes de implementarla.</p>
 
 </details>
 
 ### 3. ¿Qué es una traza?
 
 - A) Seguir paso a paso el estado de un algoritmo
-- B) Una excepción obligatoria
-- C) Un paquete
-- D) Un tipo primitivo
+- B) Un paquete
+- C) Un tipo primitivo
+- D) Una excepción obligatoria
 
 <details>
 <summary>Ver respuesta</summary>
@@ -408,19 +435,20 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué conviene hacer tras implementar un algoritmo?
 
-- A) Probarlo con varios casos
+- A) No ejecutarlo
 - B) Asumir que funciona
-- C) Cambiar nombres al azar
-- D) No ejecutarlo
+- C) Probarlo con varios casos
+- D) Cambiar nombres al azar
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Los casos de prueba validan la solución.</p>
+<p><strong>Respuesta correcta: C.</strong> Los casos de prueba validan la solución.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Resuelve tres algoritmos primero en pseudocódigo y después en Java; incluye casos de prueba.
 

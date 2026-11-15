@@ -6,6 +6,29 @@ lesson_file: 01-primeros-pasos
 lesson_number: "01"
 title: Primeros pasos con Java
 description: Compila y ejecuta tu primer programa Java desde el terminal.
+lessons:
+  - id: el-ciclo-basico
+    title: "El ciclo básico"
+  - id: primer-programa
+    title: "Primer programa"
+  - id: que-significa-cada-parte
+    title: "Qué significa cada parte"
+  - id: regla-importante
+    title: "Regla importante"
+  - id: ejercicio-rapido
+    title: "Ejercicio rápido"
+  - id: para-recordar
+    title: "Para recordar"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: ejercicios-de-practica-primeros-pasos-con-java
+    title: "Ejercicios de práctica · Primeros pasos con Java"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Primeros pasos con Java
@@ -13,6 +36,7 @@ description: Compila y ejecuta tu primer programa Java desde el terminal.
 Antes de escribir una aplicación compleja, conviene dominar el ciclo mínimo de trabajo: crear archivo, compilar y ejecutar.
 
 ## El ciclo básico
+{: #el-ciclo-basico }
 
 1. Escribes un archivo con extensión `.java`.
 2. Lo compilas con `javac`.
@@ -24,6 +48,7 @@ java Main
 ```
 
 ## Primer programa
+{: #primer-programa }
 
 ```java
 public class Main {
@@ -34,16 +59,19 @@ public class Main {
 ```
 
 ## Qué significa cada parte
+{: #que-significa-cada-parte }
 
 - `public class Main`: define una clase pública llamada `Main`.
 - `public static void main(String[] args)`: punto de entrada de la aplicación.
 - `System.out.println(...)`: escribe un mensaje por consola.
 
 ## Regla importante
+{: #regla-importante }
 
 El nombre del archivo debe coincidir con el nombre de la clase pública. Si la clase se llama `Main`, el archivo debe llamarse `Main.java`.
 
 ## Ejercicio rápido
+{: #ejercicio-rapido }
 
 Crea un archivo llamado `Saludo.java` con este contenido:
 
@@ -65,6 +93,7 @@ java Saludo
 <div class="cla-note"><strong>Idea clave</strong><p>Cuando ves un programa Java, siempre debe existir una clase, y normalmente esa clase contiene un método `main` que inicia la ejecución.</p></div>
 
 ## Para recordar
+{: #para-recordar }
 
 - `.java` = código fuente.
 - `.class` = bytecode compilado.
@@ -73,6 +102,7 @@ java Saludo
 Siguiente paso: aprender la estructura general de un programa Java y no solo copiar líneas sueltas.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Crea un archivo `HolaJava.java` y ejecuta el programa desde el terminal.
 2. Cambia el texto del mensaje y verifica que cambia la salida.
@@ -91,9 +121,11 @@ public class HolaJava {
 ¿Qué ocurre al compilar? El método `main` ya no tiene la firma correcta para que Java lo identifique como punto de entrada. Lo correcto es `public static void main(String[] args)`.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras completar este apartado, ya puedes pasar a la estructura del programa y entender cómo encaja el método `main` dentro de una clase.
 ## Ejercicios de práctica · Primeros pasos con Java
+{: #ejercicios-de-practica-primeros-pasos-con-java }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -108,29 +140,30 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en una pequeña aplicación con dos clases. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Cuál es un ciclo de trabajo básico al programar?
 
-- A) Editar → compilar → ejecutar → corregir
-- B) Ejecutar → comprar → borrar
+- A) Solo escribir código
+- B) Editar → compilar → ejecutar → corregir
 - C) Diseñar → nunca probar
-- D) Solo escribir código
+- D) Ejecutar → comprar → borrar
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> La programación es iterativa.</p>
+<p><strong>Respuesta correcta: B.</strong> La programación es iterativa.</p>
 
 </details>
 
 ### 2. ¿Qué distingue un error de sintaxis?
 
 - A) Impide que el código sea válido para el compilador
-- B) Siempre ocurre tras horas de ejecución
+- B) Solo afecta al estilo
 - C) Es un error SQL
-- D) Solo afecta al estilo
+- D) Siempre ocurre tras horas de ejecución
 
 <details>
 <summary>Ver respuesta</summary>
@@ -141,19 +174,20 @@ Responde antes de desplegar la solución.
 
 ### 3. ¿Qué conviene hacer tras un cambio pequeño?
 
-- A) Compilar/probar de nuevo
-- B) Esperar al proyecto final
+- A) Cambiar de JDK siempre
+- B) Compilar/probar de nuevo
 - C) Borrar target
-- D) Cambiar de JDK siempre
+- D) Esperar al proyecto final
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Los ciclos cortos facilitan localizar errores.</p>
+<p><strong>Respuesta correcta: B.</strong> Los ciclos cortos facilitan localizar errores.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Crea un programa mínimo, introduce dos errores de sintaxis diferentes y documenta el mensaje del compilador.
 

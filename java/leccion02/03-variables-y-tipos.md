@@ -6,6 +6,33 @@ lesson_file: 03-variables-y-tipos
 lesson_number: "03"
 title: Variables y tipos
 description: Declara datos y selecciona el tipo correcto según la información que necesitas guardar.
+lessons:
+  - id: sintaxis-basica
+    title: "Sintaxis básica"
+  - id: tipos-principales
+    title: "Tipos principales"
+  - id: reglas
+    title: "Reglas"
+  - id: ejemplos-correctos
+    title: "Ejemplos correctos"
+  - id: constantes
+    title: "Constantes"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: ejercicio
+    title: "Ejercicio"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-variables-y-tipos
+    title: "Ejercicios de práctica · Variables y tipos"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Variables y tipos
@@ -13,6 +40,7 @@ description: Declara datos y selecciona el tipo correcto según la información 
 Las variables sirven para guardar información que el programa usa durante su ejecución.
 
 ## Sintaxis básica
+{: #sintaxis-basica }
 
 ```java
 int edad = 20;
@@ -23,10 +51,11 @@ String nombre = "Ana";
 ```
 
 ## Tipos principales
+{: #tipos-principales }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-tipos-java.png" alt="Tipos de datos principales en Java" loading="lazy">
+  <img src="{{ '/assets/images/java/02-tipos-java.webp' | relative_url }}" alt="Tipos de datos principales en Java" loading="lazy">
 </figure>
 
 ### Enteros
@@ -54,12 +83,14 @@ boolean correcto = true;
 ```
 
 ## Reglas
+{: #reglas }
 
 - Las variables deben tener un nombre descriptivo.
 - En Java, los nombres suelen escribirse en minúscula y usar camelCase.
 - Una variable no puede empezar por un número.
 
 ## Ejemplos correctos
+{: #ejemplos-correctos }
 
 ```java
 int contador = 0;
@@ -68,6 +99,7 @@ double salarioMensual = 1450.50;
 ```
 
 ## Constantes
+{: #constantes }
 
 Cuando un valor no debe cambiar, se usa `final`:
 
@@ -76,6 +108,7 @@ final double IVA = 0.21;
 ```
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 ```java
 public class VariablesDemo {
@@ -94,10 +127,12 @@ public class VariablesDemo {
 <div class="cla-note"><strong>Importante</strong><p>Usa el tipo más preciso para cada dato. Un número entero no debe guardarse como `double` si no hace falta, y un valor fijo debe ser constante.</p></div>
 
 ## Ejercicio
+{: #ejercicio }
 
 Crea una clase `Persona` que almacene nombre, edad y altura, y la muestre por consola.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Declara una variable para la edad y otra para el nombre.
 2. Cambia una variable de tipo `int` a `String` y observa cómo se altera el programa.
@@ -117,13 +152,15 @@ public class ErrorTipos {
 El programa falla porque no puedes asignar un texto a una variable `int` sin convertirlo antes. La corrección sería `int edad = Integer.parseInt("25");`.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Ya sabes cómo guardar información. El siguiente paso es operar con esa información usando operadores y expresiones.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-variable-tipo-valor.png" alt="02 variable tipo valor" loading="lazy">
+  <img src="{{ '/assets/images/java/02-variable-tipo-valor.webp' | relative_url }}" alt="02 variable tipo valor" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -134,6 +171,7 @@ Crea variables para nombre, edad, altura y matrícula. Muestra todos los valores
 
 Elige tipos para precio, stock, fecha textual, aprobado y matrícula y justifica cada elección.
 ## Ejercicios de práctica · Variables y tipos
+{: #ejercicios-de-practica-variables-y-tipos }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -148,14 +186,15 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en modelar un producto o vehículo. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué declaración es válida?
 
-- A) int edad = "20";
+- A) boolean activo = "true";
 - B) double precio = 19.95;
-- C) boolean activo = "true";
+- C) int edad = "20";
 - D) char letra = "A";
 
 <details>
@@ -167,15 +206,15 @@ Responde antes de desplegar la solución.
 
 ### 2. ¿Qué tipo usarías para verdadero/falso?
 
-- A) boolean
-- B) double
-- C) String obligatoriamente
-- D) char
+- A) String obligatoriamente
+- B) char
+- C) double
+- D) boolean
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> boolean representa valores lógicos.</p>
+<p><strong>Respuesta correcta: D.</strong> boolean representa valores lógicos.</p>
 
 </details>
 
@@ -195,15 +234,15 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué tipo es adecuado para un número entero habitual?
 
-- A) int
-- B) boolean
+- A) boolean
+- B) String
 - C) char
-- D) String
+- D) int
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> int es el entero de uso general más habitual.</p>
+<p><strong>Respuesta correcta: D.</strong> int es el entero de uso general más habitual.</p>
 
 </details>
 
@@ -220,6 +259,7 @@ Responde antes de desplegar la solución.
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Modela un producto con id, nombre, precio, stock y disponible eligiendo tipos adecuados.
 2. Añade una constante para el IVA y calcula el precio con impuesto.

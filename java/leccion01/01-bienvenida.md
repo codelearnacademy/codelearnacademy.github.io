@@ -6,6 +6,17 @@ lesson_file: 01-bienvenida
 lesson_number: "01"
 title: Bienvenido
 description: Sitúa Java 21 dentro de la ruta y define el punto de partida.
+lessons:
+  - id: que-vas-a-conseguir
+    title: "Qué vas a conseguir"
+  - id: punto-de-partida
+    title: "Punto de partida"
+  - id: como-trabajar-la-leccion
+    title: "Cómo trabajar la lección"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Bienvenido
@@ -13,6 +24,7 @@ description: Sitúa Java 21 dentro de la ruta y define el punto de partida.
 Esta lección presenta Java 21 desde una perspectiva práctica: qué es el lenguaje, qué piezas forman su plataforma y cómo ejecutar un primer programa.
 
 ## Qué vas a conseguir
+{: #que-vas-a-conseguir }
 
 - Diferenciar lenguaje, plataforma y distribución de Java.
 - Seguir el recorrido `javac` → bytecode → JVM.
@@ -22,28 +34,31 @@ Esta lección presenta Java 21 desde una perspectiva práctica: qué es el lengu
 <div class="cla-note"><strong>Ruta de estudio</strong><p>Lee los apartados en orden. Los primeros once construyen el modelo mental; los últimos siete lo convierten en una práctica verificable.</p></div>
 
 ## Punto de partida
+{: #punto-de-partida }
 
 No necesitas experiencia previa con Java. Sí conviene disponer de un terminal y poder crear archivos de texto. La versión de referencia será Java 21, una versión LTS apropiada para aprender y mantener proyectos durante varios años.
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/01-mapa-ruta-java.png" alt="Mapa visual del recorrido de aprendizaje de Java" loading="lazy">
+  <img src="{{ '/assets/images/java/01-mapa-ruta-java.webp' | relative_url }}" alt="Mapa visual del recorrido de aprendizaje de Java" loading="lazy">
 </figure>
 
 
 ## Cómo trabajar la lección
+{: #como-trabajar-la-leccion }
 
 En cada apartado intenta responder tres preguntas: qué problema resuelve la pieza, qué comando o código permite observarla y qué error sería fácil cometer. Esa rutina convierte la lectura en una práctica de ingeniería.
 
 Por ejemplo, no basta con memorizar que existe `javac`: crea un archivo, compílalo, localiza el `.class` y explica qué componente lo ejecuta.
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Cuál es el objetivo principal de esta primera lección?
 
-- A) Aprender Spring Boot
+- A) Crear una API REST
 - B) Comprender el entorno y la ejecución de Java
-- C) Diseñar una base de datos
-- D) Crear una API REST
+- C) Aprender Spring Boot
+- D) Diseñar una base de datos
 
 <details>
 <summary>Ver respuesta</summary>
@@ -55,9 +70,9 @@ Responde antes de desplegar la solución.
 ### 2. ¿Qué conviene dominar antes de avanzar a estructuras complejas?
 
 - A) La JVM y el ciclo básico de trabajo
-- B) Docker Compose
+- B) CSS
 - C) Hibernate
-- D) CSS
+- D) Docker Compose
 
 <details>
 <summary>Ver respuesta</summary>
@@ -68,19 +83,20 @@ Responde antes de desplegar la solución.
 
 ### 3. ¿Qué representa el mapa de la ruta?
 
-- A) Un examen final
-- B) La progresión de contenidos de Java
-- C) La estructura interna de la JVM
-- D) Las versiones de Maven
+- A) Las versiones de Maven
+- B) La estructura interna de la JVM
+- C) La progresión de contenidos de Java
+- D) Un examen final
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> El mapa resume el recorrido formativo de la ruta.</p>
+<p><strong>Respuesta correcta: C.</strong> El mapa resume el recorrido formativo de la ruta.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Escribe en cinco líneas qué esperas aprender en la ruta y marca qué conceptos ya conoces.
 

@@ -6,6 +6,101 @@ lesson_file: 15-math
 lesson_number: "15"
 title: Clase Math en Java
 description: Aprende a realizar operaciones matemáticas, redondeos, potencias, raíces, trigonometría y cálculos aleatorios con Math en Java 21.
+lessons:
+  - id: los-metodos-de-math-son-estaticos
+    title: "Los métodos de Math son estáticos"
+  - id: metodos-principales
+    title: "Métodos principales"
+  - id: constantes-matematicas
+    title: "Constantes matemáticas"
+  - id: valor-absoluto-abs
+    title: "Valor absoluto: abs()"
+  - id: raiz-cuadrada-sqrt
+    title: "Raíz cuadrada: sqrt()"
+  - id: raiz-cubica-cbrt
+    title: "Raíz cúbica: cbrt()"
+  - id: potencias-pow
+    title: "Potencias: pow()"
+  - id: calcular-areas-con-pow
+    title: "Calcular áreas con pow()"
+  - id: maximo-max
+    title: "Máximo: max()"
+  - id: minimo-min
+    title: "Mínimo: min()"
+  - id: redondeo-con-round
+    title: "Redondeo con round()"
+  - id: redondear-hacia-arriba-ceil
+    title: "Redondear hacia arriba: ceil()"
+  - id: redondear-hacia-abajo-floor
+    title: "Redondear hacia abajo: floor()"
+  - id: comparacion-entre-round-ceil-y-floor
+    title: "Comparación entre round(), ceil() y floor()"
+  - id: limitar-un-valor-clamp
+    title: "Limitar un valor: clamp()"
+  - id: generar-numeros-pseudoaleatorios-random
+    title: "Generar números pseudoaleatorios: random()"
+  - id: numero-aleatorio-entre-0-y-9
+    title: "Número aleatorio entre 0 y 9"
+  - id: numero-aleatorio-entre-1-y-10
+    title: "Número aleatorio entre 1 y 10"
+  - id: formula-para-un-rango-aleatorio
+    title: "Fórmula para un rango aleatorio"
+  - id: trigonometria
+    title: "Trigonometría"
+  - id: seno-sin
+    title: "Seno: sin()"
+  - id: coseno-cos
+    title: "Coseno: cos()"
+  - id: tangente-tan
+    title: "Tangente: tan()"
+  - id: convertir-grados-a-radianes
+    title: "Convertir grados a radianes"
+  - id: convertir-radianes-a-grados
+    title: "Convertir radianes a grados"
+  - id: trigonometria-utilizando-grados
+    title: "Trigonometría utilizando grados"
+  - id: funciones-trigonometricas-inversas
+    title: "Funciones trigonométricas inversas"
+  - id: logaritmo-natural-log
+    title: "Logaritmo natural: log()"
+  - id: logaritmo-en-base-10-log10
+    title: "Logaritmo en base 10: log10()"
+  - id: exponencial-exp
+    title: "Exponencial: exp()"
+  - id: calcular-una-hipotenusa-hypot
+    title: "Calcular una hipotenusa: hypot()"
+  - id: operaciones-exactas-y-desbordamiento
+    title: "Operaciones exactas y desbordamiento"
+  - id: addexact
+    title: "addExact()"
+  - id: subtractexact
+    title: "subtractExact()"
+  - id: multiplyexact
+    title: "multiplyExact()"
+  - id: incrementexact-y-decrementexact
+    title: "incrementExact() y decrementExact()"
+  - id: negateexact
+    title: "negateExact()"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: para-recordar
+    title: "Para recordar"
+  - id: ejercicio-rapido
+    title: "Ejercicio rápido"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: prueba-tus-conocimientos
+    title: "Prueba tus conocimientos"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-math
+    title: "Ejercicios de práctica · Math"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Clase `Math` en Java
@@ -45,6 +140,7 @@ Salida:
 ```
 
 ## Los métodos de `Math` son estáticos
+{: #los-metodos-de-math-son-estaticos }
 
 Los métodos de `Math` son `static`.
 
@@ -69,6 +165,7 @@ La clase está diseñada para utilizar sus métodos directamente.
 <div class="cla-note"><strong>Idea clave</strong><p>Los métodos de <code>Math</code> son estáticos. Se llaman escribiendo <code>Math.nombreDelMetodo(...)</code>.</p></div>
 
 ## Métodos principales
+{: #metodos-principales }
 
 Algunos de los métodos más utilizados son:
 
@@ -96,6 +193,7 @@ Algunos de los métodos más utilizados son:
 | `clamp(...)` | Limita un valor para mantenerlo dentro de un rango. |
 
 ## Constantes matemáticas
+{: #constantes-matematicas }
 
 La clase `Math` proporciona constantes matemáticas.
 
@@ -163,6 +261,7 @@ Su valor aproximado es:
 <div class="cla-note"><strong>Para recordar</strong><p><code>Math.PI</code> representa π, <code>Math.E</code> representa el número de Euler y <code>Math.TAU</code> representa τ = 2π.</p></div>
 
 ## Valor absoluto: `abs()`
+{: #valor-absoluto-abs }
 
 El valor absoluto representa la distancia de un número respecto a cero, sin tener en cuenta su signo.
 
@@ -213,6 +312,7 @@ Salida:
 ```
 
 ## Raíz cuadrada: `sqrt()`
+{: #raiz-cuadrada-sqrt }
 
 `sqrt()` calcula la raíz cuadrada de un número.
 
@@ -269,6 +369,7 @@ Not a Number
 En los números reales no existe la raíz cuadrada de un número negativo.
 
 ## Raíz cúbica: `cbrt()`
+{: #raiz-cubica-cbrt }
 
 `Math.cbrt()` calcula una raíz cúbica.
 
@@ -297,6 +398,7 @@ Salida:
 ```
 
 ## Potencias: `pow()`
+{: #potencias-pow }
 
 `Math.pow(base, exponente)` calcula una potencia.
 
@@ -349,6 +451,7 @@ double
 ```
 
 ## Calcular áreas con `pow()`
+{: #calcular-areas-con-pow }
 
 Ejemplo de área de un círculo:
 
@@ -368,6 +471,7 @@ La fórmula utilizada es:
 ```
 
 ## Máximo: `max()`
+{: #maximo-max }
 
 `Math.max()` devuelve el mayor de dos valores.
 
@@ -399,6 +503,7 @@ Salida:
 ```
 
 ## Mínimo: `min()`
+{: #minimo-min }
 
 `Math.min()` devuelve el menor de dos valores.
 
@@ -433,6 +538,7 @@ Salida:
 ```
 
 ## Redondeo con `round()`
+{: #redondeo-con-round }
 
 `Math.round()` redondea al entero más cercano.
 
@@ -471,6 +577,7 @@ long resultado = Math.round(numero);
 Cuando recibe un `float`, devuelve un `int`.
 
 ## Redondear hacia arriba: `ceil()`
+{: #redondear-hacia-arriba-ceil }
 
 `Math.ceil()` devuelve el menor valor entero matemático que sea mayor o igual que el argumento.
 
@@ -502,6 +609,7 @@ Salida:
 El resultado es de tipo `double`.
 
 ## Redondear hacia abajo: `floor()`
+{: #redondear-hacia-abajo-floor }
 
 `Math.floor()` devuelve el mayor valor entero matemático que sea menor o igual que el argumento.
 
@@ -531,6 +639,7 @@ Salida:
 ```
 
 ## Comparación entre `round()`, `ceil()` y `floor()`
+{: #comparacion-entre-round-ceil-y-floor }
 
 Para:
 
@@ -565,6 +674,7 @@ Resumen:
 <div class="cla-note"><strong>Atención</strong><p><code>ceil()</code> y <code>floor()</code> devuelven <code>double</code>, aunque el valor obtenido represente matemáticamente un número entero.</p></div>
 
 ## Limitar un valor: `clamp()`
+{: #limitar-un-valor-clamp }
 
 Java 21 incorpora métodos `Math.clamp()` para mantener un valor dentro de unos límites.
 
@@ -642,6 +752,7 @@ Salida:
 ```
 
 ## Generar números pseudoaleatorios: `random()`
+{: #generar-numeros-pseudoaleatorios-random }
 
 `Math.random()` devuelve un `double` comprendido en este intervalo:
 
@@ -667,6 +778,7 @@ Una posible salida sería:
 El valor cambia entre ejecuciones.
 
 ## Número aleatorio entre 0 y 9
+{: #numero-aleatorio-entre-0-y-9 }
 
 Podemos multiplicar por `10`:
 
@@ -708,6 +820,7 @@ Los posibles resultados son:
 ```
 
 ## Número aleatorio entre 1 y 10
+{: #numero-aleatorio-entre-1-y-10 }
 
 Podemos sumar `1`:
 
@@ -725,6 +838,7 @@ Ahora los posibles valores son:
 ```
 
 ## Fórmula para un rango aleatorio
+{: #formula-para-un-rango-aleatorio }
 
 Para obtener un entero entre `min` y `max`, ambos incluidos:
 
@@ -750,6 +864,7 @@ System.out.println(numero);
 <div class="cla-note"><strong>Nota</strong><p><code>Math.random()</code> resulta cómodo para ejemplos sencillos. Para programas que necesitan un control más explícito de la generación de números aleatorios, Java también dispone de APIs específicas de generación aleatoria.</p></div>
 
 ## Trigonometría
+{: #trigonometria }
 
 La clase `Math` proporciona funciones trigonométricas como:
 
@@ -762,6 +877,7 @@ Math.tan()
 Estas funciones reciben los ángulos en **radianes**, no en grados.
 
 ## Seno: `sin()`
+{: #seno-sin }
 
 ```java
 double resultado =
@@ -783,6 +899,7 @@ Porque:
 ```
 
 ## Coseno: `cos()`
+{: #coseno-cos }
 
 ```java
 double resultado =
@@ -798,6 +915,7 @@ Salida:
 ```
 
 ## Tangente: `tan()`
+{: #tangente-tan }
 
 ```java
 double resultado =
@@ -815,6 +933,7 @@ El resultado será aproximadamente:
 Debido a la representación en coma flotante, algunas operaciones matemáticas pueden producir aproximaciones muy cercanas al valor esperado.
 
 ## Convertir grados a radianes
+{: #convertir-grados-a-radianes }
 
 `Math.toRadians()` convierte grados en radianes.
 
@@ -840,6 +959,7 @@ Es decir:
 ```
 
 ## Convertir radianes a grados
+{: #convertir-radianes-a-grados }
 
 `Math.toDegrees()` realiza la operación inversa.
 
@@ -859,6 +979,7 @@ Salida:
 ```
 
 ## Trigonometría utilizando grados
+{: #trigonometria-utilizando-grados }
 
 Si tenemos un ángulo en grados:
 
@@ -891,6 +1012,7 @@ Salida aproximada:
 <div class="cla-note"><strong>Regla importante</strong><p><code>sin()</code>, <code>cos()</code> y <code>tan()</code> trabajan con radianes. Si dispones de grados, utiliza primero <code>Math.toRadians()</code>.</p></div>
 
 ## Funciones trigonométricas inversas
+{: #funciones-trigonometricas-inversas }
 
 También existen:
 
@@ -920,6 +1042,7 @@ Salida:
 ```
 
 ## Logaritmo natural: `log()`
+{: #logaritmo-natural-log }
 
 `Math.log()` calcula el logaritmo natural, es decir, en base `e`.
 
@@ -943,6 +1066,7 @@ ln(e) = 1
 ```
 
 ## Logaritmo en base 10: `log10()`
+{: #logaritmo-en-base-10-log10 }
 
 ```java
 double resultado =
@@ -964,6 +1088,7 @@ porque:
 ```
 
 ## Exponencial: `exp()`
+{: #exponencial-exp }
 
 `Math.exp(x)` calcula:
 
@@ -993,6 +1118,7 @@ Math.E
 ```
 
 ## Calcular una hipotenusa: `hypot()`
+{: #calcular-una-hipotenusa-hypot }
 
 `Math.hypot(x, y)` calcula:
 
@@ -1031,6 +1157,7 @@ double hipotenusa =
 pero `Math.hypot()` expresa mejor la intención.
 
 ## Operaciones exactas y desbordamiento
+{: #operaciones-exactas-y-desbordamiento }
 
 Los tipos enteros tienen un rango limitado.
 
@@ -1047,6 +1174,7 @@ produce un desbordamiento.
 La clase `Math` dispone de métodos terminados en `Exact` que pueden detectar determinados desbordamientos.
 
 ## `addExact()`
+{: #addexact }
 
 ```java
 int resultado =
@@ -1077,6 +1205,7 @@ ArithmeticException
 en lugar de producir silenciosamente un desbordamiento.
 
 ## `subtractExact()`
+{: #subtractexact }
 
 ```java
 int resultado =
@@ -1092,6 +1221,7 @@ Salida:
 ```
 
 ## `multiplyExact()`
+{: #multiplyexact }
 
 ```java
 int resultado =
@@ -1107,6 +1237,7 @@ Salida:
 ```
 
 ## `incrementExact()` y `decrementExact()`
+{: #incrementexact-y-decrementexact }
 
 ```java
 int a = Math.incrementExact(9);
@@ -1124,6 +1255,7 @@ Salida:
 ```
 
 ## `negateExact()`
+{: #negateexact }
 
 ```java
 int resultado =
@@ -1141,6 +1273,7 @@ Salida:
 <div class="cla-note"><strong>Idea clave</strong><p>Los métodos terminados en <code>Exact</code> son útiles cuando un desbordamiento entero debe detectarse mediante una <code>ArithmeticException</code>.</p></div>
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 El siguiente programa utiliza varios de los métodos estudiados:
 
@@ -1273,6 +1406,7 @@ Hipotenusa: 5.0
 El número generado mediante `Math.random()` será diferente en distintas ejecuciones.
 
 ## Para recordar
+{: #para-recordar }
 
 - `Math` pertenece a `java.lang`.
 - No es necesario importar la clase.
@@ -1297,6 +1431,7 @@ El número generado mediante `Math.random()` será diferente en distintas ejecuc
 - Los métodos terminados en `Exact` permiten detectar determinados desbordamientos enteros.
 
 ## Ejercicio rápido
+{: #ejercicio-rapido }
 
 Indica el resultado de las siguientes operaciones:
 
@@ -1338,6 +1473,7 @@ Math.toDegrees(Math.PI) -> 180.0
 ```
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 Crea un programa llamado `CalculadoraMath.java`.
 
@@ -1437,6 +1573,7 @@ public class CalculadoraMath {
 ```
 
 ## Prueba tus conocimientos
+{: #prueba-tus-conocimientos }
 
 ### Caso 1
 
@@ -1602,6 +1739,7 @@ ArithmeticException
 porque la suma no puede representarse como un `int`.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras completar este apartado debes ser capaz de utilizar la clase `Math` para resolver operaciones matemáticas habituales sin implementar manualmente los cálculos.
 
@@ -1637,9 +1775,10 @@ También debes comprender que las funciones trigonométricas trabajan con radian
 El siguiente paso es aprender a trabajar con fechas y horas mediante la API `java.time` de Java 21.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-math-redondeo.png" alt="02 math redondeo" loading="lazy">
+  <img src="{{ '/assets/images/java/02-math-redondeo.webp' | relative_url }}" alt="02 math redondeo" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -1650,6 +1789,7 @@ Genera un dado de seis caras a partir de `Math.random()` y explica el rango en c
 
 Crea un dado de 20 caras, calcula una hipotenusa y redondea un precio a dos decimales.
 ## Ejercicios de práctica · Math
+{: #ejercicios-de-practica-math }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -1664,42 +1804,43 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en simular dados o resolver un problema geométrico. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué devuelve Math.abs(-5)?
 
-- A) 5
-- B) -5
-- C) 0
-- D) 25
+- A) 25
+- B) 5
+- C) -5
+- D) 0
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> abs calcula el valor absoluto.</p>
+<p><strong>Respuesta correcta: B.</strong> abs calcula el valor absoluto.</p>
 
 </details>
 
 ### 2. ¿Qué hace Math.sqrt(9)?
 
-- A) Devuelve 3.0
-- B) Devuelve 81
-- C) Redondea a 9
-- D) Genera aleatorio
+- A) Devuelve 81
+- B) Redondea a 9
+- C) Genera aleatorio
+- D) Devuelve 3.0
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> sqrt calcula raíz cuadrada.</p>
+<p><strong>Respuesta correcta: D.</strong> sqrt calcula raíz cuadrada.</p>
 
 </details>
 
 ### 3. ¿En qué intervalo se encuentra Math.random()?
 
 - A) <code>0.0 &lt;= x &lt; 1.0</code>
-- B) <code>1 &lt;= x &lt;= 10</code>
-- C) <code>-1 &lt; x &lt; 1</code>
+- B) <code>-1 &lt; x &lt; 1</code>
+- C) <code>1 &lt;= x &lt;= 10</code>
 - D) Solo enteros
 
 <details>
@@ -1711,19 +1852,20 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué diferencia hay entre floor y ceil?
 
-- A) floor baja al entero matemático inferior y ceil sube al superior
-- B) Son idénticos
-- C) Uno solo funciona con int
-- D) Ambos generan random
+- A) Ambos generan random
+- B) floor baja al entero matemático inferior y ceil sube al superior
+- C) Son idénticos
+- D) Uno solo funciona con int
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Representan redondeos dirigidos diferentes.</p>
+<p><strong>Respuesta correcta: B.</strong> Representan redondeos dirigidos diferentes.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Simula 100 lanzamientos de un dado y cuenta cuántas veces aparece cada valor.
 

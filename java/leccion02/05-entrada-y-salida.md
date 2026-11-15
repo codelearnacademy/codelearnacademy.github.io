@@ -6,6 +6,31 @@ lesson_file: 05-entrada-y-salida
 lesson_number: "05"
 title: Entrada y salida
 description: Lee datos desde consola y escribe información útil para el usuario.
+lessons:
+  - id: salida-por-consola
+    title: "Salida por consola"
+  - id: entrada-por-teclado
+    title: "Entrada por teclado"
+  - id: lectura-de-numeros
+    title: "Lectura de números"
+  - id: diferencia-entre-nextline-y-nextint
+    title: "Diferencia entre nextLine() y nextInt()"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: ejercicio
+    title: "Ejercicio"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-entrada-y-salida
+    title: "Ejercicios de práctica · Entrada y salida"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Entrada y salida
@@ -13,6 +38,7 @@ description: Lee datos desde consola y escribe información útil para el usuari
 La consola es una de las formas más básicas de comunicación entre el programa y el usuario.
 
 ## Salida por consola
+{: #salida-por-consola }
 
 ```java
 System.out.println("Hola");
@@ -20,10 +46,11 @@ System.out.print("Este texto no salta de línea");
 ```
 
 ## Entrada por teclado
+{: #entrada-por-teclado }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-scanner-flujo.png" alt="Flujo de entrada mediante Scanner" loading="lazy">
+  <img src="{{ '/assets/images/java/02-scanner-flujo.webp' | relative_url }}" alt="Flujo de entrada mediante Scanner" loading="lazy">
 </figure>
 
 Para leer datos del usuario, normalmente se usa `Scanner`.
@@ -45,6 +72,7 @@ public class EntradaDemo {
 ```
 
 ## Lectura de números
+{: #lectura-de-numeros }
 
 ```java
 import java.util.Scanner;
@@ -63,6 +91,7 @@ public class NumerosDemo {
 ```
 
 ## Diferencia entre `nextLine()` y `nextInt()`
+{: #diferencia-entre-nextline-y-nextint }
 
 - `nextLine()` lee texto completo hasta pulsar Enter.
 - `nextInt()` lee un número entero.
@@ -70,6 +99,7 @@ public class NumerosDemo {
 Si mezclas ambos en un mismo programa, puede aparecer un comportamiento inesperado. En esos casos, suele ser útil consumir el salto de línea con `nextLine()`.
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 ```java
 import java.util.Scanner;
@@ -93,10 +123,12 @@ public class DatosPersona {
 <div class="cla-note"><strong>Consejo</strong><p>En las primeras aplicaciones, la consola es una herramienta excelente para depurar. Un `println` bien colocado suele responder muchas dudas.</p></div>
 
 ## Ejercicio
+{: #ejercicio }
 
 Escribe un programa que pida `nombre`, `apellidos` y `edad`, y luego muestre un resumen completo.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Pide tu nombre con `Scanner` y muéstralo en pantalla.
 2. Pide dos números y muestra su suma.
@@ -120,13 +152,15 @@ public class ErrorScanner {
 Este patrón suele dejar `nombre` vacío porque el salto de línea queda pendiente. La corrección es consumir el salto de línea con `sc.nextLine()` después de leer el entero.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras dominar la interacción con consola, el siguiente paso es tomar decisiones con condiciones.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-scanner-buffer.png" alt="02 scanner buffer" loading="lazy">
+  <img src="{{ '/assets/images/java/02-scanner-buffer.webp' | relative_url }}" alt="02 scanner buffer" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -137,6 +171,7 @@ Lee edad con `nextInt()` y nombre con `nextLine()`, reproduce el problema del sa
 
 Construye una ficha de alumno leyendo nombre, edad y nota por consola.
 ## Ejercicios de práctica · Entrada y salida
+{: #ejercicios-de-practica-entrada-y-salida }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -151,6 +186,7 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en crear un formulario de consola. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
@@ -170,47 +206,48 @@ Responde antes de desplegar la solución.
 
 ### 2. ¿Qué problema típico aparece al mezclar nextInt() y nextLine()?
 
-- A) Puede quedar pendiente un salto de línea
-- B) Se borra la JVM
-- C) No compila nunca
-- D) Convierte todo a double
+- A) Se borra la JVM
+- B) No compila nunca
+- C) Convierte todo a double
+- D) Puede quedar pendiente un salto de línea
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> nextInt no consume necesariamente el salto de línea posterior.</p>
+<p><strong>Respuesta correcta: D.</strong> nextInt no consume necesariamente el salto de línea posterior.</p>
 
 </details>
 
 ### 3. ¿Qué hace `System.out.print` frente a `println`?
 
-- A) No añade salto de línea automáticamente
-- B) Lee teclado
-- C) Compila
-- D) Lanza excepción siempre
+- A) Lanza excepción siempre
+- B) No añade salto de línea automáticamente
+- C) Lee teclado
+- D) Compila
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> print mantiene el cursor en la misma línea.</p>
+<p><strong>Respuesta correcta: B.</strong> print mantiene el cursor en la misma línea.</p>
 
 </details>
 
 ### 4. ¿Qué objeto representa normalmente la entrada estándar?
 
-- A) System.in
-- B) System.out
-- C) System.err únicamente
-- D) Math.in
+- A) System.out
+- B) Math.in
+- C) System.in
+- D) System.err únicamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> System.in es el flujo de entrada estándar.</p>
+<p><strong>Respuesta correcta: C.</strong> System.in es el flujo de entrada estándar.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Construye una ficha de alumno leyendo nombre, edad y nota.
 2. Reproduce el problema `nextInt()` + `nextLine()` y corrígelo.

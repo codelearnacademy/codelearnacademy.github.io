@@ -6,6 +6,33 @@ lesson_file: 06-condicionales
 lesson_number: "06"
 title: Condicionales
 description: Toma decisiones dentro del programa según condiciones booleanas.
+lessons:
+  - id: if
+    title: "if"
+  - id: if-else
+    title: "if-else"
+  - id: else-if
+    title: "else if"
+  - id: switch
+    title: "switch"
+  - id: condiciones-complejas
+    title: "Condiciones complejas"
+  - id: ejemplo-practico
+    title: "Ejemplo práctico"
+  - id: ejercicio
+    title: "Ejercicio"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-condicionales
+    title: "Ejercicios de práctica · Condicionales"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Condicionales
@@ -13,6 +40,7 @@ description: Toma decisiones dentro del programa según condiciones booleanas.
 Los condicionales permiten ejecutar un bloque u otro según una condición.
 
 ## if
+{: #if }
 
 ```java
 int edad = 18;
@@ -23,6 +51,7 @@ if (edad >= 18) {
 ```
 
 ## if-else
+{: #if-else }
 
 ```java
 int nota = 7;
@@ -35,6 +64,7 @@ if (nota >= 5) {
 ```
 
 ## else if
+{: #else-if }
 
 ```java
 int nota = 8;
@@ -51,10 +81,11 @@ if (nota >= 9) {
 ```
 
 ## switch
+{: #switch }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-switch.png" alt="Selección de casos con switch" loading="lazy">
+  <img src="{{ '/assets/images/java/02-switch.webp' | relative_url }}" alt="Selección de casos con switch" loading="lazy">
 </figure>
 
 ```java
@@ -73,6 +104,7 @@ switch (opcion) {
 ```
 
 ## Condiciones complejas
+{: #condiciones-complejas }
 
 ```java
 int edad = 20;
@@ -84,6 +116,7 @@ if (edad >= 18 && carnet) {
 ```
 
 ## Ejemplo práctico
+{: #ejemplo-practico }
 
 ```java
 public class CondicionalesDemo {
@@ -102,10 +135,12 @@ public class CondicionalesDemo {
 <div class="cla-note"><strong>Importante</strong><p>Las condiciones deben devolver un valor booleano. Si no, no se pueden evaluar como `true` o `false`.</p></div>
 
 ## Ejercicio
+{: #ejercicio }
 
 Pide una edad por consola y muestra si la persona es menor de edad, mayor de edad o adulta.
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 1. Escribe una condición con `if` para decidir si un número es positivo.
 2. Añade un `else if` para diferenciar varios rangos.
@@ -127,13 +162,15 @@ public class ErrorCondicional {
 La condición debe ser `edad == 18`, no `edad = 18`. La primera asigna, la segunda compara.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Después de entender decisiones, el siguiente paso es automatizar repeticiones con bucles.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-if-else.png" alt="Diagrama de flujo de if-else: una condición dirige la ejecución al bloque verdadero o al bloque falso" loading="lazy">
+  <img src="{{ '/assets/images/java/02-if-else.svg' | relative_url }}" alt="La condición cantidad menor que cero bifurca hacia rechazo o cálculo del total." loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -144,6 +181,7 @@ Clasifica una edad en infancia, adolescencia, adultez y senior. Prueba valores f
 
 Implementa clasificación de notas y un menú con `switch`.
 ## Ejercicios de práctica · Condicionales
+{: #ejercicios-de-practica-condicionales }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -158,34 +196,35 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en clasificar notas, edades o permisos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Cuándo se ejecuta un bloque `if`?
 
-- A) Cuando su condición es true
-- B) Siempre
-- C) Solo si es false
-- D) Al compilar
+- A) Al compilar
+- B) Cuando su condición es true
+- C) Siempre
+- D) Solo si es false
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> if selecciona el bloque cuando la condición es verdadera.</p>
+<p><strong>Respuesta correcta: B.</strong> if selecciona el bloque cuando la condición es verdadera.</p>
 
 </details>
 
 ### 2. ¿Para qué sirve `else`?
 
-- A) Para un camino alternativo cuando la condición anterior no se cumple
-- B) Para crear un bucle
-- C) Para declarar variables
-- D) Para importar paquetes
+- A) Para importar paquetes
+- B) Para declarar variables
+- C) Para crear un bucle
+- D) Para un camino alternativo cuando la condición anterior no se cumple
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> else define el camino alternativo.</p>
+<p><strong>Respuesta correcta: D.</strong> else define el camino alternativo.</p>
 
 </details>
 
@@ -205,33 +244,34 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué resultado produce una expresión relacional como `edad >= 18`?
 
-- A) boolean
-- B) String
+- A) String
+- B) boolean
 - C) double
 - D) char
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Las comparaciones producen true o false.</p>
+<p><strong>Respuesta correcta: B.</strong> Las comparaciones producen true o false.</p>
 
 </details>
 
 ### 5. ¿Qué operador usarías para exigir dos condiciones a la vez?
 
-- A) <code>&amp;&amp;</code>
-- B) <code>||</code>
+- A) <code>||</code>
+- B) <code>%</code>
 - C) <code>+</code>
-- D) <code>%</code>
+- D) <code>&amp;&amp;</code>
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> AND lógico requiere ambas condiciones.</p>
+<p><strong>Respuesta correcta: D.</strong> AND lógico requiere ambas condiciones.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Clasifica una nota en cinco categorías usando `if/else if`.
 2. Crea un menú de cuatro opciones usando `switch`.

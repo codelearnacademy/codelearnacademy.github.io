@@ -6,6 +6,17 @@ lesson_file: 06-java-lts
 lesson_number: "06"
 title: Java LTS
 description: Comprende qué aporta una versión con soporte a largo plazo.
+lessons:
+  - id: que-aporta
+    title: "Qué aporta"
+  - id: decision-recomendada
+    title: "Decisión recomendada"
+  - id: lts-no-es-la-mas-antigua
+    title: "LTS no es “la más antigua”"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Java LTS
@@ -13,6 +24,7 @@ description: Comprende qué aporta una versión con soporte a largo plazo.
 LTS significa Long-Term Support. Una versión LTS está pensada para organizaciones que necesitan mantener una plataforma durante años y planificar las actualizaciones con menos frecuencia.
 
 ## Qué aporta
+{: #que-aporta }
 
 - Un horizonte de mantenimiento más predecible.
 - Más tiempo para actualizar bibliotecas y aplicaciones.
@@ -22,68 +34,71 @@ LTS significa Long-Term Support. Una versión LTS está pensada para organizacio
 LTS no significa que todas las bibliotecas de terceros mantengan el mismo soporte ni que una aplicación quede automáticamente actualizada. Hay que revisar vulnerabilidades, compatibilidad y fechas de fin de soporte de toda la cadena.
 
 ## Decisión recomendada
+{: #decision-recomendada }
 
 Para aprender, usa Java 21 y registra la versión en la documentación del proyecto. Para producción, combina la elección de la LTS con una política explícita de actualizaciones y pruebas de regresión.
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/01-lts-decision.png" alt="Criterio didáctico para elegir una versión LTS de Java" loading="lazy">
+  <img src="{{ '/assets/images/java/01-lts-decision.webp' | relative_url }}" alt="Criterio didáctico para elegir una versión LTS de Java" loading="lazy">
 </figure>
 
 
 ## LTS no es “la más antigua”
+{: #lts-no-es-la-mas-antigua }
 
 Una LTS puede ser reciente y recibir actualizaciones con frecuencia. La ventaja está en el compromiso de mantenimiento, no en congelar el software. Una aplicación Java 21 debe seguir actualizando el JDK dentro de la misma línea cuando haya correcciones de seguridad.
 
 En .NET existen ciclos de soporte similares, mientras que en Python la política se organiza por versión mayor y menor. El concepto es comparable, pero las fechas dependen de cada ecosistema.
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué criterio suele ser razonable para proyectos formativos y empresariales?
 
-- A) Elegir siempre una versión obsoleta
-- B) Usar una versión LTS compatible con el proyecto
+- A) Usar una versión LTS compatible con el proyecto
+- B) Evitar declarar la versión
 - C) Cambiar de versión cada día
-- D) Evitar declarar la versión
+- D) Elegir siempre una versión obsoleta
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> Una LTS suele facilitar estabilidad y soporte.</p>
+<p><strong>Respuesta correcta: A.</strong> Una LTS suele facilitar estabilidad y soporte.</p>
 
 </details>
 
 ### 2. ¿LTS significa que una versión sea la única válida?
 
-- A) Sí
-- B) No
+- A) No
+- B) Sí
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: B.</strong> También existen versiones no LTS; la elección depende del contexto.</p>
+<p><strong>Respuesta correcta: A.</strong> También existen versiones no LTS; la elección depende del contexto.</p>
 
 </details>
 
 ### 3. ¿Qué debe verificarse al elegir un JDK?
 
-- A) Compatibilidad de herramientas y dependencias
-- B) Solo el color del IDE
-- C) La marca del monitor
-- D) La extensión del README
+- A) La extensión del README
+- B) Compatibilidad de herramientas y dependencias
+- C) Solo el color del IDE
+- D) La marca del monitor
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Build tools, librerías y despliegue deben ser compatibles con la versión escogida.</p>
+<p><strong>Respuesta correcta: B.</strong> Build tools, librerías y despliegue deben ser compatibles con la versión escogida.</p>
 
 </details>
 
 ### 4. ¿Qué es más importante que memorizar todas las versiones?
 
 - A) Entender la política de soporte y la versión objetivo
-- B) Saber sus logotipos
+- B) No actualizar nunca
 - C) Instalar todas a la vez
-- D) No actualizar nunca
+- D) Saber sus logotipos
 
 <details>
 <summary>Ver respuesta</summary>
@@ -93,6 +108,7 @@ Responde antes de desplegar la solución.
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Compara dos versiones de Java que conozcas y justifica cuál escogerías para un curso de un año.
 

@@ -43,9 +43,13 @@ java:
     title: Herencia e interfaces
     url: /java/leccion07/
   - id: leccion08
-    number: 08
-    title: Persistencia con SQLite
+    number: '08'
+    title: Persistencia en Base de Datos
     url: /java/leccion08/
+  - id: leccion09
+    number: '09'
+    title: Persistencia y consultas avanzadas
+    url: /java/leccion09/
 spring:
   title: Spring y Spring Boot
   short_title: Spring

@@ -7,6 +7,10 @@ title: Fundamentos de Java
 description: Aprenderás la sintaxis básica, el flujo de control y los primeros elementos del lenguaje Java.
 permalink: /java/leccion02/
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: primeros-pasos
     title: Primeros pasos
   - id: estructura-programa
@@ -52,7 +56,33 @@ lessons:
 - Repetir tareas con bucles.
 - Organizar la lógica en métodos simples.
 
-## Contenido
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion02/07-estructura-y-comentarios/' | relative_url }}"><span aria-hidden="true">01</span><strong>Estructura y comentarios</strong></a>
+  <a href="{{ '/java/leccion02/08-variables-literales-y-constantes/' | relative_url }}"><span aria-hidden="true">02</span><strong>Variables, literales y constantes</strong></a>
+  <a href="{{ '/java/leccion02/09-operadores-y-expresiones/' | relative_url }}"><span aria-hidden="true">03</span><strong>Operadores y expresiones</strong></a>
+  <a href="{{ '/java/leccion02/10-conversiones-de-tipos/' | relative_url }}"><span aria-hidden="true">04</span><strong>Conversiones de tipos</strong></a>
+  <a href="{{ '/java/leccion02/11-entrada-y-salida-con-scanner/' | relative_url }}"><span aria-hidden="true">05</span><strong>Entrada y salida con Scanner</strong></a>
+  <a href="{{ '/java/leccion02/12-primeras-decisiones-con-if/' | relative_url }}"><span aria-hidden="true">06</span><strong>Primeras decisiones con if</strong></a>
+  <a href="{{ '/java/leccion02/13-primeras-repeticiones-con-for/' | relative_url }}"><span aria-hidden="true">07</span><strong>Primeras repeticiones con for</strong></a>
+  <a href="{{ '/java/leccion02/14-metodos-parametros-y-retorno/' | relative_url }}"><span aria-hidden="true">08</span><strong>Métodos, parámetros y retorno</strong></a>
+</div>
+
+### Fichas de consulta
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion02/15-clases-envolventes/' | relative_url }}"><span aria-hidden="true">09</span><strong>Clases envolventes</strong></a>
+  <a href="{{ '/java/leccion02/16-string-indices-y-subcadenas/' | relative_url }}"><span aria-hidden="true">10</span><strong>String: índices y subcadenas</strong></a>
+  <a href="{{ '/java/leccion02/17-integer-del-texto-al-numero/' | relative_url }}"><span aria-hidden="true">11</span><strong>Integer: del texto al número</strong></a>
+  <a href="{{ '/java/leccion02/18-math-redondeo/' | relative_url }}"><span aria-hidden="true">12</span><strong>Math: redondeo</strong></a>
+  <a href="{{ '/java/leccion02/19-fechas-con-localdate/' | relative_url }}"><span aria-hidden="true">13</span><strong>Fechas con LocalDate</strong></a>
+  <a href="{{ '/java/leccion02/20-expresiones-regulares/' | relative_url }}"><span aria-hidden="true">14</span><strong>Expresiones regulares</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Referencias y apartados originales
 
 <div class="cla-content-map">
 	<a href="01-primeros-pasos/"><span>01</span><strong>Primeros pasos</strong><em>Compila y ejecuta</em></a>
@@ -64,14 +94,19 @@ lessons:
 	<a href="07-bucles/"><span>07</span><strong>Bucles</strong><em>for, while y do while</em></a>
 	<a href="08-metodos-y-parametros/"><span>08</span><strong>Métodos</strong><em>Reutilización y modularidad</em></a>
 	<a href="09-resumen/"><span>09</span><strong>Resumen</strong><em>Lo esencial</em></a>
-	<a href="11-algoritmos/"><span>10</span><strong>Algoritmos guiados</strong><em>20 ejercicios de progresión</em></a>
-	<a href="10-practica-final/"><span>11</span><strong>Práctica final clases</strong><em>Guía para el alumno</em></a>
+	<a href="11-algoritmos/"><span>11</span><strong>Algoritmos guiados</strong><em>20 ejercicios de progresión</em></a>
+	<a href="10-practica-final/"><span>10</span><strong>Práctica adicional de sintaxis</strong><em>Guía para el alumno</em></a>
+</div>
+
+## Fichas de consulta
+
+<div class="cla-content-map">
   <a href="12-clases-envolventes/"><span>12</span><strong>Clases envolventes</strong><em>Wrapper classes, boxing y unboxing</em></a>
   <a href="13-string/"><span>13</span><strong>Clase String</strong><em>Cadenas de caracteres y métodos principales</em></a>
   <a href="14-integer/"><span>14</span><strong>Clase Integer</strong><em>Conversión, constantes y métodos principales</em></a>
   <a href="15-math/"><span>15</span><strong>Clase Math</strong><em>Operaciones matemáticas y utilidades de la API</em></a>
   <a href="16-fechas/"><span>16</span><strong>Fechas y horas</strong><em>API de fechas y horas en Java</em></a>
-  <a href="17-expreg/"><span>16</span><strong>Expresiones regulares</strong><em>API de expresiones regulares en Java</em></a>
+  <a href="17-expreg/"><span>17</span><strong>Expresiones regulares</strong><em>API de expresiones regulares en Java</em></a>
 
 </div>
 
@@ -82,17 +117,39 @@ lessons:
 {% endfor %}
 - <a href="https://retosdeprogramacion.com/ejercicios/" target="_blank">Retos de programación</a>
 
-## Tarea para casa
+## Práctica guiada · Valor del inventario
+{: #practica-guiada }
 
-Construye una calculadora modular con `Scanner`, menú repetitivo, métodos para cada operación, validación básica y control de división por cero.
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
 
-### Entrega mínima
 
-- Código fuente compilable.
-- Un `README.md` breve con instrucciones de ejecución.
-- Tres casos de prueba manuales y el resultado esperado.
 
-# Ejercicios de repaso de la lección
+<a href="{{ '/java/proyectos/inventario/Main.java' | relative_url }}">Descargar Main.java</a>
+
+
+1. **Punto de partida.** Parte de un proyecto de consola Java 21. El precio fijo es 250 céntimos.
+2. **Pasos.** Lee una cantidad entera. Separa lectura, cálculo en un método y salida con dos decimales. Compara total / 100 con total / 100.0 y explica las conversiones.
+3. **Resultado esperado.** Con 5 unidades, total de 12,50 €; con 0, 0,00 €.
+4. **Caso de fallo.** Una cantidad negativa se rechaza sin calcular el total.
+
+**Evidencia de entrega.** Código comentado, método de cálculo y tabla de resultados esperados y observados.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Separa lectura, cálculo y salida. | 1 |
+| Demuestra el total con 5 unidades y con cero. | 1 |
+| Explica la división entera y prueba una cantidad negativa. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/java/leccion03/' | relative_url }}">Continúa con la depuración →</a>
+</div>
+
+# Ejercicios de ampliación
 
 Estos ejercicios se realizan después de estudiar todos los apartados. Hay cinco retos de repaso por cada concepto trabajado en la lección 2.
 

@@ -8,6 +8,10 @@ search_title: Lección 03 - Estructuras de control
 search_description: Practicarás estructuras condicionales y repetitivas para controlar el flujo de ejecución.
 description: Controlarás el flujo de ejecución y depurarás programas Java.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: condiciones
     title: Condiciones
   - id: bucles
@@ -18,6 +22,53 @@ lessons:
     title: Ejercicios
 permalink: /java/leccion03/
 ---
+
+## Objetivo
+
+Controlarás el flujo de ejecución y depurarás programas Java.
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion03/21-seleccion-con-if-y-switch/' | relative_url }}"><span aria-hidden="true">01</span><strong>Selección con if y switch</strong></a>
+  <a href="{{ '/java/leccion03/22-bucles-y-acumuladores/' | relative_url }}"><span aria-hidden="true">02</span><strong>Bucles y acumuladores</strong></a>
+  <a href="{{ '/java/leccion03/23-recorrer-un-array/' | relative_url }}"><span aria-hidden="true">03</span><strong>Recorrer un array</strong></a>
+  <a href="{{ '/java/leccion03/24-sentencias-break-y-continue/' | relative_url }}"><span aria-hidden="true">04</span><strong>Sentencias break y continue</strong></a>
+  <a href="{{ '/java/leccion03/25-validar-entradas-y-capturar-excepciones/' | relative_url }}"><span aria-hidden="true">05</span><strong>Validar entradas y capturar excepciones</strong></a>
+  <a href="{{ '/java/leccion03/26-crear-una-excepcion-propia/' | relative_url }}"><span aria-hidden="true">06</span><strong>Crear una excepción propia</strong></a>
+  <a href="{{ '/java/leccion03/27-depurar-con-puntos-de-interrupcion/' | relative_url }}"><span aria-hidden="true">07</span><strong>Depurar con puntos de interrupción</strong></a>
+  <a href="{{ '/java/leccion03/28-verificar-invariantes-con-assert/' | relative_url }}"><span aria-hidden="true">08</span><strong>Verificar invariantes con assert</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Validación y depuración
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+
+
+<a href="{{ '/java/proyectos/inventario/Depuracion.java' | relative_url }}">Descargar Depuracion.java</a>
+
+
+1. **Punto de partida.** Reutiliza la entrada y salida de la lección 02. Para practicar el depurador, sustituye la multiplicación por un bucle desde i = 1 con condición i < cantidad.
+2. **Pasos.** Ejecuta con 3 unidades, coloca un breakpoint y registra i y total. Corrige el límite. Define CantidadInvalidaException y reintenta tras capturar una cantidad negativa. Verifica una invariante interna con assert y -ea.
+3. **Resultado esperado.** El fallo original produce 5,00 €; el código corregido produce 7,50 €.
+4. **Caso de fallo.** Prueba texto inválido, negativo y cero. Introduce temporalmente un total incoherente para comprobar la aserción y restaura el código.
+
+**Evidencia de entrega.** Traza del depurador, excepción propia, comandos con -ea y casos antes y después.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Registra índice y acumulador con el depurador. | 1 |
+| Reproduce el fallo y verifica el resultado tras corregirlo. | 1 |
+| Demuestra excepción propia y aserción habilitada. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
 
 ## Condiciones
 
@@ -85,10 +136,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## Excepciones y depuración
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/03-stacktrace.png" alt="Partes principales de un stack trace" loading="lazy">
-</figure>
-
 Las excepciones representan situaciones que interrumpen el flujo normal. Captura el problema donde puedas actuar y conserva información útil.
 
 ```java
@@ -123,10 +170,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## Ejercicios
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/03-debugger.png" alt="Flujo de trabajo con el depurador" loading="lazy">
-</figure>
-
 1. Clasifica un número como positivo, negativo o cero.
 2. Calcula la suma y la media de los números introducidos.
 3. Imprime una tabla de multiplicar usando un bucle.
@@ -135,10 +178,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 6. Introduce un error de índice, depúralo y documenta la causa.
 
 ## Refuerzo práctico
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/03-excepciones.png" alt="03 excepciones" loading="lazy">
-</figure>
 
 ### Ejemplo guiado
 
@@ -162,54 +201,54 @@ Construye un programa de entrada robusta que repita preguntas hasta recibir dato
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué bloque captura una excepción compatible?
+### 1. Con cantidad = 3, ¿cuántas veces se ejecuta for (int i = 1; i < cantidad; i++)?
 
-- A) catch
-- B) for
-- C) package
-- D) import
+- A) Tres veces, con i = 1, i = 2 e i = 3
+- B) Tres veces, con i = 0, i = 1 e i = 2
+- C) Dos veces, con i = 1 e i = 2
+- D) Una vez, con i = 1
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> catch maneja excepciones lanzadas en el try asociado.</p>
+<p><strong>Respuesta correcta: C.</strong> Al llegar a i = 3 la condición se vuelve falsa y el cuerpo no vuelve a ejecutarse.</p>
 
 </details>
 
 ### 2. ¿Qué bloque puede ejecutarse tanto si hay excepción como si no?
 
-- A) finally
+- A) case
 - B) switch
 - C) class
-- D) case
+- D) finally
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> finally se usa para acciones finales, aunque existen matices si el proceso termina abruptamente.</p>
+<p><strong>Respuesta correcta: D.</strong> finally se usa para acciones finales, aunque existen matices si el proceso termina abruptamente.</p>
 
 </details>
 
 ### 3. ¿Qué información útil suele aportar un stack trace?
 
-- A) Cadena de llamadas y líneas relacionadas con el error
-- B) Solo la versión de Java
-- C) El contenido de la base de datos
+- A) El contenido de la base de datos
+- B) Cadena de llamadas y líneas relacionadas con el error
+- C) Solo la versión de Java
 - D) La lista de dependencias
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Permite seguir dónde se originó y propagó la excepción.</p>
+<p><strong>Respuesta correcta: B.</strong> Permite seguir dónde se originó y propagó la excepción.</p>
 
 </details>
 
 ### 4. ¿Qué hace un breakpoint?
 
 - A) Pausa la ejecución en un punto para inspeccionar estado
-- B) Borra una línea
-- C) Compila más rápido
-- D) Crea una excepción
+- B) Crea una excepción
+- C) Borra una línea
+- D) Compila más rápido
 
 <details>
 <summary>Ver respuesta</summary>
@@ -220,15 +259,15 @@ Responde antes de desplegar la solución.
 
 ### 5. ¿Qué diferencia hay entre step into y step over?
 
-- A) Into entra en llamadas; over ejecuta la llamada sin recorrerla internamente
-- B) No hay diferencia
-- C) Over finaliza el programa
+- A) No hay diferencia
+- B) Over finaliza el programa
+- C) Into entra en llamadas; over ejecuta la llamada sin recorrerla internamente
 - D) Into compila
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Son dos controles básicos del depurador.</p>
+<p><strong>Respuesta correcta: C.</strong> Son dos controles básicos del depurador.</p>
 
 </details>
 

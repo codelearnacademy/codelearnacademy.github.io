@@ -8,6 +8,10 @@ search_title: Lección 06 - Colecciones y tipos avanzados
 search_description: Usarás colecciones y tipos avanzados para modelar datos de forma flexible.
 description: Utilizarás arrays, colecciones, genéricos, regex y documentos de datos.
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: arrays
     title: Arrays y colecciones
   - id: genericos
@@ -18,6 +22,53 @@ lessons:
     title: Ejercicios
 permalink: /java/leccion06/
 ---
+
+## Objetivo
+
+Utilizarás arrays, colecciones, genéricos, regex y documentos de datos.
+
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion06/42-arrays-y-matrices/' | relative_url }}"><span aria-hidden="true">01</span><strong>Arrays y matrices</strong></a>
+  <a href="{{ '/java/leccion06/43-de-un-array-a-una-list/' | relative_url }}"><span aria-hidden="true">02</span><strong>De un array a una List</strong></a>
+  <a href="{{ '/java/leccion06/44-recorrer-listas-con-iterator/' | relative_url }}"><span aria-hidden="true">03</span><strong>Recorrer listas con Iterator</strong></a>
+  <a href="{{ '/java/leccion06/45-elegir-entre-list-set-y-map/' | relative_url }}"><span aria-hidden="true">04</span><strong>Elegir entre List, Set y Map</strong></a>
+  <a href="{{ '/java/leccion06/46-clases-y-metodos-genericos/' | relative_url }}"><span aria-hidden="true">05</span><strong>Clases y métodos genéricos</strong></a>
+  <a href="{{ '/java/leccion06/47-validar-codigos-con-pattern/' | relative_url }}"><span aria-hidden="true">06</span><strong>Validar códigos con Pattern</strong></a>
+  <a href="{{ '/java/leccion06/48-leer-y-modificar-json-y-xml/' | relative_url }}"><span aria-hidden="true">07</span><strong>Leer y modificar JSON y XML</strong></a>
+  <a href="{{ '/java/leccion06/49-agrupar-y-sumar-con-streams/' | relative_url }}"><span aria-hidden="true">08</span><strong>Agrupar y sumar con streams</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Importación y resumen
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+<div class="cla-lesson-nav"><a href="{{ '/assets/proyectos/java/06-documentos.zip' | relative_url }}">Descargar Importador JSON y XML</a></div>
+
+
+
+
+1. **Punto de partida.** Prepara JSON con MAT-01: 3 y MAT-02: 2, ambos de categoría aula. Prepara un XML equivalente.
+2. **Pasos.** Importa JSON con ObjectMapper de Jackson y XML con DocumentBuilder de Java para ficheros controlados de la práctica. Valida códigos con Pattern y Matcher. Usa List e Iterator, detecta duplicados con Set, agrupa con Map y suma por categoría con streams. Crea una clase Caja<T>, un método genérico y una tabla int[][] de cantidades por categoría y día. Exporta el documento actualizado.
+3. **Resultado esperado.** La categoría aula suma 5. Tras cambiar MAT-02 a 4, el total pasa a 7 y se refleja al releer el documento.
+4. **Caso de fallo.** Un código inválido o duplicado se señala y no se incorpora.
+
+**Evidencia de entrega.** Documentos de entrada y salida, código y justificación de las colecciones.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Justifica la colección elegida y muestra el procesamiento. | 1 |
+| Modifica y vuelve a leer un documento con el total esperado. | 1 |
+| Demuestra el rechazo de duplicados o códigos inválidos. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
 
 ## Arrays y colecciones
 
@@ -50,10 +101,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 ## Genéricos e iteradores
 
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/06-elegir-coleccion.png" alt="Criterios para elegir List Set o Map" loading="lazy">
-</figure>
-
 Los genéricos expresan el tipo de los elementos y evitan conversiones inseguras.
 
 ```java
@@ -83,10 +130,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Operaciones y expresiones regulares
 
-
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/06-stream-pipeline.png" alt="Pipeline de operaciones Stream" loading="lazy">
-</figure>
 
 Los streams permiten encadenar operaciones sin modificar la colección original:
 
@@ -129,10 +172,6 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 
 ## Refuerzo práctico
 
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/06-colecciones.png" alt="Comparación visual entre Array, List, Set y Map y sus características principales" loading="lazy">
-</figure>
-
 ### Ejemplo guiado
 
 Parte de una lista de notas: calcula media, filtra aprobados y genera otra lista transformada con Stream.
@@ -155,40 +194,40 @@ Crea estadísticas de notas utilizando `List`, `Map` y Stream: media, máximo, m
 
 Responde antes de desplegar la solución.
 
-### 1. ¿Qué colección mantiene orden y permite duplicados normalmente?
+### 1. ¿Qué estructura expresa mejor la consulta de existencias por código único?
 
-- A) List
-- B) Set
-- C) Map como única opción
-- D) boolean
+- A) Map<String, Integer>
+- B) Set<Integer>
+- C) List<Integer> sin códigos
+- D) Map<Integer, String> con cantidades como clave
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> List modela secuencias ordenadas.</p>
+<p><strong>Respuesta correcta: A.</strong> Un mapa de código a cantidad permite localizar el valor por su clave única.</p>
 
 </details>
 
 ### 2. ¿Qué colección se usa cuando quieres unicidad de elementos?
 
-- A) Set
+- A) Scanner
 - B) List obligatoriamente
-- C) String
-- D) Scanner
+- C) Set
+- D) String
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Set no admite duplicados según igualdad.</p>
+<p><strong>Respuesta correcta: C.</strong> Set no admite duplicados según igualdad.</p>
 
 </details>
 
 ### 3. ¿Qué estructura representa pares clave-valor?
 
 - A) Map
-- B) List
-- C) Set
-- D) Array primitivo
+- B) Set
+- C) Array primitivo
+- D) List
 
 <details>
 <summary>Ver respuesta</summary>
@@ -199,29 +238,29 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué hace filter en un Stream?
 
-- A) Conserva elementos que cumplen un predicado
-- B) Transforma cada elemento
+- A) Cierra la JVM
+- B) Conserva elementos que cumplen un predicado
 - C) Ordena siempre
-- D) Cierra la JVM
+- D) Transforma cada elemento
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> filter selecciona elementos.</p>
+<p><strong>Respuesta correcta: B.</strong> filter selecciona elementos.</p>
 
 </details>
 
 ### 5. ¿Qué hace map en un Stream?
 
-- A) Transforma elementos
-- B) Elimina duplicados siempre
-- C) Abre un fichero
-- D) Crea una interfaz
+- A) Abre un fichero
+- B) Crea una interfaz
+- C) Elimina duplicados siempre
+- D) Transforma elementos
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> map aplica una función y produce otro flujo de valores.</p>
+<p><strong>Respuesta correcta: D.</strong> map aplica una función y produce otro flujo de valores.</p>
 
 </details>
 

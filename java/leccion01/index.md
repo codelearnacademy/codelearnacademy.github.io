@@ -7,10 +7,14 @@ title: Introducción a Java
 description: Primer contacto con Java 21.
 permalink: /java/leccion01/
 lessons:
+  - id: sublecciones
+    title: Sublecciones
+  - id: practica-guiada
+    title: Práctica guiada
   - id: objetivos
     title: Objetivos
-  - id: contenido
-    title: Contenido
+  - id: referencias-y-apartados-originales
+    title: Referencias y apartados originales
   - id: referencias-reutilizables
     title: Referencias reutilizables
 ---
@@ -25,11 +29,6 @@ lessons:
 		<div class="cla-lesson-stat"><strong>Inicial</strong><span>nivel</span></div>
 	</div>
 </section>
-<figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/01-mapa-ruta-java.png" alt="Mapa visual de la ruta de aprendizaje de Java" loading="lazy">
-</figure>
-
-
 ## Objetivos
 
 - Comprender qué es Java.
@@ -37,7 +36,47 @@ lessons:
 - Entender la JVM.
 - Ejecutar el primer programa.
 
-## Contenido
+## Sublecciones
+{: #sublecciones }
+
+<div class="cla-content-map">
+  <a href="{{ '/java/leccion01/01-configurar-el-jdk-y-el-ide/' | relative_url }}"><span aria-hidden="true">01</span><strong>Configurar el JDK y el IDE</strong></a>
+  <a href="{{ '/java/leccion01/02-anatomia-de-main-java/' | relative_url }}"><span aria-hidden="true">02</span><strong>Anatomía de Main.java</strong></a>
+  <a href="{{ '/java/leccion01/03-compilar-y-ejecutar/' | relative_url }}"><span aria-hidden="true">03</span><strong>Compilar y ejecutar</strong></a>
+  <a href="{{ '/java/leccion01/04-jvm-y-portabilidad/' | relative_url }}"><span aria-hidden="true">04</span><strong>JVM y portabilidad</strong></a>
+  <a href="{{ '/java/leccion01/05-inspeccionar-el-bytecode/' | relative_url }}"><span aria-hidden="true">05</span><strong>Inspeccionar el bytecode</strong></a>
+  <a href="{{ '/java/leccion01/06-diagnosticar-errores/' | relative_url }}"><span aria-hidden="true">06</span><strong>Diagnosticar errores</strong></a>
+  <a href="#practica-guiada"><span aria-hidden="true">→</span><strong>Práctica guiada</strong></a>
+</div>
+
+## Práctica guiada · Mi primer proyecto
+{: #practica-guiada }
+
+**Práctica obligatoria.** Utiliza los demás ejercicios como refuerzo o ampliación.
+
+<div class="cla-lesson-nav"><a href="{{ '/assets/proyectos/java/01-ide.zip' | relative_url }}">Descargar Proyecto Java 21 para el IDE</a></div>
+
+
+
+1. **Punto de partida.** Crea en el IDE un proyecto Java 21 con Main.java y selecciona el JDK del proyecto.
+2. **Pasos.** Comprueba java -version y javac -version. Ejecuta desde el IDE. Después compila con javac Main.java y ejecuta con java Main.
+3. **Resultado esperado.** El programa imprime el nombre, la versión y «Estoy listo para aprender».
+4. **Caso de fallo.** Cambia el nombre de la clase pública sin renombrar el archivo. Reproduce el error y restablece el código.
+
+**Evidencia de entrega.** Configuración del JDK, fuente, salida y explicación del error.
+
+### Rúbrica de la práctica
+
+| Indicador | Puntos |
+|---|---:|
+| Configura JDK 21 y ejecuta desde el IDE. | 1 |
+| Aporta código y salida coherentes. | 1 |
+| Reproduce y explica el error entre nombre de clase y archivo. | 1 |
+
+Cada indicador vale 1 si la evidencia es suficiente, 0,5 si es parcial y 0 si falta.
+
+
+## Referencias y apartados originales
 
 <div class="cla-content-map">
 	<a href="01-bienvenida/"><span>01</span><strong>Bienvenido</strong><em>Orientación y objetivos</em></a>

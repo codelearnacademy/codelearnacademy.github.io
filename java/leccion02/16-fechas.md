@@ -6,6 +6,129 @@ lesson_file: 16-fechas-horas
 lesson_number: "16"
 title: Fechas y horas en Java
 description: Aprende a crear, comparar, formatear y calcular diferencias entre fechas y horas utilizando la API java.time de Java 21.
+lessons:
+  - id: caracteristicas-de-java-time
+    title: "Características de java.time"
+  - id: localdate
+    title: "LocalDate"
+  - id: anos-bisiestos
+    title: "Años bisiestos"
+  - id: numero-de-dias-del-mes
+    title: "Número de días del mes"
+  - id: numero-de-dias-del-ano
+    title: "Número de días del año"
+  - id: localtime
+    title: "LocalTime"
+  - id: localdatetime
+    title: "LocalDateTime"
+  - id: formatear-fechas
+    title: "Formatear fechas"
+  - id: formatear-fecha-y-hora
+    title: "Formatear fecha y hora"
+  - id: mostrar-nombre-del-mes-y-dia
+    title: "Mostrar nombre del mes y día"
+  - id: convertir-texto-en-fecha-parse
+    title: "Convertir texto en fecha: parse()"
+  - id: convertir-texto-en-hora
+    title: "Convertir texto en hora"
+  - id: errores-al-convertir-fechas
+    title: "Errores al convertir fechas"
+  - id: diferencia-entre-dos-fechas-con-period
+    title: "Diferencia entre dos fechas con Period"
+  - id: diferencia-total-en-dias
+    title: "Diferencia total en días"
+  - id: diferencia-en-semanas
+    title: "Diferencia en semanas"
+  - id: diferencia-en-meses
+    title: "Diferencia en meses"
+  - id: diferencia-en-anos
+    title: "Diferencia en años"
+  - id: period-frente-a-chronounit
+    title: "Period frente a ChronoUnit"
+  - id: diferencia-entre-horas-con-duration
+    title: "Diferencia entre horas con Duration"
+  - id: period-frente-a-duration
+    title: "Period frente a Duration"
+  - id: crear-periodos
+    title: "Crear periodos"
+  - id: crear-duraciones
+    title: "Crear duraciones"
+  - id: calcular-dias-hasta-una-fecha
+    title: "Calcular días hasta una fecha"
+  - id: calcular-dias-desde-una-fecha
+    title: "Calcular días desde una fecha"
+  - id: primer-y-ultimo-dia-del-mes
+    title: "Primer y último día del mes"
+  - id: temporaladjusters
+    title: "TemporalAdjusters"
+  - id: dia-de-la-semana
+    title: "Día de la semana"
+  - id: comprobar-fin-de-semana
+    title: "Comprobar fin de semana"
+  - id: month
+    title: "Month"
+  - id: year
+    title: "Year"
+  - id: yearmonth
+    title: "YearMonth"
+  - id: monthday
+    title: "MonthDay"
+  - id: zonas-horarias
+    title: "Zonas horarias"
+  - id: instant
+    title: "Instant"
+  - id: unix-timestamp
+    title: "Unix timestamp"
+  - id: comparar-instant
+    title: "Comparar Instant"
+  - id: medir-duracion-de-una-operacion
+    title: "Medir duración de una operación"
+  - id: ejemplo-calcular-edad-completa
+    title: "Ejemplo: calcular edad completa"
+  - id: ejemplo-saber-si-una-persona-es-mayor-de-edad
+    title: "Ejemplo: saber si una persona es mayor de edad"
+  - id: ejemplo-dias-entre-dos-fechas
+    title: "Ejemplo: días entre dos fechas"
+  - id: ejemplo-diferencia-en-anos
+    title: "Ejemplo: diferencia en años"
+  - id: ejemplo-diferencia-en-meses
+    title: "Ejemplo: diferencia en meses"
+  - id: ejemplo-duracion-de-una-jornada
+    title: "Ejemplo: duración de una jornada"
+  - id: ejemplo-sumar-90-minutos
+    title: "Ejemplo: sumar 90 minutos"
+  - id: ejemplo-cita-dentro-de-15-dias
+    title: "Ejemplo: cita dentro de 15 días"
+  - id: ejemplo-vencimiento-dentro-de-tres-meses
+    title: "Ejemplo: vencimiento dentro de tres meses"
+  - id: ejemplo-comprobar-si-una-fecha-ha-vencido
+    title: "Ejemplo: comprobar si una fecha ha vencido"
+  - id: ejemplo-comprobar-si-una-fecha-esta-dentro-de-un-intervalo
+    title: "Ejemplo: comprobar si una fecha está dentro de un intervalo"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: tabla-de-referencia-rapida
+    title: "Tabla de referencia rápida"
+  - id: period-duration-y-chronounit
+    title: "Period, Duration y ChronoUnit"
+  - id: para-recordar
+    title: "Para recordar"
+  - id: ejercicio-rapido
+    title: "Ejercicio rápido"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: prueba-tus-conocimientos
+    title: "Prueba tus conocimientos"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-fechas-y-horas
+    title: "Ejercicios de práctica · Fechas y horas"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Fechas y horas en Java
@@ -60,6 +183,7 @@ El valor concreto dependerá del día en el que se ejecute el programa.
 <div class="cla-note"><strong>Idea clave</strong><p>La API moderna de fechas y horas de Java se encuentra principalmente en <code>java.time</code>. Para código nuevo, estas clases son preferibles a las antiguas <code>Date</code> y <code>Calendar</code>.</p></div>
 
 ## Características de `java.time`
+{: #caracteristicas-de-java-time }
 
 Las clases principales de `java.time` presentan varias características importantes:
 
@@ -92,6 +216,7 @@ Salida:
 La fecha original no cambia.
 
 ## `LocalDate`
+{: #localdate }
 
 `LocalDate` representa una fecha formada por:
 
@@ -428,6 +553,7 @@ true
 ```
 
 ## Años bisiestos
+{: #anos-bisiestos }
 
 `LocalDate` permite comprobar si un año es bisiesto.
 
@@ -474,6 +600,7 @@ false
 ```
 
 ## Número de días del mes
+{: #numero-de-dias-del-mes }
 
 Podemos utilizar:
 
@@ -512,6 +639,7 @@ obtendríamos:
 ```
 
 ## Número de días del año
+{: #numero-de-dias-del-ano }
 
 ```java
 LocalDate fecha =
@@ -529,6 +657,7 @@ Salida:
 ```
 
 ## `LocalTime`
+{: #localtime }
 
 `LocalTime` representa una hora sin fecha y sin zona horaria.
 
@@ -716,6 +845,7 @@ true
 ```
 
 ## `LocalDateTime`
+{: #localdatetime }
 
 `LocalDateTime` combina una fecha y una hora.
 
@@ -862,6 +992,7 @@ System.out.println(
 ```
 
 ## Formatear fechas
+{: #formatear-fechas }
 
 Por defecto:
 
@@ -938,6 +1069,7 @@ Salida:
 <div class="cla-note"><strong>Atención</strong><p><code>MM</code> representa el mes, mientras que <code>mm</code> representa los minutos. Son distintos.</p></div>
 
 ## Formatear fecha y hora
+{: #formatear-fecha-y-hora }
 
 ```java
 LocalDateTime fechaHora =
@@ -967,6 +1099,7 @@ Salida:
 ```
 
 ## Mostrar nombre del mes y día
+{: #mostrar-nombre-del-mes-y-dia }
 
 Para obtener nombres localizados podemos utilizar un `Locale`.
 
@@ -1006,6 +1139,7 @@ viernes, 11 de septiembre de 2026
 ```
 
 ## Convertir texto en fecha: `parse()`
+{: #convertir-texto-en-fecha-parse }
 
 Podemos convertir texto ISO directamente:
 
@@ -1060,6 +1194,7 @@ Salida:
 ```
 
 ## Convertir texto en hora
+{: #convertir-texto-en-hora }
 
 ```java
 String texto =
@@ -1096,6 +1231,7 @@ LocalTime hora =
 ```
 
 ## Errores al convertir fechas
+{: #errores-al-convertir-fechas }
 
 Si intentamos:
 
@@ -1144,6 +1280,7 @@ public class Main {
 <div class="cla-note"><strong>Idea clave</strong><p>Una expresión regular puede comprobar el formato de una fecha, pero <code>LocalDate.parse()</code> puede comprobar además si la fecha representa realmente una fecha válida.</p></div>
 
 ## Diferencia entre dos fechas con `Period`
+{: #diferencia-entre-dos-fechas-con-period }
 
 `Period` representa una cantidad de tiempo basada en:
 
@@ -1276,6 +1413,7 @@ System.out.println(edad);
 ```
 
 ## Diferencia total en días
+{: #diferencia-total-en-dias }
 
 Si queremos saber el número total de días entre dos fechas, podemos utilizar:
 
@@ -1322,6 +1460,7 @@ Salida:
 ```
 
 ## Diferencia en semanas
+{: #diferencia-en-semanas }
 
 ```java
 long semanas =
@@ -1332,6 +1471,7 @@ long semanas =
 ```
 
 ## Diferencia en meses
+{: #diferencia-en-meses }
 
 ```java
 LocalDate inicio =
@@ -1364,6 +1504,7 @@ Salida:
 ```
 
 ## Diferencia en años
+{: #diferencia-en-anos }
 
 ```java
 LocalDate inicio =
@@ -1396,6 +1537,7 @@ Salida:
 ```
 
 ## `Period` frente a `ChronoUnit`
+{: #period-frente-a-chronounit }
 
 Supongamos:
 
@@ -1459,6 +1601,7 @@ obtenemos el número total de días.
 <div class="cla-note"><strong>Para recordar</strong><p><code>Period</code> es adecuado cuando queremos expresar una diferencia en años, meses y días. <code>ChronoUnit</code> es útil cuando queremos obtener una cantidad total en una unidad concreta.</p></div>
 
 ## Diferencia entre horas con `Duration`
+{: #diferencia-entre-horas-con-duration }
 
 `Duration` representa una cantidad de tiempo basada principalmente en:
 
@@ -1588,10 +1731,11 @@ Salida:
 ```
 
 ## `Period` frente a `Duration`
+{: #period-frente-a-duration }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-period-duration.png" alt="Comparación entre Period y Duration" loading="lazy">
+  <img src="{{ '/assets/images/java/02-period-duration.webp' | relative_url }}" alt="Comparación entre Period y Duration" loading="lazy">
 </figure>
 
 | Clase | Trabaja principalmente con |
@@ -1628,6 +1772,7 @@ Duration duracion =
 Representa cinco horas.
 
 ## Crear periodos
+{: #crear-periodos }
 
 ```java
 Period unAnio =
@@ -1665,6 +1810,7 @@ Salida:
 ```
 
 ## Crear duraciones
+{: #crear-duraciones }
 
 ```java
 Duration unaHora =
@@ -1678,6 +1824,7 @@ Duration diezSegundos =
 ```
 
 ## Calcular días hasta una fecha
+{: #calcular-dias-hasta-una-fecha }
 
 Por ejemplo:
 
@@ -1708,6 +1855,7 @@ System.out.println(
 Si la fecha objetivo ya ha pasado, el resultado será negativo.
 
 ## Calcular días desde una fecha
+{: #calcular-dias-desde-una-fecha }
 
 ```java
 LocalDate inicio =
@@ -1730,6 +1878,7 @@ System.out.println(dias);
 ```
 
 ## Primer y último día del mes
+{: #primer-y-ultimo-dia-del-mes }
 
 Podemos obtener el primer día fácilmente:
 
@@ -1771,6 +1920,7 @@ Salida:
 ```
 
 ## `TemporalAdjusters`
+{: #temporaladjusters }
 
 Java dispone de utilidades para realizar ajustes habituales sobre fechas.
 
@@ -1829,6 +1979,7 @@ LocalDate proximoLunes =
 ```
 
 ## Día de la semana
+{: #dia-de-la-semana }
 
 ```java
 LocalDate fecha =
@@ -1870,6 +2021,7 @@ if (fecha.getDayOfWeek()
 `DayOfWeek` es un `enum`, por lo que es correcto comparar sus valores con `==`.
 
 ## Comprobar fin de semana
+{: #comprobar-fin-de-semana }
 
 ```java
 DayOfWeek dia =
@@ -1885,6 +2037,7 @@ System.out.println(
 ```
 
 ## `Month`
+{: #month }
 
 Java proporciona el `enum`:
 
@@ -1923,6 +2076,7 @@ LocalDate fecha =
 ```
 
 ## `Year`
+{: #year }
 
 La clase `Year` representa un año.
 
@@ -1957,6 +2111,7 @@ Year actual =
 ```
 
 ## `YearMonth`
+{: #yearmonth }
 
 `YearMonth` representa un año y un mes.
 
@@ -2010,6 +2165,7 @@ Salida:
 ```
 
 ## `MonthDay`
+{: #monthday }
 
 `MonthDay` representa un mes y un día sin asociarlo a un año.
 
@@ -2040,6 +2196,7 @@ Salida:
 ```
 
 ## Zonas horarias
+{: #zonas-horarias }
 
 `LocalDateTime` no almacena ninguna zona horaria.
 
@@ -2117,6 +2274,7 @@ System.out.println(
 <div class="cla-note"><strong>Idea clave</strong><p><code>LocalDateTime</code> representa una fecha y hora local sin zona. <code>ZonedDateTime</code> añade una zona horaria y permite representar correctamente un instante en lugares diferentes.</p></div>
 
 ## `Instant`
+{: #instant }
 
 `Instant` representa un punto concreto en la línea temporal.
 
@@ -2153,6 +2311,7 @@ Por ejemplo:
 `Z` representa UTC.
 
 ## Unix timestamp
+{: #unix-timestamp }
 
 Podemos obtener segundos desde el instante Unix:
 
@@ -2184,6 +2343,7 @@ Salida:
 ```
 
 ## Comparar `Instant`
+{: #comparar-instant }
 
 ```java
 Instant inicio =
@@ -2200,6 +2360,7 @@ System.out.println(
 ```
 
 ## Medir duración de una operación
+{: #medir-duracion-de-una-operacion }
 
 ```java
 Instant inicio =
@@ -2225,6 +2386,7 @@ System.out.println(
 Para mediciones precisas de rendimiento dentro de una JVM también suele utilizarse `System.nanoTime()`, pero `Instant` es útil cuando nos interesa un instante real del reloj.
 
 ## Ejemplo: calcular edad completa
+{: #ejemplo-calcular-edad-completa }
 
 ```java
 import java.time.LocalDate;
@@ -2267,6 +2429,7 @@ public class EdadExample {
 ```
 
 ## Ejemplo: saber si una persona es mayor de edad
+{: #ejemplo-saber-si-una-persona-es-mayor-de-edad }
 
 Una forma sencilla es comparar su fecha de nacimiento con la fecha límite:
 
@@ -2300,6 +2463,7 @@ nacimiento.plusYears(18)
 calcula la fecha en la que la persona cumple 18 años.
 
 ## Ejemplo: días entre dos fechas
+{: #ejemplo-dias-entre-dos-fechas }
 
 ```java
 LocalDate salida =
@@ -2336,6 +2500,7 @@ Duración del viaje: 14 días
 ```
 
 ## Ejemplo: diferencia en años
+{: #ejemplo-diferencia-en-anos }
 
 ```java
 LocalDate inicio =
@@ -2368,6 +2533,7 @@ Salida:
 ```
 
 ## Ejemplo: diferencia en meses
+{: #ejemplo-diferencia-en-meses }
 
 ```java
 LocalDate inicio =
@@ -2400,6 +2566,7 @@ Salida:
 ```
 
 ## Ejemplo: duración de una jornada
+{: #ejemplo-duracion-de-una-jornada }
 
 ```java
 LocalTime entrada =
@@ -2429,6 +2596,7 @@ Salida:
 ```
 
 ## Ejemplo: sumar 90 minutos
+{: #ejemplo-sumar-90-minutos }
 
 ```java
 LocalTime hora =
@@ -2450,6 +2618,7 @@ Salida:
 ```
 
 ## Ejemplo: cita dentro de 15 días
+{: #ejemplo-cita-dentro-de-15-dias }
 
 ```java
 LocalDate hoy =
@@ -2464,6 +2633,7 @@ System.out.println(
 ```
 
 ## Ejemplo: vencimiento dentro de tres meses
+{: #ejemplo-vencimiento-dentro-de-tres-meses }
 
 ```java
 LocalDate fecha =
@@ -2488,6 +2658,7 @@ Salida:
 ```
 
 ## Ejemplo: comprobar si una fecha ha vencido
+{: #ejemplo-comprobar-si-una-fecha-ha-vencido }
 
 ```java
 LocalDate vencimiento =
@@ -2515,6 +2686,7 @@ if (vencimiento.isBefore(hoy)) {
 ```
 
 ## Ejemplo: comprobar si una fecha está dentro de un intervalo
+{: #ejemplo-comprobar-si-una-fecha-esta-dentro-de-un-intervalo }
 
 ```java
 LocalDate inicio =
@@ -2552,6 +2724,7 @@ true
 ```
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 ```java
 import java.time.Duration;
@@ -2685,6 +2858,7 @@ public class FechasExample {
 ```
 
 ## Tabla de referencia rápida
+{: #tabla-de-referencia-rapida }
 
 | Operación | Ejemplo |
 | --- | --- |
@@ -2718,6 +2892,7 @@ public class FechasExample {
 | Duración entre horas | `Duration.between(inicio, fin)` |
 
 ## `Period`, `Duration` y `ChronoUnit`
+{: #period-duration-y-chronounit }
 
 Una de las dudas más frecuentes es cuándo utilizar cada opción.
 
@@ -2782,6 +2957,7 @@ long anios =
 ```
 
 ## Para recordar
+{: #para-recordar }
 
 - `LocalDate` representa una fecha.
 - `LocalTime` representa una hora.
@@ -2803,6 +2979,7 @@ long anios =
 - `DateTimeParseException` indica problemas al convertir texto en una fecha u hora.
 
 ## Ejercicio rápido
+{: #ejercicio-rapido }
 
 Dadas estas fechas:
 
@@ -2873,6 +3050,7 @@ Resultado:
 ```
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 Crea un programa llamado:
 
@@ -3046,6 +3224,7 @@ public class GestorFechas {
 ```
 
 ## Prueba tus conocimientos
+{: #prueba-tus-conocimientos }
 
 ### Caso 1
 
@@ -3247,6 +3426,7 @@ Salida:
 ```
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras completar este apartado debes saber distinguir entre:
 
@@ -3296,9 +3476,10 @@ Para obtener un **total exacto en una unidad concreta**, como días, meses o añ
 Cuando el programa necesite representar una zona horaria real, utiliza `ZoneId` y `ZonedDateTime` en lugar de asumir que un `LocalDateTime` contiene información geográfica o de huso horario.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-fechas.png" alt="Comparación entre LocalDate, LocalTime y LocalDateTime con ejemplos de los datos que representa cada tipo" loading="lazy">
+  <img src="{{ '/assets/images/java/02-fechas.webp' | relative_url }}" alt="Comparación entre LocalDate, LocalTime y LocalDateTime con ejemplos de los datos que representa cada tipo" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -3309,6 +3490,7 @@ Crea una fecha de nacimiento y calcula la fecha del próximo cumpleaños.
 
 Calcula edad, días hasta una fecha y compara dos horas.
 ## Ejercicios de práctica · Fechas y horas
+{: #ejercicios-de-practica-fechas-y-horas }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -3323,34 +3505,35 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en agenda, cumpleaños o plazos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué representa LocalDate?
 
-- A) Una fecha sin hora ni zona
-- B) Una hora únicamente
-- C) Un instante UTC obligatorio
-- D) Una duración
+- A) Un instante UTC obligatorio
+- B) Una duración
+- C) Una fecha sin hora ni zona
+- D) Una hora únicamente
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> LocalDate modela año, mes y día.</p>
+<p><strong>Respuesta correcta: C.</strong> LocalDate modela año, mes y día.</p>
 
 </details>
 
 ### 2. ¿Qué representa LocalTime?
 
-- A) Hora sin fecha
-- B) Fecha completa
+- A) Fecha completa
+- B) Zona horaria
 - C) Periodo de años
-- D) Zona horaria
+- D) Hora sin fecha
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> LocalTime modela hora, minuto, segundo, etc.</p>
+<p><strong>Respuesta correcta: D.</strong> LocalTime modela hora, minuto, segundo, etc.</p>
 
 </details>
 
@@ -3370,33 +3553,34 @@ Responde antes de desplegar la solución.
 
 ### 4. ¿Qué clase es apropiada para diferencia basada en fechas como años/meses/días?
 
-- A) Period
-- B) Duration siempre
+- A) Integer
+- B) Period
 - C) Scanner
-- D) Integer
+- D) Duration siempre
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Period trabaja con unidades de fecha.</p>
+<p><strong>Respuesta correcta: B.</strong> Period trabaja con unidades de fecha.</p>
 
 </details>
 
 ### 5. ¿Para qué sirve DateTimeFormatter?
 
-- A) Formatear y parsear fechas/horas
+- A) Compilar Java
 - B) Crear bucles
-- C) Compilar Java
-- D) Gestionar memoria
+- C) Gestionar memoria
+- D) Formatear y parsear fechas/horas
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Permite convertir entre representaciones textuales y temporales.</p>
+<p><strong>Respuesta correcta: D.</strong> Permite convertir entre representaciones textuales y temporales.</p>
 
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Dada una fecha de nacimiento, calcula la edad aproximada con `Period` y los días hasta el próximo cumpleaños.
 

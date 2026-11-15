@@ -6,6 +6,67 @@ lesson_file: 12-clases-envolventes
 lesson_number: "12"
 title: Clases envolventes en Java
 description: Aprende a trabajar con las clases envolventes, autoboxing, unboxing y conversión de tipos en Java 21.
+lessons:
+  - id: para-que-sirven-las-clases-envolventes
+    title: "¿Para qué sirven las clases envolventes?"
+  - id: autoboxing
+    title: "Autoboxing"
+  - id: unboxing
+    title: "Unboxing"
+  - id: metodos-comunes
+    title: "Métodos comunes"
+  - id: clase-byte
+    title: "Clase Byte"
+  - id: clase-short
+    title: "Clase Short"
+  - id: clase-integer
+    title: "Clase Integer"
+  - id: clase-long
+    title: "Clase Long"
+  - id: clase-float
+    title: "Clase Float"
+  - id: clase-double
+    title: "Clase Double"
+  - id: clase-character
+    title: "Clase Character"
+  - id: clase-boolean
+    title: "Clase Boolean"
+  - id: conversion-de-texto-a-numeros
+    title: "Conversión de texto a números"
+  - id: que-ocurre-si-el-texto-no-contiene-un-numero
+    title: "¿Qué ocurre si el texto no contiene un número?"
+  - id: comparar-objetos-envolventes
+    title: "Comparar objetos envolventes"
+  - id: comparacion-con-equals
+    title: "Comparación con equals()"
+  - id: constantes-utiles
+    title: "Constantes útiles"
+  - id: metodos-xxxvalue
+    title: "Métodos xxxValue()"
+  - id: clases-numericas-y-number
+    title: "Clases numéricas y Number"
+  - id: clases-envolventes-y-null
+    title: "Clases envolventes y null"
+  - id: ejemplo-completo
+    title: "Ejemplo completo"
+  - id: para-recordar
+    title: "Para recordar"
+  - id: ejercicio-rapido
+    title: "Ejercicio rápido"
+  - id: practica-guiada-del-concepto
+    title: "Práctica guiada del concepto"
+  - id: prueba-tus-conocimientos
+    title: "Prueba tus conocimientos"
+  - id: despues-de-esta-leccion
+    title: "Después de esta lección"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-clases-envolventes
+    title: "Ejercicios de práctica · Clases envolventes"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Clases envolventes en Java
@@ -40,6 +101,7 @@ Aunque ambos representan el valor `10`, no son exactamente lo mismo:
 - `Integer` es una clase y, por tanto, sus valores son objetos.
 
 ## ¿Para qué sirven las clases envolventes?
+{: #para-que-sirven-las-clases-envolventes }
 
 Las clases envolventes son necesarias cuando una API de Java necesita trabajar con objetos en lugar de tipos primitivos.
 
@@ -88,6 +150,7 @@ Java convierte automáticamente los valores `int` en objetos `Integer`.
 Este proceso se denomina **autoboxing**.
 
 ## Autoboxing
+{: #autoboxing }
 
 El **autoboxing** es la conversión automática de un tipo primitivo a su clase envolvente.
 
@@ -112,6 +175,7 @@ Character letra = 'A';
 ```
 
 ## Unboxing
+{: #unboxing }
 
 El **unboxing** es el proceso contrario: convertir automáticamente un objeto envolvente en su tipo primitivo correspondiente.
 
@@ -152,6 +216,7 @@ Salida:
 <div class="cla-note"><strong>Idea clave</strong><p>Autoboxing convierte automáticamente un valor primitivo en un objeto envolvente. Unboxing realiza el proceso contrario.</p></div>
 
 ## Métodos comunes
+{: #metodos-comunes }
 
 Las clases envolventes proporcionan métodos que permiten:
 
@@ -162,6 +227,7 @@ Las clases envolventes proporcionan métodos que permiten:
 - Analizar caracteres.
 
 ## Clase `Byte`
+{: #clase-byte }
 
 La clase `Byte` representa valores de tipo `byte`.
 
@@ -183,6 +249,7 @@ System.out.println(numero);
 ```
 
 ## Clase `Short`
+{: #clase-short }
 
 La clase `Short` representa valores de tipo `short`.
 
@@ -204,6 +271,7 @@ System.out.println(numero);
 ```
 
 ## Clase `Integer`
+{: #clase-integer }
 
 `Integer` es la clase envolvente correspondiente al tipo primitivo `int`.
 
@@ -263,6 +331,7 @@ valueOf()  -> Integer
 ```
 
 ## Clase `Long`
+{: #clase-long }
 
 `Long` es la clase envolvente correspondiente a `long`.
 
@@ -284,6 +353,7 @@ System.out.println(numero);
 ```
 
 ## Clase `Float`
+{: #clase-float }
 
 `Float` representa valores de tipo `float`.
 
@@ -305,6 +375,7 @@ System.out.println(numero);
 ```
 
 ## Clase `Double`
+{: #clase-double }
 
 `Double` representa valores de tipo `double`.
 
@@ -326,6 +397,7 @@ System.out.println(precio);
 ```
 
 ## Clase `Character`
+{: #clase-character }
 
 `Character` es la clase envolvente correspondiente a `char`.
 
@@ -359,6 +431,7 @@ Es un número
 ```
 
 ## Clase `Boolean`
+{: #clase-boolean }
 
 `Boolean` representa valores de tipo `boolean`.
 
@@ -386,6 +459,7 @@ true
 ```
 
 ## Conversión de texto a números
+{: #conversion-de-texto-a-numeros }
 
 Uno de los usos más habituales de las clases envolventes es convertir cadenas de caracteres en valores numéricos.
 
@@ -416,6 +490,7 @@ boolean valorBoolean = Boolean.parseBoolean("true");
 ```
 
 ## ¿Qué ocurre si el texto no contiene un número?
+{: #que-ocurre-si-el-texto-no-contiene-un-numero }
 
 Observa este código:
 
@@ -457,6 +532,7 @@ public class Main {
 <div class="cla-note"><strong>Importante</strong><p>Los métodos como <code>Integer.parseInt()</code> o <code>Double.parseDouble()</code> pueden lanzar una <code>NumberFormatException</code> cuando el texto no representa un valor válido.</p></div>
 
 ## Comparar objetos envolventes
+{: #comparar-objetos-envolventes }
 
 Los objetos envolventes pueden compararse utilizando `compareTo()`.
 
@@ -482,6 +558,7 @@ int resultado = Integer.compare(10, 20);
 ```
 
 ## Comparación con `equals()`
+{: #comparacion-con-equals }
 
 Cuando trabajamos con objetos envolventes debemos tener cuidado con `==`.
 
@@ -509,6 +586,7 @@ true
 <div class="cla-note"><strong>Regla importante</strong><p>Para comparar el contenido de objetos envolventes utiliza normalmente <code>equals()</code>. No dependas de <code>==</code> para comprobar si contienen el mismo valor.</p></div>
 
 ## Constantes útiles
+{: #constantes-utiles }
 
 Las clases envolventes también contienen constantes que permiten conocer los límites de los tipos numéricos.
 
@@ -541,6 +619,7 @@ Long.MAX_VALUE
 ```
 
 ## Métodos `xxxValue()`
+{: #metodos-xxxvalue }
 
 Cada clase envolvente permite obtener un valor primitivo.
 
@@ -578,6 +657,7 @@ boolean activo = datoBoolean.booleanValue();
 En muchos casos Java realiza el **unboxing** automáticamente.
 
 ## Clases numéricas y `Number`
+{: #clases-numericas-y-number }
 
 Las principales clases envolventes numéricas heredan de la clase abstracta `Number`.
 
@@ -620,6 +700,7 @@ Salida:
 ```
 
 ## Clases envolventes y `null`
+{: #clases-envolventes-y-null }
 
 Al tratarse de objetos, una variable de una clase envolvente puede contener `null`.
 
@@ -657,6 +738,7 @@ if (numeroObjeto != null) {
 <div class="cla-note"><strong>Atención</strong><p>Una clase envolvente puede contener <code>null</code>. Intentar realizar unboxing de <code>null</code> provoca una <code>NullPointerException</code>.</p></div>
 
 ## Ejemplo completo
+{: #ejemplo-completo }
 
 El siguiente programa combina conversión, autoboxing, unboxing y comparación:
 
@@ -698,6 +780,7 @@ Primitivo: 123
 ```
 
 ## Para recordar
+{: #para-recordar }
 
 - Los tipos primitivos no son objetos.
 - Cada tipo primitivo dispone de una clase envolvente.
@@ -715,6 +798,7 @@ Primitivo: 123
 - El unboxing de `null` provoca una `NullPointerException`.
 
 ## Ejercicio rápido
+{: #ejercicio-rapido }
 
 Indica qué tipo tendrá cada variable:
 
@@ -764,6 +848,7 @@ Integer numero3 = numero2; -> autoboxing
 ```
 
 ## Práctica guiada del concepto
+{: #practica-guiada-del-concepto }
 
 Crea un programa llamado `Conversor.java`.
 
@@ -813,6 +898,7 @@ El número es mayor que 100
 ```
 
 ## Prueba tus conocimientos
+{: #prueba-tus-conocimientos }
 
 ### Caso 1
 
@@ -878,6 +964,7 @@ true
 porque `equals()` compara los valores de los objetos.
 
 ## Después de esta lección
+{: #despues-de-esta-leccion }
 
 Tras completar este apartado debes saber distinguir entre `int` e `Integer` y comprender cuándo Java convierte automáticamente entre ambos.
 
@@ -896,9 +983,10 @@ Las clases envolventes aparecerán continuamente cuando trabajemos con coleccion
 El siguiente paso es estudiar con mayor detalle la clase `String` y aprender a trabajar con cadenas de caracteres en Java.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-wrapper.png" alt="02 wrapper" loading="lazy">
+  <img src="{{ '/assets/images/java/02-wrapper.webp' | relative_url }}" alt="02 wrapper" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -909,6 +997,7 @@ Convierte `"25"` a entero, provoca un `NumberFormatException` con `"hola"` y obs
 
 Convierte varios textos numéricos y documenta qué ocurre con entradas inválidas.
 ## Ejercicios de práctica · Clases envolventes
+{: #ejercicios-de-practica-clases-envolventes }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -923,29 +1012,30 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en procesar un formulario recibido como texto. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Cuál es el wrapper de int?
 
-- A) Integer
-- B) Int
-- C) NumberInt
-- D) Long
+- A) NumberInt
+- B) Long
+- C) Int
+- D) Integer
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Integer envuelve valores int.</p>
+<p><strong>Respuesta correcta: D.</strong> Integer envuelve valores int.</p>
 
 </details>
 
 ### 2. ¿Qué es autoboxing?
 
 - A) Conversión automática de primitivo a wrapper
-- B) Conversión de String a JSON
+- B) Compilación de bytecode
 - C) Un tipo de bucle
-- D) Compilación de bytecode
+- D) Conversión de String a JSON
 
 <details>
 <summary>Ver respuesta</summary>
@@ -956,15 +1046,15 @@ Responde antes de desplegar la solución.
 
 ### 3. ¿Qué es unboxing?
 
-- A) Extraer el valor primitivo de un wrapper
-- B) Eliminar una clase
-- C) Leer teclado
-- D) Crear un array
+- A) Eliminar una clase
+- B) Leer teclado
+- C) Crear un array
+- D) Extraer el valor primitivo de un wrapper
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Es la conversión wrapper → primitivo.</p>
+<p><strong>Respuesta correcta: D.</strong> Es la conversión wrapper → primitivo.</p>
 
 </details>
 
@@ -981,6 +1071,7 @@ Responde antes de desplegar la solución.
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Crea una lista `List<Integer>` con un `null` y analiza qué ocurre al hacer unboxing del valor nulo.
 

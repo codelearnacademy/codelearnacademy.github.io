@@ -6,6 +6,145 @@ lesson_file: 17-expresiones-regulares
 lesson_number: "17"
 title: Expresiones regulares en Java
 description: Aprende a validar, buscar, extraer, dividir y reemplazar texto mediante expresiones regulares con Pattern y Matcher en Java 21.
+lessons:
+  - id: tabla-de-metacaracteres-de-expresiones-regulares
+    title: "Tabla de metacaracteres de expresiones regulares"
+  - id: combinacion-de-metacaracteres
+    title: "Combinación de metacaracteres"
+  - id: ejemplos-tipicos-de-expresiones-regulares
+    title: "Ejemplos típicos de expresiones regulares"
+  - id: ejemplo-de-validador-con-varios-patrones
+    title: "Ejemplo de validador con varios patrones"
+  - id: regla-final
+    title: "Regla final"
+  - id: donde-se-utilizan-las-expresiones-regulares-en-java
+    title: "¿Dónde se utilizan las expresiones regulares en Java?"
+  - id: importar-pattern-y-matcher
+    title: "Importar Pattern y Matcher"
+  - id: expresion-regular-frente-a-cadena-java
+    title: "Expresión regular frente a cadena Java"
+  - id: caracteres-literales
+    title: "Caracteres literales"
+  - id: matches
+    title: "matches()"
+  - id: matches-comprueba-toda-la-cadena
+    title: "matches() comprueba toda la cadena"
+  - id: clases-de-caracteres
+    title: "Clases de caracteres"
+  - id: d
+    title: "\\D"
+  - id: w
+    title: "\\w"
+  - id: w-2
+    title: "\\W"
+  - id: s
+    title: "\\s"
+  - id: s-2
+    title: "\\S"
+  - id: resumen-de-clases-de-caracteres
+    title: "Resumen de clases de caracteres"
+  - id: el-punto
+    title: "El punto ."
+  - id: corchetes
+    title: "Corchetes []"
+  - id: rangos-de-caracteres
+    title: "Rangos de caracteres"
+  - id: combinar-rangos
+    title: "Combinar rangos"
+  - id: negacion-dentro-de-corchetes
+    title: "Negación dentro de corchetes"
+  - id: cuantificadores
+    title: "Cuantificadores"
+  - id: cero-o-una-vez
+    title: "?: cero o una vez"
+  - id: cero-o-mas-veces
+    title: ": cero o más veces"
+  - id: una-o-mas-veces
+    title: "+: una o más veces"
+  - id: n-numero-exacto
+    title: "{n}: número exacto"
+  - id: n-minimo-de-repeticiones
+    title: "{n,}: mínimo de repeticiones"
+  - id: n-m-intervalo-de-repeticiones
+    title: "{n,m}: intervalo de repeticiones"
+  - id: anclas
+    title: "Anclas"
+  - id: alternativas-con
+    title: "Alternativas con |"
+  - id: grupos-con-parentesis
+    title: "Grupos con paréntesis"
+  - id: validar-un-codigo-postal-sencillo
+    title: "Validar un código postal sencillo"
+  - id: validar-un-numero-de-telefono-sencillo
+    title: "Validar un número de teléfono sencillo"
+  - id: validar-letras
+    title: "Validar letras"
+  - id: propiedades-unicode
+    title: "Propiedades Unicode"
+  - id: validar-un-identificador-sencillo
+    title: "Validar un identificador sencillo"
+  - id: validar-una-contrasena-por-estructura
+    title: "Validar una contraseña por estructura"
+  - id: validacion-basica-de-correo-electronico
+    title: "Validación básica de correo electrónico"
+  - id: crear-un-pattern
+    title: "Crear un Pattern"
+  - id: ventaja-de-reutilizar-pattern
+    title: "Ventaja de reutilizar Pattern"
+  - id: ejemplo-con-pattern-y-matcher
+    title: "Ejemplo con Pattern y Matcher"
+  - id: matches-de-matcher
+    title: "matches() de Matcher"
+  - id: obtener-la-coincidencia-con-group
+    title: "Obtener la coincidencia con group()"
+  - id: posicion-de-una-coincidencia
+    title: "Posición de una coincidencia"
+  - id: encontrar-todas-las-coincidencias
+    title: "Encontrar todas las coincidencias"
+  - id: ejemplo-completo-con-grupos
+    title: "Ejemplo completo con grupos"
+  - id: eliminar-varios-espacios
+    title: "Eliminar varios espacios"
+  - id: eliminar-caracteres-no-numericos
+    title: "Eliminar caracteres no numéricos"
+  - id: dividir-usando-varios-espacios
+    title: "Dividir usando varios espacios"
+  - id: el-punto-es-un-metacaracter
+    title: "El punto es un metacarácter"
+  - id: pattern-quote
+    title: "Pattern.quote()"
+  - id: cuantificadores-perezosos
+    title: "Cuantificadores perezosos"
+  - id: patron-1
+    title: "Patrón 1"
+  - id: patron-2
+    title: "Patrón 2"
+  - id: patron-3
+    title: "Patrón 3"
+  - id: caso-1
+    title: "Caso 1"
+  - id: caso-2
+    title: "Caso 2"
+  - id: caso-3
+    title: "Caso 3"
+  - id: caso-4
+    title: "Caso 4"
+  - id: caso-5
+    title: "Caso 5"
+  - id: caso-6
+    title: "Caso 6"
+  - id: caso-7
+    title: "Caso 7"
+  - id: caso-8
+    title: "Caso 8"
+  - id: refuerzo-practico
+    title: "Refuerzo práctico"
+  - id: ejercicios-de-practica-expresiones-regulares
+    title: "Ejercicios de práctica · Expresiones regulares"
+  - id: autoevaluacion
+    title: "Autoevaluación"
+  - id: ejercicios-propuestos
+    title: "Ejercicios propuestos"
 ---
 
 # Expresiones regulares en Java
@@ -62,6 +201,7 @@ porque la barra invertida `\` también tiene un significado especial dentro de l
 
 
 ## Tabla de metacaracteres de expresiones regulares
+{: #tabla-de-metacaracteres-de-expresiones-regulares }
 
 Los **metacaracteres** son símbolos que tienen un significado especial dentro de una expresión regular.
 
@@ -155,6 +295,7 @@ ABC
 ```
 
 ## Combinación de metacaracteres
+{: #combinacion-de-metacaracteres }
 
 La verdadera potencia de las expresiones regulares aparece cuando combinamos diferentes elementos.
 
@@ -332,6 +473,7 @@ alumno_21
 ```
 
 ## Ejemplos típicos de expresiones regulares
+{: #ejemplos-tipicos-de-expresiones-regulares }
 
 ### Código postal
 
@@ -1067,6 +1209,7 @@ Documento.Pdf
 | Archivo PDF | `(?i)^.+\.pdf$` | `"(?i)^.+\\.pdf$"` |
 
 ## Ejemplo de validador con varios patrones
+{: #ejemplo-de-validador-con-varios-patrones }
 
 ```java
 public class Validador {
@@ -1154,6 +1297,7 @@ Usuario: true
 ```
 
 ## Regla final
+{: #regla-final }
 
 Conviene distinguir entre:
 
@@ -1177,6 +1321,7 @@ Y para una URL, una expresión regular puede realizar una comprobación básica,
 
 
 ## ¿Dónde se utilizan las expresiones regulares en Java?
+{: #donde-se-utilizan-las-expresiones-regulares-en-java }
 
 Java permite trabajar con expresiones regulares principalmente mediante:
 
@@ -1211,6 +1356,7 @@ true
 ```
 
 ## Importar `Pattern` y `Matcher`
+{: #importar-pattern-y-matcher }
 
 Las clases relacionadas con expresiones regulares pertenecen al paquete:
 
@@ -1232,6 +1378,7 @@ import java.util.regex.*;
 ```
 
 ## Expresión regular frente a cadena Java
+{: #expresion-regular-frente-a-cadena-java }
 
 Este es uno de los puntos que más confusión genera.
 
@@ -1292,6 +1439,7 @@ En Java:
 <div class="cla-note"><strong>Regla importante</strong><p>Cuando una expresión regular contiene una barra invertida, normalmente debes escribirla duplicada dentro de un literal <code>String</code> de Java.</p></div>
 
 ## Caracteres literales
+{: #caracteres-literales }
 
 La expresión regular más sencilla es un texto literal.
 
@@ -1328,6 +1476,7 @@ false
 porque `matches()` exige que **toda la cadena** coincida con el patrón.
 
 ## `matches()`
+{: #matches }
 
 El método:
 
@@ -1373,6 +1522,7 @@ false
 porque la cadena contiene letras.
 
 ## `matches()` comprueba toda la cadena
+{: #matches-comprueba-toda-la-cadena }
 
 Observa:
 
@@ -1395,6 +1545,7 @@ Aunque existe una parte numérica, el texto completo no está formado únicament
 Si queremos **buscar** un patrón dentro de un texto, normalmente utilizaremos `Matcher.find()`.
 
 ## Clases de caracteres
+{: #clases-de-caracteres }
 
 Las clases de caracteres permiten representar grupos de caracteres.
 
@@ -1445,6 +1596,7 @@ false
 porque `\d` representa un único dígito.
 
 ## `\D`
+{: #d }
 
 Representa un carácter que no es un dígito.
 
@@ -1469,6 +1621,7 @@ true
 ```
 
 ## `\w`
+{: #w }
 
 Representa un carácter considerado de palabra por el motor de expresiones regulares en su configuración habitual.
 
@@ -1495,6 +1648,7 @@ true
 ```
 
 ## `\W`
+{: #w-2 }
 
 Representa un carácter que no pertenece a `\w`.
 
@@ -1511,6 +1665,7 @@ true
 ```
 
 ## `\s`
+{: #s }
 
 Representa un carácter de espacio en blanco.
 
@@ -1535,6 +1690,7 @@ true
 ```
 
 ## `\S`
+{: #s-2 }
 
 Representa un carácter que no es espacio en blanco.
 
@@ -1551,6 +1707,7 @@ true
 ```
 
 ## Resumen de clases de caracteres
+{: #resumen-de-clases-de-caracteres }
 
 | Expresión | Java | Significado |
 | --- | --- | --- |
@@ -1563,6 +1720,7 @@ true
 | `.` | `"."` | Casi cualquier carácter |
 
 ## El punto `.`
+{: #el-punto }
 
 El punto representa normalmente cualquier carácter excepto determinados terminadores de línea.
 
@@ -1593,6 +1751,7 @@ true
 ```
 
 ## Corchetes `[]`
+{: #corchetes }
 
 Los corchetes permiten definir un conjunto de caracteres permitidos.
 
@@ -1637,6 +1796,7 @@ false
 ```
 
 ## Rangos de caracteres
+{: #rangos-de-caracteres }
 
 Podemos definir rangos dentro de los corchetes.
 
@@ -1687,6 +1847,7 @@ true
 ```
 
 ## Combinar rangos
+{: #combinar-rangos }
 
 Podemos combinar varios rangos:
 
@@ -1713,6 +1874,7 @@ true
 ```
 
 ## Negación dentro de corchetes
+{: #negacion-dentro-de-corchetes }
 
 El símbolo `^` al principio de una clase de caracteres indica negación.
 
@@ -1741,6 +1903,7 @@ true
 ```
 
 ## Cuantificadores
+{: #cuantificadores }
 
 Los cuantificadores indican cuántas veces puede aparecer un elemento.
 
@@ -1756,6 +1919,7 @@ Los principales son:
 | `{n,m}` | Entre `n` y `m` veces |
 
 ## `?`: cero o una vez
+{: #cero-o-una-vez }
 
 Ejemplo:
 
@@ -1791,6 +1955,7 @@ true
 ```
 
 ## `*`: cero o más veces
+{: #cero-o-mas-veces }
 
 ```text
 a*
@@ -1821,6 +1986,7 @@ true
 ```
 
 ## `+`: una o más veces
+{: #una-o-mas-veces }
 
 ```text
 a+
@@ -1871,6 +2037,7 @@ true
 ```
 
 ## `{n}`: número exacto
+{: #n-numero-exacto }
 
 ```text
 \d{5}
@@ -1911,6 +2078,7 @@ false
 ```
 
 ## `{n,}`: mínimo de repeticiones
+{: #n-minimo-de-repeticiones }
 
 ```text
 \d{3,}
@@ -1937,6 +2105,7 @@ true
 ```
 
 ## `{n,m}`: intervalo de repeticiones
+{: #n-m-intervalo-de-repeticiones }
 
 ```text
 \d{2,4}
@@ -1959,6 +2128,7 @@ true
 ```
 
 ## Anclas
+{: #anclas }
 
 Las anclas permiten indicar posiciones dentro del texto.
 
@@ -2005,6 +2175,7 @@ true
 Con `String.matches()` los anclajes suelen ser redundantes para muchas validaciones porque `matches()` ya intenta hacer coincidir toda la cadena, pero siguen siendo habituales para expresar de forma explícita la intención del patrón.
 
 ## Alternativas con `|`
+{: #alternativas-con }
 
 El símbolo:
 
@@ -2041,6 +2212,7 @@ true
 ```
 
 ## Grupos con paréntesis
+{: #grupos-con-parentesis }
 
 Los paréntesis permiten agrupar partes de una expresión.
 
@@ -2090,6 +2262,7 @@ ababab
 ```
 
 ## Validar un código postal sencillo
+{: #validar-un-codigo-postal-sencillo }
 
 Un código postal español puede representarse de forma básica como cinco dígitos:
 
@@ -2119,6 +2292,7 @@ Este patrón comprueba únicamente la estructura de cinco dígitos, no si el có
 <div class="cla-note"><strong>Importante</strong><p>Una expresión regular normalmente valida el <strong>formato</strong> de un dato. No garantiza necesariamente que el dato exista o sea válido desde el punto de vista del negocio.</p></div>
 
 ## Validar un número de teléfono sencillo
+{: #validar-un-numero-de-telefono-sencillo }
 
 Por ejemplo, nueve dígitos:
 
@@ -2144,6 +2318,7 @@ true
 ```
 
 ## Validar letras
+{: #validar-letras }
 
 Podemos exigir que un texto contenga únicamente letras ASCII:
 
@@ -2182,6 +2357,7 @@ Sin embargo, este patrón no acepta directamente letras como:
 Para textos humanos internacionales conviene tener en cuenta Unicode.
 
 ## Propiedades Unicode
+{: #propiedades-unicode }
 
 Java permite utilizar propiedades Unicode en expresiones regulares.
 
@@ -2224,6 +2400,7 @@ System.out.println(valido);
 Este patrón permite letras Unicode y espacios.
 
 ## Validar un identificador sencillo
+{: #validar-un-identificador-sencillo }
 
 Supongamos que queremos:
 
@@ -2257,6 +2434,7 @@ true
 ```
 
 ## Validar una contraseña por estructura
+{: #validar-una-contrasena-por-estructura }
 
 Supongamos una regla sencilla:
 
@@ -2292,6 +2470,7 @@ true
 Este ejemplo sirve para estudiar regex, aunque en aplicaciones reales las reglas de contraseñas deben diseñarse con cuidado y no depender únicamente de requisitos arbitrarios de complejidad.
 
 ## Validación básica de correo electrónico
+{: #validacion-basica-de-correo-electronico }
 
 Podemos crear una expresión regular sencilla como:
 
@@ -2347,10 +2526,11 @@ Pattern patron =
 Un objeto `Pattern` representa una expresión regular compilada.
 
 ## Crear un `Pattern`
+{: #crear-un-pattern }
 
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-pattern-matcher.png" alt="Flujo entre expresión regular Pattern y Matcher" loading="lazy">
+  <img src="{{ '/assets/images/java/02-pattern-matcher.webp' | relative_url }}" alt="Flujo entre expresión regular Pattern y Matcher" loading="lazy">
 </figure>
 
 Ejemplo:
@@ -2377,6 +2557,7 @@ Salida:
 ```
 
 ## Ventaja de reutilizar `Pattern`
+{: #ventaja-de-reutilizar-pattern }
 
 Si vamos a aplicar la misma expresión muchas veces, podemos compilarla una sola vez.
 
@@ -2425,6 +2606,7 @@ boolean coincide =
 ```
 
 ## Ejemplo con `Pattern` y `Matcher`
+{: #ejemplo-con-pattern-y-matcher }
 
 ```java
 import java.util.regex.Pattern;
@@ -2460,6 +2642,7 @@ Formato correcto
 ```
 
 ## `matches()` de `Matcher`
+{: #matches-de-matcher }
 
 `Matcher.matches()` comprueba si **todo el texto** coincide con el patrón.
 
@@ -2544,6 +2727,7 @@ find()    -> busca coincidencias dentro del texto
 <div class="cla-note"><strong>Regla importante</strong><p>Utiliza <code>matches()</code> cuando quieras validar el texto completo y <code>find()</code> cuando quieras localizar partes que coinciden dentro de un texto más grande.</p></div>
 
 ## Obtener la coincidencia con `group()`
+{: #obtener-la-coincidencia-con-group }
 
 Después de que `find()` encuentre una coincidencia:
 
@@ -2580,6 +2764,7 @@ Salida:
 ```
 
 ## Posición de una coincidencia
+{: #posicion-de-una-coincidencia }
 
 Podemos obtener la posición inicial y final.
 
@@ -2626,6 +2811,7 @@ Fin: 7
 El índice devuelto por `end()` corresponde a la primera posición posterior a la coincidencia.
 
 ## Encontrar todas las coincidencias
+{: #encontrar-todas-las-coincidencias }
 
 ```java
 String texto =
@@ -2722,6 +2908,7 @@ group(3) -> tercer grupo
 ```
 
 ## Ejemplo completo con grupos
+{: #ejemplo-completo-con-grupos }
 
 ```java
 import java.util.regex.Pattern;
@@ -2871,6 +3058,7 @@ Pedido XXX, factura XXX
 ```
 
 ## Eliminar varios espacios
+{: #eliminar-varios-espacios }
 
 Podemos sustituir una o más apariciones de espacio en blanco por un único espacio:
 
@@ -2894,6 +3082,7 @@ Java es interesante
 ```
 
 ## Eliminar caracteres no numéricos
+{: #eliminar-caracteres-no-numericos }
 
 ```java
 String texto =
@@ -2964,6 +3153,7 @@ C++
 ```
 
 ## Dividir usando varios espacios
+{: #dividir-usando-varios-espacios }
 
 ```java
 String texto =
@@ -2986,6 +3176,7 @@ C++
 ```
 
 ## El punto es un metacarácter
+{: #el-punto-es-un-metacaracter }
 
 Si queremos dividir:
 
@@ -3077,6 +3268,7 @@ Java:
 ```
 
 ## `Pattern.quote()`
+{: #pattern-quote }
 
 Si tenemos texto que queremos tratar literalmente, podemos utilizar:
 
@@ -3243,6 +3435,7 @@ aplicado a:
 puede abarcar desde el primer `<` hasta el último `>`.
 
 ## Cuantificadores perezosos
+{: #cuantificadores-perezosos }
 
 Podemos utilizar:
 
@@ -3696,6 +3889,7 @@ boolean valido =
 Indica qué cadenas coinciden con cada patrón.
 
 ## Patrón 1
+{: #patron-1 }
 
 ```java
 "\\d{3}"
@@ -3720,6 +3914,7 @@ ABC -> false
 ```
 
 ## Patrón 2
+{: #patron-2 }
 
 ```java
 "[A-Z]{2}\\d{2}"
@@ -3744,6 +3939,7 @@ ABC1 -> false
 ```
 
 ## Patrón 3
+{: #patron-3 }
 
 ```java
 "[A-Za-z]+"
@@ -3916,6 +4112,7 @@ Java 21 regex
 # Prueba tus conocimientos
 
 ## Caso 1
+{: #caso-1 }
 
 ```java
 String texto = "12345";
@@ -3934,6 +4131,7 @@ true
 porque todos los caracteres son dígitos.
 
 ## Caso 2
+{: #caso-2 }
 
 ```java
 String texto = "ABC123";
@@ -3952,6 +4150,7 @@ false
 porque `matches()` intenta hacer coincidir toda la cadena.
 
 ## Caso 3
+{: #caso-3 }
 
 ```java
 Pattern patron =
@@ -3974,6 +4173,7 @@ true
 porque `find()` busca una coincidencia dentro del texto.
 
 ## Caso 4
+{: #caso-4 }
 
 ```java
 String texto =
@@ -3995,6 +4195,7 @@ Java 21
 ```
 
 ## Caso 5
+{: #caso-5 }
 
 ```java
 String version = "21.0.2";
@@ -4012,6 +4213,7 @@ El array contiene:
 ```
 
 ## Caso 6
+{: #caso-6 }
 
 ```java
 String codigo =
@@ -4032,6 +4234,7 @@ true
 ```
 
 ## Caso 7
+{: #caso-7 }
 
 ```java
 Pattern patron =
@@ -4058,6 +4261,7 @@ Salida:
 porque `group(2)` corresponde al segundo grupo de captura.
 
 ## Caso 8
+{: #caso-8 }
 
 ```java
 Pattern patron =
@@ -4115,9 +4319,10 @@ y su representación dentro de Java:
 Las expresiones regulares son especialmente útiles para procesar texto, validar formatos y extraer información, pero deben utilizarse con moderación: cuando Java proporciona una API específica para un tipo de dato, como fechas y horas, suele ser preferible combinar una validación estructural sencilla con esa API especializada.
 
 ## Refuerzo práctico
+{: #refuerzo-practico }
 
 <figure class="cla-diagram cla-diagram--small">
-  <img src="/java/images/02-regex-anatomia.png" alt="02 regex anatomia" loading="lazy">
+  <img src="{{ '/assets/images/java/02-regex-anatomia.webp' | relative_url }}" alt="02 regex anatomia" loading="lazy">
 </figure>
 
 ### Ejemplo guiado
@@ -4128,6 +4333,7 @@ Construye paso a paso la regex de matrícula `ABC1234`: letra, tres letras, díg
 
 Crea expresiones para código postal, teléfono y nombre de fichero `.java`.
 ## Ejercicios de práctica · Expresiones regulares
+{: #ejercicios-de-practica-expresiones-regulares }
 
 Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los casos conserva el código y anota brevemente qué has comprobado.
 
@@ -4142,29 +4348,30 @@ Realiza estos ejercicios antes de pasar al siguiente concepto. En todos los caso
 **5. Mini integración.** Desarrolla un ejercicio pequeño basado en validar matrículas, usuarios o códigos. Debe incluir entrada o datos de prueba, procesamiento, salida verificable y al menos tres casos que demuestren que la solución funciona. **Entrega:** solución completa, datos usados, salida esperada/real y una breve conclusión.
 
 ## Autoevaluación
+{: #autoevaluacion }
 
 Responde antes de desplegar la solución.
 
 ### 1. ¿Qué indica `^` al inicio de una regex?
 
-- A) Inicio del texto/línea según modo
-- B) Un dígito
-- C) Cualquier carácter
-- D) Fin
+- A) Un dígito
+- B) Fin
+- C) Inicio del texto/línea según modo
+- D) Cualquier carácter
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> ^ es un ancla de inicio.</p>
+<p><strong>Respuesta correcta: C.</strong> ^ es un ancla de inicio.</p>
 
 </details>
 
 ### 2. ¿Qué representa `\d`?
 
 - A) Un dígito
-- B) Una letra mayúscula
-- C) Un espacio exclusivamente
-- D) El final
+- B) El final
+- C) Una letra mayúscula
+- D) Un espacio exclusivamente
 
 <details>
 <summary>Ver respuesta</summary>
@@ -4175,29 +4382,29 @@ Responde antes de desplegar la solución.
 
 ### 3. ¿Qué significa `{3}` tras un patrón?
 
-- A) Exactamente tres repeticiones
-- B) Como máximo una
+- A) Alternativa
+- B) Exactamente tres repeticiones
 - C) Cero o más
-- D) Alternativa
+- D) Como máximo una
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> {n} fija la cantidad exacta.</p>
+<p><strong>Respuesta correcta: B.</strong> {n} fija la cantidad exacta.</p>
 
 </details>
 
 ### 4. ¿Qué clase compila una expresión regular en Java?
 
-- A) Pattern
+- A) Scanner
 - B) Matcher
 - C) Math
-- D) Scanner
+- D) Pattern
 
 <details>
 <summary>Ver respuesta</summary>
 
-<p><strong>Respuesta correcta: A.</strong> Pattern representa el patrón compilado.</p>
+<p><strong>Respuesta correcta: D.</strong> Pattern representa el patrón compilado.</p>
 
 </details>
 
@@ -4205,8 +4412,8 @@ Responde antes de desplegar la solución.
 
 - A) matches intenta casar toda la entrada; find busca coincidencias
 - B) Son siempre idénticos
-- C) find compila Java
-- D) matches crea ficheros
+- C) matches crea ficheros
+- D) find compila Java
 
 <details>
 <summary>Ver respuesta</summary>
@@ -4216,6 +4423,7 @@ Responde antes de desplegar la solución.
 </details>
 
 ## Ejercicios propuestos
+{: #ejercicios-propuestos }
 
 1. Construye paso a paso una regex para validar tres letras mayúsculas seguidas de cuatro dígitos.
 2. Valida un código postal y un nombre de fichero `.java`.
