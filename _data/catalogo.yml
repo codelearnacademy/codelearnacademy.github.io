@@ -1,0 +1,46 @@
+editorial: [algoritmia, java, software, spring, ficheros, orm, git, maven, testing, docker, ides, sql, angular, typescript]
+groups:
+  - id: fundamentos
+    title: Fundamentos
+  - id: backend-datos
+    title: Backend y datos
+  - id: herramientas-calidad
+    title: Herramientas y calidad
+  - id: frontend
+    title: Frontend
+cards:
+  algoritmia:
+    title: Algoritmia
+    description: Algoritmos, diagramas de flujo y resolución de problemas.
+  java:
+    description: Fundamentos del lenguaje y programación orientada a objetos.
+  software:
+    description: Ciclo de vida, metodologías ágiles y calidad del software.
+  spring:
+    description: Desarrolla aplicaciones con Spring Framework y Spring Boot.
+  ficheros:
+    title: Ficheros
+    description: Lee y escribe CSV, JSON y XML con Java.
+  orm:
+    title: Persistencia y ORM
+    description: Persistencia con JPA, Hibernate y bases de datos relacionales.
+  git:
+    title: Git
+    description: Control de versiones y trabajo colaborativo con Git y GitHub.
+  maven:
+    title: Maven
+    description: Gestión de proyectos, dependencias y ciclo de construcción.
+  testing:
+    title: Testing
+    description: Pruebas en Java con JUnit, Mockito y buenas prácticas.
+  docker:
+    title: Docker
+    description: Contenedores y entornos reproducibles con Docker Compose.
+  ides:
+    description: Configura tu entorno de desarrollo con Java 21 y Maven.
+  sql:
+    description: Consultas y diseño de bases de datos.
+  angular:
+    description: Aplicaciones web con Angular.
+  typescript:
+    description: Tipado estático y JavaScript moderno.

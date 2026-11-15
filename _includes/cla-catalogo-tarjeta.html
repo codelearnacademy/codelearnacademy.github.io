@@ -1,0 +1,15 @@
+{% assign tech = site.data.technologies[include.route.technology] %}
+{% assign short = nil %}
+{% if include.profile == "catalogo" %}
+  {% assign short = site.data.catalogo.cards[include.key] %}
+{% endif %}
+<a class="cla-route-card cla-catalogo-tarjeta" href="{{ include.route.url | relative_url }}">
+  {% if tech.icon %}
+    <img src="{{ tech.icon | relative_url }}" alt="" width="38" height="38" loading="lazy">
+  {% endif %}
+  <div>
+    <h3>{{ short.title | default: include.route.title | escape }}</h3>
+    <p>{{ short.description | default: include.route.description | escape }}</p>
+    {% unless include.profile == "catalogo" %}<strong>Comenzar <span aria-hidden="true">→</span></strong>{% endunless %}
+  </div>
+</a>

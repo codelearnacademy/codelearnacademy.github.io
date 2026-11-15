@@ -1,0 +1,74 @@
+{% include cla-catalogo-estilos.html %}
+<main class="cla-main cla-catalogo-pagina">
+  <div class="cla-container cla-section" id="rutas">
+    <header class="cla-catalogo-intro">
+      <h1>{{ site.academy.hero_title | default: 'Rutas de aprendizaje' | escape }}</h1>
+      <p>{{ site.academy.tagline | escape }}</p>
+    </header>
+    {% assign route_keys = '' | split: ',' %}
+    {% for item in site.data.routes %}
+      {% assign key = item[0] | split: ',' %}
+      {% assign route_keys = route_keys | concat: key %}
+    {% endfor %}
+    {% assign route_keys = site.data.catalogo.editorial | concat: route_keys | uniq %}
+
+    {% for group in site.data.catalogo.groups %}
+      {% assign count = 0 %}
+      {% capture visible %}
+        {% for key in route_keys %}
+          {% assign route = site.data.routes[key] %}
+          {% if route.status == 'published' and route.group == group.id %}
+            {% assign count = count | plus: 1 %}
+            {% include cla-catalogo-tarjeta.html route=route key=key profile="catalogo" %}
+            {% if count == 3 %}{% break %}{% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% if count > 0 %}
+        <section class="cla-catalogo-grupo" aria-labelledby="grupo-{{ group.id }}">
+          <h2 id="grupo-{{ group.id }}">{{ group.title | escape }}</h2>
+          <div class="cla-route-grid cla-catalogo-grid cla-catalogo-columnas-{{ count }}">{{ visible }}</div>
+          {% assign count = 0 %}
+          {% capture additional %}
+            {% for key in route_keys %}
+              {% assign route = site.data.routes[key] %}
+              {% if route.status == 'published' and route.group == group.id %}
+                {% assign count = count | plus: 1 %}
+                {% if count > 3 %}{% include cla-catalogo-tarjeta.html route=route key=key profile="catalogo" %}{% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endcapture %}
+          {% if count > 3 %}
+            <details>
+              <summary>Ver todas las rutas de {{ group.title | escape }}</summary>
+              <div class="cla-route-grid cla-catalogo-grid">{{ additional }}</div>
+            </details>
+          {% endif %}
+        </section>
+      {% endif %}
+    {% endfor %}
+    {% capture forthcoming %}
+      {% for item in site.data.routes %}
+        {% if item[1].status == 'draft' %}
+          {% assign draft = item[1] %}
+          {% assign tech = site.data.technologies[draft.technology] %}
+          {% assign short = site.data.catalogo.cards[item[0]] %}
+          <li>
+            {% if tech.icon %}<img src="{{ tech.icon | relative_url }}" alt="" width="38" height="38" loading="lazy">{% endif %}
+            <div>
+              <strong>{{ short.title | default: draft.title | escape }}</strong>
+              <p>{{ short.description | default: draft.description | escape }}</p>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    {% assign upcoming = forthcoming | strip %}
+    {% if upcoming != '' %}
+      <section class="cla-catalogo-franja" aria-labelledby="proximamente">
+        <h2 id="proximamente">Próximamente</h2>
+        <ul class="cla-catalogo-proximas">{{ upcoming }}</ul>
+      </section>
+    {% endif %}
+  </div>
+</main>

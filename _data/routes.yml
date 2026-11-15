@@ -1,4 +1,5 @@
 java:
+  group: fundamentos
   title: Java
   short_title: Java
   technology: java
@@ -51,6 +52,7 @@ java:
     title: Persistencia y consultas avanzadas
     url: /java/leccion09/
 spring:
+  group: backend-datos
   title: Spring y Spring Boot
   short_title: Spring
   technology: spring
@@ -505,6 +507,7 @@ spring:
     title: Swagger UI y documentación OpenAPI
     url: /spring/leccion109/
 sql:
+  group: backend-datos
   title: SQL
   short_title: SQL
   technology: sql
@@ -520,6 +523,7 @@ sql:
   - sqlite
   lessons: []
 angular:
+  group: frontend
   title: Angular
   short_title: Angular
   technology: angular
@@ -535,6 +539,7 @@ angular:
   - git
   lessons: []
 typescript:
+  group: frontend
   title: TypeScript
   short_title: TypeScript
   technology: typescript
@@ -548,6 +553,7 @@ typescript:
   - git
   lessons: []
 docker:
+  group: herramientas-calidad
   title: Docker y entornos reproducibles
   short_title: Docker
   technology: docker
@@ -810,6 +816,7 @@ docker:
     title: Proyecto final · Plataforma Java + Spring + Angular + PostgreSQL con CI/CD
     url: /docker/leccion61/
 algoritmia:
+  group: fundamentos
   title: Algoritmia y Fundamentos de Programación
   short_title: Algoritmia
   technology: algoritmia
@@ -899,6 +906,7 @@ algoritmia:
     title: Proyecto final de algoritmia
     url: /algoritmia/leccion19/
 git:
+  group: herramientas-calidad
   title: Git y repositorios colaborativos
   short_title: Git
   technology: git
@@ -999,6 +1007,7 @@ git:
     title: Proyecto final colaborativo
     url: /git/leccion22/
 maven:
+  group: herramientas-calidad
   title: Maven y construcción de proyectos Java
   short_title: Maven
   technology: maven
@@ -1141,6 +1150,7 @@ maven:
     url: /maven/a4-comparar-herramientas/
     kind: ampliacion
 ficheros:
+  group: backend-datos
   title: Ficheros y formatos estructurados
   short_title: Ficheros
   technology: ficheros
@@ -1294,6 +1304,7 @@ ficheros:
     title: Retos y ampliaciones
     url: /ficheros/leccion34/
 orm:
+  group: backend-datos
   title: 'Persistencia relacional y ORM con Java y SQLite'
   short_title: ORM
   technology: orm
@@ -1424,6 +1435,7 @@ orm:
     title: 'Proyecto final PersistenceLab'
     url: /orm/leccion28/
 testing:
+  group: herramientas-calidad
   title: Testing y optimización
   short_title: Testing
   technology: testing
@@ -1799,6 +1811,7 @@ testing:
     title: Proyecto final · Sistema Java con quality gate
     url: /testing/leccion90/
 software:
+  group: fundamentos
   title: Software y metodologías
   short_title: Software
   technology: software
@@ -2024,6 +2037,7 @@ software:
     url: /software/leccion52/
 
 ides:
+  group: herramientas-calidad
   title: Entornos de desarrollo Java
   short_title: IDEs
   technology: ides
