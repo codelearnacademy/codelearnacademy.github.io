@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion109
 lesson_number: "109"
 lesson_file: 109-swagger-openapi
-title: Swagger UI y documentación OpenAPI
+title: Swagger UI y contrato OpenAPI
 permalink: /spring/leccion109/
 lessons:
   - id: openapi-y-swagger-ui
@@ -15,7 +15,7 @@ lessons:
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 
-# Swagger UI y documentación OpenAPI
+# Swagger UI y contrato OpenAPI
 
 ![OpenAPI: Describe POST y sus respuestas. Swagger UI: Envía la petición de prueba. Resultado: Comprueba 201 o 400.]({{ "/assets/images/spring/109-swagger-openapi.webp" | relative_url }})
 
@@ -50,6 +50,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 @ApiResponse(responseCode = "201", description = "Tarea creada; Location identifica el recurso")
 @ApiResponse(responseCode = "400", description = "Título inválido")
 ```
+
+**Ejercicio breve.** Antes de añadir las anotaciones, compara el `400` real con el que aparezca en OpenAPI. Busca `application/problem+json` y el campo de validación `errores`. Anota qué información falta en la especificación y amplía la documentación de POST para describirla.
 
 Reinicia la aplicación y comprueba que el resumen y ambos códigos aparecen en OpenAPI y en Swagger UI. Guarda la especificación con `curl -fsS http://localhost:8080/v3/api-docs -o openapi.json`. Entrega ese archivo y una evidencia de cada respuesta. [Documentación oficial de springdoc](https://springdoc.org/).
 

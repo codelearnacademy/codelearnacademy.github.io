@@ -59,7 +59,7 @@ spring:
   level: Ruta
   url: /spring/
   status: published
-  description: Spring Framework y Spring Boot con JDK 21, inyección de dependencias, API REST con Swagger UI, acceso a datos, pruebas y despliegue.
+  description: Spring Framework y Spring Boot con JDK 21, prácticas de API REST, errores HTTP, Swagger UI, acceso a datos, pruebas y despliegue.
   project: Sí
   exam: Sí
   technologies:
@@ -222,6 +222,18 @@ spring:
     number: '38'
     title: Path variables
     url: /spring/leccion38/
+  - id: leccion110
+    number: '110'
+    title: PUT · Sustituir una tarea
+    url: /spring/leccion110/
+  - id: leccion111
+    number: '111'
+    title: PATCH · Modificar parte de una tarea
+    url: /spring/leccion111/
+  - id: leccion112
+    number: '112'
+    title: DELETE · Eliminar una tarea
+    url: /spring/leccion112/
   - id: leccion39
     number: '39'
     title: Query parameters
@@ -236,19 +248,19 @@ spring:
     url: /spring/leccion41/
   - id: leccion42
     number: '42'
-    title: Códigos de estado HTTP
+    title: Códigos HTTP y diagnóstico de respuestas
     url: /spring/leccion42/
   - id: leccion43
     number: '43'
-    title: ResponseEntity
+    title: ResponseEntity, cabeceras y cuerpo
     url: /spring/leccion43/
   - id: leccion44
     number: '44'
-    title: Manejo global de errores
+    title: Manejo global de errores con ProblemDetail
     url: /spring/leccion44/
   - id: leccion45
     number: '45'
-    title: Validación
+    title: Validación de POST, PUT y PATCH
     url: /spring/leccion45/
   - id: leccion46
     number: '46'
@@ -368,7 +380,7 @@ spring:
     url: /spring/leccion74/
   - id: leccion75
     number: '75'
-    title: Testing MVC
+    title: Pruebas de la API de tareas con MockMvc
     url: /spring/leccion75/
   - id: leccion76
     number: '76'
@@ -500,11 +512,11 @@ spring:
     url: /spring/leccion107/
   - id: leccion108
     number: '108'
-    title: Diseño de servicios REST
+    title: Diseño de servicios REST y práctica CRUD
     url: /spring/leccion108/
   - id: leccion109
     number: '109'
-    title: Swagger UI y documentación OpenAPI
+    title: Swagger UI y contrato OpenAPI
     url: /spring/leccion109/
 sql:
   group: backend-datos

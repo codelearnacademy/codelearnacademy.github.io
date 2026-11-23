@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion42
 lesson_file: 42-codigos-de-estado-http
 lesson_number: "42"
-title: Códigos de estado HTTP
+title: Códigos HTTP y diagnóstico de respuestas
 description: Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 permalink: /spring/leccion42/
 lessons:
@@ -23,7 +23,7 @@ lessons:
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
-# Códigos de estado HTTP
+# Códigos HTTP y diagnóstico de respuestas
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 
@@ -47,18 +47,28 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
-Relaciona escenarios:
+Arranca el [ejemplo de tareas]({{ '/spring/ejemplos/api-tareas.zip' | relative_url }}) con `mvn spring-boot:run`. En otra terminal, define `api=http://localhost:8080/api/tareas`. Antes de cada petición, predice el estado, el cuerpo y las cabeceras relevantes.
 
-```text
-GET correcto → 200
-creación → 201
-borrado sin body → 204
-dato inválido → 400
-no existe → 404
-conflicto → 409
+### 1. Comparar éxito con ausencia
+
+| Petición | Resultado |
+|---|---|
+| `GET /api/tareas` en un arranque limpio | `200` con `[]`. La colección existe y está vacía. |
+| `GET /api/tareas/999999` en ese mismo arranque | `404` porque esa tarea no existe. |
+| POST válido | `201`, cuerpo con la tarea y cabecera `Location`. |
+| DELETE sobre una tarea existente | `204` sin cuerpo. |
+
+**Ejercicio breve.** Ejecuta `curl -i "$api"` y `curl -i "$api/999999"`. Explica qué parte de la URL cambia el recurso que estás solicitando.
+
+### 2. Identificar qué debe corregir el cliente
+
+```sh
+curl -i -X DELETE "$api"
+curl -i -H 'Content-Type: text/plain' --data 'Preparar entrega' "$api"
+curl -i -H 'Content-Type: application/json' --data '{' "$api"
 ```
 
-
+**Ejercicio breve.** Asigna un código a cada petición antes de ejecutarla. Comprueba `405` y la cabecera `Allow`, `415` por el tipo de contenido y `400` por JSON incompleto. Cambia el tercer cuerpo por `{"titulo":"Preparar entrega"}` y comprueba `201`.
 
 ## Relación con el resto de la ruta
 
@@ -68,18 +78,18 @@ Angular, JavaScript, apps móviles u otros clientes solo ven HTTP/JSON; el dise�
 
 ## Ejemplo adicional: aplicación práctica
 
-```http
-POST /api/tareas HTTP/1.1
-Content-Type: application/json
+### 3. Razonar sobre permisos, conflictos y fallos
 
-{"titulo":"Estudiar"}
+Estos casos se trabajan como decisiones de diseño. La API base funciona en memoria y carece de autenticación y de reglas de archivo.
 
-HTTP/1.1 201 Created
-```
+| Situación | Respuesta que corresponde |
+|---|---|
+| Una API protegida requiere credenciales válidas y la petición carece de ellas | `401 Unauthorized`, con el desafío de autenticación aplicable en `WWW-Authenticate`. |
+| El usuario está autenticado y carece del permiso requerido | `403 Forbidden`. |
+| Una regla impide reabrir una tarea archivada | `409 Conflict` por el estado actual de la tarea. |
+| Una excepción inesperada impide completar la petición | `500 Internal Server Error`. El servidor registra la causa y el cliente recibe un mensaje genérico. |
 
-Distingue 200, 201, 400, 404 y 409 según la operación.
-
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+**Ejercicio breve.** Compara un título en blanco con una solicitud válida para reabrir una tarea archivada. El primer caso exige corregir el cuerpo (`400`). En el segundo, la regla impide la transición solicitada (`409`). Indica qué podría hacer el cliente en cada caso.
 
 ## Ejercicios propuestos
 

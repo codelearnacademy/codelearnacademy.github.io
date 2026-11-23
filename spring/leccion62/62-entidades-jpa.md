@@ -5,121 +5,52 @@ lesson_id: leccion62
 lesson_file: 62-entidades-jpa
 lesson_number: "62"
 title: Entidades JPA
-description: Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+description: Distingue el DTO, la entidad y la tabla. Comprueba cómo Boot descubre las entidades.
 permalink: /spring/leccion62/
 lessons:
-  - id: qué-vas-a-conseguir
-    title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-el-resto-de-la-ruta
-    title: Relación con el resto de la ruta
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: práctica-con-sqlite3
+    title: Práctica con SQLite3
+  - id: comprueba-lo-aprendido
+    title: Comprueba lo aprendido
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # Entidades JPA
 
-Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+Distingue el DTO, la entidad y la tabla. Comprueba cómo Boot descubre las entidades.
 
-## Qué vas a conseguir
+## Práctica con SQLite3
 
-Al terminar esta lección podrás:
+Usa el [proyecto de tareas y categorías]({{ '/spring/ejemplos/api-tareas-sqlite.zip' | relative_url }}) para continuar la práctica de las lecciones 61–67.
 
-- Explicar **Entidades JPA** y reconocer cuándo se aplica.
-- Interpretar el ejemplo guiado y señalar el resultado esperado.
-- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
+El JSON del POST se convierte en `NuevaTarea`. Spring valida los campos y el servicio construye una `TareaEntity`. Hibernate usa su mapeo para guardar una fila en `tareas`. El servicio devuelve `TareaResponse`, que expone el ID de la categoría en el JSON.
 
-## Punto de partida
+```text
+aula.tareas.TareasApplication
+aula.tareas.persistencia.TareaEntity
+aula.tareas.persistencia.CategoriaEntity
+```
 
-**Bloque:** Persistencia con JPA y PostgreSQL.
-
-Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
-
-## Infografía
-
-![TaskEntity: Campos anotados. Mapeo JPA: Asocia atributos a columnas. Tabla: Conserva la fila.]({{ "/assets/images/spring/62-entidades-jpa.webp" | relative_url }})
-
-## Ejemplo guiado
+Spring Boot busca entidades en el paquete de la clase principal con `@SpringBootApplication` y sus subpaquetes. La configuración estándar del ejemplo prescinde de `persistence.xml` y del listado manual de clases. Si el mapeo reside en otro paquete, Spring Boot 4 permite indicar su ubicación:
 
 ```java
-@Entity
-@Table(name = "tasks")
-class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+import org.springframework.boot.persistence.autoconfigure.EntityScan;
+
+@SpringBootApplication
+@EntityScan(basePackageClasses = TareaEntity.class)
+public class TareasApplication {
+    // Método main.
 }
 ```
 
+La clase se usa como referencia al paquete. Si las entidades están en varios paquetes, indica uno por paquete en `basePackageClasses`.
 
+**Ejercicio breve.** Busca `@Entity`, `@Table` y el constructor sin argumentos en el proyecto. Subraya qué campos del POST se convierten en columnas y qué valor agrega el servicio o la base. Después compara una fila de `tareas` con el JSON que devuelve GET.
 
-### Separación entre entidad y modelo
+## Comprueba lo aprendido
 
-```java
-@Entity
-@Table(name = "tasks")
-public class TaskEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
-    private String title;
-
-    protected TaskEntity() {}
-
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-}
-```
-
-El modelo `Task` es una clase Java normal con constructor, getters y setters. Los servicios no deben utilizar entidades como respuesta HTTP. La conversión se concentra en `TaskMapper`.
-
-## Relación con el resto de la ruta
-
-PostgreSQL es infraestructura. JPA abstrae persistencia, Spring Data reduce código repetitivo y Flyway controla evolución del esquema.
-
-
-
-## Ejemplo adicional: aplicación práctica
-
-```java
-@Entity
-@Table(name = "tareas")
-public class TaskEntity {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false) private String title;
-    protected TaskEntity() {}
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
-}
-```
-
-La entidad representa la tabla; el DTO define el contrato externo.
-
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
-
-## Ejercicios propuestos
-
-1. Implementa el concepto **Entidades JPA** en una entidad `TaskEntity` y su repositorio.
-2. Añade una prueba de repositorio que compruebe los cambios persistidos, no solo los objetos en memoria.
-3. Comprueba un caso límite: registro inexistente, relación inválida o transacción fallida, según corresponda.
-
-**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
-
-## Qué debes recordar
-
-- **Entidades JPA** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
-- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
-- Distingue entre código de negocio, configuración y servicios aportados por Spring.
+Repite el ejercicio cambiando un dato de entrada o usando un archivo nuevo para la migración. Registra el resultado esperado y lo observado en la API, en la consulta SQL o en la prueba.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion61/">← 61 · Configurar DataSource</a>

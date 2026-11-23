@@ -90,6 +90,6 @@ Prueba GET /api/tareas?completadas=true.
 - Distingue entre código de negocio, configuración y servicios aportados por Spring.
 
 <div class="cla-lesson-nav">
-  <a href="/spring/leccion38/">← 38 · Path variables</a>
+  <a href="{{ '/spring/leccion112/' | relative_url }}">← DELETE</a>
   <a href="/spring/leccion40/">40 · Request body y JSON →</a>
 </div>

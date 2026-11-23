@@ -5,92 +5,44 @@ lesson_id: leccion67
 lesson_file: 67-migraciones-de-base-de-datos
 lesson_number: "67"
 title: Migraciones de base de datos
-description: Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+description: Migra un archivo SQLite con datos existentes y comprueba el estado resultante.
 permalink: /spring/leccion67/
 lessons:
-  - id: qué-vas-a-conseguir
-    title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-el-resto-de-la-ruta
-    title: Relación con el resto de la ruta
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: práctica-con-sqlite3
+    title: Práctica con SQLite3
+  - id: comprueba-lo-aprendido
+    title: Comprueba lo aprendido
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # Migraciones de base de datos
 
-Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+Migra un archivo SQLite con datos existentes y comprueba el estado resultante.
 
-## Qué vas a conseguir
+## Práctica con SQLite3
 
-Al terminar esta lección podrás:
+Usa el [proyecto de tareas y categorías]({{ '/spring/ejemplos/api-tareas-sqlite.zip' | relative_url }}) para continuar la práctica de las lecciones 61–67.
 
-- Explicar **Migraciones de base de datos** y reconocer cuándo se aplica.
-- Interpretar el ejemplo guiado y señalar el resultado esperado.
-- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
-
-## Punto de partida
-
-**Bloque:** Persistencia con JPA y PostgreSQL.
-
-Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
-
-## Infografía
-
-![Script versionado: Describe un cambio. Flyway: Aplica migraciones pendientes. Esquema: Evoluciona de forma controlada.]({{ "/assets/images/spring/67-migraciones-de-base-de-datos.webp" | relative_url }})
-
-## Ejemplo guiado
-
-```text
-db/migration/
-V1__create_tasks.sql
-V2__add_categories.sql
-```
-
-Deja el esquema bajo control de versiones con Flyway.
-
-
-
-## Relación con el resto de la ruta
-
-PostgreSQL es infraestructura. JPA abstrae persistencia, Spring Data reduce código repetitivo y Flyway controla evolución del esquema.
-
-
-
-## Ejemplo adicional: aplicación práctica
+Flyway aplica scripts versionados. V1 crea las tablas y deja una tarea de ejemplo. V2 añade un estado obligatorio con un valor inicial y restringe los valores permitidos.
 
 ```sql
--- V1__create_tasks.sql
-CREATE TABLE tareas (
-    id BIGSERIAL PRIMARY KEY,
-    titulo VARCHAR(120) NOT NULL,
-    completada BOOLEAN NOT NULL DEFAULT FALSE
-);
+ALTER TABLE tareas ADD COLUMN estado TEXT NOT NULL DEFAULT 'PENDIENTE'
+    CHECK (estado IN ('PENDIENTE', 'COMPLETADA'));
 ```
 
-Las migraciones versionadas permiten evolucionar esquemas de forma reproducible.
+**Ejercicio breve.** Sigue «Observar el paso de V1 a V2» en el README del ejemplo. Arranca primero con la versión objetivo 1 sobre un archivo nuevo y anota el ID y título de la fila. Aplica V2 al mismo archivo y ejecuta:
 
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+```sh
+sqlite3 -readonly tareas-migracion.sqlite3 'SELECT id, titulo, estado FROM tareas;'
+sqlite3 -readonly tareas-migracion.sqlite3 'SELECT version, success FROM flyway_schema_history ORDER BY installed_rank;'
+```
 
-## Ejercicios propuestos
+Comprueba que el ID y el título se conservan, que el estado es `PENDIENTE` y que el historial registra las dos versiones. Explica qué decisión toma Flyway y qué comprueba Hibernate con `ddl-auto=validate`.
 
-1. Implementa el concepto **Migraciones de base de datos** en una entidad `TaskEntity` y su repositorio.
-2. Añade una prueba de repositorio que compruebe los cambios persistidos, no solo los objetos en memoria.
-3. Comprueba un caso límite: registro inexistente, relación inválida o transacción fallida, según corresponda.
+## Comprueba lo aprendido
 
-**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
-
-## Qué debes recordar
-
-- **Migraciones de base de datos** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
-- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
-- Distingue entre código de negocio, configuración y servicios aportados por Spring.
+Repite el ejercicio cambiando un dato de entrada o usando un archivo nuevo para la migración. Registra el resultado esperado y lo observado en la API, en la consulta SQL o en la prueba.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion66/">← 66 · Transacciones</a>

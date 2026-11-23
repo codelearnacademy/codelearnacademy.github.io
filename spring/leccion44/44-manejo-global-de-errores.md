@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion44
 lesson_file: 44-manejo-global-de-errores
 lesson_number: "44"
-title: Manejo global de errores
+title: Manejo global de errores con ProblemDetail
 description: Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 permalink: /spring/leccion44/
 lessons:
@@ -23,7 +23,7 @@ lessons:
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
-# Manejo global de errores
+# Manejo global de errores con ProblemDetail
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 
@@ -47,15 +47,26 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
-```java
-@RestControllerAdvice
-class ApiExceptionHandler {
-    @ExceptionHandler(TaskNotFoundException.class)
-    ResponseEntity<?> notFound(TaskNotFoundException ex) { ... }
+### 1. Inspeccionar un problema HTTP
+
+El ejemplo incluye `ErroresRest`, una clase `@RestControllerAdvice` que extiende `ResponseEntityExceptionHandler`. Spring transforma las excepciones MVC que reconoce este manejador en respuestas `ProblemDetail`. El controlador señala la ausencia de una tarea con una `ResponseStatusException` de estado `404`.
+
+**Ejercicio breve.** Con el ejemplo recién arrancado, ejecuta `curl -i http://localhost:8080/api/tareas/999999`. Identifica el estado de la respuesta, el tipo `application/problem+json` y los campos `status`, `detail` e `instance`. Distingue el código HTTP del valor incluido en el cuerpo.
+
+### 2. Indicar qué campo falló
+
+Al fallar `@Valid`, el manejador añade la lista `errores` al problema. Cada entrada indica el campo y su mensaje. El texto del mensaje puede variar según el idioma configurado.
+
+```json
+{
+  "title": "Bad Request",
+  "status": 400,
+  "detail": "Revisa los campos indicados.",
+  "errores": [{"campo": "titulo", "mensaje": "must not be blank"}]
 }
 ```
 
-
+**Ejercicio breve.** Envía un POST con `{"titulo":" "}` y otro con el cuerpo `{`. Ambos deben devolver `400`. Localiza `errores` en la respuesta de validación y explica por qué el cuerpo incompleto falla antes de validar campos.
 
 ## Relación con el resto de la ruta
 
@@ -65,19 +76,7 @@ Angular, JavaScript, apps móviles u otros clientes solo ven HTTP/JSON; el dise�
 
 ## Ejemplo adicional: aplicación práctica
 
-```java
-@RestControllerAdvice
-class ErroresHttp {
-    @ExceptionHandler(IllegalArgumentException.class)
-    ResponseEntity<Map<String, String>> error(IllegalArgumentException e) {
-        return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
-    }
-}
-```
-
-Centraliza el tratamiento de errores HTTP sin mezclarlo con la persistencia.
-
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+**Ejercicio breve.** Localiza el texto «Revisa los campos indicados» en `ErroresRest.java`. Cámbialo, reinicia el ejemplo y comprueba que cambia `detail` y el estado sigue siendo `400`. En una aplicación real, conserva los detalles internos de un fallo inesperado en el registro del servidor y expón un mensaje genérico al cliente.
 
 ## Ejercicios propuestos
 

@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion75
 lesson_file: 75-testing-mvc
 lesson_number: "75"
-title: Testing MVC
+title: Pruebas de la API de tareas con MockMvc
 description: Comprueba unidades, contexto, MVC, persistencia e integración con una estrategia progresiva.
 permalink: /spring/leccion75/
 lessons:
@@ -23,7 +23,7 @@ lessons:
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
-# Testing MVC
+# Pruebas de la API de tareas con MockMvc
 
 Comprueba unidades, contexto, MVC, persistencia e integración con una estrategia progresiva.
 
@@ -47,14 +47,25 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
+### 1. Ejecutar una prueba real de la API
+
+Descarga el [ejemplo de tareas]({{ '/spring/ejemplos/api-tareas.zip' | relative_url }}). Abre `src/test/java/aula/tareas/TareaControllerTest.java` y ejecuta `mvn test`. `@SpringBootTest` carga la configuración del ejemplo y `@AutoConfigureMockMvc` permite usar `MockMvc` sin abrir un puerto HTTP.
+
 ```java
-@WebMvcTest(TaskController.class)
-class TaskControllerTest {
-    @Autowired MockMvc mvc;
-}
+mvc.perform(post("/api/tareas")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content("{\"titulo\":\" \"}"))
+   .andExpect(status().isBadRequest())
+   .andExpect(jsonPath("$.errores[0].campo").value("titulo"));
 ```
 
+**Ejercicio breve.** Ejecuta solo ese método con `mvn -Dtest=TareaControllerTest#identificaElCampoInvalido test`. Cambia temporalmente la expectativa a `isCreated()`, observa el fallo y vuelve a `isBadRequest()`.
 
+### 2. Comprobar estado, cuerpo y cabeceras
+
+La prueba del ciclo de vida usa el `Location` del POST para actualizar y borrar el recurso que acaba de crear. La prueba de errores verifica `400`, `405` con `Allow` y `415`.
+
+**Ejercicio breve.** Añade una comprobación de `$.titulo` en la respuesta al POST y ejecuta nuevamente la clase con `mvn -Dtest=TareaControllerTest test`. Mantén las peticiones que modifican una misma tarea en el mismo escenario.
 
 ## Relación con el resto de la ruta
 
@@ -64,28 +75,13 @@ Maven ejecuta pruebas; Spring ofrece utilidades de test; Testcontainers aporta i
 
 ## Ejemplo adicional: aplicación práctica
 
-```java
-@WebMvcTest(TareaController.class)
-class TareaControllerTest {
-    @Autowired MockMvc mvc;
-    @Test void respondeCorrectamente() throws Exception {
-        mvc.perform(get("/api/tareas/saludo"))
-           .andExpect(status().isOk());
-    }
-}
-```
-
-Esta prueba debe aportar o simular las dependencias del controlador.
-
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+**Ejercicio breve.** Después del PATCH válido, añade un PATCH con `{"titulo":null}` y comprueba `400`. Haz un GET y verifica que la tarea sigue teniendo el título anterior. El ejercicio comprueba el rechazo y la ausencia de efectos secundarios.
 
 ## Ejercicios propuestos
 
-1. Crea una prueba sobre **Testing MVC** que tenga un resultado esperado verificable.
-2. Añade un caso sin registros y otro con datos válidos; evita que las pruebas compartan estado.
-3. Ejecuta las pruebas dos veces en distinto orden y comprueba que el resultado no depende de otras pruebas.
-
-**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
+1. Añade una comprobación de `application/problem+json` en la prueba del JSON incompleto.
+2. Comprueba que `PUT` y `PATCH` con cuerpo válido devuelven `404` sobre la ruta después del borrado.
+3. Ejecuta la clase completa y uno de sus métodos por separado. Registra qué verifica cada caso y qué resultado obtuviste.
 
 ## Qué debes recordar
 

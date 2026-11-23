@@ -47,6 +47,10 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
+`@PathVariable` extrae un dato de la ruta, por ejemplo, el ID de `/api/tareas/12`. PATCH es el método HTTP de actualización parcial. Una petición `PATCH /api/tareas/12` combina ambos conceptos: PATCH indica qué operación realizar y `12` identifica sobre qué tarea.
+
+**Ejercicio breve.** Predice qué devuelve GET para un ID existente, un número inexistente y un texto como `abc`. Prueba las tres URLs en la API base. Espera `200`, `404` y `400`, respectivamente.
+
 ```java
 @GetMapping("/{id}")
 TaskDto findById(@PathVariable Long id) {
@@ -73,7 +77,7 @@ ResponseEntity<TareaResponse> buscar(@PathVariable Long id) {
 }
 ```
 
-Prueba un ID existente y otro inexistente.
+Prueba un ID existente y otro inexistente. En la [práctica de servicios REST]({{ "/spring/leccion108/" | relative_url }}) verás cómo PUT, PATCH y DELETE también usan `@PathVariable` para identificar la tarea.
 
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
@@ -93,5 +97,5 @@ Prueba un ID existente y otro inexistente.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion37/">← 37 · POST</a>
-  <a href="/spring/leccion39/">39 · Query parameters →</a>
+  <a href="{{ '/spring/leccion110/' | relative_url }}">PUT →</a>
 </div>

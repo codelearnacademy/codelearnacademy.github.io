@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion45
 lesson_file: 45-validacion
 lesson_number: "45"
-title: Validación
+title: Validación de POST, PUT y PATCH
 description: Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 permalink: /spring/leccion45/
 lessons:
@@ -24,7 +24,7 @@ lessons:
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
 
-# Validación
+# Validación de POST, PUT y PATCH
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 
@@ -50,17 +50,21 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
+### 1. Validar un cuerpo completo
+
+POST y PUT reciben `NuevaTarea`. `@RequestBody` convierte el JSON en un objeto Java. `@Valid` activa la restricción `@NotBlank` del título.
+
 ```java
-record CreateTaskRequest(
-    @NotBlank
-    @Size(max = 120)
-    String title
-) {}
+public record NuevaTarea(@NotBlank String titulo) {}
 ```
 
-Usa `@Valid` en el endpoint.
+**Ejercicio breve.** En `POST /api/tareas`, prueba en orden `{}`, `{"titulo":null}`, `{"titulo":" "}` y `{"titulo":"Preparar entrega"}`. Predice cuáles devuelven `400` y cuál devuelve `201`. Guarda la ruta de `Location`.
 
+### 2. Validar únicamente el cambio solicitado
 
+PATCH usa un objeto JSON donde el título puede estar ausente. En este ejemplo, `{}` conserva el valor actual. Si el título aparece, debe ser texto no vacío. El controlador también rechaza propiedades desconocidas.
+
+**Ejercicio breve.** Envía `{}` primero con PUT y luego con PATCH a la ruta guardada. Comprueba `400` y `200`, respectivamente. Repite PATCH con `{"titulo":null}`, `{"titulo":42}` y `{"estado":"hecha"}`. Después consulta la tarea para verificar que conserva el título original.
 
 ## Relación con el resto de la ruta
 

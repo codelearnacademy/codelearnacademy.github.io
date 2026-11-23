@@ -4,7 +4,7 @@ route: spring
 lesson_id: leccion43
 lesson_file: 43-responseentity
 lesson_number: "43"
-title: ResponseEntity
+title: ResponseEntity, cabeceras y cuerpo
 description: Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 permalink: /spring/leccion43/
 lessons:
@@ -23,7 +23,7 @@ lessons:
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
-# ResponseEntity
+# ResponseEntity, cabeceras y cuerpo
 
 Construye APIs HTTP con Spring MVC comprendiendo el recorrido completo de una petición.
 
@@ -47,13 +47,23 @@ Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte cor
 
 ## Ejemplo guiado
 
+### 1. Crear y localizar un recurso
+
+En `TareaController.crear`, la respuesta construye el estado, la cabecera y el cuerpo en una sola expresión.
+
 ```java
-return ResponseEntity
-    .status(HttpStatus.CREATED)
-    .body(result);
+return ResponseEntity.created(URI.create("/api/tareas/" + tarea.id())).body(tarea);
 ```
 
+**Ejercicio breve.** Ejecuta el POST de la [práctica REST]({{ '/spring/leccion108/' | relative_url }}). Copia la ruta de `Location` y consúltala con GET. Compara el ID de ambas respuestas.
 
+### 2. Borrar y comprobar el cuerpo
+
+```java
+return ResponseEntity.noContent().build();
+```
+
+**Ejercicio breve.** Ejecuta `curl -i -X DELETE` sobre la URL de la tarea creada. Comprueba que termina después de las cabeceras. Repite la petición y compara el `404` con el `204` anterior. ¿Cuántas tareas quedan con ese ID en cada caso?
 
 ## Relación con el resto de la ruta
 
@@ -63,18 +73,7 @@ Angular, JavaScript, apps móviles u otros clientes solo ven HTTP/JSON; el dise�
 
 ## Ejemplo adicional: aplicación práctica
 
-```java
-@DeleteMapping("/{id}")
-ResponseEntity<Void> eliminar(@PathVariable Long id) {
-    return servicio.eliminar(id)
-        ? ResponseEntity.noContent().build()
-        : ResponseEntity.notFound().build();
-}
-```
-
-ResponseEntity permite controlar tanto el estado como el cuerpo.
-
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+**Ejercicio breve.** Busca `ResponseEntity.ok`, `created` y `noContent` en el controlador descargable. Asocia cada construcción con una petición y anota si tendría sentido llamar a `body(...)`. En el caso `404`, sigue el lanzamiento de la excepción hasta el manejo de errores de la [lección 44]({{ '/spring/leccion44/' | relative_url }}).
 
 ## Ejercicios propuestos
 

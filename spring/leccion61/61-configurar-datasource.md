@@ -5,90 +5,51 @@ lesson_id: leccion61
 lesson_file: 61-configurar-datasource
 lesson_number: "61"
 title: Configurar DataSource
-description: Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+description: Configura una base SQLite3 y localiza el archivo utilizado por la aplicación.
 permalink: /spring/leccion61/
 lessons:
-  - id: qué-vas-a-conseguir
-    title: Qué vas a conseguir
-  - id: punto-de-partida
-    title: Punto de partida
-  - id: ejemplo-guiado
-    title: Ejemplo guiado
-  - id: relación-con-el-resto-de-la-ruta
-    title: Relación con el resto de la ruta
-  - id: ejercicios-propuestos
-    title: Ejercicios propuestos
-  - id: qué-debes-recordar
-    title: Qué debes recordar
+  - id: práctica-con-sqlite3
+    title: Práctica con SQLite3
+  - id: comprueba-lo-aprendido
+    title: Comprueba lo aprendido
 ---
 
 <link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
 # Configurar DataSource
 
-Integra PostgreSQL mediante JPA, Spring Data, transacciones y migraciones controladas.
+Configura una base SQLite3 y localiza el archivo utilizado por la aplicación.
 
-## Qué vas a conseguir
+## Práctica con SQLite3
 
-Al terminar esta lección podrás:
+Usa el [proyecto de tareas y categorías]({{ '/spring/ejemplos/api-tareas-sqlite.zip' | relative_url }}) para continuar la práctica de las lecciones 61–67.
 
-- Explicar **Configurar DataSource** y reconocer cuándo se aplica.
-- Interpretar el ejemplo guiado y señalar el resultado esperado.
-- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
-
-## Punto de partida
-
-**Bloque:** Persistencia con JPA y PostgreSQL.
-
-Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
-
-## Infografía
-
-![Propiedades: URL y credenciales. DataSource: Proporciona conexiones. PostgreSQL: Atiende las consultas.]({{ "/assets/images/spring/61-configurar-datasource.webp" | relative_url }})
-
-## Ejemplo guiado
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/tasks
-    username: tasks
-    password: dev-only
-```
-
-
-
-## Relación con el resto de la ruta
-
-PostgreSQL es infraestructura. JPA abstrae persistencia, Spring Data reduce código repetitivo y Flyway controla evolución del esquema.
-
-
-
-## Ejemplo adicional: aplicación práctica
+El `DataSource` proporciona conexiones JDBC. En esta práctica, SQLite guarda los datos en un archivo local. El controlador Xerial abre el archivo y el dialecto de Hibernate adapta el SQL.
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/tareas
-spring.datasource.username=${DB_USER}
-spring.datasource.password=${DB_PASSWORD}
+spring.datasource.url=jdbc:sqlite:tareas-practica.sqlite3
+spring.datasource.driver-class-name=org.sqlite.JDBC
+spring.datasource.hikari.maximum-pool-size=1
+spring.datasource.hikari.connection-init-sql=PRAGMA foreign_keys=ON
+spring.jpa.database-platform=org.hibernate.community.dialect.SQLiteDialect
 spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.open-in-view=false
 ```
 
-La configuración separa credenciales del código fuente.
+Flyway crea el esquema y Hibernate comprueba su compatibilidad. La URL relativa se resuelve desde el directorio de ejecución. La práctica usa una sola conexión en el pool y activa la comprobación de claves foráneas al abrirla.
 
-**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+**Ejercicio breve.** Descarga y descomprime el proyecto. Desde la carpeta del POM, ejecuta `mvn spring-boot:run`. En otra terminal, consulta el archivo en modo de solo lectura:
 
-## Ejercicios propuestos
+```sh
+sqlite3 -readonly tareas-practica.sqlite3 '.tables'
+sqlite3 -readonly tareas-practica.sqlite3 'SELECT id, nombre FROM categorias;'
+```
 
-1. Implementa el concepto **Configurar DataSource** en una entidad `TaskEntity` y su repositorio.
-2. Añade una prueba de repositorio que compruebe los cambios persistidos, no solo los objetos en memoria.
-3. Comprueba un caso límite: registro inexistente, relación inválida o transacción fallida, según corresponda.
+Localiza las tablas `categorias`, `tareas` y `flyway_schema_history`. Guarda el ID de la categoría «Estudio» para las lecciones siguientes.
 
-**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
+## Comprueba lo aprendido
 
-## Qué debes recordar
-
-- **Configurar DataSource** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
-- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
-- Distingue entre código de negocio, configuración y servicios aportados por Spring.
+Repite el ejercicio cambiando un dato de entrada o usando un archivo nuevo para la migración. Registra el resultado esperado y lo observado en la API, en la consulta SQL o en la prueba.
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion60/">← 60 · Añadir PostgreSQL mediante Maven</a>

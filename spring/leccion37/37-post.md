@@ -89,7 +89,7 @@ POST recibe un DTO de entrada y devuelve 201 cuando se crea el recurso.
 
 Observa el campo **Request URL**. Es la URL HTTP que recibe la petición. Cuando cambies el almacenamiento a fichero, SQLite o PostgreSQL, podrás repetir la práctica desde la misma interfaz y comprobar el dato en el almacenamiento de ese perfil.
 
-El ejemplo de partida ofrece creación y consulta. Cuando implementes actualización, borrado y búsquedas en el controlador, springdoc incorporará esas operaciones a Swagger UI.
+En el mismo ejemplo puedes probar PUT, PATCH y DELETE en Swagger UI. La [práctica de servicios REST]({{ "/spring/leccion108/" | relative_url }}) explica qué envía y qué devuelve cada operación.
 
 <div class="cla-lesson-nav">
   <a href="{{ '/spring/leccion109/' | relative_url }}">109 · Swagger UI y documentación OpenAPI</a>
