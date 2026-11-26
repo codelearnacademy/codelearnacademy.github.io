@@ -99,11 +99,11 @@ spring:
     title: El ecosistema Spring
     url: /spring/leccion07/
   - id: leccion08
-    number: 08
+    number: '08'
     title: Spring Framework frente a Spring Boot
     url: /spring/leccion08/
   - id: leccion09
-    number: 09
+    number: '09'
     title: Historia de Spring y Spring Boot
     url: /spring/leccion09/
   - id: leccion10
@@ -222,302 +222,302 @@ spring:
     number: '38'
     title: Path variables
     url: /spring/leccion38/
-  - id: leccion110
-    number: '110'
-    title: PUT · Sustituir una tarea
-    url: /spring/leccion110/
-  - id: leccion111
-    number: '111'
-    title: PATCH · Modificar parte de una tarea
-    url: /spring/leccion111/
-  - id: leccion112
-    number: '112'
-    title: DELETE · Eliminar una tarea
-    url: /spring/leccion112/
   - id: leccion39
     number: '39'
-    title: Query parameters
+    title: PUT · Sustituir una tarea
     url: /spring/leccion39/
   - id: leccion40
     number: '40'
-    title: Request body y JSON
+    title: PATCH · Modificar parte de una tarea
     url: /spring/leccion40/
   - id: leccion41
     number: '41'
-    title: DTOs
+    title: DELETE · Eliminar una tarea
     url: /spring/leccion41/
   - id: leccion42
     number: '42'
-    title: Códigos HTTP y diagnóstico de respuestas
+    title: Query parameters
     url: /spring/leccion42/
   - id: leccion43
     number: '43'
-    title: ResponseEntity, cabeceras y cuerpo
+    title: Request body y JSON
     url: /spring/leccion43/
   - id: leccion44
     number: '44'
-    title: Manejo global de errores con ProblemDetail
+    title: DTOs
     url: /spring/leccion44/
   - id: leccion45
     number: '45'
-    title: Validación de POST, PUT y PATCH
+    title: Códigos HTTP y diagnóstico de respuestas
     url: /spring/leccion45/
   - id: leccion46
     number: '46'
-    title: Qué es Tomcat
+    title: ResponseEntity, cabeceras y cuerpo
     url: /spring/leccion46/
   - id: leccion47
     number: '47'
-    title: Tomcat embebido
+    title: Manejo global de errores con ProblemDetail
     url: /spring/leccion47/
   - id: leccion48
     number: '48'
-    title: ¿Quién arranca a quién?
+    title: Validación de POST, PUT y PATCH
     url: /spring/leccion48/
   - id: leccion49
     number: '49'
-    title: Cambiar Tomcat por otro servidor
+    title: Qué es Tomcat
     url: /spring/leccion49/
   - id: leccion50
     number: '50'
-    title: JAR ejecutable
+    title: Tomcat embebido
     url: /spring/leccion50/
   - id: leccion51
     number: '51'
-    title: WAR tradicional
+    title: ¿Quién arranca a quién?
     url: /spring/leccion51/
   - id: leccion52
     number: '52'
-    title: Tomcat 10 frente a Tomcat 11
+    title: Cambiar Tomcat por otro servidor
     url: /spring/leccion52/
   - id: leccion53
     number: '53'
-    title: Controller, Service y Repository
+    title: JAR ejecutable
     url: /spring/leccion53/
   - id: leccion54
     number: '54'
-    title: Responsabilidad del Controller
+    title: WAR tradicional
     url: /spring/leccion54/
   - id: leccion55
     number: '55'
-    title: Responsabilidad del Service
+    title: Tomcat 10 frente a Tomcat 11
     url: /spring/leccion55/
   - id: leccion56
     number: '56'
-    title: Responsabilidad del Repository
+    title: Controller, Service y Repository
     url: /spring/leccion56/
   - id: leccion57
     number: '57'
-    title: Dependency Injection entre capas
+    title: Responsabilidad del Controller
     url: /spring/leccion57/
   - id: leccion58
     number: '58'
-    title: Interfaces y desacoplamiento
+    title: Responsabilidad del Service
     url: /spring/leccion58/
   - id: leccion59
     number: '59'
-    title: Spring JDBC, JPA y Spring Data JPA
+    title: Responsabilidad del Repository
     url: /spring/leccion59/
   - id: leccion60
     number: '60'
-    title: Añadir PostgreSQL mediante Maven
+    title: Dependency Injection entre capas
     url: /spring/leccion60/
   - id: leccion61
     number: '61'
-    title: Configurar DataSource
+    title: Interfaces y desacoplamiento
     url: /spring/leccion61/
   - id: leccion62
     number: '62'
-    title: Entidades JPA
+    title: Spring JDBC, JPA y Spring Data JPA
     url: /spring/leccion62/
   - id: leccion63
     number: '63'
-    title: Identificadores
+    title: Añadir PostgreSQL mediante Maven
     url: /spring/leccion63/
   - id: leccion64
     number: '64'
-    title: Repositories
+    title: Configurar DataSource
     url: /spring/leccion64/
   - id: leccion65
     number: '65'
-    title: Relaciones entre entidades
+    title: Entidades JPA
     url: /spring/leccion65/
   - id: leccion66
     number: '66'
-    title: Transacciones
+    title: Identificadores
     url: /spring/leccion66/
   - id: leccion67
     number: '67'
-    title: Migraciones de base de datos
+    title: Repositories
     url: /spring/leccion67/
   - id: leccion68
     number: '68'
-    title: Configuración externa
+    title: Relaciones entre entidades
     url: /spring/leccion68/
   - id: leccion69
     number: '69'
-    title: Profiles de desarrollo, test y producción
+    title: Transacciones
     url: /spring/leccion69/
   - id: leccion70
     number: '70'
-    title: Variables de entorno
+    title: Migraciones de base de datos
     url: /spring/leccion70/
   - id: leccion71
     number: '71'
-    title: Secretos
+    title: Configuración externa
     url: /spring/leccion71/
   - id: leccion72
     number: '72'
-    title: Etiqueta ConfigurationProperties
+    title: Profiles de desarrollo, test y producción
     url: /spring/leccion72/
   - id: leccion73
     number: '73'
-    title: Testing de servicios
+    title: Variables de entorno
     url: /spring/leccion73/
   - id: leccion74
     number: '74'
-    title: Testing del contexto Spring
+    title: Secretos
     url: /spring/leccion74/
   - id: leccion75
     number: '75'
-    title: Pruebas de la API de tareas con MockMvc
+    title: Etiqueta ConfigurationProperties
     url: /spring/leccion75/
   - id: leccion76
     number: '76'
-    title: Testing del Repository
+    title: Testing de servicios
     url: /spring/leccion76/
   - id: leccion77
     number: '77'
-    title: Tests de integración
+    title: Testing del contexto Spring
     url: /spring/leccion77/
   - id: leccion78
     number: '78'
-    title: Testcontainers
+    title: Pruebas de la API de tareas con MockMvc
     url: /spring/leccion78/
   - id: leccion79
     number: '79'
-    title: Autenticación y autorización
+    title: Testing del Repository
     url: /spring/leccion79/
   - id: leccion80
     number: '80'
-    title: Introducción a Spring Security
+    title: Tests de integración
     url: /spring/leccion80/
   - id: leccion81
     number: '81'
-    title: Password hashing
+    title: Testcontainers
     url: /spring/leccion81/
   - id: leccion82
     number: '82'
-    title: Autenticación para APIs
+    title: Autenticación y autorización
     url: /spring/leccion82/
   - id: leccion83
     number: '83'
-    title: Logging
+    title: Introducción a Spring Security
     url: /spring/leccion83/
   - id: leccion84
     number: '84'
-    title: Spring Boot Actuator
+    title: Password hashing
     url: /spring/leccion84/
   - id: leccion85
     number: '85'
-    title: Métricas con Micrometer
+    title: Autenticación para APIs
     url: /spring/leccion85/
   - id: leccion86
     number: '86'
-    title: Healthchecks
+    title: Logging
     url: /spring/leccion86/
   - id: leccion87
     number: '87'
-    title: Configuración para producción
+    title: Spring Boot Actuator
     url: /spring/leccion87/
   - id: leccion88
     number: '88'
-    title: Dockerizar un Spring Boot JAR
+    title: Métricas con Micrometer
     url: /spring/leccion88/
   - id: leccion89
     number: '89'
-    title: Dockerfile multi-stage
+    title: Healthchecks
     url: /spring/leccion89/
   - id: leccion90
     number: '90'
-    title: Spring Boot + PostgreSQL con Compose
+    title: Configuración para producción
     url: /spring/leccion90/
   - id: leccion91
     number: '91'
-    title: Variables de entorno en Docker
+    title: Dockerizar un Spring Boot JAR
     url: /spring/leccion91/
   - id: leccion92
     number: '92'
-    title: Profiles dentro del contenedor
+    title: Dockerfile multi-stage
     url: /spring/leccion92/
   - id: leccion93
     number: '93'
-    title: Healthcheck de Spring
+    title: Spring Boot + PostgreSQL con Compose
     url: /spring/leccion93/
   - id: leccion94
     number: '94'
-    title: Spring Boot y Cloud Native Buildpacks
+    title: Variables de entorno en Docker
     url: /spring/leccion94/
   - id: leccion95
     number: '95'
-    title: Spring dentro del flujo Git
+    title: Profiles dentro del contenedor
     url: /spring/leccion95/
   - id: leccion96
     number: '96'
-    title: CI para Spring Boot
+    title: Healthcheck de Spring
     url: /spring/leccion96/
   - id: leccion97
     number: '97'
-    title: Construcción de imagen
+    title: Spring Boot y Cloud Native Buildpacks
     url: /spring/leccion97/
   - id: leccion98
     number: '98'
-    title: Publicar en un registry
+    title: Spring dentro del flujo Git
     url: /spring/leccion98/
   - id: leccion99
     number: '99'
-    title: CD, desplegar una versión
+    title: CI para Spring Boot
     url: /spring/leccion99/
   - id: leccion100
     number: '100'
-    title: AOP
+    title: Construcción de imagen
     url: /spring/leccion100/
   - id: leccion101
     number: '101'
-    title: Proxies de Spring
+    title: Publicar en un registry
     url: /spring/leccion101/
   - id: leccion102
     number: '102'
-    title: Eventos
+    title: CD, desplegar una versión
     url: /spring/leccion102/
   - id: leccion103
     number: '103'
-    title: Scheduling
+    title: AOP
     url: /spring/leccion103/
   - id: leccion104
     number: '104'
-    title: Cache
+    title: Proxies de Spring
     url: /spring/leccion104/
   - id: leccion105
     number: '105'
-    title: Clientes HTTP
+    title: Eventos
     url: /spring/leccion105/
   - id: leccion106
     number: '106'
-    title: Spring MVC frente a WebFlux
+    title: Scheduling
     url: /spring/leccion106/
   - id: leccion107
     number: '107'
-    title: Proyecto final · Plataforma de gestión de tareas
+    title: Cache
     url: /spring/leccion107/
   - id: leccion108
     number: '108'
-    title: Diseño de servicios REST y práctica CRUD
+    title: Clientes HTTP
     url: /spring/leccion108/
   - id: leccion109
     number: '109'
-    title: Swagger UI y contrato OpenAPI
+    title: Spring MVC frente a WebFlux
     url: /spring/leccion109/
+  - id: leccion110
+    number: '110'
+    title: Proyecto final · Plataforma de gestión de tareas
+    url: /spring/leccion110/
+  - id: leccion111
+    number: '111'
+    title: Diseño de servicios REST y práctica CRUD
+    url: /spring/leccion111/
+  - id: leccion112
+    number: '112'
+    title: Swagger UI y contrato OpenAPI
+    url: /spring/leccion112/
 sql:
   group: backend-datos
   title: SQL

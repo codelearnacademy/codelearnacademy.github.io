@@ -77,7 +77,7 @@ ResponseEntity<TareaResponse> buscar(@PathVariable Long id) {
 }
 ```
 
-Prueba un ID existente y otro inexistente. En la [práctica de servicios REST]({{ "/spring/leccion108/" | relative_url }}) verás cómo PUT, PATCH y DELETE también usan `@PathVariable` para identificar la tarea.
+Prueba un ID existente y otro inexistente. En la [práctica de servicios REST]({{ "/spring/leccion111/" | relative_url }}) verás cómo PUT, PATCH y DELETE también usan `@PathVariable` para identificar la tarea.
 
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
@@ -97,5 +97,5 @@ Prueba un ID existente y otro inexistente. En la [práctica de servicios REST]({
 
 <div class="cla-lesson-nav">
   <a href="/spring/leccion37/">← 37 · POST</a>
-  <a href="{{ '/spring/leccion110/' | relative_url }}">PUT →</a>
+  <a href="{{ '/spring/leccion39/' | relative_url }}">PUT →</a>
 </div>

@@ -85,7 +85,7 @@ Identifica la ruta, el verbo, el controlador y el cuerpo de la respuesta.
 **Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
 
 <div class="cla-lesson-nav">
-  <a href="{{ '/spring/leccion108/' | relative_url }}">108 · Diseño de servicios REST</a>
+  <a href="{{ '/spring/leccion111/' | relative_url }}">111 · Diseño de servicios REST</a>
 </div>
 
 ## Ejercicios propuestos

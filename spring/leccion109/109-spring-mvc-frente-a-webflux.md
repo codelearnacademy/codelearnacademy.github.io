@@ -1,0 +1,96 @@
+---
+layout: lesson
+route: spring
+lesson_id: leccion109
+lesson_file: 109-spring-mvc-frente-a-webflux
+lesson_number: "109"
+title: Spring MVC frente a WebFlux
+description: Introduce mecanismos transversales de Spring y alternativas arquitectónicas sin perder el modelo mental.
+permalink: /spring/leccion109/
+lessons:
+  - id: qué-vas-a-conseguir
+    title: Qué vas a conseguir
+  - id: punto-de-partida
+    title: Punto de partida
+  - id: ejemplo-guiado
+    title: Ejemplo guiado
+  - id: relación-con-el-resto-de-la-ruta
+    title: Relación con el resto de la ruta
+  - id: ejercicios-propuestos
+    title: Ejercicios propuestos
+  - id: qué-debes-recordar
+    title: Qué debes recordar
+---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+# Spring MVC frente a WebFlux
+
+Introduce mecanismos transversales de Spring y alternativas arquitectónicas sin perder el modelo mental.
+
+## Qué vas a conseguir
+
+Al terminar esta lección podrás:
+
+- Explicar **Spring MVC frente a WebFlux** y reconocer cuándo se aplica.
+- Interpretar el ejemplo guiado y señalar el resultado esperado.
+- Realizar una modificación controlada y comprobarla con una ejecución o prueba.
+
+## Punto de partida
+
+**Bloque:** Capacidades avanzadas de Spring.
+
+Antes de empezar, revisa el ejemplo de esta lección e identifica qué parte corresponde a la aplicación y qué parte proporciona el framework o la herramienta utilizada.
+
+## Infografía
+
+![MVC: Modelo Servlet e imperativo. WebFlux: Modelo reactivo. Elección: Depende del flujo y las dependencias.]({{ "/assets/images/spring/106-spring-mvc-frente-a-webflux.webp" | relative_url }})
+
+## Ejemplo guiado
+
+```text
+Spring MVC → Servlet / modelo imperativo
+Spring WebFlux → stack reactivo / non-blocking
+```
+
+Elige por necesidades reales, no porque WebFlux sea “más moderno”.
+
+
+
+## Relación con el resto de la ruta
+
+AOP, proxies, eventos y cache explican parte del comportamiento transversal de Spring; MVC/WebFlux son modelos web distintos.
+
+
+
+## Ejemplo adicional: aplicación práctica
+
+```java
+@GetMapping("/mvc")
+String mvc() { return "respuesta"; }
+
+@GetMapping("/reactivo")
+Mono<String> reactivo() { return Mono.just("respuesta"); }
+```
+
+Estos fragmentos pertenecen a stacks distintos; no son un controlador listo para copiar sin dependencias.
+
+**Comprueba:** identifica qué clase, anotación o propiedad se encarga del comportamiento descrito y realiza una modificación pequeña para observar su efecto.
+
+## Ejercicios propuestos
+
+1. Construye un ejemplo pequeño y aislado de **Spring MVC frente a WebFlux**.
+2. Compara su comportamiento con y sin la característica y explica en qué momento interviene Spring.
+3. Crea una prueba que verifique el resultado observable y no solo la presencia de una anotación.
+
+**Evidencia de aprendizaje:** entrega el código o configuración modificada, una prueba o comando de verificación y una breve explicación del resultado.
+
+## Qué debes recordar
+
+- **Spring MVC frente a WebFlux** tiene una responsabilidad concreta en el diseño o ejecución de la aplicación.
+- Comprueba el resultado mediante una prueba, un comando o una petición según el contenido trabajado.
+- Distingue entre código de negocio, configuración y servicios aportados por Spring.
+
+<div class="cla-lesson-nav">
+  <a href="/spring/leccion108/">← 108 · Clientes HTTP</a>
+  <a href="/spring/leccion110/">110 · Proyecto final · Plataforma de gestión de tareas →</a>
+</div>

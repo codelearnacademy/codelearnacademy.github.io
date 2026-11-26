@@ -80,7 +80,7 @@ Arranca la aplicación antes de realizar la primera petición HTTP.
 Con el ejemplo descargable en marcha, abre <a class="cla-maven-card-link" href="http://localhost:8080/swagger-ui/index.html">Swagger UI</a>. Despliega `GET /api/tareas`, pulsa **Try it out** y **Execute**, y comprueba el estado **200**. La [lección 37]({{ "/spring/leccion37/" | relative_url }}) muestra cómo crear y verificar una tarea desde la interfaz.
 
 <div class="cla-lesson-nav">
-  <a href="{{ '/spring/leccion109/' | relative_url }}">109 · Swagger UI y documentación OpenAPI</a>
+  <a href="{{ '/spring/leccion112/' | relative_url }}">112 · Swagger UI y documentación OpenAPI</a>
 </div>
 
 ## Ejercicios propuestos

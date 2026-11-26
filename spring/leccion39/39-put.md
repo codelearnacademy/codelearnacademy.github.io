@@ -1,0 +1,63 @@
+---
+layout: lesson
+route: spring
+lesson_id: leccion39
+lesson_file: 39-put
+lesson_number: "39"
+title: "PUT · Sustituir una tarea"
+description: "Usa @PutMapping y valida la representación editable completa."
+permalink: /spring/leccion39/
+lessons:
+  - id: cuándo-usarlo
+    title: Cuándo usarlo
+  - id: implementación-en-spring-mvc
+    title: Implementación en Spring MVC
+  - id: práctica-con-la-api
+    title: Práctica con la API
+---
+
+<link rel="stylesheet" href='{{ "/assets/css/academy.css" | relative_url }}'>
+
+# PUT · Sustituir una tarea
+
+## Cuándo usarlo
+
+Usa `PUT /api/tareas/{id}` cuando el cliente envíe todos los campos editables de una tarea existente. En este ejemplo, el único campo editable es `titulo`. El ID proviene de la URL y permanece fijo. La API devuelve `200` con la tarea actualizada, `400` si el título es inválido y `404` si el ID no existe y el cuerpo es válido.
+
+**Ejercicio breve.** Identifica qué dato viene de `/{id}` y cuál del JSON. Luego ejecuta dos veces la misma actualización y comprueba que el estado final es el mismo.
+
+## Implementación en Spring MVC
+
+Busca este método en `TareaController.java` del ejemplo descargable.
+
+```java
+@PutMapping("/{id}")
+ResponseEntity<Tarea> reemplazar(@PathVariable("id") long id, @Valid @RequestBody NuevaTarea peticion) {
+    return ResponseEntity.ok(exigirTarea(servicio.actualizar(id, peticion.titulo())));
+}
+```
+
+## Práctica con la API
+
+Descarga el [ejemplo de tareas]({{ '/spring/ejemplos/api-tareas.zip' | relative_url }}) y arráncalo con `mvn spring-boot:run`. Crea una tarea de práctica.
+
+```sh
+api=http://localhost:8080/api/tareas
+curl -i -H 'Content-Type: application/json' --data '{"titulo":"Preparar entrega"}' "$api"
+tarea="$api/1"
+```
+
+Ajusta `tarea` con la ruta de la cabecera `Location` si el ID que devuelve el POST es distinto de 1.
+
+```sh
+curl -i -X PUT -H 'Content-Type: application/json' --data '{"titulo":"Revisar entrega"}' "$tarea"
+curl -i -X PUT -H 'Content-Type: application/json' --data '{}' "$tarea"
+curl -i "$tarea"
+```
+
+**Ejercicio breve.** Predice el resultado de los tres comandos antes de ejecutarlos. Comprueba `200`, `400` y `200`. El GET debe seguir devolviendo «Revisar entrega». Repite el primer PUT con un ID inexistente y un cuerpo válido para obtener `404`.
+
+<div class="cla-lesson-nav">
+  <a href="{{ '/spring/leccion38/' | relative_url }}">← 38 · Variables de ruta</a>
+  <a href="{{ '/spring/leccion40/' | relative_url }}">PATCH →</a>
+</div>

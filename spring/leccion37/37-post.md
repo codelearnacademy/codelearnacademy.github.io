@@ -89,10 +89,10 @@ POST recibe un DTO de entrada y devuelve 201 cuando se crea el recurso.
 
 Observa el campo **Request URL**. Es la URL HTTP que recibe la petición. Cuando cambies el almacenamiento a fichero, SQLite o PostgreSQL, podrás repetir la práctica desde la misma interfaz y comprobar el dato en el almacenamiento de ese perfil.
 
-En el mismo ejemplo puedes probar PUT, PATCH y DELETE en Swagger UI. La [práctica de servicios REST]({{ "/spring/leccion108/" | relative_url }}) explica qué envía y qué devuelve cada operación.
+En el mismo ejemplo puedes probar PUT, PATCH y DELETE en Swagger UI. La [práctica de servicios REST]({{ "/spring/leccion111/" | relative_url }}) explica qué envía y qué devuelve cada operación.
 
 <div class="cla-lesson-nav">
-  <a href="{{ '/spring/leccion109/' | relative_url }}">109 · Swagger UI y documentación OpenAPI</a>
+  <a href="{{ '/spring/leccion112/' | relative_url }}">112 · Swagger UI y documentación OpenAPI</a>
 </div>
 
 ## Ejercicios propuestos

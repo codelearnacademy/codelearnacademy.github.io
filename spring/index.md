@@ -11,7 +11,7 @@ permalink: /spring/
 
 {% assign route = site.data.routes.spring %}
 
-<div class="cla-lesson-nav"><a href='{{ "/spring/infografias/" | relative_url }}'>Ver la galería de infografías</a> <a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el ejemplo de tareas</a> <a href='{{ "/spring/leccion108/" | relative_url }}'>Practicar GET, POST, PUT, PATCH y DELETE</a></div>
+<div class="cla-lesson-nav"><a href='{{ "/spring/infografias/" | relative_url }}'>Ver la galería de infografías</a> <a href='{{ "/spring/ejemplos/api-tareas.zip" | relative_url }}'>Descargar el ejemplo de tareas</a> <a href='{{ "/spring/leccion111/" | relative_url }}'>Practicar GET, POST, PUT, PATCH y DELETE</a></div>
 
 ## Tecnologías utilizadas
 
